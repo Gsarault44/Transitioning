@@ -1,0 +1,237 @@
+/*
+*************************************************
+
+AmerisourceBergen
+General Screen Styles
+
+Created by the Greg Sarault via Bluecadet
+www.bluecadet.com
+
+*************************************************
+*/
+
+
+/*-------------------------------------------    
+    Fonts     
+-------------------------------------------*/
+
+
+
+/*-------------------------------------------    
+    Flag
+	(Thanks Jeremy: http://adactio.com/journal/5429/)
+-------------------------------------------*/
+body:after { content: 'mini'; display: none; }
+
+
+
+/*-------------------------------------------    
+    Base     
+-------------------------------------------*/
+* { margin: 0; padding: 0; }
+html { font-size: 62.5%;} /* for rems */
+body { font-family: Helvetica, Arial, sans-serif; color: #333; }
+
+
+/* block level */
+
+h1, .h1 { font: bold 4.2em Helvetica, Arial, sans-serif; margin: 0 0 0.5em; }
+h2, .h2 { font: bold 1.8em Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+h3, .h3 { font: bold 1.5em Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+h4, h5, h6, .h4, .h5, .h6 { font: bold 1.2rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+
+p, ul, dl, ol, table { font-size: 16px; margin: 0 0 1.5em; }
+
+form { margin: 0 0 1.5em; }
+
+/* inline */
+
+label { font-size: 1.6rem; }
+input, select, textarea {  }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { }
+input.empty::-webkit-input-placeholder, textarea.empty::-webkit-input-placeholder { color: red; }
+input.empty:-moz-placeholder, textarea.empty:-moz-placeholder { color: red; }
+.error { color: red; }
+
+table { }
+    td { padding: 0.25em 1em; border-top: 1px solid #aaa; }
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+mark { background: none; font-style: normal; }
+
+video { width: 100%; height: auto; }
+
+a { text-decoration: none; }
+a:hover, a:focus { color: red; }
+
+img { display: block; margin: 0 10px 10px 0; max-width: 100%; }
+
+a img { border: none; }
+
+i { font-style: normal; }
+b { font-weight: normal; }
+
+abbr, abbr[title], acronym { font-size: 75%; letter-spacing: 0.2em; text-transform: uppercase; border: none; }
+
+code { font: 1.4rem/1 Consolas, 'Courier New', Courier, monospace; color: #999; }
+
+sub, sup { line-height: 0; }
+
+::selection { background: #2a69c2; color: #fff; }
+::-moz-selection { background: #2a69c2; color: #fff; }
+
+
+/*-------------------------------------------    
+    Global
+-------------------------------------------*/
+ 
+/* Phark Image Replacement - http://phark.typepad.com/phark/2003/08/accessible_imag.html */
+.phark { display: block; text-indent: -9999px; background-position: 0 0; background-repeat: no-repeat; background-color: transparent; }
+
+/* Trimming Outline in Firefox - http://snook.ca/archives/html_and_css/trimming_long_o  */
+/*\*/ .phark-link { overflow: hidden; } /**/
+
+/* Easy Clearing - http://www.positioniseverything.net/easyclearing.html */ 
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.offscreen { position: absolute; left: -9999px; display: block; }
+.onscreen { left: 0; }
+
+.hide { display: none; }
+
+.no-bullets { list-style: none; }
+
+.bulleted { list-style: disc; }
+
+.uppercase { text-transform: uppercase; }
+
+.rwd-break { display: block; }
+
+/*-------------------------------------------    
+	Modules
+-------------------------------------------*/
+
+/* Gates */
+#gate2, #gate3 {
+	display: none;
+}
+
+
+.container {
+	.slider-wrapper {
+		max-width: 100%;
+		max-height: 100%;
+		height: 100%;
+		width: 100%;
+		display: block;
+		position: absolute;
+		overflow: hidden;
+
+		/*  Text/ Content  */
+		.content-wrapper {
+			top:25%;
+			left:20%;
+			position: relative;
+			height: 400px;
+			width: 45%;
+			overflow: auto;
+			.content {
+				margin: 0 auto;
+				margin-top: 40px;
+				padding: 5px;
+				h1 {
+					font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+				}
+				p {
+
+				}
+				a {
+					color:#fff;
+				}
+				a.next {
+					color:#fff;
+				}
+			}
+		}
+
+
+		/* Spliting Gates */
+		.gate {
+			display: block;
+			position: absolute;
+			width: 150%;
+			height: 150%;
+			top: -25%;
+			left:-25%;
+			transform:rotate(4deg);
+			-ms-transform:rotate(4deg);
+			-webkit-transform:rotate(4deg);
+			overflow: hidden;
+			.top-gate {
+				position: absolute;
+				width: 100%;
+				height: 50%;
+			}
+			.bottom-gate {
+				position: absolute;
+				width:100%;
+				top:50%;
+				height: 50%;
+			}
+		}
+
+	}
+}
+.slide {
+	height: 100%;
+	width: 100%;
+	background-size: 100%;
+}
+#gate1 {
+	background:transparent url(../i/truck.jpg) no-repeat 0 0;
+	.content {
+		h1 {
+			color:#81c2ff;
+		}
+		p {
+			color:#81c2ff;
+		}
+	}
+}
+#gate2 {
+	background:transparent url(../i/dish.jpg) no-repeat 0 0;
+	.content {
+		h1 {
+			color:#445b0d;
+		}
+		p {
+			color:#445b0d;
+		}
+	}
+}
+#gate3 {
+	background:transparent url(../i/tube.jpg) no-repeat 0 0;
+	.content {
+		h1 {
+			color:#cdfc94;
+		}
+		p {
+			color:#cdfc94;
+		}
+	}
+}
+
+
+
+
+
+/*-------------------------------------------    
+	Page Specific
+-------------------------------------------*/
+
+
+
+
+

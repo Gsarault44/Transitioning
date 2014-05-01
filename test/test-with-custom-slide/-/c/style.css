@@ -1,0 +1,426 @@
+/*
+*************************************************
+
+AmerisourceBergen
+General Screen Styles
+
+Created by the Greg Sarault via Bluecadet
+www.bluecadet.com
+
+*************************************************
+*/
+/*-------------------------------------------    
+    Fonts     
+-------------------------------------------*/
+/*-------------------------------------------    
+    Flag
+	(Thanks Jeremy: http://adactio.com/journal/5429/)
+-------------------------------------------*/
+body:after {
+  content: 'mini';
+  display: none; }
+
+/*-------------------------------------------    
+    Base     
+-------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+/* for rems */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+  min-height: 100%;
+  height: 100%; }
+
+/* block level */
+h1, .h1 {
+  font: bold 4.2em Helvetica, Arial, sans-serif;
+  margin: 0 0 0.5em; }
+
+h2, .h2 {
+  font: bold 1.8em Helvetica, Arial, sans-serif;
+  margin: 0 0 1em; }
+
+h3, .h3 {
+  font: bold 1.5em Helvetica, Arial, sans-serif;
+  margin: 0 0 1em; }
+
+h4, h5, h6, .h4, .h5, .h6 {
+  font: bold 1.2rem Helvetica, Arial, sans-serif;
+  margin: 0 0 1em; }
+
+p, ul, dl, ol, table {
+  font-size: 16px;
+  margin: 0 0 1.5em; }
+
+form {
+  margin: 0 0 1.5em; }
+
+/* inline */
+label {
+  font-size: 1.6rem; }
+
+input.empty::-webkit-input-placeholder, textarea.empty::-webkit-input-placeholder {
+  color: red; }
+
+input.empty:-moz-placeholder, textarea.empty:-moz-placeholder {
+  color: red; }
+
+.error {
+  color: red; }
+
+td {
+  padding: 0.25em 1em;
+  border-top: 1px solid #aaa; }
+
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
+
+mark {
+  background: none;
+  font-style: normal; }
+
+video {
+  width: 100%;
+  height: auto; }
+
+a {
+  text-decoration: none; }
+
+a:hover, a:focus {
+  color: red; }
+
+img {
+  display: block;
+  margin: 0 10px 10px 0;
+  max-width: 100%; }
+
+a img {
+  border: none; }
+
+i {
+  font-style: normal; }
+
+b {
+  font-weight: normal; }
+
+abbr, abbr[title], acronym {
+  font-size: 75%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: none; }
+
+code {
+  font: 1.4rem/1 Consolas, 'Courier New', Courier, monospace;
+  color: #999; }
+
+sub, sup {
+  line-height: 0; }
+
+::selection {
+  background: #2a69c2;
+  color: #fff; }
+
+::-moz-selection {
+  background: #2a69c2;
+  color: #fff; }
+
+/*-------------------------------------------    
+    Mixins
+-------------------------------------------*/
+/*-------------------------------------------    
+    Global
+-------------------------------------------*/
+/* Phark Image Replacement - http://phark.typepad.com/phark/2003/08/accessible_imag.html */
+.phark {
+  display: block;
+  text-indent: -9999px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-color: transparent; }
+
+/* Trimming Outline in Firefox - http://snook.ca/archives/html_and_css/trimming_long_o  */
+/*\*/
+.phark-link {
+  overflow: hidden; }
+
+/**/
+/* Easy Clearing - http://www.positioniseverything.net/easyclearing.html */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+  display: block; }
+
+.onscreen {
+  left: 0; }
+
+.hide {
+  display: none; }
+
+.no-bullets {
+  list-style: none; }
+
+.bulleted {
+  list-style: disc; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.rwd-break {
+  display: block; }
+
+/*-------------------------------------------    
+	Modules
+-------------------------------------------*/
+/* Gates */
+/* #gate2, #gate3 {
+	display: none;
+} */
+.container {
+  background: #000;
+  height: 100%; }
+  .container .slider-wrapper {
+    height: 95%;
+    padding-bottom: 1%;
+    /*  Text/ Content  */
+    /* Spliting Gates */ }
+    .container .slider-wrapper .slick-list {
+      height: 100%; }
+    .container .slider-wrapper .slick-track {
+      height: 100%; }
+    .container .slider-wrapper .content-wrapper {
+      transform: rotate(-8deg);
+      -ms-transform: rotate(-8deg);
+      -webkit-transform: rotate(-8deg);
+      top: 25%;
+      left: 20%;
+      position: relative;
+      height: 400px;
+      width: 50%;
+      overflow: auto; }
+      .container .slider-wrapper .content-wrapper .content h1 {
+        font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
+      .container .slider-wrapper .content-wrapper .content a {
+        color: #fff; }
+      .container .slider-wrapper .content-wrapper .content a.next {
+        color: #fff; }
+    .container .slider-wrapper .gate {
+      display: block;
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      top: -25%;
+      left: -0.5%;
+      -webkit-backface-visibility: hidden; }
+      .container .slider-wrapper .gate .top-gate {
+        -webkit-transition: all .8s ease-out;
+        -moz-transition: all .8s ease-out;
+        -o-transition: all .8s ease-out;
+        transition: all .8s ease-out;
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        -webkit-backface-visibility: hidden; }
+      .container .slider-wrapper .gate .bottom-gate {
+        -webkit-transition: all .8s ease-out;
+        -moz-transition: all .8s ease-out;
+        -o-transition: all .8s ease-out;
+        transition: all .8s ease-out;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        height: 50%;
+        -webkit-backface-visibility: hidden; }
+
+.slide {
+  position: relative;
+  transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  -webkit-transform: rotate(8deg); }
+
+#gate1 {
+  -webkit-backface-visibility: hidden;
+  background: transparent url(../i/truck.jpg) no-repeat center center;
+  background-size: 100%; }
+  #gate1 .content h1 {
+    color: #81c2ff; }
+  #gate1 .content p {
+    color: #81c2ff; }
+
+#gate2 {
+  -webkit-backface-visibility: hidden;
+  background: transparent url(../i/plane.jpg) no-repeat center center;
+  background-size: 100%; }
+  #gate2 .content h1 {
+    color: #445b0d; }
+  #gate2 .content p {
+    color: #445b0d; }
+
+#gate3 {
+  -webkit-backface-visibility: hidden;
+  background: transparent url(../i/dish.jpg) no-repeat center center;
+  background-size: 100%; }
+  #gate3 .content h1 {
+    color: #cdfc94; }
+  #gate3 .content p {
+    color: #cdfc94; }
+
+#gate4 {
+  -webkit-backface-visibility: hidden;
+  background: transparent url(../i/circut.jpg) no-repeat center center;
+  background-size: 100%; }
+  #gate4 .content h1 {
+    color: #cdfc94; }
+  #gate4 .content p {
+    color: #cdfc94; }
+
+.cube {
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+  .cube a {
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: #fff; }
+
+/*-------------------------------------------    
+	Page Specific
+-------------------------------------------*/
+.slick-prev, .slick-next {
+  background: red;
+  width: 50px;
+  height: 50px;
+  z-index: 9999;
+  cursor: pointer; }
+
+.slick-prev {
+  left: 0;
+  top: 25%; }
+
+.slick-next {
+  right: 0;
+  top: 75%; }
+
+.slick-dots li button {
+  background: green; }
+.slick-dots li + li button {
+  background: purple; }
+.slick-dots li + li + li button {
+  background: yellow; }
+.slick-dots li + li + li + li button {
+  background: orange; }
+.slick-dots li + li + li + li + li button {
+  background: blue; }
+.slick-dots li + li + li + li + li + li button {
+  background: red; }
+.slick-dots .slick-active button {
+  height: 13px;
+  width: 23px; }
+
+.slick-dots {
+  position: absolute;
+  bottom: -45px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0px;
+  width: 100%; }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 10px;
+    width: 20px;
+    margin: 0px 5px;
+    padding: 0px;
+    cursor: pointer; }
+    .slick-dots li button {
+      border: 0;
+      display: block;
+      height: 10px;
+      width: 20px;
+      outline: 0;
+      line-height: 0;
+      font-size: 0;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer;
+      /* &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: $slick-dot-character;
+          width: 20px;
+          height: 20px;
+          font-family:"slick";
+          font-size: 6px;
+          line-height: 20px;
+          text-align: center;
+          color: $slick-dot-color;
+          opacity: 0.25;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+      } */ }
+      .slick-dots li button:focus {
+        outline: 0; }
+
+/* INDEXED VIEW */
+.indexed {
+  /* Spliting Gates */ }
+  .indexed .content-wrapper {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    top: 25%;
+    left: 20%;
+    position: relative;
+    height: 400px;
+    width: 50%;
+    overflow: auto; }
+    .indexed .content-wrapper .content h1 {
+      font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
+    .indexed .content-wrapper .content a {
+      color: #fff; }
+    .indexed .content-wrapper .content a.next {
+      color: #fff; }
+  .indexed .gate {
+    display: block;
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -0.5%; }
+    .indexed .gate .top-gate {
+      position: absolute;
+      width: 105%;
+      height: 50%; }
+    .indexed .gate .bottom-gate {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      height: 50%; }
+  .indexed .slide {
+    position: relative;
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    width: 33%;
+    float: left; }
