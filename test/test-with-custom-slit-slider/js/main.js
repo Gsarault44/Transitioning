@@ -10,8 +10,8 @@
 
 function initalClick(){
 	$('.gate').click(function(){
-		$('.gate').find('.top-gate-wrapper').animate({top: '-45%'}, 800);
-		$('.gate').find('.bottom-gate-wrapper').animate({top: '50%'}, 800, function(){
+		$(this).find('.top-gate-wrapper').animate({top: '-40%'}, 600);
+		$(this).find('.bottom-gate-wrapper').animate({top: '40%'}, 600, function(){
 			$('.content-wrapper').css('z-index', '9999999');
 		}).dequeue();
 	});
@@ -34,14 +34,15 @@ function slitSlider(){
 					$nav.eq( pos ).addClass( 'nav-dot-current' );
 				},
 				onAfterChange: function(){
-					$(".gate img").removeAttr('style');
-					$('.content-wrapper').removeAttr('style');
-					$(".gate:not(.sl-trans-elems .gate)").find('.top-gate-wrapper').animate({top: '0'}, 500).dequeue();
-					$(".gate:not(.sl-trans-elems .gate)").find('.bottom-gate-wrapper').animate({top: '0'}, 500).dequeue();
-					$('.sl-trans-elems .gate').find('.top-gate-wrapper').animate({top: '-45%'}, 500);
-					$('.sl-trans-elems .gate').find('.bottom-gate-wrapper').animate({top: '50%'}, 500, function(){
+					$('.sl-trans-elems .gate').find('.top-gate-wrapper').animate({top: '-40%'}, 500).dequeue();
+					$('.sl-trans-elems .gate').find('.bottom-gate-wrapper').animate({top: '40%'}, 500, function(){
 						$('.sl-trans-elems .content-wrapper').delay(500).css('z-index', '9999999');
 					}).dequeue();
+					$(".gate:not(.sl-trans-elems .gate)").find('.top-gate-wrapper').animate({top: '0'}, 400).dequeue();
+					$(".gate:not(.sl-trans-elems .gate)").find('.bottom-gate-wrapper').animate({top: '0'}, 400).dequeue();
+					$(".gate img").removeAttr('style');
+					$('.content-wrapper').removeAttr('style');
+					
 					$('.expand').slideUp();
 				}
 

@@ -130,9 +130,10 @@ sub, sup { line-height: 0; }
 -------------------------------------------*/
 .container {
 	background: #000;
-	height: 100%;
+	height: 120%;
 	width: 100%;
 	position: absolute;
+	top:-10%;
 }
 .cube {
 	position: absolute;
@@ -153,17 +154,15 @@ sub, sup { line-height: 0; }
 	-o-animation: slide .8s ease-out both;
 	-ms-animation: slide .8s ease-out both;
 	animation: slide .8s ease-out both;
-	
-	/* .sl-content-wrapper {
-		transform:rotate(8deg);
-		-ms-transform:rotate(8deg);
-		-webkit-transform:rotate(8deg);
+	.sl-content-wrapper {
+		width: 120%;
 		.sl-content {
-			transform:rotate(-8deg);
-			-ms-transform:rotate(-8deg);
-			-webkit-transform:rotate(-8deg);
+			position: relative;
+			width: 120%;	
+			left:-10%;
+
 		}
-	} */
+	} 
 	.content-wrapper {
 		top:10%;
 		position: relative;
@@ -359,25 +358,26 @@ sub, sup { line-height: 0; }
 		}
 	}
 }
+
 @-webkit-keyframes slide{
 	0% {-webkit-transform: translateX(100%);}
-	100% {-webkit-transform: translateX(0px);-webkit-transform:rotate(8deg);}
+	100% {-webkit-transform: translateX(0px);-webkit-transform:rotate(7deg);}
 }
 @-moz-keyframes slide{
 	0% {-moz-transform: translateX(100%); opacity: 0;}
-	100% {-moz-transform: translateX(0px); opacity: 1;transform:rotate(8deg);}
+	100% {-moz-transform: translateX(0px); opacity: 1;transform:rotate(7deg);}
 }
 @-o-keyframes slide{
 	0% {-o-transform: translateX(100%); opacity: 0;}
-	100% {-o-transform: translateX(0px); opacity: 1;transform:rotate(8deg);}
+	100% {-o-transform: translateX(0px); opacity: 1;transform:rotate(7deg);}
 }
 @-ms-keyframes slide{
 	0% {-ms-transform: translateX(100%); opacity: 0;}
-	100% {-ms-transform: translateX(0px); opacity: 1;-ms-transform:rotate(8deg);}
+	100% {-ms-transform: translateX(0px); opacity: 1;-ms-transform:rotate(7deg);}
 }
 @keyframes slide{
 	0% {transform: translateX(100%); opacity: 0;}
-	100% {transform: translateX(0px); opacity: 1;transform:rotate(8deg);}
+	100% {transform: translateX(0px); opacity: 1;transform:rotate(7deg);}
 }
 @-webkit-keyframes fadeIn{
 	0% {opacity: 0;}

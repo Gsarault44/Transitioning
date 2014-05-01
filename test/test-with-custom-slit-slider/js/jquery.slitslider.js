@@ -68,7 +68,7 @@
 
 	$.Slitslider.defaults = {
 		// transitions speed
-		speed : 1900,
+		speed : 900,
 		// if true the item's slices will also animate the opacity value
 		optOpacity : false,
 		// amount (%) to translate both slices - adjust as necessary
@@ -251,7 +251,7 @@
 			$currentSlide.removeClass( 'sl-trans-elems' );
 
 			var transitionProp = {
-				'transition' : 'all ' + this.options.speed + 'ms ease-in-out'
+				'transition' : 'all ' + this.options.speed + 'ms ease-out'
 			};
 
 			// add the 2 slices and animate them
