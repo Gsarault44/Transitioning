@@ -1,0 +1,47 @@
+.zoom-light {
+	display: none;
+	background:rgba(0,0,0,.85); 
+	position: absolute;
+	z-index: 99999999;
+	height: 100%;
+	width: 100%;
+	cursor:pointer;
+	@include transitions;
+	.zoom-layout{
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+		div {
+			list-style-type:none; 
+			span {
+				float:left;
+				width: 50%;
+				@include transitions;
+				@media all and (min-width: 768px) {
+					width: 33%;
+				}
+				@media all and (min-width: 1260px) {
+					width:25%;
+				}
+				
+				a {
+					display: block;
+					margin:15px;
+					overflow: hidden;
+					img {
+						@include transitions;
+						width: 100%;
+						height:150px;
+						@media all and (min-width: 768px) {
+							height: 250px;
+						}
+						@media all and (min-width: 1260px) {	
+							height:350px;
+						}
+					}
+				}
+			}
+		}
+	}
+				
+}

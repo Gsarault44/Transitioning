@@ -68,11 +68,11 @@
 
 	$.Slitslider.defaults = {
 		// transitions speed
-		speed : 900,
+		speed : 700,
 		// if true the item's slices will also animate the opacity value
-		optOpacity : false,
+		optOpacity : true,
 		// amount (%) to translate both slices - adjust as necessary
-		translateFactor : 180,
+		translateFactor : 160,
 		// maximum possible angle
 		maxAngle : 25,
 		// maximum possible scale
@@ -251,7 +251,7 @@
 			$currentSlide.removeClass( 'sl-trans-elems' );
 
 			var transitionProp = {
-				'transition' : 'all ' + this.options.speed + 'ms ease-out'
+				'transition' : 'all ' + this.options.speed + 'ms ease-in'
 			};
 
 			// add the 2 slices and animate them
@@ -269,7 +269,7 @@
 									
 									slice.css( resetStyle );
 
-								}, 50 );
+								}, 20 );
 										 
 							}, 
 							function() {
@@ -279,7 +279,7 @@
 									
 									slice.css( slice1Style );
 
-								}, 50 );
+								}, 20 );
 						
 							}
 						)
@@ -310,7 +310,7 @@
 
 									}
 
-								}, 50 );
+								}, 20 );
 						
 							},
 							function() {
@@ -335,7 +335,7 @@
 
 									}
 
-								}, 50 );
+								}, 20 );
 								
 							}
 						)

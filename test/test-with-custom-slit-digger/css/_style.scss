@@ -1,0 +1,462 @@
+/*
+*************************************************
+
+AmerisourceBergen
+General Screen Styles
+
+Created by the Greg Sarault via Bluecadet
+www.bluecadet.com
+
+*************************************************
+*/
+
+
+/*-------------------------------------------    
+    Fonts     
+-------------------------------------------*/
+
+
+
+/*-------------------------------------------    
+    Flag
+	(Thanks Jeremy: http://adactio.com/journal/5429/)
+-------------------------------------------*/
+body:after { content: 'mini'; display: none; background:#000;}
+
+
+
+/*-------------------------------------------    
+    Base     
+-------------------------------------------*/
+* { margin: 0; padding: 0; }
+html { font-size: 62.5%; } /* for rems */
+body { font-family: Helvetica, Arial, sans-serif; color: #333;}
+
+
+/* block level */
+
+h1, .h1 { font: bold 3.8em Helvetica, Arial, sans-serif; margin: 0 0 0.5em; }
+h2, .h2 { font: bold 1.8em Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+h3, .h3 { font: bold 1.5em Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+h4, h5, h6, .h4, .h5, .h6 { font: bold 1.2rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+
+p, ul, dl, ol, table { font-size: 16px; margin: 0 0 1.5em; }
+
+form { margin: 0 0 1.5em; }
+
+/* inline */
+
+label { font-size: 1.6rem; }
+input, select, textarea {  }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { }
+input.empty::-webkit-input-placeholder, textarea.empty::-webkit-input-placeholder { color: red; }
+input.empty:-moz-placeholder, textarea.empty:-moz-placeholder { color: red; }
+.error { color: red; }
+
+table { }
+    td { padding: 0.25em 1em; border-top: 1px solid #aaa; }
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+
+mark { background: none; font-style: normal; }
+
+video { width: 100%; height: auto; }
+
+a { text-decoration: none; }
+a:hover, a:focus { color: red; }
+
+img { display: block; margin: 0 10px 10px 0; max-width: 100%; }
+
+a img { border: none; }
+
+i { font-style: normal; }
+b { font-weight: normal; }
+
+abbr, abbr[title], acronym { font-size: 75%; letter-spacing: 0.2em; text-transform: uppercase; border: none; }
+
+code { font: 1.4rem/1 Consolas, 'Courier New', Courier, monospace; color: #999; }
+
+sub, sup { line-height: 0; }
+
+::selection { background: #2a69c2; color: #fff; }
+::-moz-selection { background: #2a69c2; color: #fff; }
+
+
+
+/*-------------------------------------------    
+    Mixins
+-------------------------------------------*/
+@mixin transitions {
+	-webkit-transition: all .8s ease-out;
+  	-moz-transition: all .8s ease-out;
+  	-o-transition: all .8s ease-out;
+  	transition: all .8s ease-out;
+}
+
+/*-------------------------------------------    
+    Global
+-------------------------------------------*/
+ 
+/* Phark Image Replacement - http://phark.typepad.com/phark/2003/08/accessible_imag.html */
+.phark { display: block; text-indent: -9999px; background-position: 0 0; background-repeat: no-repeat; background-color: transparent; }
+
+/* Trimming Outline in Firefox - http://snook.ca/archives/html_and_css/trimming_long_o  */
+/*\*/ .phark-link { overflow: hidden; } /**/
+
+/* Easy Clearing - http://www.positioniseverything.net/easyclearing.html */ 
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.offscreen { position: absolute; left: -9999px; display: block; }
+.onscreen { left: 0; }
+
+.hide { display: none; }
+
+.no-bullets { list-style: none; }
+
+.bulleted { list-style: disc; }
+
+.uppercase { text-transform: uppercase; }
+
+.rwd-break { display: block; }
+.clr {
+	clear: both;
+	padding: 0;
+	height: 0;
+	margin: 0;
+}
+/*-------------------------------------------    
+	Modules
+-------------------------------------------*/
+
+.moveup{
+	@media all and (min-width: 420px) {
+		-webkit-animation: moveUp .5s ease-in-out both;
+		-moz-animation: moveUp .5s ease-in both;
+		-o-animation: moveUp .5s ease-in both;
+		-ms-animation: moveUp .5s ease-in both;
+		animation: moveUp .5s ease-in-out both;
+	}
+}
+.scale-up {
+	-webkit-animation: scaleUp .5s ease-in-out both;
+	-moz-animation: scaleUp .5s ease-in both;
+	-o-animation: scaleUp .5s ease-in both;
+	-ms-animation: scaleUp .5s ease-in both;
+	animation: scaleUp .5s ease-in-out both;
+}
+.scale-down {
+	-webkit-animation: scaleDown .5s ease-in-out both;
+	-moz-animation: scaleDown .5s ease-in both;
+	-o-animation: scaleDown .5s ease-in both;
+	-ms-animation: scaleDown .5s ease-in both;
+	animation: scaleDown .5s ease-in-out both;
+}
+
+
+/*-------------------------------------------    
+	Page
+-------------------------------------------*/
+
+
+.container {
+	background: #000;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+.cube {
+	position: absolute;
+	right:0;
+	bottom:0;
+	z-index: 99999;
+	a {
+		width: 50px;
+		height: 50px;
+		display: block;
+		background:black;
+	}
+}
+.gate img {
+	-webkit-transform: rotate(77deg);
+	-moz-transform: rotate(77deg);
+	-o-transform: rotate(77deg);
+	-ms-transform: rotate(77deg);
+	transform: rotate(77deg);
+	@media all and (min-width: 420px) {
+		-webkit-transform: rotate(-7deg);
+		-moz-transform: rotate(-7deg);
+		-o-transform: rotate(-7deg);
+		-ms-transform: rotate(-7deg);
+		transform: rotate(-7deg); 
+	}
+}
+.sl-slide {
+	//These slide in the next slide from the right side when pagi is clicked
+	/* -webkit-animation: slide .8s ease-out both;
+	-moz-animation: slide .8s ease-out both;
+	-o-animation: slide .8s ease-out both;
+	-ms-animation: slide .8s ease-out both;
+	animation: slide .8s ease-out both; */
+	-webkit-transform: rotate(-77deg);
+	-moz-transform: rotate(-77deg);
+	-o-transform: rotate(-77deg);
+	-ms-transform: rotate(-77deg);
+	transform: rotate(-77deg);
+	@media all and (min-width: 420px) {
+		-webkit-transform: rotate(7deg);
+		-moz-transform: rotate(7deg);
+		-o-transform: rotate(7deg);
+		-ms-transform: rotate(7deg);
+		transform: rotate(7deg);
+	}
+	.sl-content-wrapper {
+		width: 120%;
+		height: 120%;
+		.sl-content {
+			position: relative;
+			width: 120%;
+			height: 120%;	
+			left:-10%;
+			top:-10%;
+		}
+		.background {
+			position: absolute;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			-webkit-transform: rotate(77deg);
+			-moz-transform: rotate(77deg);
+			-o-transform: rotate(77deg);
+			-ms-transform: rotate(77deg);
+			transform: rotate(77deg);
+			@media all and (min-width: 420px) {
+				-webkit-transform: rotate(7deg);
+				-moz-transform: rotate(0deg);
+				-o-transform: rotate(0deg);
+				-ms-transform: rotate(0deg);
+				transform: rotate(7deg);
+			}
+		}
+	} 
+	.content-wrapper {
+		top:10%;
+		position: relative;
+		height: 200px;
+		overflow: auto;
+		width: 85%;
+		margin:0 auto;
+		-webkit-transform: rotate(77deg);
+		-moz-transform: rotate(77deg);
+		-o-transform: rotate(77deg);
+		-ms-transform: rotate(77deg);
+		transform: rotate(77deg);
+		@media all and (min-width: 420px) {
+			height: 400px;
+			-webkit-transform: rotate(-7deg);
+			-moz-transform: rotate(-7deg);
+			-o-transform: rotate(-7deg);
+			-ms-transform: rotate(-7deg);
+			transform: rotate(-7deg);
+			top:15%;
+			width: 75%;
+		}
+		@media all and (min-width: 768px) {
+			width: 60%;
+			top:25%;
+		}
+		.content {
+
+			position: relative;
+			padding-bottom: 50px;
+			margin-left: 10px;
+			max-width: 850px;	
+
+			h1 {
+				font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+				font-size: 20px;
+				font-size: 2em;
+				@media all and (min-width: 420px) {
+					font-size: 28px;
+					font-size: 2.8em;
+				}
+				@media all and (min-width: 768px) {
+					font-size: 38px;
+					font-size: 3.8em;
+				}
+			}
+			p {
+
+			}
+			a {
+				display:block;
+				color:#fff;
+			}
+			a.next {
+				font-size: 18px;
+				color:#fff;
+			}
+		}
+	}
+	.gate {
+		display: block;
+		position: absolute;
+		width: 150%;
+		height: 100%;
+		top:0%;
+		left:0%;
+		margin:0;
+		padding:0;
+		z-index: 1;
+		@media all and (min-width: 420px) {
+			width:100%;
+		}
+		.top-gate-wrapper{
+			position: relative;
+			width: 200%;
+			height: 50%;
+			margin:0;
+			padding:0;
+			top:0;
+			overflow-x: hidden;
+			margin-left: -50%;
+			@media all and (min-width: 420px) {
+				width: 100%;
+				margin-top: 0;
+				margin-left: 0;
+			}
+			.top-gate {
+				width: 130%;
+				height:130%;
+			}
+			p {
+				position: absolute;
+				font-size: 30px;
+				color: white;
+				margin:0;
+				bottom: -7px;
+				text-transform: uppercase;
+				opacity: 0.8;
+				display: block;
+				width: 100%;
+				text-align: center;
+				font-family: rockwell;
+				font-weight: bold;
+				@media all and (min-width: 420px) {
+					font-size: 130px;
+					bottom:-30px;
+				}
+			}
+		}
+		.bottom-gate-wrapper {
+			position: relative;
+			width:200%;
+			top:0;
+			height: 60%;
+			margin:0;
+			padding:0;
+			overflow: hidden;
+			margin-left: -50%;
+			@media all and (min-width: 420px) {
+				width: 100%;
+				margin-top: 0;
+				margin-left: 0;
+			}
+			
+			.bottom-gate {
+				width: 130%;
+				height: 120%;
+				margin-top: -5%;
+				@media all and (min-width: 420px) {
+					width: 130%;
+					height: 120%;
+					margin-top: -5%;
+				}
+			}	
+			p {
+				position: absolute;
+				font-size: 30px;
+				color: white;
+				top: -7px;
+				margin:0;
+				text-transform: uppercase;
+				opacity: 0.8;
+				display: block;
+				width: 100%;
+				text-align: center;
+				transform: rotateY(-180deg);
+				-ms-transform: rotateY(-180deg);
+				-webkit-transform: rotatex(-180deg);
+				font-family: rockwell;
+				font-weight: bold;
+				@media all and (min-width: 420px) {
+					font-size: 130px;
+					top: -30px;
+				}
+			}
+		}
+	}
+}
+
+/*-------------------------------------------    
+	IMAGES FOR EACH SLIDE
+-------------------------------------------*/
+#horsepower-brainpower {
+	.sl-content {
+		//background:transparent url(../images/truck.jpg) no-repeat center center;
+		//background-size: 100%;
+	}
+	.content {
+		h1 {
+			color:#81c2ff;
+		}
+		p {
+			color:#81c2ff;
+		}
+	}
+}
+#hindsight-foresight {
+	.sl-content {
+		/* background:transparent url(../images/plane.jpg) no-repeat center center;
+		background-size: 100%; */
+	}
+	.content {
+		h1 {
+			color:#445b0d;
+		}
+		p {
+			color:#445b0d;
+		}
+	}
+}
+#computers-compassion {
+	.sl-content {
+		/* background:transparent url(../images/dish.jpg) no-repeat center center;
+		background-size: 100%; */
+	}
+	.content {
+		h1 {
+			color:#cdfc94;
+		}
+		p {
+			color:#cdfc94;
+		}
+	}
+}
+#slice4 {
+	.sl-content {
+		background:transparent url(../images/circut.jpg) no-repeat center center;
+		background-size: 100%;
+	}
+	.content {
+		h1 {
+			color:#cdfc94;
+		}
+		p {
+			color:#cdfc94;
+		}
+	}
+}
+
+
