@@ -162,3 +162,23 @@
 }
 
 
+@-webkit-keyframes gateUp{
+	0% {-webkit-transform: translateY(0);}
+	100% {-webkit-transform: translateY(-40%);}
+}
+@-moz-keyframes gateUp{
+	0% {-moz-transform: translateY(0);}
+	100% {-moz-transform: translateY(-40%);}
+}
+@-o-keyframes gateUp{
+	0% {-o-transform: translateY(0);}
+	100% {-o-transform: translateY(-40%);}
+}
+@-ms-keyframes gateUp{
+	0% {-ms-transform: translateY(0);}
+	100% {-ms-transform: translateY(-40%);}
+}
+@keyframes gateUp{
+	0% {transform: translateY(0);}
+	100% {transform: translateY(-40%);}
+}

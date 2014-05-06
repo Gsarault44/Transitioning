@@ -14,7 +14,10 @@ www.bluecadet.com
 /*-------------------------------------------    
     Fonts     
 -------------------------------------------*/
-
+@font-face {
+  font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  src: url('../css/fonts/rock.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
 
 
 /*-------------------------------------------    
@@ -29,8 +32,8 @@ body:after { content: 'mini'; display: none; background:#000;}
     Base     
 -------------------------------------------*/
 * { margin: 0; padding: 0; }
-html { font-size: 62.5%; } /* for rems */
-body { font-family: Helvetica, Arial, sans-serif; color: #333;}
+html { font-size: 62.5%; -webkit-font-smoothing: antialiased !important;} /* for rems */
+body { font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif; color: #333;}
 
 
 /* block level */
@@ -166,46 +169,34 @@ sub, sup { line-height: 0; }
 	position: absolute;
 	overflow: hidden;
 }
-.cube {
-	position: absolute;
-	right:0;
-	bottom:0;
-	z-index: 99999;
-	a {
-		width: 50px;
-		height: 50px;
-		display: block;
-		background:black;
-	}
-}
+
 .gate img {
-	-webkit-transform: rotate(77deg);
-	-moz-transform: rotate(77deg);
-	-o-transform: rotate(77deg);
-	-ms-transform: rotate(77deg);
-	transform: rotate(77deg);
-	@media all and (min-width: 420px) {
-		-webkit-transform: rotate(-7deg);
-		-moz-transform: rotate(-7deg);
-		-o-transform: rotate(-7deg);
-		-ms-transform: rotate(-7deg);
-		transform: rotate(-7deg); 
-	}
+	-webkit-transform: rotate(-7deg);
+	-moz-transform: rotate(-7deg);
+	-o-transform: rotate(-7deg);
+	-ms-transform: rotate(-7deg);
+	transform: rotate(-7deg); 
 }
 .sl-slide {
-	//These slide in the next slide from the right side when pagi is clicked
-	/* -webkit-animation: slide .8s ease-out both;
-	-moz-animation: slide .8s ease-out both;
-	-o-animation: slide .8s ease-out both;
-	-ms-animation: slide .8s ease-out both;
-	animation: slide .8s ease-out both; */
-	-webkit-transform: rotate(-77deg);
-	-moz-transform: rotate(-77deg);
-	-o-transform: rotate(-77deg);
-	-ms-transform: rotate(-77deg);
-	transform: rotate(-77deg);
-	@media all and (min-width: 420px) {
-		-webkit-transform: rotate(7deg);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+	-webkit-transform: rotate(7deg);
+	-moz-transform: rotate(7deg);
+	-o-transform: rotate(7deg);
+	-ms-transform: rotate(7deg);
+	transform: rotate(7deg);
+		/* Portrait */
+	@media screen and (orientation:portrait) {
+		-webkit-transform: rotate(-77deg);
+		-moz-transform: rotate(-77deg);
+		-o-transform: rotate(-77deg);
+		-ms-transform: rotate(-77deg);
+		transform: rotate(-77deg);
+	}
+	/* Landscape */
+	@media screen and (orientation:landscape) {
+	   -webkit-transform: rotate(7deg);
 		-moz-transform: rotate(7deg);
 		-o-transform: rotate(7deg);
 		-ms-transform: rotate(7deg);
@@ -220,115 +211,190 @@ sub, sup { line-height: 0; }
 			height: 120%;	
 			left:-10%;
 			top:-10%;
+			@media screen and (orientation:portrait) {
+				-webkit-transform: rotate(84deg);
+				-moz-transform: rotate(84deg);
+				-o-transform: rotate(84deg);
+				-ms-transform: rotate(84deg);
+				transform: rotate(84deg);
+			}
 		}
 		.background {
 			position: absolute;
 			z-index: 0;
 			width: 100%;
 			height: 100%;
-			-webkit-transform: rotate(77deg);
-			-moz-transform: rotate(77deg);
-			-o-transform: rotate(77deg);
-			-ms-transform: rotate(77deg);
-			transform: rotate(77deg);
-			@media all and (min-width: 420px) {
-				-webkit-transform: rotate(7deg);
-				-moz-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
-				transform: rotate(7deg);
-			}
-		}
-	} 
-	.content-wrapper {
-		top:10%;
-		position: relative;
-		height: 200px;
-		overflow: auto;
-		width: 85%;
-		margin:0 auto;
-		-webkit-transform: rotate(77deg);
-		-moz-transform: rotate(77deg);
-		-o-transform: rotate(77deg);
-		-ms-transform: rotate(77deg);
-		transform: rotate(77deg);
-		@media all and (min-width: 420px) {
-			height: 400px;
 			-webkit-transform: rotate(-7deg);
 			-moz-transform: rotate(-7deg);
 			-o-transform: rotate(-7deg);
 			-ms-transform: rotate(-7deg);
 			transform: rotate(-7deg);
+		}
+	} 
+	.content-wrapper {
+		top:12%;
+		left: 0%;
+		position: relative;
+		overflow: auto;
+		width: 75%;
+		margin:0 auto;
+		-webkit-transform: rotate(-7deg);
+		-moz-transform: rotate(-7deg);
+		-o-transform: rotate(-7deg);
+		-ms-transform: rotate(-7deg);
+		transform: rotate(-7deg);
+		@media all and (min-width: 420px) {
 			top:15%;
-			width: 75%;
+			width: 70%;
 		}
 		@media all and (min-width: 768px) {
 			width: 60%;
 			top:25%;
 		}
-		.content {
-
-			position: relative;
-			padding-bottom: 50px;
-			margin-left: 10px;
-			max-width: 850px;	
-
-			h1 {
-				font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-				font-size: 20px;
-				font-size: 2em;
-				@media all and (min-width: 420px) {
-					font-size: 28px;
-					font-size: 2.8em;
+		.button-wrapper{
+			max-width: 850px;
+			position: relative;	
+			.content {
+				position: relative;
+				padding-bottom: 85px;
+				max-width: 850px;	
+				h1 {
+					font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+					font-size: 20px;
+					font-size: 2em;
+					margin:0;
+					@media all and (min-width: 420px) {
+						margin-bottom: 10px;
+						font-size: 28px;
+						font-size: 2.8em;
+					}
+					@media all and (min-width: 768px) {
+						font-size: 50px;
+						font-size: 5em;
+					}
 				}
-				@media all and (min-width: 768px) {
-					font-size: 38px;
-					font-size: 3.8em;
+				p {
+					font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+					font-size: 17px;
+					font-size: 1.7em;
+					margin:0;
+					margin-bottom: 10px;
+					@media all and (min-width: 420px) {
+						margin-bottom: 18px;
+						font-size: 18px;
+						font-size: 1.6em;
+						line-height: 20px;
+					}
+					@media all and (min-width: 768px) {
+						font-size: 22px;
+						font-size: 2.2em;
+						line-height: 24px;
+					}
 				}
-			}
-			p {
-
-			}
-			a {
-				display:block;
-				color:#fff;
-			}
-			a.next {
-				font-size: 18px;
-				color:#fff;
+				.expand p {
+					font-size: 15px;
+					font-size: 1.5em;
+					line-height: 17px;
+					@media all and (min-width: 768px) {
+						width: 90%;	
+						font-size: 20px;
+						font-size: 2em;
+						line-height: 22px;
+					}
+				}
 			}
 		}
+
+	}
+	.b-border {
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility:    hidden;
+		-ms-backface-visibility:     hidden;
+		border-bottom: 1px solid #fff;
+		height: 54%;
+		@media screen and (orientation:landscape) {
+			height: 45%;
+		}
+	}
+	.more {
+		display:block;
+		position: relative;
+		border-top: 1px solid #fff;
+		width: 100%;
+		bottom:45px;
+		a {
+			display: inline-block;
+			color:#fff;
+			font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+			font-weight: 400;
+			font-size: 20px;
+			font-size: 2em;
+			&:after {
+				content:"";
+				position: absolute;
+				display: block;
+				background:transparent url(../images/circle-arrow-down.png)no-repeat 0 0;
+				background-size: 100%;
+				width:35px;
+				height:35px;
+				margin-left: 30px;
+				margin-top: 10px;
+			}	
+		}
+	}
+	a.next {
+		font-size: 18px;
+		color:#fff;
 	}
 	.gate {
 		display: block;
 		position: absolute;
-		width: 150%;
+		width: 120%;
 		height: 100%;
 		top:0%;
-		left:0%;
+		left:-10%;
 		margin:0;
 		padding:0;
 		z-index: 1;
-		@media all and (min-width: 420px) {
-			width:100%;
+		@media screen and (orientation:portrait) {
+		-webkit-transform: rotate(-77deg);
+		-moz-transform: rotate(-77deg);
+		-o-transform: rotate(-77deg);
+		-ms-transform: rotate(-77deg);
+		transform: rotate(-77deg);
+		width: 180%;
+		left:-40%;
 		}
 		.top-gate-wrapper{
 			position: relative;
-			width: 200%;
+			width: 100%;
 			height: 50%;
 			margin:0;
 			padding:0;
 			top:0;
-			overflow-x: hidden;
-			margin-left: -50%;
+			overflow: hidden;
+			box-shadow: 0px 0px 4px 0px #000;
 			@media all and (min-width: 420px) {
+
 				width: 100%;
 				margin-top: 0;
 				margin-left: 0;
 			}
 			.top-gate {
-				width: 130%;
-				height:130%;
+				width: 110%;
+				height:120%;
+				max-width: none;
+				top: 5%;
+				position: relative;
+				@media screen and (orientation:portrait) {
+					-webkit-transform: rotate(70deg);
+					-moz-transform: rotate(70deg);
+					-o-transform: rotate(70deg);
+					-ms-transform: rotate(70deg);
+					transform: rotate(70deg);
+					width: 100%;
+					height:200%;
+				}
 			}
 			p {
 				position: absolute;
@@ -341,9 +407,16 @@ sub, sup { line-height: 0; }
 				display: block;
 				width: 100%;
 				text-align: center;
-				font-family: rockwell;
+				font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
 				font-weight: bold;
-				@media all and (min-width: 420px) {
+				@media all and (min-width: 560px) {
+					font-size: 50px;
+				}
+				@media all and (min-width: 768px) {
+					font-size: 90px;
+					bottom:-20px;
+				}
+				@media all and (min-width: 1024px) {
 					font-size: 130px;
 					bottom:-30px;
 				}
@@ -351,13 +424,13 @@ sub, sup { line-height: 0; }
 		}
 		.bottom-gate-wrapper {
 			position: relative;
-			width:200%;
+			width:100%;
 			top:0;
 			height: 60%;
 			margin:0;
 			padding:0;
 			overflow: hidden;
-			margin-left: -50%;
+			box-shadow: 0px 0px 4px 0px #000;
 			@media all and (min-width: 420px) {
 				width: 100%;
 				margin-top: 0;
@@ -365,13 +438,23 @@ sub, sup { line-height: 0; }
 			}
 			
 			.bottom-gate {
-				width: 130%;
-				height: 120%;
-				margin-top: -5%;
+				width: 100%;
+				height: auto;
+				margin-top: -50%;
+				max-width: none;
 				@media all and (min-width: 420px) {
 					width: 130%;
-					height: 120%;
-					margin-top: -5%;
+					height: auto;
+					margin-top: -50%;
+				}
+				@media screen and (orientation:portrait) {
+					-webkit-transform: rotate(70deg);
+					-moz-transform: rotate(70deg);
+					-o-transform: rotate(70deg);
+					-ms-transform: rotate(70deg);
+					transform: rotate(70deg);
+					width: 100%;
+					height: 200%;
 				}
 			}	
 			p {
@@ -388,11 +471,18 @@ sub, sup { line-height: 0; }
 				transform: rotateY(-180deg);
 				-ms-transform: rotateY(-180deg);
 				-webkit-transform: rotatex(-180deg);
-				font-family: rockwell;
+				font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
 				font-weight: bold;
-				@media all and (min-width: 420px) {
+				@media all and (min-width: 560px) {
+					font-size: 50px;
+				}
+				@media all and (min-width: 768px) {
+					font-size: 90px;
+					top:-20px;
+				}
+				@media all and (min-width: 1024px) {
 					font-size: 130px;
-					top: -30px;
+					top:-30px;
 				}
 			}
 		}
@@ -460,3 +550,22 @@ sub, sup { line-height: 0; }
 }
 
 
+
+
+/*-------------------------------------------    
+	Footer
+-------------------------------------------*/
+.footer {
+}
+.cube {
+	position: absolute;
+	right:0;
+	bottom:0;
+	z-index: 99999;
+	a {
+		width: 50px;
+		height: 50px;
+		display: block;
+		background:black;
+	}
+}

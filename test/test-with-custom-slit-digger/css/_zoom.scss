@@ -15,8 +15,11 @@
 			list-style-type:none; 
 			span {
 				float:left;
-				width: 50%;
+				width: 100%;
 				@include transitions;
+				@media all and (min-width: 560px) {
+					width: 50%;
+				}
 				@media all and (min-width: 768px) {
 					width: 33%;
 				}
@@ -28,6 +31,14 @@
 					display: block;
 					margin:15px;
 					overflow: hidden;
+					 &:hover img {
+					 	@include transitions;
+					 	-webkit-transform: rotateY(30deg);
+						-moz-transform:    rotateY(30deg);
+						-ms-transform:     rotateY(30deg);
+						-o-transform:      rotateY(30deg);
+						transform:         rotateY(30deg);
+					 }
 					img {
 						@include transitions;
 						width: 100%;
@@ -39,6 +50,7 @@
 							height:350px;
 						}
 					}
+
 				}
 			}
 		}
