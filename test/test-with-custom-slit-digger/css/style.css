@@ -230,31 +230,13 @@ sub, sup {
   position: absolute;
   overflow: hidden; }
 
-.gate img {
-  -webkit-transform: rotate(-7deg);
-  -moz-transform: rotate(-7deg);
-  -o-transform: rotate(-7deg);
-  -ms-transform: rotate(-7deg);
-  transform: rotate(-7deg); }
-
 .sl-slide {
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   -webkit-transform: rotate(7deg);
   -moz-transform: rotate(7deg);
   -o-transform: rotate(7deg);
   -ms-transform: rotate(7deg);
   transform: rotate(7deg);
-  /* Portrait */
   /* Landscape */ }
-  @media screen and (orientation: portrait) {
-    .sl-slide {
-      -webkit-transform: rotate(-77deg);
-      -moz-transform: rotate(-77deg);
-      -o-transform: rotate(-77deg);
-      -ms-transform: rotate(-77deg);
-      transform: rotate(-77deg); } }
   @media screen and (orientation: landscape) {
     .sl-slide {
       -webkit-transform: rotate(7deg);
@@ -271,13 +253,6 @@ sub, sup {
       height: 120%;
       left: -10%;
       top: -10%; }
-      @media screen and (orientation: portrait) {
-        .sl-slide .sl-content-wrapper .sl-content {
-          -webkit-transform: rotate(84deg);
-          -moz-transform: rotate(84deg);
-          -o-transform: rotate(84deg);
-          -ms-transform: rotate(84deg);
-          transform: rotate(84deg); } }
     .sl-slide .sl-content-wrapper .background {
       position: absolute;
       z-index: 0;
@@ -317,8 +292,8 @@ sub, sup {
         max-width: 850px; }
         .sl-slide .content-wrapper .button-wrapper .content h1 {
           font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-          font-size: 20px;
-          font-size: 2em;
+          font-size: 18px;
+          font-size: 1.8em;
           margin: 0; }
           @media all and (min-width: 420px) {
             .sl-slide .content-wrapper .button-wrapper .content h1 {
@@ -331,8 +306,8 @@ sub, sup {
               font-size: 5em; } }
         .sl-slide .content-wrapper .button-wrapper .content p {
           font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-          font-size: 17px;
-          font-size: 1.7em;
+          font-size: 16px;
+          font-size: 1.6em;
           margin: 0;
           margin-bottom: 10px; }
           @media all and (min-width: 420px) {
@@ -410,6 +385,12 @@ sub, sup {
         transform: rotate(-77deg);
         width: 180%;
         left: -40%; } }
+    .sl-slide .gate img {
+      -webkit-transform: rotate(-7deg);
+      -moz-transform: rotate(-7deg);
+      -o-transform: rotate(-7deg);
+      -ms-transform: rotate(-7deg);
+      transform: rotate(-7deg); }
     .sl-slide .gate .top-gate-wrapper {
       position: relative;
       width: 100%;
@@ -1007,8 +988,7 @@ sub, sup {
   width: 20px;
   height: 20px;
   margin-top: -20px;
-  cursor: pointer;
-  /*  */ }
+  cursor: pointer; }
   @media all and (min-width: 420px) {
     .nav-arrows > div {
       width: 60px;
@@ -1017,13 +997,38 @@ sub, sup {
 .nav-arrows:hover {
   border-color: rgba(150, 150, 150, 0.9); }
 
+.prev-title {
+  display: none;
+  margin: -40px 0 0 15px; }
+  .prev-title p {
+    color: #fff;
+    font-size: 26px;
+    margin: 0;
+    margin-left: 15px; }
+  .prev-title p + p {
+    margin-left: 0px; }
+
+.next-title {
+  display: none;
+  position: absolute;
+  right: 70px;
+  top: -40px; }
+  .next-title p {
+    color: #fff;
+    font-size: 26px;
+    margin: 0 40px 0 0; }
+  .next-title p + p {
+    display: inline-block;
+    margin: 0 0 0 0; }
+
 .nav-arrows .nav-arrow-prev {
-  left: 5px;
+  left: 5%;
   border-right: none;
   border-top: none;
   width: 0;
   height: 0;
-  position: absolute; }
+  position: absolute;
+  top: 80%; }
   @media all and (min-width: 420px) {
     .nav-arrows .nav-arrow-prev {
       left: 30px;
@@ -1057,36 +1062,15 @@ sub, sup {
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 
-.prev-title {
-  display: none;
-  margin: -40px 0 0 15px; }
-  .prev-title p {
-    color: #fff;
-    font-size: 26px;
-    margin: 0;
-    margin-left: 15px; }
-  .prev-title p + p {
-    margin-left: 0px; }
-
-.next-title {
-  display: none;
-  position: absolute;
-  right: 70px;
-  top: -40px; }
-  .next-title p {
-    color: #fff;
-    font-size: 26px;
-    margin: 0 40px 0 0; }
-  .next-title p + p {
-    display: inline-block;
-    margin: 0 0 0 0; }
-
 .nav-arrows .nav-arrow-next {
-  right: 5px;
+  left: 94%;
   top: 80%;
   text-align: right;
   border-left: none;
   border-bottom: none; }
+  @media all and (min-width: 1024px) {
+    .nav-arrows .nav-arrow-next {
+      left: 97%; } }
   .nav-arrows .nav-arrow-next:before {
     content: "";
     display: block;
@@ -1124,13 +1108,14 @@ sub, sup {
   transition: all .8s ease-out; }
   .next-current p, .prev-current p {
     color: transparent; }
-  .next-current:hover p, .prev-current:hover p {
-    color: #fff; }
+  @media all and (min-width: 420px) {
+    .next-current:hover p, .prev-current:hover p {
+      color: #fff; } }
 
 /* Custom navigation dots */
 .container .nav-dots {
   text-align: center;
-  position: absolute;
+  position: fixed;
   bottom: 50px;
   width: 100%;
   left: 0;

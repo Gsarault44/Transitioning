@@ -125,6 +125,9 @@
 	top: 0;
 	left: 0;
 }
+.nav-arrows {
+
+}
 .nav-arrows > div{
 	position: absolute;
 	z-index: 2000;
@@ -135,7 +138,6 @@
 	//text-indent: -90000px;
 	margin-top: -20px;
 	cursor: pointer;
-	/*  */
 	@media all and (min-width: 420px) {
 		width: 60px;
 		height: 60px;
@@ -145,13 +147,42 @@
 .nav-arrows:hover {
 	border-color: rgba(150,150,150,0.9);
 }
+.prev-title {
+	display: none;
+	margin:-40px 0 0 15px;
+	p {
+		color:#fff;
+		font-size: 26px;
+		margin:0;
+		margin-left: 15px;
+	}
+	p + p {
+		margin-left: 0px;
+	}
+}
+.next-title {
+	display: none;
+	position: absolute;
+	right: 70px;
+	top:-40px;
+	p {
+		color:#fff;
+		font-size: 26px;
+		margin:0 40px 0 0;
+	}
+	p + p {
+		display: inline-block;
+		margin:0 0 0 0;
+	}
+}
 .nav-arrows .nav-arrow-prev {
-	left: 5px;
+	left: 5%;
 	border-right: none;
 	border-top: none;
 	width: 0;
 	height: 0;
 	position: absolute;
+	top:80%;
 	@media all and (min-width: 420px) {
 		left:30px;
 		top:20%;
@@ -189,40 +220,16 @@
 	
 }
 
-.prev-title {
-	display: none;
-	margin:-40px 0 0 15px;
-	p {
-		color:#fff;
-		font-size: 26px;
-		margin:0;
-		margin-left: 15px;
-	}
-	p + p {
-		margin-left: 0px;
-	}
-}
-.next-title {
-	display: none;
-	position: absolute;
-	right: 70px;
-	top:-40px;
-	p {
-		color:#fff;
-		font-size: 26px;
-		margin:0 40px 0 0;
-	}
-	p + p {
-		display: inline-block;
-		margin:0 0 0 0;
-	}
-}
+
 .nav-arrows .nav-arrow-next {
-	right: 5px;
+	left: 94%;
 	top:80%;
 	text-align: right;
 	border-left: none;
 	border-bottom: none;
+	@media all and (min-width: 1024px) {
+		left:97%;
+	}
 	&:before {
 		content: "";
 		display: block;
@@ -261,15 +268,17 @@
 	p {
 		color:transparent;
 	}
-	&:hover p {
-		color:#fff;
+	@media all and (min-width: 420px) {
+		&:hover p {
+			color:#fff;
+		}
 	}
 }
 /* Custom navigation dots */
 .container {
 	.nav-dots {
 		text-align: center;
-		position: absolute;
+		position: fixed;
 		bottom: 50px;
 		width: 100%;
 		left: 0;

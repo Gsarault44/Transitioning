@@ -15,12 +15,12 @@ function hashing() {
 function pagiLabel() {
 	$('.next-title').each(function(){
 		if($('.next-title:last-of-type').hasClass('current')){
-			$('.next-title:first-of-type').addClass('next-current')
+			$('.next-title:first-of-type').addClass('next-current');
 		}
 	});
 	$('.prev-title').each(function(){
 		if($('.prev-title:first-of-type').hasClass('current')){
-			$('.prev-title:last-of-type').addClass('prev-current')
+			$('.prev-title:last-of-type').addClass('prev-current');
 		}
 	});
 }
@@ -93,6 +93,7 @@ function slitSlider(){
 				$('.content').addClass('moveup');
 				hashing();
 				pagiLabel();
+
 			}
 
 		}),
@@ -197,25 +198,35 @@ function zoomLight() {
 
 
 
-/*
-function theIndex(){
-	$('.cube a').click(function(){
-		//$('.slider-wrapper').unslick();
-		$('.slider-wrapper').addClass('indexed');
-		$('.slider-wrapper').removeClass('slick-slider');
-		
-		$(this).addClass('slider', function(){
-			$(this).on('click', function(){
-				$('.slider-wrapper').removeClass('indexed');
-				
-			});
-		});
-
-
-		return false;
-	});
+var agent = navigator.userAgent,
+device = {
+	Android: function() {return agent.match(/Android/i) ? true : false; },
+	iOS: function() {return agent.match(/iPod|iPad|iPhone/i) ? true : false;},
+	Blackberry: function() {return agent.match(/BlackBerry/i) ? true : false;},
+	winPhone: function() {return agent.match(/IEMobile/i) ? true : false;},
+	all: function() {return (device.Android() || device.iOS() || device.Blackberry() || device.winPhone());}
 }
-*/
+if (device.iOS()) {			
+		function checkMode() {
+			var o = window.orientation;
+
+			if (o != 90 && o != -90) {
+				$(".sl-slide").attr("data-orientation","vertical");
+			} else {
+				$(".sl-slide").attr("data-orientation","horizontal");
+			}
+		}
+
+		// dom onload check
+		checkMode();
+
+		// listen to changes
+		$(window).bind('orientationchange', function() {
+			checkMode();
+		});
+	}
+
+
 /********************
 ** jQuery Window resize
 ********************/
@@ -228,9 +239,9 @@ $(window).resize(function(){
 ********************/
 
 jQuery(window).load(function(){
+	slitSlider();
 	pagiLabel();
 	initalClick();
-	slitSlider();
 });
 
 /********************
