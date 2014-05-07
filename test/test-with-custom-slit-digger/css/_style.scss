@@ -214,6 +214,7 @@ sub, sup { line-height: 0; }
 		overflow: auto;
 		width: 75%;
 		margin:0 auto;
+		z-index: 1;
 		-webkit-transform: rotate(-7deg);
 		-moz-transform: rotate(-7deg);
 		-o-transform: rotate(-7deg);
@@ -476,9 +477,31 @@ sub, sup { line-height: 0; }
 	IMAGES FOR EACH SLIDE
 -------------------------------------------*/
 #horsepower-brainpower {
-	.sl-content {
-		//background:transparent url(../images/truck.jpg) no-repeat center center;
-		//background-size: 100%;
+	.sl-content{
+		&:after {
+			content:"";
+			display: block;
+			position: absolute;
+			overflow: hidden;
+			height:100%;
+			width:100%;
+			top:0;
+			left:0;
+			/* fallback */
+		  	background-color: transparent;
+		  	background-repeat: repeat-x;
+		  	/* Safari 4-5, Chrome 1-9 */
+		  	background: -webkit-gradient(linear, 0% 0%, 0% .9, from(#00539B), to(#820053));
+		  	/* Safari 5.1, Chrome 10+ */
+		  	background: -webkit-linear-gradient(top, #00539B, #820053);
+		  	/* Firefox 3.6+ */
+		  	background: -moz-linear-gradient(top, #00539B, #820053);
+		  	/* IE 10 */
+		  	background: -ms-linear-gradient(top, #00539B, #820053);
+		  	/* Opera 11.10+ */
+		  	background: -o-linear-gradient(top, #00539B, #820053);
+		  	opacity: .8;
+		}
 	}
 	.content {
 		h1 {
@@ -491,8 +514,30 @@ sub, sup { line-height: 0; }
 }
 #hindsight-foresight {
 	.sl-content {
-		/* background:transparent url(../images/plane.jpg) no-repeat center center;
-		background-size: 100%; */
+		&:after {
+			content:"";
+			display: block;
+			position: absolute;
+			overflow: hidden;
+			height:100%;
+			width:100%;
+			top:0;
+			left:0;
+			/* fallback */
+		  	background-color: transparent;
+		  	background-repeat: repeat-x;
+		  	/* Safari 4-5, Chrome 1-9 */
+		  	background: -webkit-gradient(linear, 0% 0%, 0% .9, from(#FFCE51), to(#78A13F));
+		  	/* Safari 5.1, Chrome 10+ */
+		  	background: -webkit-linear-gradient(top, #FFCE51, #78A13F);
+		  	/* Firefox 3.6+ */
+		  	background: -moz-linear-gradient(top, #FFCE51, #78A13F);
+		  	/* IE 10 */
+		  	background: -ms-linear-gradient(top, #FFCE51, #78A13F);
+		  	/* Opera 11.10+ */
+		  	background: -o-linear-gradient(top, #FFCE51, #78A13F);
+		  	opacity: .8;
+		}
 	}
 	.content {
 		h1 {
@@ -505,8 +550,30 @@ sub, sup { line-height: 0; }
 }
 #computers-compassion {
 	.sl-content {
-		/* background:transparent url(../images/dish.jpg) no-repeat center center;
-		background-size: 100%; */
+		&:after {
+			content:"";
+			display: block;
+			position: absolute;
+			overflow: hidden;
+			height:100%;
+			width:100%;
+			top:0;
+			left:0;
+			/* fallback */
+		  	background-color: transparent;
+		  	background-repeat: repeat-x;
+		  	/* Safari 4-5, Chrome 1-9 */
+		  	background: -webkit-gradient(linear, 0% 0%, 0% .9, from(#008BB0), to(#00746D));
+		  	/* Safari 5.1, Chrome 10+ */
+		  	background: -webkit-linear-gradient(top, #008BB0, #00746D);
+		  	/* Firefox 3.6+ */
+		  	background: -moz-linear-gradient(top, #008BB0, #00746D);
+		  	/* IE 10 */
+		  	background: -ms-linear-gradient(top, #008BB0, #00746D);
+		  	/* Opera 11.10+ */
+		  	background: -o-linear-gradient(top, #008BB0, #00746D);
+		  	opacity: .8;
+		}
 	}
 	.content {
 		h1 {
@@ -519,8 +586,102 @@ sub, sup { line-height: 0; }
 }
 #slice4 {
 	.sl-content {
-		background:transparent url(../images/circut.jpg) no-repeat center center;
-		background-size: 100%;
+		&:after {
+			content:"";
+			display: block;
+			position: absolute;
+			overflow: hidden;
+			height:100%;
+			width:100%;
+			top:0;
+			left:0;
+			/* fallback */
+		  	background-color: transparent;
+		  	background-repeat: repeat-x;
+		  	/* Safari 4-5, Chrome 1-9 */
+		  	background: -webkit-gradient(linear, 0% 0%, 0% .9, from(#008BB0), to(#00746D));
+		  	/* Safari 5.1, Chrome 10+ */
+		  	background: -webkit-linear-gradient(top, #008BB0, #00746D);
+		  	/* Firefox 3.6+ */
+		  	background: -moz-linear-gradient(top, #008BB0, #00746D);
+		  	/* IE 10 */
+		  	background: -ms-linear-gradient(top, #008BB0, #00746D);
+		  	/* Opera 11.10+ */
+		  	background: -o-linear-gradient(top, #008BB0, #00746D);
+		  	opacity: .8;
+		}
+	}
+	.content {
+		h1 {
+			color:#cdfc94;
+		}
+		p {
+			color:#cdfc94;
+		}
+	}
+}
+#slice5 {
+	.sl-content {
+		&:after {
+			content:"";
+			display: block;
+			position: absolute;
+			overflow: hidden;
+			height:100%;
+			width:100%;
+			top:0;
+			left:0;
+			/* fallback */
+		  	background-color: transparent;
+		  	background-repeat: repeat-x;
+		  	/* Safari 4-5, Chrome 1-9 */
+		  	background: -webkit-gradient(linear, 0% 0%, 0% .9, from(#008BB0), to(#00746D));
+		  	/* Safari 5.1, Chrome 10+ */
+		  	background: -webkit-linear-gradient(top, #008BB0, #00746D);
+		  	/* Firefox 3.6+ */
+		  	background: -moz-linear-gradient(top, #008BB0, #00746D);
+		  	/* IE 10 */
+		  	background: -ms-linear-gradient(top, #008BB0, #00746D);
+		  	/* Opera 11.10+ */
+		  	background: -o-linear-gradient(top, #008BB0, #00746D);
+		  	opacity: .8;
+		}
+	}
+	.content {
+		h1 {
+			color:#cdfc94;
+		}
+		p {
+			color:#cdfc94;
+		}
+	}
+}
+#slice5 {
+	.sl-content {
+		&:after {
+			content:"";
+			display: block;
+			position: absolute;
+			overflow: hidden;
+			height:100%;
+			width:100%;
+			top:0;
+			left:0;
+			/* fallback */
+		  	background-color: transparent;
+		  	background-repeat: repeat-x;
+		  	/* Safari 4-5, Chrome 1-9 */
+		  	background: -webkit-gradient(linear, 0% 0%, 0% .9, from(#008BB0), to(#00746D));
+		  	/* Safari 5.1, Chrome 10+ */
+		  	background: -webkit-linear-gradient(top, #008BB0, #00746D);
+		  	/* Firefox 3.6+ */
+		  	background: -moz-linear-gradient(top, #008BB0, #00746D);
+		  	/* IE 10 */
+		  	background: -ms-linear-gradient(top, #008BB0, #00746D);
+		  	/* Opera 11.10+ */
+		  	background: -o-linear-gradient(top, #008BB0, #00746D);
+		  	opacity: .8;
+		}
 	}
 	.content {
 		h1 {
@@ -539,16 +700,49 @@ sub, sup { line-height: 0; }
 	Footer
 -------------------------------------------*/
 .footer {
-}
-.cube {
-	position: absolute;
-	right:0;
+	position: fixed;
 	bottom:0;
-	z-index: 99999;
-	a {
-		width: 50px;
-		height: 50px;
+	z-index: 9;
+	width: 100%;
+	.footer-logo {
+		
+		background:#000;
 		display: block;
-		background:black;
+		width: 80%;
+		float: left;
+		padding:15px 0;
+		@media all and (min-width: 560px) {
+			width:90%;
+		}
+		@media all and (min-width: 1024px) {
+			width: 95%;
+		}
+		img {
+			margin:0;
+			padding-left:50px; 
+			max-width: 140px;
+		}
+	}
+	.cube {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		margin:0;
+		display: block;
+		float:right;
+		width: 20%;
+		border-left: 1px solid transparent;
+		@media all and (min-width: 560px) {
+			width: 10%;
+		}
+		@media all and (min-width: 1024px) {
+			width: 5%;
+		}
+		a {
+			background:#000 url(../images/cube.png)no-repeat center center; 
+			background-size: 75%;
+			height: 67px;
+			display: block;
+		}
 	}
 }

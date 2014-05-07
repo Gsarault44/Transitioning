@@ -11,6 +11,7 @@
 		display: table-cell;
 		text-align: center;
 		vertical-align: middle;
+		padding-bottom: 90px;
 		div {
 			list-style-type:none; 
 			span {
@@ -38,6 +39,7 @@
 						-ms-transform:     rotateY(30deg);
 						-o-transform:      rotateY(30deg);
 						transform:         rotateY(30deg);
+						box-shadow: 5px 5px 8px -1px #fff;
 					 }
 					img {
 						@include transitions;

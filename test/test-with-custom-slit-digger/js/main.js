@@ -29,7 +29,7 @@ function pagiLabel() {
 function initalClick(){
 	$('.gate').click(function(){
 		$(this).find('.top-gate-wrapper').animate({top: '-40%'}, 600, 'easeOutCubic');
-		$(this).find('.bottom-gate-wrapper').animate({top: '40%'}, 600, 'easeOutCubic', function(){
+		$(this).find('.bottom-gate-wrapper').animate({top: '35%'}, 600, 'easeOutCubic', function(){
 			$('.content-wrapper').css('z-index', '99');
 		});
 	});
@@ -81,8 +81,10 @@ function slitSlider(){
 			},
 			onAfterChange: function(){
 				$('.sl-trans-elems .gate').find('.top-gate-wrapper').stop().animate({top: '-40%'}, 700, 'easeInOutQuad');
-				$('.sl-trans-elems .gate').find('.bottom-gate-wrapper').stop().animate({top: '40%'}, 700,'easeInOutQuad');
-				$('.sl-trans-elems .content-wrapper').delay(400).css('z-index', '9999999');
+				$('.sl-trans-elems .gate').find('.bottom-gate-wrapper').stop().animate({top: '35%'}, 700,'easeInOutQuad', function(){
+					$('.sl-trans-elems .content-wrapper').css('z-index', '9999999');
+				});
+				
 				$(".gate:not(.sl-trans-elems .gate)").find('.top-gate-wrapper').animate({top: '0'}, 600);
 				$(".gate:not(.sl-trans-elems .gate)").find('.bottom-gate-wrapper').animate({top: '0'}, 600);
 				$(".gate img").removeAttr('style');
@@ -91,6 +93,7 @@ function slitSlider(){
 				$('.more').show();
 				$('.expand').slideUp();
 				$('.content').addClass('moveup');
+				
 				hashing();
 				pagiLabel();
 
@@ -207,24 +210,24 @@ device = {
 	all: function() {return (device.Android() || device.iOS() || device.Blackberry() || device.winPhone());}
 }
 if (device.iOS()) {			
-		function checkMode() {
-			var o = window.orientation;
+	function checkMode() {
+		var o = window.orientation;
 
-			if (o != 90 && o != -90) {
-				$(".sl-slide").attr("data-orientation","vertical");
-			} else {
-				$(".sl-slide").attr("data-orientation","horizontal");
-			}
+		if (o != 90 && o != -90) {
+			$(".sl-slide").attr("data-orientation","vertical");
+		} else {
+			$(".sl-slide").attr("data-orientation","horizontal");
 		}
-
-		// dom onload check
-		checkMode();
-
-		// listen to changes
-		$(window).bind('orientationchange', function() {
-			checkMode();
-		});
 	}
+
+	// dom onload check
+	checkMode();
+
+	// listen to changes
+	$(window).bind('orientationchange', function() {
+		checkMode();
+	});
+}
 
 
 /********************
