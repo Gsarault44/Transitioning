@@ -27,12 +27,23 @@ function pagiLabel() {
 
 
 function initalClick(){
-	$('.gate').click(function(){
-		$(this).find('.top-gate-wrapper').animate({top: '-40%'}, 600, 'easeOutCubic');
-		$(this).find('.bottom-gate-wrapper').animate({top: '35%'}, 600, 'easeOutCubic', function(){
-			$('.content-wrapper').css('z-index', '99');
+	if ($(window).width() < 768) {
+	   	$('.gate').click(function(){
+			$(this).find('.top-gate-wrapper').animate({top: '-45%'}, 600, 'easeOutCubic');
+			$(this).find('.bottom-gate-wrapper').animate({top: '40%'}, 600, 'easeOutCubic', function(){
+				$('.content-wrapper').css('z-index', '99');
+			});
 		});
-	});
+	}
+	else {
+   		$('.gate').click(function(){
+			$(this).find('.top-gate-wrapper').animate({top: '-40%'}, 600, 'easeOutCubic');
+			$(this).find('.bottom-gate-wrapper').animate({top: '35%'}, 600, 'easeOutCubic', function(){
+				$('.content-wrapper').css('z-index', '99');
+			});
+		});
+	}
+	
 }
 function moreContent(){
 	$('.hide').hide();

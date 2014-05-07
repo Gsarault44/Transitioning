@@ -130,17 +130,10 @@
 }
 .nav-arrows > div{
 	position: absolute;
+	display: block;
 	z-index: 2000;
-	width: 20px;
-	height: 20px;
-	//border: 2px solid #ddd;
-	//border: 2px solid rgba(255,255,255,0.4);
-	//text-indent: -90000px;
-	margin-top: -20px;
 	cursor: pointer;
 	@media all and (min-width: 420px) {
-		width: 60px;
-		height: 60px;
 	}
 }
 
@@ -149,12 +142,13 @@
 }
 .prev-title {
 	display: none;
-	margin:-40px 0 0 15px;
+	margin:-15px 0 0 15px;
 	p {
 		color:#fff;
 		font-size: 26px;
 		margin:0;
 		margin-left: 15px;
+		line-height: 24px;
 	}
 	p + p {
 		margin-left: 0px;
@@ -163,9 +157,10 @@
 .next-title {
 	display: none;
 	position: absolute;
-	right: 70px;
-	top:-40px;
+	right: 0;
+	top:-10px;
 	p {
+		line-height: 24px;
 		color:#fff;
 		font-size: 26px;
 		margin:0 40px 0 0;
@@ -179,10 +174,9 @@
 	left: 5%;
 	border-right: none;
 	border-top: none;
-	width: 0;
-	height: 0;
 	position: absolute;
-	top:80%;
+	top:75%;
+	text-align: left;
 	@media all and (min-width: 420px) {
 		left:30px;
 		top:20%;
@@ -190,32 +184,42 @@
 	&:before {
 		content: "";
 		display: block;
+		width:30px;
+		height:30px;
 		position: absolute;
-		top:-50px;
+		top:-14px;
 		left:2px;
-		width: 0;
-		height: 50px;
 		border-left: 2px solid #fff;
 		-webkit-transform: rotate(45deg);
 		-moz-transform: rotate(45deg);
 		-o-transform: rotate(45deg);
 		-ms-transform: rotate(45deg);
 		transform: rotate(45deg);
+		@media all and (min-width: 420px) {
+			width: 60px;
+			height: 60px;
+		}
 	}
 	&:after {
 		content: "";
 		display: block;
+		width: 30px;
+		height:30px;
 		position: absolute;
 		top:-15px;
 		left:2px;
-		width: 0;
-		height: 50px;
 		border-left: 2px solid #fff;
 		-webkit-transform: rotate(-45deg);
 		-moz-transform: rotate(-45deg);
 		-o-transform: rotate(-45deg);
 		-ms-transform: rotate(-45deg);
 		transform: rotate(-45deg);
+		@media all and (min-width: 420px) {
+			width: 60px;
+			height: 60px;
+			top:-15px;
+			left:2px;
+		}
 	}
 	
 }
@@ -223,10 +227,10 @@
 
 .nav-arrows .nav-arrow-next {
 	left: 94%;
-	top:80%;
-	text-align: right;
+	top:70%;
 	border-left: none;
 	border-bottom: none;
+	text-align: right;
 	@media all and (min-width: 1024px) {
 		left:97%;
 	}
@@ -234,37 +238,50 @@
 		content: "";
 		display: block;
 		position: absolute;
-		top:-50px;
+		top:-12px;
 		left:2px;
-		width: 0;
-		height: 50px;
+		width: 30px;
+		height: 30px;
 		border-left: 2px solid #fff;
 		-webkit-transform: rotate(-45deg);
 		-moz-transform: rotate(-45deg);
 		-o-transform: rotate(-45deg);
 		-ms-transform: rotate(-45deg);
 		transform: rotate(-45deg);
+		@media all and (min-width: 420px) {
+			width: 60px;
+			height: 60px;
+			top:-57px;
+			left:2px;
+		}
 	}
 	&:after {
 		content: "";
 		display: block;
 		position: absolute;
-		top:-15px;
 		left:2px;
-		width: 0;
-		height: 50px;
+		top:30px;
+		width: 30px;
+		height: 30px;
 		border-left: 2px solid #fff;
 		-webkit-transform: rotate(45deg);
 		-moz-transform: rotate(45deg);
 		-o-transform: rotate(45deg);
 		-ms-transform: rotate(45deg);
 		transform: rotate(45deg);
+		@media all and (min-width: 420px) {
+			width: 60px;
+			height: 60px;
+			top:25px;
+			left:2px;
+		}
 	}
 }
 
 .next-current, .prev-current {
-	display:block;
+	display: block;
 	@include transitions;
+
 	p {
 		color:transparent;
 	}
@@ -279,10 +296,12 @@
 	.nav-dots {
 		text-align: center;
 		position: fixed;
-		bottom: 50px;
+		bottom: 60px;
 		width: 100%;
 		left: 0;
 		z-index: 1000;
+		background:#000;
+		padding:5px 0;
 	}
 
 	.nav-dots span {
@@ -290,11 +309,15 @@
 		float:left;
 		position: relative;
 		width: 16.666666667%;
-		height: 10px;
+		height: 5px;
 		background: #ddd;
 		background: #21a3ba;
 		cursor: pointer;
 		opacity: .25;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		border-right:2px solid #000; 
 	}
 	.nav-dots span:nth-of-type(2) {
 		background:#753d78 ;
@@ -315,12 +338,12 @@
 	.nav-dots span.nav-dot-current {
 		opacity: 1;
 		vertical-align: bottom;
-		margin-top: -2px;
+		margin-top: -3px;
 		content: "";
-		height: 15px;
-		-moz-box-shadow:    1px 1px 3px 0px #ccc;
-		-webkit-box-shadow: 1px 1px 3px 0px #ccc;
-		box-shadow:         1px 1px 3px 0px #ccc;
+		height: 8px;
+		-moz-box-shadow:    0px 2px 6px -2px #ccc;
+		-webkit-box-shadow: 0px 2px 6px -2px #ccc;
+		box-shadow:         0px 2px 6px -2px #ccc;
 	}
 }
 
