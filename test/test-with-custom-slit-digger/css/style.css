@@ -293,8 +293,8 @@ sub, sup {
         max-width: 850px; }
         .sl-slide .content-wrapper .button-wrapper .content h1 {
           font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-          font-size: 18px;
-          font-size: 1.8em;
+          font-size: 16px;
+          font-size: 1.6em;
           margin: 0; }
           @media all and (min-width: 420px) {
             .sl-slide .content-wrapper .button-wrapper .content h1 {
@@ -307,8 +307,8 @@ sub, sup {
               font-size: 5em; } }
         .sl-slide .content-wrapper .button-wrapper .content p {
           font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-          font-size: 16px;
-          font-size: 1.6em;
+          font-size: 12px;
+          font-size: 1.2em;
           margin: 0;
           margin-bottom: 10px; }
           @media all and (min-width: 420px) {
