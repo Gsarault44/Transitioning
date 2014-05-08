@@ -133,71 +133,40 @@
 	display: block;
 	z-index: 2000;
 	cursor: pointer;
-	@media all and (min-width: 420px) {
+	@media all and (min-width: 560px) {
 	}
 }
 
 .nav-arrows:hover {
 	border-color: rgba(150,150,150,0.9);
 }
-.prev-title {
-	display: none;
-	margin:-15px 0 0 15px;
-	p {
-		color:#fff;
-		font-size: 26px;
-		margin:0;
-		margin-left: 15px;
-		line-height: 24px;
-	}
-	p + p {
-		margin-left: 0px;
-	}
-}
-.next-title {
-	display: none;
-	position: absolute;
-	right: 0;
-	top:-10px;
-	p {
-		line-height: 24px;
-		color:#fff;
-		font-size: 26px;
-		margin:0 40px 0 0;
-	}
-	p + p {
-		display: inline-block;
-		margin:0 0 0 0;
-	}
-}
+
+
 .nav-arrows .nav-arrow-prev {
-	left: 5%;
-	border-right: none;
-	border-top: none;
 	position: absolute;
+	left: 15px;
 	top:75%;
 	text-align: left;
-	@media all and (min-width: 420px) {
-		left:30px;
+	width:200px;
+	height:100px;
+	@media all and (min-width: 560px) {
+		left:5px;
 		top:20%;
 	}
 	&:before {
 		content: "";
 		display: block;
-		width:30px;
 		height:30px;
 		position: absolute;
-		top:-15px;
-		left:2px;
-		border-left: 2px solid #fff;
+		border-left: 3px solid #fff;
 		-webkit-transform: rotate(45deg);
 		-moz-transform: rotate(45deg);
 		-o-transform: rotate(45deg);
 		-ms-transform: rotate(45deg);
 		transform: rotate(45deg);
-		@media all and (min-width: 420px) {
-			width: 60px;
+		@media all and (min-width: 560px) {
 			height: 60px;
+			left:22px;
 		}
 	}
 	&:after {
@@ -206,19 +175,42 @@
 		width: 30px;
 		height:30px;
 		position: absolute;
-		top:-15px;
-		left:2px;
-		border-left: 2px solid #fff;
+		top:10px;
+		left:-4px;
+		border-left: 3px solid #fff;
 		-webkit-transform: rotate(-45deg);
 		-moz-transform: rotate(-45deg);
 		-o-transform: rotate(-45deg);
 		-ms-transform: rotate(-45deg);
 		transform: rotate(-45deg);
-		@media all and (min-width: 420px) {
+		@media all and (min-width: 560px) {
 			width: 60px;
 			height: 60px;
-			top:-15px;
-			left:2px;
+			top:20px;
+			left:12px;
+		}
+	}
+	@media all and (min-width: 768px) {
+		&:hover {
+			.prev-current {
+				display: block;
+			}
+		}
+	}
+	.prev-title {
+		display: none;
+		position: relative;
+			left: 30px;
+			top: 20px;
+		p {
+			color:#fff;
+			font-size: 26px;
+			margin:0;
+			margin-left: 25px;
+			line-height: 24px;
+		}
+		p + p {
+			margin-left: 0px;
 		}
 	}
 	
@@ -226,54 +218,73 @@
 
 
 .nav-arrows .nav-arrow-next {
-	left: 94%;
-	top:70%;
+	right:15px;
+	top: 75%;
 	border-left: none;
 	border-bottom: none;
 	text-align: right;
-	@media all and (min-width: 1024px) {
-		left:97%;
+	width: 200px;
+	height: 100px;
+	@media all and (min-width: 560px) {
+		right:5px;
 	}
 	&:before {
 		content: "";
 		display: block;
 		position: absolute;
-		top:10px;
-		left:-20px;
-		width: 30px;
+		right:0;
 		height: 30px;
-		border-left: 2px solid #fff;
+		border-left: 3px solid #fff;
 		-webkit-transform: rotate(135deg);
 		-moz-transform: rotate(135deg);
 		-o-transform: rotate(135deg);
 		-ms-transform: rotate(135deg);
 		transform: rotate(135deg);
-		@media all and (min-width: 420px) {
-			width: 60px;
+		@media all and (min-width: 560px) {
 			height: 60px;
-			top:-17px;
-			left:-38px;
+			right:20px;
 		}
 	}
 	&:after {
 		content: "";
 		display: block;
 		position: absolute;
-		left:2px;
-		top:30px;
-		width: 30px;
+		right:0;
 		height: 30px;
-		border-left: 2px solid #fff;
+		border-left: 3px solid #fff;
 		-webkit-transform: rotate(45deg);
 		-moz-transform: rotate(45deg);
 		-o-transform: rotate(45deg);
 		-ms-transform: rotate(45deg);
 		transform: rotate(45deg);
-		@media all and (min-width: 420px) {
-			width: 60px;
+		top:17px;
+		@media all and (min-width: 560px) {
 			height: 60px;
-			top:25px;
-			left:2px;
+			right: 20px;
+			top:40px;
+		}
+	}
+	@media all and (min-width: 768px) {
+		&:hover {
+			.next-current {
+				display: block;
+			}
+		}
+	}
+	.next-title {
+		display: none;
+		position: absolute;
+		right: 30px;
+		top: 25px;
+		p {
+			line-height: 24px;
+			color:#fff;
+			font-size: 26px;
+			margin:0 40px 0 0;
+		}
+		p + p {
+			display: inline-block;
+			margin:0 0 0 0;
 		}
 	}
 }
@@ -281,15 +292,6 @@
 .next-current, .prev-current {
 	display: block;
 	@include transitions;
-
-	p {
-		color:transparent;
-	}
-	@media all and (min-width: 420px) {
-		&:hover p {
-			color:#fff;
-		}
-	}
 }
 /* Custom navigation dots */
 .container {

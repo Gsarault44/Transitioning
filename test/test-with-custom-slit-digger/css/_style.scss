@@ -209,7 +209,7 @@ sub, sup { line-height: 0; }
 	} 
 	.content-wrapper {
 		top:12%;
-		left: -5%;
+		left: 0;
 		position: relative;
 		overflow: auto;
 		width: 75%;
@@ -227,6 +227,7 @@ sub, sup { line-height: 0; }
 		@media all and (min-width: 768px) {
 			width: 68%;
 			top:20%;
+			left: 0;
 		}
 		.button-wrapper{
 			position: relative;	

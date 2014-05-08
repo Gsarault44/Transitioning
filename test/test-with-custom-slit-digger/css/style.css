@@ -265,7 +265,7 @@ sub, sup {
       transform: rotate(-7deg); }
   .sl-slide .content-wrapper {
     top: 12%;
-    left: -5%;
+    left: 0;
     position: relative;
     overflow: auto;
     width: 75%;
@@ -283,7 +283,8 @@ sub, sup {
     @media all and (min-width: 768px) {
       .sl-slide .content-wrapper {
         width: 68%;
-        top: 20%; } }
+        top: 20%;
+        left: 0; } }
     .sl-slide .content-wrapper .button-wrapper {
       position: relative; }
       .sl-slide .content-wrapper .button-wrapper .content {
@@ -1165,131 +1166,130 @@ sub, sup {
 .nav-arrows:hover {
   border-color: rgba(150, 150, 150, 0.9); }
 
-.prev-title {
-  display: none;
-  margin: -15px 0 0 15px; }
-  .prev-title p {
-    color: #fff;
-    font-size: 26px;
-    margin: 0;
-    margin-left: 15px;
-    line-height: 24px; }
-  .prev-title p + p {
-    margin-left: 0px; }
-
-.next-title {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: -10px; }
-  .next-title p {
-    line-height: 24px;
-    color: #fff;
-    font-size: 26px;
-    margin: 0 40px 0 0; }
-  .next-title p + p {
-    display: inline-block;
-    margin: 0 0 0 0; }
-
 .nav-arrows .nav-arrow-prev {
-  left: 5%;
-  border-right: none;
-  border-top: none;
   position: absolute;
+  left: 15px;
   top: 75%;
-  text-align: left; }
-  @media all and (min-width: 420px) {
+  text-align: left;
+  width: 200px;
+  height: 100px; }
+  @media all and (min-width: 560px) {
     .nav-arrows .nav-arrow-prev {
-      left: 30px;
+      left: 5px;
       top: 20%; } }
   .nav-arrows .nav-arrow-prev:before {
     content: "";
     display: block;
-    width: 30px;
     height: 30px;
     position: absolute;
-    top: -15px;
-    left: 2px;
-    border-left: 2px solid #fff;
+    border-left: 3px solid #fff;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg); }
-    @media all and (min-width: 420px) {
+    @media all and (min-width: 560px) {
       .nav-arrows .nav-arrow-prev:before {
-        width: 60px;
-        height: 60px; } }
+        height: 60px;
+        left: 22px; } }
   .nav-arrows .nav-arrow-prev:after {
     content: "";
     display: block;
     width: 30px;
     height: 30px;
     position: absolute;
-    top: -15px;
-    left: 2px;
-    border-left: 2px solid #fff;
+    top: 10px;
+    left: -4px;
+    border-left: 3px solid #fff;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg); }
-    @media all and (min-width: 420px) {
+    @media all and (min-width: 560px) {
       .nav-arrows .nav-arrow-prev:after {
         width: 60px;
         height: 60px;
-        top: -15px;
-        left: 2px; } }
+        top: 20px;
+        left: 12px; } }
+  @media all and (min-width: 768px) {
+    .nav-arrows .nav-arrow-prev:hover .prev-current {
+      display: block; } }
+  .nav-arrows .nav-arrow-prev .prev-title {
+    display: none;
+    position: relative;
+    left: 30px;
+    top: 20px; }
+    .nav-arrows .nav-arrow-prev .prev-title p {
+      color: #fff;
+      font-size: 26px;
+      margin: 0;
+      margin-left: 25px;
+      line-height: 24px; }
+    .nav-arrows .nav-arrow-prev .prev-title p + p {
+      margin-left: 0px; }
 
 .nav-arrows .nav-arrow-next {
-  left: 94%;
-  top: 70%;
+  right: 15px;
+  top: 75%;
   border-left: none;
   border-bottom: none;
-  text-align: right; }
-  @media all and (min-width: 1024px) {
+  text-align: right;
+  width: 200px;
+  height: 100px; }
+  @media all and (min-width: 560px) {
     .nav-arrows .nav-arrow-next {
-      left: 97%; } }
+      right: 5px; } }
   .nav-arrows .nav-arrow-next:before {
     content: "";
     display: block;
     position: absolute;
-    top: 10px;
-    left: -20px;
-    width: 30px;
+    right: 0;
     height: 30px;
-    border-left: 2px solid #fff;
+    border-left: 3px solid #fff;
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
     -o-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
     transform: rotate(135deg); }
-    @media all and (min-width: 420px) {
+    @media all and (min-width: 560px) {
       .nav-arrows .nav-arrow-next:before {
-        width: 60px;
         height: 60px;
-        top: -17px;
-        left: -38px; } }
+        right: 20px; } }
   .nav-arrows .nav-arrow-next:after {
     content: "";
     display: block;
     position: absolute;
-    left: 2px;
-    top: 30px;
-    width: 30px;
+    right: 0;
     height: 30px;
-    border-left: 2px solid #fff;
+    border-left: 3px solid #fff;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
-    transform: rotate(45deg); }
-    @media all and (min-width: 420px) {
+    transform: rotate(45deg);
+    top: 17px; }
+    @media all and (min-width: 560px) {
       .nav-arrows .nav-arrow-next:after {
-        width: 60px;
         height: 60px;
-        top: 25px;
-        left: 2px; } }
+        right: 20px;
+        top: 40px; } }
+  @media all and (min-width: 768px) {
+    .nav-arrows .nav-arrow-next:hover .next-current {
+      display: block; } }
+  .nav-arrows .nav-arrow-next .next-title {
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 25px; }
+    .nav-arrows .nav-arrow-next .next-title p {
+      line-height: 24px;
+      color: #fff;
+      font-size: 26px;
+      margin: 0 40px 0 0; }
+    .nav-arrows .nav-arrow-next .next-title p + p {
+      display: inline-block;
+      margin: 0 0 0 0; }
 
 .next-current, .prev-current {
   display: block;
@@ -1297,11 +1297,6 @@ sub, sup {
   -moz-transition: all .8s ease-out;
   -o-transition: all .8s ease-out;
   transition: all .8s ease-out; }
-  .next-current p, .prev-current p {
-    color: transparent; }
-  @media all and (min-width: 420px) {
-    .next-current:hover p, .prev-current:hover p {
-      color: #fff; } }
 
 /* Custom navigation dots */
 .container .nav-dots {
