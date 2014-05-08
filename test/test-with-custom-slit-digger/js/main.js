@@ -164,7 +164,6 @@ function slitSlider(){
 						$pagiP.removeClass( 'current' );
 						$dot.addClass( 'current' );
 					}
-					slitslider.jump( i + 1 );
 				});
 				$('.prev-title:first-of-type').click(function(){
 					$('.prev-title:last-of-type').addClass('current');
@@ -177,7 +176,6 @@ function slitSlider(){
 						$pagiN.removeClass( 'current' );
 						$dot.addClass( 'current' );
 					}
-					slitslider.jump( i + 1 );
 				});
 			});
 			
