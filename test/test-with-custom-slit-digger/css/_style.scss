@@ -285,6 +285,8 @@ sub, sup { line-height: 0; }
 					}
 				}
 				.expand p {
+					letter-spacing: 0;
+					font-family:Arial, Helvetica, sans-serif;
 					font-size: 15px;
 					font-size: 1.5em;
 					line-height: 17px;
@@ -414,10 +416,10 @@ sub, sup { line-height: 0; }
 			}
 			p {
 				position: absolute;
-				font-size: 30px;
+				font-size: 40px;
 				color: white;
 				margin:0;
-				bottom: -7px;
+				bottom: -9px;
 				text-transform: uppercase;
 				opacity: 0.8;
 				display: block;
@@ -426,8 +428,13 @@ sub, sup { line-height: 0; }
 				font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
 				font-weight: bold;
 				z-index: 2;
-				@media all and (min-width: 560px) {
+				@media all and (min-width: 420px) {
 					font-size: 50px;
+					bottom:-11px;
+				}
+				@media all and (min-width: 560px) {
+					font-size: 80px;
+					bottom:-18px;
 				}
 				@media all and (min-width: 768px) {
 					font-size: 90px;
@@ -490,9 +497,9 @@ sub, sup { line-height: 0; }
 			}	
 			p {
 				position: absolute;
-				font-size: 30px;
+				font-size: 40px;
 				color: white;
-				top: -7px;
+				top: -9px;
 				margin:0;
 				text-transform: uppercase;
 				opacity: 0.8;
@@ -505,8 +512,13 @@ sub, sup { line-height: 0; }
 				font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
 				font-weight: bold;
 				z-index: 2;
-				@media all and (min-width: 560px) {
+				@media all and (min-width: 420px) {
 					font-size: 50px;
+					top:-11px;
+				}
+				@media all and (min-width: 560px) {
+					font-size: 80px;
+					top:-18px;
 				}
 				@media all and (min-width: 768px) {
 					font-size: 90px;
@@ -555,6 +567,10 @@ sub, sup { line-height: 0; }
 	}
 }
 #hindsight-foresight {
+	.gate .top-gate-wrapper .top-gate {
+		top:-50%;
+	}
+
 	.sl-content {
 		/* &:after {
 			content:"";
