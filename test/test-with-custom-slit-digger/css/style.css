@@ -437,7 +437,7 @@ sub, sup {
         top: 0;
         left: 0;
         background: #000;
-        opacity: .3;
+        opacity: .2;
         z-index: 1; }
       .sl-slide .gate .top-gate-wrapper .top-gate {
         width: 110%;
@@ -503,7 +503,7 @@ sub, sup {
         top: 0;
         left: 0;
         background: #000;
-        opacity: .3;
+        opacity: .2;
         z-index: 1; }
       .sl-slide .gate .bottom-gate-wrapper .bottom-gate {
         width: 100%;
@@ -514,7 +514,7 @@ sub, sup {
           .sl-slide .gate .bottom-gate-wrapper .bottom-gate {
             width: 100%;
             height: auto;
-            margin-top: -50%; } }
+            margin-top: -20%; } }
         @media screen and (orientation: portrait) {
           .sl-slide .gate .bottom-gate-wrapper .bottom-gate {
             -webkit-transform: rotate(70deg);

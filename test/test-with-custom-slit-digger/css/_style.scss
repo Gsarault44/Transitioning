@@ -393,7 +393,7 @@ sub, sup { line-height: 0; }
 				top:0;
 				left:0;
 			  	background: #000;
-			  	opacity: .3;
+			  	opacity: .2;
 			  	z-index: 1;
 			}
 			.top-gate {
@@ -463,7 +463,7 @@ sub, sup { line-height: 0; }
 				top:0;
 				left:0;
 			  	background: #000;
-			  	opacity: .3;
+			  	opacity: .2;
 			  	z-index: 1;
 			}
 			
@@ -476,7 +476,7 @@ sub, sup { line-height: 0; }
 				@media all and (min-width: 420px) {
 					width: 100%;
 					height: auto;
-					margin-top: -50%;
+					margin-top: -20%;
 				}
 				@media screen and (orientation:portrait) {
 					-webkit-transform: rotate(70deg);
