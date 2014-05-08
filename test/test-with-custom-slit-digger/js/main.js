@@ -24,13 +24,17 @@ function pagiLabel() {
 		}
 	});
 }
-
+function newsletter() {
+	$('.subscribe-block').click(function(){
+		$('.subscribe-block form').fadeToggle();
+	});
+}
 
 function initalClick(){
 	if ($(window).width() < 768) {
-	   	$('.gate').click(function(){
-			$(this).find('.top-gate-wrapper').animate({top: '-45%'}, 600, 'easeOutCubic');
-			$(this).find('.bottom-gate-wrapper').animate({top: '40%'}, 600, 'easeOutCubic', function(){
+		$('.gate').click(function(){
+			$(this).find('.top-gate-wrapper').animate({top: '-43%'}, 600, 'easeOutCubic');
+			$(this).find('.bottom-gate-wrapper').animate({top: '42%'}, 600, 'easeOutCubic', function(){
 				$('.content-wrapper').css('z-index', '99');
 			});
 		});
@@ -91,13 +95,18 @@ function slitSlider(){
 				
 			},
 			onAfterChange: function(){
-				$('.sl-trans-elems .gate').find('.top-gate-wrapper').stop().animate({top: '-40%'}, 700, 'easeInOutQuad');
-				$('.sl-trans-elems .gate').find('.bottom-gate-wrapper').stop().animate({top: '35%'}, 700,'easeInOutQuad', function(){
+				var topGate = $('.sl-trans-elems .gate').find('.top-gate-wrapper');
+				var bottomGate = $('.sl-trans-elems .gate').find('.bottom-gate-wrapper');
+				var notTopGate = $(".gate:not(.sl-trans-elems .gate)").find('.top-gate-wrapper');
+				var notBottomGate = $(".gate:not(.sl-trans-elems .gate)").find('.bottom-gate-wrapper');
+
+				$(topGate).stop().animate({top: '-40%'}, 700, 'easeInOutQuad');
+				$(bottomGate).stop().animate({top: '35%'}, 700,'easeInOutQuad', function(){
 					$('.sl-trans-elems .content-wrapper').css('z-index', '9999999');
 				});
+				$(notTopGate).animate({top: '0'}, 600);
+				$(notBottomGate).animate({top: '0'}, 600);
 				
-				$(".gate:not(.sl-trans-elems .gate)").find('.top-gate-wrapper').animate({top: '0'}, 600);
-				$(".gate:not(.sl-trans-elems .gate)").find('.bottom-gate-wrapper').animate({top: '0'}, 600);
 				$(".gate img").removeAttr('style');
 				$('.content-wrapper').removeAttr('style');
 				$('.content-wrapper').removeClass('b-border');
@@ -294,5 +303,5 @@ jQuery(document).ready(function(){
 	moreContent();
 	zoomLight();
 	orientation();
-	
+	newsletter();
 });

@@ -303,12 +303,15 @@
 	.nav-dots {
 		text-align: center;
 		position: fixed;
-		bottom: 60px;
+		bottom: 49px;
 		width: 100%;
 		left: 0;
 		z-index: 1000;
 		background:#000;
 		padding:5px 0;
+		@media all and (min-width: 560px) {
+			bottom: 60px;
+		}
 	}
 
 	.nav-dots span {
