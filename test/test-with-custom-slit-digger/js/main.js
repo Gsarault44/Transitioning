@@ -213,14 +213,14 @@ function zoomLight() {
 
 
 var agent = navigator.userAgent,
-device = {
-	Android: function() {return agent.match(/Android/i) ? true : false; },
-	iOS: function() {return agent.match(/iPod|iPad|iPhone/i) ? true : false;},
-	Blackberry: function() {return agent.match(/BlackBerry/i) ? true : false;},
-	winPhone: function() {return agent.match(/IEMobile/i) ? true : false;},
-	all: function() {return (device.Android() || device.iOS() || device.Blackberry() || device.winPhone());}
-}
-if (device.iOS()) {			
+	device = {
+		Android: function() {return agent.match(/Android/i) ? true : false; },
+		iOS: function() {return agent.match(/iPod|iPad|iPhone/i) ? true : false;},
+		Blackberry: function() {return agent.match(/BlackBerry/i) ? true : false;},
+		winPhone: function() {return agent.match(/IEMobile/i) ? true : false;},
+		all: function() {return (device.Android() || device.iOS() || device.Blackberry() || device.winPhone());}
+	};
+	if (device.iOS()) {			
 	function checkMode() {
 		var o = window.orientation;
 
@@ -243,12 +243,28 @@ function orientation(){
 	var windowH = $(window).height()
 	var windowW = $(window).width()
 	if (windowH > windowW) {
-		console.log('height is more');
 		$(".sl-slide").attr("data-orientation","vertical");
 	}else {
-		console.log('width is more');
 		$(".sl-slide").attr("data-orientation","horizontal");
 	}
+
+	/*if(event.orientation){
+		if(event.orientation == 'portrait'){
+			$(".sl-slide").attr("data-orientation","vertical");
+		}
+		else if(event.orientation == 'landscape') {
+			$(".sl-slide").attr("data-orientation","horizontal");
+		}
+	}
+	if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+	    var viewportmeta = document.querySelector('meta[name="viewport"]');
+	    if (viewportmeta) {
+	        viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
+	        document.body.addEventListener('gesturestart', function () {
+	            viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+	        }, false);
+	    }
+	}*/
 }
 
 
