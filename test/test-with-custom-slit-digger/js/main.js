@@ -239,6 +239,17 @@ if (device.iOS()) {
 		checkMode();
 	});
 }
+function orientation(){
+	var windowH = $(window).height()
+	var windowW = $(window).width()
+	if (windowH > windowW) {
+		console.log('height is more');
+		$(".sl-slide").attr("data-orientation","vertical");
+	}else {
+		console.log('width is more');
+		$(".sl-slide").attr("data-orientation","horizontal");
+	}
+}
 
 
 /********************
@@ -246,7 +257,7 @@ if (device.iOS()) {
 ********************/
 
 $(window).resize(function(){
-
+	orientation();
 });
 /********************
 ** jQuery Window Load
@@ -266,5 +277,6 @@ jQuery(document).ready(function(){
 	//theIndex();
 	moreContent();
 	zoomLight();
+	orientation();
 	
 });

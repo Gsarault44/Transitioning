@@ -187,7 +187,7 @@
 		width:30px;
 		height:30px;
 		position: absolute;
-		top:-14px;
+		top:-15px;
 		left:2px;
 		border-left: 2px solid #fff;
 		-webkit-transform: rotate(45deg);
@@ -238,21 +238,21 @@
 		content: "";
 		display: block;
 		position: absolute;
-		top:-12px;
-		left:2px;
+		top:10px;
+		left:-20px;
 		width: 30px;
 		height: 30px;
 		border-left: 2px solid #fff;
-		-webkit-transform: rotate(-45deg);
-		-moz-transform: rotate(-45deg);
-		-o-transform: rotate(-45deg);
-		-ms-transform: rotate(-45deg);
-		transform: rotate(-45deg);
+		-webkit-transform: rotate(135deg);
+		-moz-transform: rotate(135deg);
+		-o-transform: rotate(135deg);
+		-ms-transform: rotate(135deg);
+		transform: rotate(135deg);
 		@media all and (min-width: 420px) {
 			width: 60px;
 			height: 60px;
-			top:-57px;
-			left:2px;
+			top:-17px;
+			left:-38px;
 		}
 	}
 	&:after {

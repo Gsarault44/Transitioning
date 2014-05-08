@@ -209,7 +209,7 @@ sub, sup { line-height: 0; }
 	} 
 	.content-wrapper {
 		top:12%;
-		left: 0%;
+		left: -5%;
 		position: relative;
 		overflow: auto;
 		width: 75%;
@@ -235,8 +235,8 @@ sub, sup { line-height: 0; }
 				padding-bottom: 45px;	
 				h1 {
 					font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-					font-size: 16px;
-					font-size: 1.6em;
+					font-size: 18px;
+					font-size: 1.8em;
 					margin:0;
 					@media all and (min-width: 420px) {
 						margin-bottom: 8px;
@@ -254,14 +254,14 @@ sub, sup { line-height: 0; }
 				}
 				p {
 					font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-					font-size: 12px;
-					font-size: 1.2em;
+					font-size: 16px;
+					font-size: 1.6em;
 					margin:0;
 					margin-bottom: 10px;
 					@media all and (min-width: 420px) {
 						margin-bottom: 18px;
 						font-size: 18px;
-						font-size: 1.6em;
+						font-size: 1.8em;
 						line-height: 20px;
 					}
 					@media all and (min-width: 768px) {

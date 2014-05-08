@@ -265,7 +265,7 @@ sub, sup {
       transform: rotate(-7deg); }
   .sl-slide .content-wrapper {
     top: 12%;
-    left: 0%;
+    left: -5%;
     position: relative;
     overflow: auto;
     width: 75%;
@@ -291,8 +291,8 @@ sub, sup {
         padding-bottom: 45px; }
         .sl-slide .content-wrapper .button-wrapper .content h1 {
           font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-          font-size: 16px;
-          font-size: 1.6em;
+          font-size: 18px;
+          font-size: 1.8em;
           margin: 0; }
           @media all and (min-width: 420px) {
             .sl-slide .content-wrapper .button-wrapper .content h1 {
@@ -309,15 +309,15 @@ sub, sup {
               font-size: 5em; } }
         .sl-slide .content-wrapper .button-wrapper .content p {
           font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-          font-size: 12px;
-          font-size: 1.2em;
+          font-size: 16px;
+          font-size: 1.6em;
           margin: 0;
           margin-bottom: 10px; }
           @media all and (min-width: 420px) {
             .sl-slide .content-wrapper .button-wrapper .content p {
               margin-bottom: 18px;
               font-size: 18px;
-              font-size: 1.6em;
+              font-size: 1.8em;
               line-height: 20px; } }
           @media all and (min-width: 768px) {
             .sl-slide .content-wrapper .button-wrapper .content p {
@@ -1208,7 +1208,7 @@ sub, sup {
     width: 30px;
     height: 30px;
     position: absolute;
-    top: -14px;
+    top: -15px;
     left: 2px;
     border-left: 2px solid #fff;
     -webkit-transform: rotate(45deg);
@@ -1254,22 +1254,22 @@ sub, sup {
     content: "";
     display: block;
     position: absolute;
-    top: -12px;
-    left: 2px;
+    top: 10px;
+    left: -20px;
     width: 30px;
     height: 30px;
     border-left: 2px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg); }
     @media all and (min-width: 420px) {
       .nav-arrows .nav-arrow-next:before {
         width: 60px;
         height: 60px;
-        top: -57px;
-        left: 2px; } }
+        top: -17px;
+        left: -38px; } }
   .nav-arrows .nav-arrow-next:after {
     content: "";
     display: block;
