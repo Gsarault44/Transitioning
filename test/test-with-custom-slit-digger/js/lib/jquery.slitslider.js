@@ -256,6 +256,7 @@
 
 			// add the 2 slices and animate them
 			$movingSlide.css( 'z-index', this.slidesCount )
+						
 						.find( 'div.sl-content-wrapper' )
 						.wrap( $( '<div class="sl-content-slice" />' ).css( transitionProp ) )
 						.parent()
@@ -266,7 +267,7 @@
 								var slice = this;
 								this.css( slice1Style );
 								setTimeout( function() {
-									
+									$nextSlide.addClass('sl-trans-elems')
 									slice.css( resetStyle );
 
 								}, 20 );
@@ -342,7 +343,7 @@
 						.find( 'div.sl-content-wrapper' )
 						.css( cssStyle );
 			
-			$nextSlide.show();
+			$nextSlide.delay(1600).show();
 			
 		},
 		_validateValues : function( config ) {
@@ -382,7 +383,7 @@
 			
 			// reset previous slide's style after next slide is shown
 			var $slide = $slice.parent(),
-				removeClasses = 'sl-trans-elems sl-trans-back-elems';
+				removeClasses = 'sl-trans-back-elems';
 			
 			// remove second slide's slice
 			$slice.remove();
@@ -397,7 +398,6 @@
 			// now we can navigate again..
 			this.isAnimating = false;
 			this.options.onAfterChange( $slide, this.current );
-			
 		},
 		_setSize : function() {
 		

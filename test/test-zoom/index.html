@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <title>AmeriSource Bergen</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0;"> 
         <meta name="description" content="Fullscreen Slit Slider with CSS3 and jQuery" />
         <meta name="keywords" content="slit slider, plugin, css3, transitions, jquery, fullscreen, autoplay" />
         <meta name="author" content="Codrops" />
@@ -18,9 +18,8 @@
     <body>
         
         <div class="container demo-1">
-            <div id="slider" class="sl-slider-wrapper">
-				<div class="sl-slider">
-					<div id="horsepower-brainpower" class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="7" data-slice2-rotation="7" data-slice1-scale="2" data-slice2-scale="2">
+				<div class="slider">
+					<div id="horsepower-brainpower" class="slide bg-1">
 						<img src="images/truck.jpg" alt="background" class="background">
 						<div class="content-wrapper">
 							<div class="button-wrapper">
@@ -52,7 +51,7 @@
 						</div>
 					</div>
 					
-					<div id="hindsight-foresight" class="sl-slide bg-2" data-orientation="horizontal" data-slice1-rotation="7" data-slice2-rotation="7" data-slice1-scale="2" data-slice2-scale="2">
+					<div id="hindsight-foresight" class="slide bg-2">
 						<img src="images/tube.jpg" alt="background" class="background">
 						<div class="content-wrapper">
 							<div class="button-wrapper">
@@ -96,7 +95,7 @@
 						</div>
 					</div>
 					
-					<div id="computers-compassion" class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="7" data-slice2-rotation="7" data-slice1-scale="2" data-slice2-scale="2">
+					<div id="computers-compassion" class="slide bg-3">
 						<img src="images/circut.jpg" alt="background" class="background">
 						<div class="content-wrapper">
 							<div class="button-wrapper">
@@ -126,104 +125,9 @@
 								<p>Compassion</p>
 							</div>
 						</div>
-					</div>
-					
-					<!-- <div id="slice4" class="sl-slide bg-4" data-orientation="horizontal" data-slice1-rotation="7" data-slice2-rotation="7" data-slice1-scale="2" data-slice2-scale="2">
-						<img src="images/circut.jpg" alt="background" class="background">
-						<div class="content-wrapper">
-							<div class="button-wrapper">
-								<div class="content">
-									<h1>Fourthslide. Slidefour.</h1>
-										<p>Managing growth, addressing change and planning for the future takes past experiences as well as innovative, foward thinking. It takes a global healthcare solutions leader dedicated to enhancing patient care through end-to-end solutions for manufacturers, pharmacies and providers. Its takes hidsite and foresight. It Takes AmerisourceBergen.</p>
-										<div class="hide expand">
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-										</div>
-									</div>
-									<div class="more">
-										<a href="#" class="show-more">Read more</a>
-									</div>
-								</div>
-							</div>
-						<div class="gate">
-							<div class="top-gate-wrapper">
-								<img src="images/2.jpg" alt="Gate Top" class="top-gate">
-								<p>Fourthslide</p>
-							</div>
-							<div class="bottom-gate-wrapper">
-								<img src="images/3.jpg" alt="Gate Bottom" class="bottom-gate">
-								<p>Slidefour</p>
-							</div>
-						</div>
-					</div>
-					<div id="slice5" class="sl-slide bg-5" data-orientation="horizontal" data-slice1-rotation="7" data-slice2-rotation="7" data-slice1-scale="2" data-slice2-scale="2">
-						<img src="images/circut.jpg" alt="background" class="background">
-						<div class="content-wrapper">
-							<div class="button-wrapper">
-								<div class="content">
-									<h1>Fifthslide. Slidefive.</h1>
-										<p>Managing growth, addressing change and planning for the future takes past experiences as well as innovative, foward thinking. It takes a global healthcare solutions leader dedicated to enhancing patient care through end-to-end solutions for manufacturers, pharmacies and providers. Its takes hidsite and foresight. It Takes AmerisourceBergen.</p>
-										<div class="hide expand">
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-										</div>
-									</div>
-									<div class="more">
-										<a href="#" class="show-more">Read more</a>
-									</div>
-								</div>
-							</div>
-						<div class="gate">
-							<div class="top-gate-wrapper">
-								<img src="images/1.jpg" alt="Gate Top" class="top-gate">
-								<p>Fifthslide</p>
-							</div>
-							<div class="bottom-gate-wrapper">
-								<img src="images/5.jpg" alt="Gate Bottom" class="bottom-gate">
-								<p>Slidefour</p>
-							</div>
-						</div>
-					</div>
-					<div id="slice6" class="sl-slide bg-6" data-orientation="horizontal" data-slice1-rotation="7" data-slice2-rotation="7" data-slice1-scale="2" data-slice2-scale="2">
-						<img src="images/circut.jpg" alt="background" class="background">
-						<div class="content-wrapper">
-							<div class="button-wrapper">
-								<div class="content">
-									<h1>Sixthslide. Slidesix.</h1>
-										<p>Managing growth, addressing change and planning for the future takes past experiences as well as innovative, foward thinking. It takes a global healthcare solutions leader dedicated to enhancing patient care through end-to-end solutions for manufacturers, pharmacies and providers. Its takes hidsite and foresight. It Takes AmerisourceBergen.</p>
-										<div class="hide expand">
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum.</p>
-										</div>
-									</div>
-									<div class="more">
-										<a href="#" class="show-more">Read more</a>
-									</div>
-								</div>
-							</div>
-						<div class="gate">
-							<div class="top-gate-wrapper">
-								<img src="images/4.jpg" alt="Gate Top" class="top-gate">
-								<p>Sixthslide</p>
-							</div>
-							<div class="bottom-gate-wrapper">
-								<img src="images/5.jpg" alt="Gate Bottom" class="bottom-gate">
-								<p>Slidesix</p>
-							</div>
-						</div>
-					</div> -->
 				</div><!-- /sl-slider -->
 				
-				<nav id="nav-arrows" class="nav-arrows">
+				<!-- <nav id="nav-arrows" class="nav-arrows">
 					<div class="nav-arrow-prev">
 						<div class="prev1 prev-title">
 							<p>Horsepower</p>
@@ -237,18 +141,6 @@
 							<p>Computers</p>
 							<p>Compassion</p>
 						</div>
-						<!-- <div class="prev4 prev-title">
-							<p>Fourthslide</p>
-							<p>Slidefour</p>
-						</div>
-						<div class="prev5 prev-title">
-							<p>Fifthslide</p>
-							<p>Slidefive</p>
-						</div>
-						<div class="prev6 prev-title prev-current">
-							<p>Sixthslide</p>
-							<p>Slidesix</p>
-						</div> -->
 					</div>
 					<div class="nav-arrow-next">
 						<div class="next1 next-title current">
@@ -263,28 +155,13 @@
 							<p>Computers</p>
 							<p>Compassion</p>
 						</div>
-						<!-- <div class="next4 next-title">
-							<p>Fourthslide</p>
-							<p>Slidefour</p>
-						</div>
-						<div class="next5 next-title">
-							<p>Fifthslide</p>
-							<p>Slidefive</p>
-						</div>
-						<div class="next6 next-title">
-							<p>Sixthslide</p>
-							<p>Slidesix</p>
-						</div> -->
 					</div>
-				</nav> 
+				</nav>  -->
 
 				<nav id="nav-dots" class="nav-dots">
 					<span class="nav-dot-current"></span>
 					<span></span>
 					<span></span>
-					<!-- <span></span>
-					<span></span>
-					<span></span> -->
 				</nav>
 			</div><!-- /slider-wrapper -->
         </div>
@@ -328,9 +205,8 @@
 		    	</div>
 			</div>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
-		<script type="text/javascript" src="js/lib/jquery.slitslider.js"></script>
 		<script type="text/javascript" src="js/lib/plugins.js"></script>
+		<script type="text/javascript" src="js/lib/slick.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/lib/jquery.mobile.fastButtons.js"></script>
 

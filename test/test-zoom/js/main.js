@@ -63,7 +63,7 @@ function moreContent(){
 		});
 	});
 }
-function slitSlider(){
+/*function slitSlider(){
 	var Page = (function() {
 	var $navArrows = $( '#nav-arrows' ),
 		$nav = $( '#nav-dots > span' ),
@@ -71,15 +71,14 @@ function slitSlider(){
 		$pagiP = $( '.nav-arrow-prev > div' ),
 		$pagiN = $( '.nav-arrow-next > div' ),
 
-		slitslider = $( '#slider' ).slitslider( {
+		slitslider = $( '#slider' ).delay(5000).slitslider( {
 
 			onBeforeChange : function( slide, pos ) {
-				var topGate = $('.sl-trans-elems .gate').find('.top-gate-wrapper');
-				var bottomGate = $('.sl-trans-elems .gate').find('.bottom-gate-wrapper');
-				$(topGate).stop().animate({top: '0'}, 500, 'easeInOutQuad');
-				$(bottomGate).stop().animate({top: '0'}, 500,'easeInOutQuad');
+				$('.top-gate-wrapper').animate({top: '0%'}, 400, 'easeOutCubic');
+				$('.bottom-gate-wrapper').animate({top: '0%'}, 400, 'easeOutCubic');
 				$('.content-wrapper').removeAttr('style');
 				$('.content').removeClass('moveup');
+				
 				// Status bar 
 				$nav.removeClass( 'nav-dot-current' );
 				$nav.eq( pos ).addClass( 'nav-dot-current' );
@@ -180,7 +179,6 @@ function slitSlider(){
 				$( this ).on( 'click', function() {
 					var $dot = $( this );
 					if( !slitslider.isActive() ) {
-
 						$pagiN.removeClass( 'current' );
 						$dot.addClass( 'current' );
 					}
@@ -199,7 +197,7 @@ function slitSlider(){
 	 * Notes: 
 	 * 
 	 * example how to add items:
-	 */
+	 
 
 	
 	
@@ -207,6 +205,49 @@ function slitSlider(){
 	
 	// call the plugin's add method
 	//ss.add($items);
+}*/
+
+function slick() {
+	$('.slider').slick({
+		dots: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		onBeforeChange : function( slide, pos ) {
+				var topGate = $('.gate').find('.top-gate-wrapper');
+				var bottomGate = $('.gate').find('.bottom-gate-wrapper');
+				$(topGate).stop().animate({top: '0'}, 500, 'easeInOutQuad');
+				$(bottomGate).stop().animate({top: '0'}, 500,'easeInOutQuad');
+				$('.content-wrapper').removeAttr('style');
+				$('.content').removeClass('moveup');
+				// Status bar 
+			},
+		onAfterChange: function(){
+				var topGate = $('.slick-active .gate').find('.top-gate-wrapper');
+				var bottomGate = $('.slick-active .gate').find('.bottom-gate-wrapper');
+				var notTopGate = $(".gate:not(.slick-active .gate)").find('.top-gate-wrapper');
+				var notBottomGate = $(".gate:not(.slick-active .gate)").find('.bottom-gate-wrapper');
+
+				$(topGate).stop().delay(1200).animate({top: '-40%'}, 700, 'easeInOutQuad');
+				$(bottomGate).stop().delay(1200).animate({top: '35%'}, 700,'easeInOutQuad', function(){
+					$('.slick-actives .content-wrapper').css('z-index', '9999999');
+				});
+				$(notTopGate).animate({top: '0'}, 600);
+				$(notBottomGate).animate({top: '0'}, 600);
+				
+				$(".gate img").removeAttr('style');
+				$('.content-wrapper').removeAttr('style');
+				$('.content-wrapper').removeClass('b-border');
+				$('.more').show();
+				$('.expand').slideUp();
+				$('.content').addClass('moveup');
+				
+				hashing();
+				pagiLabel();
+
+			}
+	});
+
 }
 
 function zoomLight() {
@@ -278,7 +319,7 @@ $(window).resize(function(){
 ********************/
 
 jQuery(window).load(function(){
-	slitSlider();
+	slick();
 	pagiLabel();
 	initalClick();
 });

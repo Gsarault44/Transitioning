@@ -173,42 +173,16 @@ sub, sup { line-height: 0; }
 }
 
 
-.sl-slide {
-	-webkit-transform: rotate(7deg);
-	-moz-transform: rotate(7deg);
-	-o-transform: rotate(7deg);
-	-ms-transform: rotate(7deg);
-	transform: rotate(7deg);
-	/* Landscape */
-	@media screen and (orientation:landscape) {
-	   -webkit-transform: rotate(7deg);
-		-moz-transform: rotate(7deg);
-		-o-transform: rotate(7deg);
-		-ms-transform: rotate(7deg);
-		transform: rotate(7deg);
+.slide {
+	overflow: hidden;
+	position: relative;
+	.background {
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		height: auto;
+		
 	}
-	.sl-content-wrapper {
-		width: 120%;
-		height: 120%;
-		.sl-content {
-			position: relative;
-			width: 120%;
-			height: 120%;	
-			left:-10%;
-			top:-10%;
-		}
-		.background {
-			position: absolute;
-			z-index: 0;
-			width: 100%;
-			height: auto;
-			-webkit-transform: rotate(-7deg);
-			-moz-transform: rotate(-7deg);
-			-o-transform: rotate(-7deg);
-			-ms-transform: rotate(-7deg);
-			transform: rotate(-7deg);
-		}
-	} 
 	.content-wrapper {
 		top:11%;
 		left: 0;
@@ -218,11 +192,6 @@ sub, sup { line-height: 0; }
 		margin:0 auto;
 		z-index: 1;
 		max-width: 650px;
-		-webkit-transform: rotate(-7deg);
-		-moz-transform: rotate(-7deg);
-		-o-transform: rotate(-7deg);
-		-ms-transform: rotate(-7deg);
-		transform: rotate(-7deg);
 		@media all and (min-width: 420px) {
 			top:15%;
 			width: 70%;
@@ -251,7 +220,7 @@ sub, sup { line-height: 0; }
 			.content {
 				text-align: left;
 				position: relative;
-				padding-bottom: 45px;	
+				padding-bottom: 45px;
 				h1 {
 					text-align: left;
 					font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
@@ -351,30 +320,26 @@ sub, sup { line-height: 0; }
 		display: block;
 		position: absolute;
 		width: 120%;
-		height: 100%;
-		top:-5%;
+		height: 120%;
+		top:-10%;
 		left:-10%;
 		margin:0;
 		padding:0;
 		z-index: 1;
-		@media all and (min-width: 420px) {
-			top:0;
-		}
-		@media screen and (orientation:portrait) {
-			-webkit-transform: rotate(-77deg);
-			-moz-transform: rotate(-77deg);
-			-o-transform: rotate(-77deg);
-			-ms-transform: rotate(-77deg);
-			transform: rotate(-77deg);
-			width: 180%;
-			left:-40%;
-		}
+		-webkit-transform: rotate(7deg);
+		-moz-transform: rotate(7deg);
+		-o-transform: rotate(7deg);
+		-ms-transform: rotate(7deg);
+		transform: rotate(7deg);
 		img {
 			-webkit-transform: rotate(-7deg);
 			-moz-transform: rotate(-7deg);
 			-o-transform: rotate(-7deg);
 			-ms-transform: rotate(-7deg);
-			transform: rotate(-7deg); 
+			transform: rotate(-7deg);
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility:    hidden;
+			-ms-backface-visibility:     hidden;
 		}
 		.top-gate-wrapper{
 			position: relative;
@@ -386,7 +351,6 @@ sub, sup { line-height: 0; }
 			overflow: hidden;
 			box-shadow: 0px 0px 4px 0px #000;
 			@media all and (min-width: 420px) {
-
 				width: 100%;
 				margin-top: 0;
 				margin-left: 0;
@@ -411,11 +375,6 @@ sub, sup { line-height: 0; }
 				top: 5%;
 				position: relative;
 				@media screen and (orientation:portrait) {
-					-webkit-transform: rotate(70deg);
-					-moz-transform: rotate(70deg);
-					-o-transform: rotate(70deg);
-					-ms-transform: rotate(70deg);
-					transform: rotate(70deg);
 					width: 100%;
 					height:200%;
 				}
@@ -492,13 +451,8 @@ sub, sup { line-height: 0; }
 					margin-top: -20%;
 				}
 				@media screen and (orientation:portrait) {
-					-webkit-transform: rotate(70deg);
-					-moz-transform: rotate(70deg);
-					-o-transform: rotate(70deg);
-					-ms-transform: rotate(70deg);
-					transform: rotate(70deg);
 					width: 100%;
-					height: 200%;
+					height: auto;
 				} 
 			}	
 			p {
@@ -512,9 +466,6 @@ sub, sup { line-height: 0; }
 				display: block;
 				width: 100%;
 				text-align: center;
-				transform: rotateY(-180deg);
-				-ms-transform: rotateY(-180deg);
-				-webkit-transform: rotatex(-180deg);
 				font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
 				font-weight: bold;
 				z-index: 2;
@@ -543,7 +494,7 @@ sub, sup { line-height: 0; }
 	IMAGES FOR EACH SLIDE
 -------------------------------------------*/
 #horsepower-brainpower {
-	.sl-content{
+	.content{
 		/* &:after {
 			content:"";
 			display: block;
@@ -580,7 +531,7 @@ sub, sup { line-height: 0; }
 		top:-50%;
 	}
 
-	.sl-content {
+	.content {
 		/* &:after {
 			content:"";
 			display: block;
@@ -614,7 +565,7 @@ sub, sup { line-height: 0; }
 	}
 }
 #computers-compassion {
-	.sl-content {
+	.content {
 		/* &:after {
 			content:"";
 			display: block;
@@ -644,7 +595,7 @@ sub, sup { line-height: 0; }
 	}
 }
 #slice4 {
-	.sl-content {
+	.content {
 		/* &:after {
 			content:"";
 			display: block;
@@ -674,7 +625,7 @@ sub, sup { line-height: 0; }
 	}
 }
 #slice5 {
-	.sl-content {
+	.content {
 		/* &:after {
 			content:"";
 			display: block;
@@ -707,7 +658,7 @@ sub, sup { line-height: 0; }
 	}
 }
 #slice6 {
-	.sl-content {
+	.content {
 		/* &:after {
 			content:"";
 			display: block;
