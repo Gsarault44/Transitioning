@@ -27,8 +27,8 @@ function pagiLabel() {
 function newsletter() {
 	$('.subscribe-block').click(function(){
 		$('.subscribe-form-block').fadeToggle();
-		$('.subscribe-form-block:not(.subscribe-form-wrapper').on('click', function (){
-			$('.subscribe-form-block').fadeToggle();
+		$('.close').on('click', function (){
+			$('.subscribe-form-block').fadeOut();
 		});
 	});
 }

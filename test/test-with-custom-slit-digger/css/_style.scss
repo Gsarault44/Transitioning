@@ -245,9 +245,11 @@ sub, sup { line-height: 0; }
 		.button-wrapper{
 			position: relative;	
 			.content {
+				text-align: left;
 				position: relative;
 				padding-bottom: 45px;	
 				h1 {
+					text-align: left;
 					font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
 					font-size: 16px;
 					font-size: 1.6em;
@@ -564,6 +566,9 @@ sub, sup { line-height: 0; }
 		p {
 			color:#81c2ff;
 		}
+		li {
+			color:#81c2ff;
+		}
 	}
 }
 #hindsight-foresight {
@@ -592,10 +597,14 @@ sub, sup { line-height: 0; }
 		} */
 	}
 	.content {
+		color:#445b0d;
 		h1 {
 			color:#445b0d;
 		}
 		p {
+			color:#445b0d;
+		}
+		li {
 			color:#445b0d;
 		}
 	}
@@ -686,6 +695,9 @@ sub, sup { line-height: 0; }
 			color:#cdfc94;
 		}
 		p {
+			color:#cdfc94;
+		}
+		li {
 			color:#cdfc94;
 		}
 	}

@@ -303,9 +303,11 @@ sub, sup {
     .sl-slide .content-wrapper .button-wrapper {
       position: relative; }
       .sl-slide .content-wrapper .button-wrapper .content {
+        text-align: left;
         position: relative;
         padding-bottom: 45px; }
         .sl-slide .content-wrapper .button-wrapper .content h1 {
+          text-align: left;
           font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
           font-size: 16px;
           font-size: 1.6em;
@@ -591,6 +593,8 @@ sub, sup {
   color: #81c2ff; }
 #horsepower-brainpower .content p {
   color: #81c2ff; }
+#horsepower-brainpower .content li {
+  color: #81c2ff; }
 
 #hindsight-foresight .gate .top-gate-wrapper .top-gate {
   top: -50%; }
@@ -613,10 +617,14 @@ sub, sup {
     	background: -o-linear-gradient(top, #FFCE51, #78A13F);
     	opacity: .8;
   } */ }
-#hindsight-foresight .content h1 {
+#hindsight-foresight .content {
   color: #445b0d; }
-#hindsight-foresight .content p {
-  color: #445b0d; }
+  #hindsight-foresight .content h1 {
+    color: #445b0d; }
+  #hindsight-foresight .content p {
+    color: #445b0d; }
+  #hindsight-foresight .content li {
+    color: #445b0d; }
 
 #computers-compassion .sl-content {
   /* &:after {
@@ -688,6 +696,8 @@ sub, sup {
 #slice5 .content h1 {
   color: #cdfc94; }
 #slice5 .content p {
+  color: #cdfc94; }
+#slice5 .content li {
   color: #cdfc94; }
 
 #slice6 .sl-content {
@@ -1491,7 +1501,6 @@ sub, sup {
   z-index: 99999;
   height: 100%;
   width: 100%;
-  cursor: pointer;
   -webkit-transition: all .8s ease-out;
   -moz-transition: all .8s ease-out;
   -o-transition: all .8s ease-out;
@@ -1506,20 +1515,30 @@ sub, sup {
     max-width: 500px;
     margin-top: 20%;
     position: relative; }
-    .subscribe-form-block .subscribe-form-wrapper:after {
+    .subscribe-form-block .subscribe-form-wrapper .close {
       position: absolute;
-      z-index: 9999999999;
       top: -15px;
       right: -15px;
-      content: "x";
       display: block;
       background: #fff;
       color: #000;
-      padding: 0px 8px 3px;
+      width: 30px;
+      height: 30px;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
-      font-size: 25px; }
+      font-size: 25px;
+      border: 2px solid #000;
+      cursor: pointer; }
+      .subscribe-form-block .subscribe-form-wrapper .close:before {
+        content: "X";
+        z-index: 99999999999;
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        text-indent: 6px;
+        font-family: arial; }
     .subscribe-form-block .subscribe-form-wrapper form {
       padding: 10px;
       margin: 0 auto; }
