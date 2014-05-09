@@ -64,7 +64,7 @@
                 slide: 'div',
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                speed: 300,
+                speed: 900,
                 swipe: true,
                 touchMove: true,
                 touchThreshold: 5,
@@ -352,10 +352,10 @@
         if (_.options.arrows === true && _.slideCount > _.options.slidesToShow) {
 
             _.$prevArrow = $(
-                '<button type="button" class="slick-prev">Previous</button>').appendTo(
+                '<div class="prev-wrapper"><button type="button" class="slick-prev">Previous</button></div>').appendTo(
                 _.$slider);
             _.$nextArrow = $(
-                '<button type="button" class="slick-next">Next</button>').appendTo(
+                '<div class="next-wrapper"><button type="button" class="slick-next">Next</button></div>').appendTo(
                 _.$slider);
 
             if (_.options.infinite !== true) {

@@ -770,3 +770,26 @@ sub, sup { line-height: 0; }
 		}
 	}
 }
+
+.zoom {
+	-webkit-animation: zoom 5s ease-in-out both;
+	-moz-animation: zoom 5s ease-in both;
+	-o-animation: zoom 5s ease-in both;
+	-ms-animation: zoom 5s ease-in both;
+	animation: zoom 5s ease-in-out both;
+}
+.zoom-out {
+	-webkit-transform: scale(1.0);
+	-moz-transform:    scale(1.0);
+	-ms-transform:     scale(1.0);
+	-o-transform:      scale(1.0);
+	transform:         scale(1.0);
+}
+
+.zoom-in {
+	-webkit-transform: scale(0.5);
+	-moz-transform:    scale(0.5);
+	-ms-transform:     scale(0.5);
+	-o-transform:      scale(0.5);
+	transform:         scale(0.5);
+}

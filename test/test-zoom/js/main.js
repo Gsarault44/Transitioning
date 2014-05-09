@@ -211,18 +211,18 @@ function slick() {
 	$('.slider').slick({
 		dots: true,
 		infinite: true,
-		speed: 300,
+		speed: 6000,
 		slidesToShow: 1,
 		onBeforeChange : function( slide, pos ) {
-				var topGate = $('.gate').find('.top-gate-wrapper');
-				var bottomGate = $('.gate').find('.bottom-gate-wrapper');
-				$(topGate).stop().animate({top: '0'}, 500, 'easeInOutQuad');
-				$(bottomGate).stop().animate({top: '0'}, 500,'easeInOutQuad');
+				$('.slick-active .gate').find('.top-gate-wrapper').animate({top: '0'}, 500, 'easeInOutQuad');
+				$('.slick-active .gate').find('.bottom-gate-wrapper').animate({top: '0'}, 500,'easeInOutQuad');
+				$('.slider').addClass('zoom');
 				$('.content-wrapper').removeAttr('style');
 				$('.content').removeClass('moveup');
 				// Status bar 
 			},
 		onAfterChange: function(){
+			$('.slider').removeClass('zoom');
 				var topGate = $('.slick-active .gate').find('.top-gate-wrapper');
 				var bottomGate = $('.slick-active .gate').find('.bottom-gate-wrapper');
 				var notTopGate = $(".gate:not(.slick-active .gate)").find('.top-gate-wrapper');

@@ -1,7 +1,7 @@
 /* Slider */
 .slick-slider { position: relative; height: 100%; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: none; touch-action: none; -webkit-tap-highlight-color: transparent; }
 
-.slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; height:100%;}
+.slick-list { position: relative; display: block; margin: 0; padding: 0; height:100%;}
 .slick-list:focus { outline: none; }
 .slick-loading .slick-list { background: white  center center no-repeat; }
 .slick-list.dragging { cursor: pointer; cursor: hand; }
@@ -45,4 +45,178 @@
 .slick-dots li button:focus { outline: none; }
 .slick-dots li button:before { position: absolute; top: 0; left: 0; content: "\2022"; width: 20px; height: 20px; font-family: "slick"; font-size: 6px; line-height: 20px; text-align: center; color: black; opacity: 0.25; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 .slick-dots li.slick-active button:before { opacity: 0.75; }
+
+.nav-arrows > div{
+	position: absolute;
+	display: block;
+	z-index: 2000;
+	cursor: pointer;
+	@media all and (min-width: 560px) {
+	}
+}
+
+.nav-arrows:hover {
+	border-color: rgba(150,150,150,0.9);
+}
+
+
+.slick-prev{
+	position: absolute;
+	left: 15px;
+	bottom:90px;
+	text-align: left;
+	width:60px;
+	height:50px;
+	font-size: 26px;
+	@media all and (min-width: 560px) {
+		width:200px;
+		height:100px;
+		left:5px;
+		top:15%;
+	}
+	&:before {
+		content: "";
+		display: block;
+		height:30px;
+		position: absolute;
+		border-left: 3px solid #fff;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		@media all and (min-width: 560px) {
+			height: 60px;
+			left:22px;
+		}
+	}
+	&:after {
+		content: "";
+		display: block;
+		width: 30px;
+		height:30px;
+		position: absolute;
+		top:10px;
+		left:-4px;
+		border-left: 3px solid #fff;
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		@media all and (min-width: 560px) {
+			width: 60px;
+			height: 60px;
+			top:20px;
+			left:12px;
+		}
+	}
+	@media all and (min-width: 768px) {
+		&:hover {
+			.prev-current {
+				display: block;
+			}
+		}
+	}
+	button {
+		display: none;
+		position: relative;
+		left: 30px;
+		top: 20px;
+		p {
+			color:#fff;
+			font-size: 26px;
+			margin:0;
+			margin-left: 25px;
+			line-height: 24px;
+		}
+		p + p {
+			margin-left: 0px;
+		}
+	}
+	
+}
+
+
+.slick-next {
+	right:15px;
+	bottom:90px;
+	border-left: none;
+	border-bottom: none;
+	text-align: right;
+	width: 60px;
+	height: 50px;
+	@media all and (min-width: 560px) {
+		bottom:15%;
+		right:5px;
+		width: 200px;
+		height: 100px;
+	}
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		right:0;
+		height: 30px;
+		border-left: 3px solid #fff;
+		-webkit-transform: rotate(135deg);
+		-moz-transform: rotate(135deg);
+		-o-transform: rotate(135deg);
+		-ms-transform: rotate(135deg);
+		transform: rotate(135deg);
+		@media all and (min-width: 560px) {
+			height: 60px;
+			right:20px;
+		}
+	}
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		right:0;
+		height: 30px;
+		border-left: 3px solid #fff;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		top:19px;
+		@media all and (min-width: 560px) {
+			height: 60px;
+			right: 20px;
+			top:40px;
+		}
+	}
+	@media all and (min-width: 768px) {
+		&:hover {
+			.next-current {
+				display: block;
+			}
+		}
+	}
+	button {
+		display: none;
+		position: absolute;
+		right: 30px;
+		top: 25px;
+		p {
+			line-height: 24px;
+			color:#fff;
+			font-size: 26px;
+			margin:0 40px 0 0;
+		}
+		p + p {
+			display: inline-block;
+			margin:0 0 0 0;
+		}
+	}
+}
+
+.next-current, .prev-current {
+	display: block;
+	@include transitions;
+}
+
+
 
