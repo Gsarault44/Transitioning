@@ -43,7 +43,7 @@ function initalClick(){
 		});
 	}
 	else {
-   		$('.gate').click(function(){
+		$('.gate').click(function(){
 			$(this).find('.top-gate-wrapper').animate({top: '-40%'}, 600, 'easeOutCubic');
 			$(this).find('.bottom-gate-wrapper').animate({top: '35%'}, 600, 'easeOutCubic', function(){
 				$('.content-wrapper').css('z-index', '99');
@@ -160,7 +160,7 @@ function slitSlider(){
 					$('.zoom-light').fadeOut();
 				});
 			});
-			$pagiP.each( function( i ) {
+			$pagiP.each( function() {
 				$( this ).on( 'click', function() {
 					var $dot = $( this );
 					if( !slitslider.isActive() ) {
@@ -172,7 +172,7 @@ function slitSlider(){
 					$('.prev-title:last-of-type').addClass('current');
 				});
 			});
-			$pagiN.each( function( i ) {
+			$pagiN.each( function() {
 				$( this ).on( 'click', function() {
 					var $dot = $( this );
 					if( !slitslider.isActive() ) {
@@ -230,16 +230,17 @@ var agent = navigator.userAgent,
 		winPhone: function() {return agent.match(/IEMobile/i) ? true : false;},
 		all: function() {return (device.Android() || device.iOS() || device.Blackberry() || device.winPhone());}
 	};
-	if (device.iOS()) {			
-	function checkMode() {
-		var o = window.orientation;
+function checkMode() {
+	var o = window.orientation;
 
-		if (o != 90 && o != -90) {
-			$(".sl-slide").attr("data-orientation","vertical");
-		} else {
-			$(".sl-slide").attr("data-orientation","horizontal");
-		}
+	if (o !== 90 && o !== -90) {
+		$(".sl-slide").attr("data-orientation","vertical");
+	} else {
+		$(".sl-slide").attr("data-orientation","horizontal");
 	}
+}
+	if (device.iOS()) {
+	
 
 	// dom onload check
 	checkMode();
@@ -250,31 +251,13 @@ var agent = navigator.userAgent,
 	});
 }
 function orientation(){
-	var windowH = $(window).height()
-	var windowW = $(window).width()
+	var windowH = $(window).height();
+	var windowW = $(window).width();
 	if (windowH > windowW) {
 		$(".sl-slide").attr("data-orientation","vertical");
 	}else {
 		$(".sl-slide").attr("data-orientation","horizontal");
 	}
-
-	/*if(event.orientation){
-		if(event.orientation == 'portrait'){
-			$(".sl-slide").attr("data-orientation","vertical");
-		}
-		else if(event.orientation == 'landscape') {
-			$(".sl-slide").attr("data-orientation","horizontal");
-		}
-	}
-	if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
-	    var viewportmeta = document.querySelector('meta[name="viewport"]');
-	    if (viewportmeta) {
-	        viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
-	        document.body.addEventListener('gesturestart', function () {
-	            viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
-	        }, false);
-	    }
-	}*/
 }
 
 
