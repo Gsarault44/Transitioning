@@ -137,7 +137,6 @@
 				margin:0 auto;
 				.subscribe-input {
 					display: block;
-					margin-bottom: 15px;
 					width:100%;
 					padding:5px;
 					color:#a2a1a1;
@@ -178,7 +177,7 @@
 					box-shadow:0;
 					@media all and (min-width: 420px) {
 						padding:6px 10px;
-						margin-right: -24px;
+						margin-right: -24px !important;
 					}
 					&:hover {
 						background-color:#fff;
@@ -216,7 +215,8 @@
    	color:#a2a1a1;
 }
 
-
+input:focus::-webkit-input-placeholder { color:transparent !important; }
+input:focus:-moz-placeholder { color:transparent !important; }
 
 .anystretch {
 	img {

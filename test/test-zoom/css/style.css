@@ -621,6 +621,8 @@ sub, sup {
     	background: -o-linear-gradient(top, #00539B, #820053);
     	opacity: .8;
   } */ }
+#horsepower-brainpower .bottom-gate {
+  margin-top: -40%; }
 #horsepower-brainpower .content h1 {
   color: #81c2ff; }
 #horsepower-brainpower .content p {
@@ -628,6 +630,11 @@ sub, sup {
 #horsepower-brainpower .content li {
   color: #81c2ff; }
 
+#hindsight-foresight .bottom-gate {
+  margin-left: -10%; }
+  @media all and (min-width: 560px) {
+    #hindsight-foresight .bottom-gate {
+      margin-left: 0; } }
 #hindsight-foresight .content {
   /* &:after {
   	content:"";
@@ -656,6 +663,9 @@ sub, sup {
   #hindsight-foresight .content li {
     color: #445b0d; }
 
+#computers-compassion .bottom-gate {
+  width: 145%;
+  margin-left: -20%; }
 #computers-compassion .content {
   /* &:after {
   	content:"";
@@ -784,7 +794,7 @@ sub, sup {
         padding: 15px 0; } }
     @media all and (min-width: 1024px) {
       .footer .f-wrapper {
-        width: 95%; } }
+        width: 94%; } }
     .footer .f-wrapper .footer-logo {
       display: block;
       float: left; }
@@ -823,8 +833,9 @@ sub, sup {
         width: 10%; } }
     @media all and (min-width: 1024px) {
       .footer .cube {
-        width: 5%; } }
+        width: 6%; } }
     .footer .cube a {
+      margin-right: 3px;
       background: url(../images/cube.png) no-repeat center center;
       background-size: 62px;
       height: 52px;
@@ -869,15 +880,11 @@ sub, sup {
   -moz-animation: zoomer 2s ease-in-out both;
   -o-animation: zoomer 2s ease-in-out both;
   -ms-animation: zoomer 2s ease-in-out both;
-  animation: zoomer 2s ease-in-out both;
-  overflow: auto; }
+  animation: zoomer 2s ease-in-out both; }
   .zoom-zoom .slick-dots div {
     z-index: 9999999999;
     cursor: pointer;
     margin-bottom: 50px; }
-  @media screen and (orientation: portrait) {
-    .zoom-zoom .slick-track {
-      max-width: 400px !important; } }
 
 @-webkit-keyframes slide {
   0% {
@@ -1867,7 +1874,6 @@ sub, sup {
         margin: 0 auto; }
         .subscribe-form-block .subscribe-form-wrapper .form-wrapper form .subscribe-input {
           display: block;
-          margin-bottom: 15px;
           width: 100%;
           padding: 5px;
           color: #a2a1a1;
@@ -1905,7 +1911,7 @@ sub, sup {
           @media all and (min-width: 420px) {
             .subscribe-form-block .subscribe-form-wrapper .form-wrapper form .subscribe-submit {
               padding: 6px 10px;
-              margin-right: -24px; } }
+              margin-right: -24px !important; } }
           .subscribe-form-block .subscribe-form-wrapper .form-wrapper form .subscribe-submit:hover {
             background-color: #fff;
             color: #000;
@@ -1935,6 +1941,12 @@ sub, sup {
   padding-left: 5px;
   font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
   color: #a2a1a1; }
+
+input:focus::-webkit-input-placeholder {
+  color: transparent !important; }
+
+input:focus:-moz-placeholder {
+  color: transparent !important; }
 
 .anystretch img {
   max-width: none; }

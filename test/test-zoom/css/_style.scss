@@ -578,6 +578,9 @@ sub, sup { line-height: 0; }
 		  	opacity: .8;
 		} */
 	}
+	.bottom-gate {
+		margin-top: -40%;
+	}
 	.content {
 		h1 {
 			color:#81c2ff;
@@ -594,7 +597,12 @@ sub, sup { line-height: 0; }
 	.gate .top-gate-wrapper .top-gate {
 
 	}
-
+	.bottom-gate {
+		margin-left: -10%;
+		@media all and (min-width: 560px) {
+			margin-left: 0;
+		}
+	}
 	.content {
 		/* &:after {
 			content:"";
@@ -629,6 +637,10 @@ sub, sup { line-height: 0; }
 	}
 }
 #computers-compassion {
+	.bottom-gate {
+		width: 145%;
+		margin-left: -20%;
+	}
 	.content {
 		/* &:after {
 			content:"";
@@ -785,7 +797,7 @@ sub, sup { line-height: 0; }
 			padding:15px 0;
 		}
 		@media all and (min-width: 1024px) {
-			width: 95%;
+			width: 94%;
 		}
 		.footer-logo {
 			display: block;			
@@ -830,10 +842,10 @@ sub, sup { line-height: 0; }
 			width: 10%;
 		}
 		@media all and (min-width: 1024px) {
-			width: 5%;
+			width: 6%;
 		}
 		a {
-
+			margin-right: 3px;
 			background: url(../images/cube.png)no-repeat center center; 
 			background-size: 62px;
 			height: 52px;
@@ -886,7 +898,6 @@ sub, sup { line-height: 0; }
 	-o-animation: zoomer 2s ease-in-out both;
 	-ms-animation: zoomer 2s ease-in-out both;
 	animation: zoomer 2s ease-in-out both;
-	overflow: auto;
 	.slick-dots {
 		div {
 			z-index: 9999999999;
@@ -894,11 +905,6 @@ sub, sup { line-height: 0; }
 			margin-bottom: 50px;
 		}
 	}
-	.slick-track { 
-		@media screen and (orientation:portrait) {
-			max-width: 400px !important;
-		}
- }
 }
 
 
