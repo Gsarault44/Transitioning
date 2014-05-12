@@ -98,7 +98,6 @@ sub, sup { line-height: 0; }
   	-o-transition: all .8s ease-out;
   	transition: all .8s ease-out;
 }
-
 /*-------------------------------------------    
     Global
 -------------------------------------------*/
@@ -321,7 +320,7 @@ sub, sup { line-height: 0; }
 		position: absolute;
 		width: 120%;
 		height: 120%;
-		top:-10%;
+		top:-15%;
 		left:-10%;
 		margin:0;
 		padding:0;
@@ -337,17 +336,14 @@ sub, sup { line-height: 0; }
 			-o-transform: rotate(-7deg);
 			-ms-transform: rotate(-7deg);
 			transform: rotate(-7deg);
-			-webkit-backface-visibility: hidden;
-			-moz-backface-visibility:    hidden;
-			-ms-backface-visibility:     hidden;
 		}
 		.top-gate-wrapper{
 			position: relative;
 			width: 100%;
-			height: 50%;
+			height: 60%;
 			margin:0;
 			padding:0;
-			top:0;
+			top:-5%;
 			overflow: hidden;
 			box-shadow: 0px 0px 4px 0px #000;
 			@media all and (min-width: 420px) {
@@ -414,8 +410,8 @@ sub, sup { line-height: 0; }
 		.bottom-gate-wrapper {
 			position: relative;
 			width:100%;
-			top:0;
 			height: 60%;
+			top: -5%;
 			margin:0;
 			padding:0;
 			overflow: hidden;
@@ -771,12 +767,32 @@ sub, sup { line-height: 0; }
 	}
 }
 
+.zoom-zoom {
+	-webkit-animation: zoomer 2s ease-in-out both;
+	-moz-animation: zoomer 2s ease-in-out both;
+	-o-animation: zoomer 2s ease-in-out both;
+	-ms-animation: zoomer 2s ease-in-out both;
+	animation: zoomer 2s ease-in-out both;
+	.slick-dots {
+		div {
+			z-index: 9999999999;
+		}
+	}
+}
+.zoom-zoom-in {
+	-webkit-animation: zoomer-in 2s ease-in-out both;
+	-moz-animation: zoomer-in 2s ease-in-out both;
+	-o-animation: zoomer-in 2s ease-in-out both;
+	-ms-animation: zoomer-in 2s ease-in-out both;
+	animation: zoomer-in 2s ease-in-out both;
+}
+
 .zoom {
-	-webkit-animation: zoom 5s ease-in-out both;
-	-moz-animation: zoom 5s ease-in both;
-	-o-animation: zoom 5s ease-in both;
-	-ms-animation: zoom 5s ease-in both;
-	animation: zoom 5s ease-in-out both;
+	-webkit-animation: zoom 2s ease-in-out both;
+	-moz-animation: zoom 2s ease-in-out both;
+	-o-animation: zoom 2s ease-in-out both;
+	-ms-animation: zoom 2s ease-in-out both;
+	animation: zoom 2s ease-in-out both;
 }
 .zoom-out {
 	-webkit-transform: scale(1.0);

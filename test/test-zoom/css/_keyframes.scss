@@ -102,42 +102,42 @@
 }
 @-webkit-keyframes scaleDown{
 	0% {-webkit-transform: scale(1);}
-	100% {-webkit-transform: scale(0);}
+	100% {-webkit-transform: scale(2);}
 }
 @-moz-keyframes scaleDown{
 	0% {-moz-transform: scale(1);}
-	100% {-moz-transform: scale(0);}
+	100% {-moz-transform: scale(2);}
 }
 @-o-keyframes scaleDown{
 	0% {-o-transform: scale(1);}
-	100% {-o-transform: scale(0);}
+	100% {-o-transform: scale(2);}
 }
 @-ms-keyframes scaleDown{
 	0% {-ms-transform: scale(1);}
-	100% {-ms-transform: scale(0);}
+	100% {-ms-transform: scale(2);}
 }
 @keyframes scaleDown{
 	0% {transform: scale(1);}
-	100% {transform: scale(0);}
+	100% {transform: scale(2);}
 }
 @-webkit-keyframes scaleUp{
-	0% {-webkit-transform: scale(0);}
+	0% {-webkit-transform: scale(2);}
 	100% {-webkit-transform: scale(1);}
 }
 @-moz-keyframes scaleUp{
-	0% {-moz-transform: scale(0);}
+	0% {-moz-transform: scale(2);}
 	100% {-moz-transform: scale(1);}
 }
 @-o-keyframes scaleUp{
-	0% {-o-transform: scale(0);}
+	0% {-o-transform: scale(2);}
 	100% {-o-transform: scale(1);}
 }
 @-ms-keyframes scaleUp{
-	0% {-ms-transform: scale(0);}
+	0% {-ms-transform: scale(2);}
 	100% {-ms-transform: scale(1);}
 }
 @keyframes scaleUp{
-	0% {transform: scale(0);}
+	0% {transform: scale(2);}
 	100% {transform: scale(1);}
 }
 @-webkit-keyframes fadeOut{
@@ -207,4 +207,48 @@
 	0% {transform: scale(1);}
 	50% {transform: scale(0.5);}
 	100% {transform: scale(1);}
+}
+@-webkit-keyframes zoomer{
+	0% {-webkit-transform: scale(1);}
+	100% {-webkit-transform: scale(0.3);}
+}
+@-moz-keyframes zoomer{
+	0% {-moz-transform: scale(1);}
+	100% {-moz-transform: scale(0.3);}
+}
+@-o-keyframes zoomer{
+	0% {-ms-transform: scale(1);}
+	100% {-ms-transform: scale(0.3);}
+}
+@-ms-keyframes zoomer{
+	0% {-o-transform: scale(1);}
+	100% {-o-transform: scale(0.3);}
+}
+@keyframes zoomer{
+	0% {transform: scale(1);}
+	30% {transform: scale(0.3);}
+}
+
+
+
+
+@-webkit-keyframes zoomer-in{
+	0% {-webkit-transform: scale(0.3);}
+	100% {-webkit-transform: scale(1);}
+}
+@-moz-keyframes zoomer-in{
+	0% {-moz-transform: scale(0.3);}
+	100% {-moz-transform: scale(1);}
+}
+@-o-keyframes zoomer-in{
+	0% {-ms-transform: scale(0.3);}
+	100% {-ms-transform: scale(1);}
+}
+@-ms-keyframes zoomer-in{
+	0% {-o-transform: scale(0.3);}
+	100% {-o-transform: scale(1);}
+}
+@keyframes zoomer-in{
+	0% {transform: scale(0.3);}
+	30% {transform: scale(1);}
 }
