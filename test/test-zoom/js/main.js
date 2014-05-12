@@ -179,7 +179,11 @@ function zoomLight() {
 	});
 }
 
-
+function anyStretch() {
+	$('.bg-1').anystretch("images/truck.jpg", {speed: 150});
+	$('.bg-2').anystretch("images/tube.jpg", {speed: 150});
+	$('.bg-3').anystretch("images/circut.jpg", {speed: 150});
+}	
 
 /********************
 ** jQuery Window resize
@@ -192,7 +196,7 @@ $(window).resize(function(){
 ********************/
 
 jQuery(window).load(function(){
-	
+	anyStretch();
 	slick();
 	pagiText();
 	initalClick();

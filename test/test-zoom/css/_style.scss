@@ -190,8 +190,11 @@ sub, sup { line-height: 0; }
 		height: 100%;
 		max-width: none;
 		@media only screen and (orientation : landscape) and (min-device-width : 960px) {
-			width: 100%;
-			max-width: 100%;
+			width: 200%;
+			height: auto;
+		}
+		@media only screen and (min-device-width : 1024px) {
+			width: 130%;
 			height: auto;
 		}
 
@@ -206,7 +209,7 @@ sub, sup { line-height: 0; }
 		margin:0 auto;
 		z-index: 1;
 		max-width: 650px;
-		max-height:56%;
+		max-height:60%;
 		@media all and (min-width: 420px) {
 			top:15%;
 			width: 70%;
@@ -390,6 +393,9 @@ sub, sup { line-height: 0; }
 				margin-top: 0;
 				margin-left: 0;
 			}
+			@media screen and (orientation:portrait) {
+
+			}
 			/* &:after {
 				content:"";
 				display: block;
@@ -423,10 +429,11 @@ sub, sup { line-height: 0; }
 			}
 			p {
 				position: absolute;
-				font-size: 40px;
+				font-size: 38px;
 				color: white;
 				margin:0;
 				bottom: -9px;
+				left:15px;
 				text-transform: uppercase;
 				opacity: 0.8;
 				display: block;
@@ -483,7 +490,7 @@ sub, sup { line-height: 0; }
 			}
 			
 			.bottom-gate {
-				width: 100%;
+				width: 120%;
 				height: auto;
 				margin-top: -50%;
 				max-width: none;
@@ -491,28 +498,29 @@ sub, sup { line-height: 0; }
 				@media all and (min-width: 420px) {
 					width: 120%;
 					height: auto;
-					margin-top: -10%;
+					margin-top: -30%;
 				}
 				@media screen and (orientation:portrait) {
-					width: 125%;
+					width: 140%;
 					height: auto;
 
-					margin-left: -13%;
+					margin-left: -20%;
 					-webkit-transform: rotate(87deg);
 					-moz-transform: rotate(87deg);
 					-o-transform: rotate(87deg);
 					-ms-transform: rotate(87deg);
 					transform: rotate(87deg);
 				} 
-				@media all and (min-width: 768px) {
+				@media all and (min-width: 1024px) {
 					width:100%;
 				}
 			}	
 			p {
 				position: absolute;
-				font-size: 40px;
+				font-size: 38px;
 				color: white;
-				top: -9px;
+				top: -10px;
+				left:15px;
 				margin:0;
 				text-transform: uppercase;
 				opacity: 0.8;
@@ -828,7 +836,7 @@ sub, sup { line-height: 0; }
 
 			background: url(../images/cube.png)no-repeat center center; 
 			background-size: 62px;
-			height: 49px;
+			height: 52px;
 			display: block;
 			opacity: .5;
 			@media all and (min-width: 560px) {
@@ -878,9 +886,19 @@ sub, sup { line-height: 0; }
 	-o-animation: zoomer 2s ease-in-out both;
 	-ms-animation: zoomer 2s ease-in-out both;
 	animation: zoomer 2s ease-in-out both;
+	overflow: auto;
 	.slick-dots {
 		div {
 			z-index: 9999999999;
+			cursor: pointer;
+			margin-bottom: 50px;
 		}
 	}
+	.slick-track { 
+		@media screen and (orientation:portrait) {
+			max-width: 400px !important;
+		}
+ }
 }
+
+

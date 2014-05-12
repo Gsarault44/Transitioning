@@ -269,8 +269,11 @@ sub, sup {
     max-width: none; }
     @media only screen and (orientation: landscape) and (min-device-width: 960px) {
       .slide .background {
-        width: 100%;
-        max-width: 100%;
+        width: 200%;
+        height: auto; } }
+    @media only screen and (min-device-width: 1024px) {
+      .slide .background {
+        width: 130%;
         height: auto; } }
   .slide .content-wrapper {
     top: 11%;
@@ -281,7 +284,7 @@ sub, sup {
     margin: 0 auto;
     z-index: 1;
     max-width: 650px;
-    max-height: 56%;
+    max-height: 60%;
     /* @media all and (min-width: 560px) {
     	left:0;
     } */ }
@@ -482,10 +485,11 @@ sub, sup {
             margin-left: -50%; } }
       .slide .gate .top-gate-wrapper p {
         position: absolute;
-        font-size: 40px;
+        font-size: 38px;
         color: white;
         margin: 0;
         bottom: -9px;
+        left: 15px;
         text-transform: uppercase;
         opacity: 0.8;
         display: block;
@@ -538,7 +542,7 @@ sub, sup {
         opacity: .2;
         z-index: 1; }
       .slide .gate .bottom-gate-wrapper .bottom-gate {
-        width: 100%;
+        width: 120%;
         height: auto;
         margin-top: -50%;
         max-width: none; }
@@ -546,25 +550,26 @@ sub, sup {
           .slide .gate .bottom-gate-wrapper .bottom-gate {
             width: 120%;
             height: auto;
-            margin-top: -10%; } }
+            margin-top: -30%; } }
         @media screen and (orientation: portrait) {
           .slide .gate .bottom-gate-wrapper .bottom-gate {
-            width: 125%;
+            width: 140%;
             height: auto;
-            margin-left: -13%;
+            margin-left: -20%;
             -webkit-transform: rotate(87deg);
             -moz-transform: rotate(87deg);
             -o-transform: rotate(87deg);
             -ms-transform: rotate(87deg);
             transform: rotate(87deg); } }
-        @media all and (min-width: 768px) {
+        @media all and (min-width: 1024px) {
           .slide .gate .bottom-gate-wrapper .bottom-gate {
             width: 100%; } }
       .slide .gate .bottom-gate-wrapper p {
         position: absolute;
-        font-size: 40px;
+        font-size: 38px;
         color: white;
-        top: -9px;
+        top: -10px;
+        left: 15px;
         margin: 0;
         text-transform: uppercase;
         opacity: 0.8;
@@ -822,7 +827,7 @@ sub, sup {
     .footer .cube a {
       background: url(../images/cube.png) no-repeat center center;
       background-size: 62px;
-      height: 49px;
+      height: 52px;
       display: block;
       opacity: .5; }
       @media all and (min-width: 560px) {
@@ -864,9 +869,15 @@ sub, sup {
   -moz-animation: zoomer 2s ease-in-out both;
   -o-animation: zoomer 2s ease-in-out both;
   -ms-animation: zoomer 2s ease-in-out both;
-  animation: zoomer 2s ease-in-out both; }
+  animation: zoomer 2s ease-in-out both;
+  overflow: auto; }
   .zoom-zoom .slick-dots div {
-    z-index: 9999999999; }
+    z-index: 9999999999;
+    cursor: pointer;
+    margin-bottom: 50px; }
+  @media screen and (orientation: portrait) {
+    .zoom-zoom .slick-track {
+      max-width: 400px !important; } }
 
 @-webkit-keyframes slide {
   0% {
@@ -1246,41 +1257,76 @@ sub, sup {
   100% {
     transform: scale(1); } }
 
-@-webkit-keyframes zoomer {
-  0% {
-    -webkit-transform: scale(1); }
+@media screen and (orientation: portrait) {
+  @-webkit-keyframes zoomer {
+    0% {
+      -webkit-transform: scale(1); }
 
-  100% {
-    -webkit-transform: scale(0.3); } }
+    100% {
+      -webkit-transform: scale(0.5); } } }
+@media screen and (orientation: landscape) {
+  @-webkit-keyframes zoomer {
+    0% {
+      -webkit-transform: scale(1); }
 
-@-moz-keyframes zoomer {
-  0% {
-    -moz-transform: scale(1); }
+    100% {
+      -webkit-transform: scale(0.3); } } }
+@media screen and (orientation: portrait) {
+  @-moz-keyframes zoomer {
+    0% {
+      -moz-transform: scale(1); }
 
-  100% {
-    -moz-transform: scale(0.3); } }
+    100% {
+      -moz-transform: scale(0.5); } } }
+@media screen and (orientation: landscape) {
+  @-moz-keyframes zoomer {
+    0% {
+      -moz-transform: scale(1); }
 
-@-o-keyframes zoomer {
-  0% {
-    -ms-transform: scale(1); }
+    100% {
+      -moz-transform: scale(0.3); } } }
+@media screen and (orientation: portrait) {
+  @-o-keyframes zoomer {
+    0% {
+      -ms-transform: scale(1); }
 
-  100% {
-    -ms-transform: scale(0.3); } }
+    100% {
+      -ms-transform: scale(0.5); } } }
+@media screen and (orientation: landscape) {
+  @-o-keyframes zoomer {
+    0% {
+      -ms-transform: scale(1); }
 
-@-ms-keyframes zoomer {
-  0% {
-    -o-transform: scale(1); }
+    100% {
+      -ms-transform: scale(0.3); } } }
+@media screen and (orientation: portrait) {
+  @-ms-keyframes zoomer {
+    0% {
+      -o-transform: scale(1); }
 
-  100% {
-    -o-transform: scale(0.3); } }
+    100% {
+      -o-transform: scale(0.5); } } }
+@media screen and (orientation: landscape) {
+  @-ms-keyframes zoomer {
+    0% {
+      -o-transform: scale(1); }
 
-@keyframes zoomer {
-  0% {
-    transform: scale(1); }
+    100% {
+      -o-transform: scale(0.3); } } }
+@media screen and (orientation: portrait) {
+  @keyframes zoomer {
+    0% {
+      transform: scale(1); }
 
-  30% {
-    transform: scale(0.3); } }
+    30% {
+      transform: scale(0.5); } } }
+@media screen and (orientation: landscape) {
+  @keyframes zoomer {
+    0% {
+      transform: scale(1); }
 
+    30% {
+      transform: scale(0.3); } } }
 @-webkit-keyframes zoomer-in {
   0% {
     -webkit-transform: scale(0.3); }
@@ -1356,7 +1402,8 @@ sub, sup {
   top: 0;
   display: block;
   zoom: 1;
-  height: 100%; }
+  height: 100%;
+  max-width: none !important; }
 
 .slick-track:before, .slick-track:after {
   content: "";
@@ -1888,3 +1935,6 @@ sub, sup {
   padding-left: 5px;
   font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
   color: #a2a1a1; }
+
+.anystretch img {
+  max-width: none; }
