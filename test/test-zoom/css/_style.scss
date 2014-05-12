@@ -33,17 +33,17 @@ body:after { content: 'mini'; display: none; background:#000;}
 -------------------------------------------*/
 * { margin: 0; padding: 0; }
 html { font-size: 62.5%; -webkit-font-smoothing: antialiased !important; -moz-osx-font-smoothing: grayscale;} /* for rems */
-body { font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline;}
+body { font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline; }
 
 
 /* block level */
 
-h1, .h1 { font: bold 3.8em Helvetica, Arial, sans-serif; margin: 0 0 0.5em; }
-h2, .h2 { font: bold 1.8em Helvetica, Arial, sans-serif; margin: 0 0 1em; }
-h3, .h3 { font: bold 1.5em Helvetica, Arial, sans-serif; margin: 0 0 1em; }
-h4, h5, h6, .h4, .h5, .h6 { font: bold 1.2rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+h1, .h1 { font: bold 3.8em "rockwell", Courier, Georgia,Times, "Times New Roman", serif; margin: 0 0 0.5em;-webkit-font-smoothing: antialiased;-webkit-text-stroke: 0.1px; }
+h2, .h2 { font: bold 1.8em "rockwell", Courier, Georgia,Times, "Times New Roman", serif; margin: 0 0 1em;-webkit-font-smoothing: antialiased;-webkit-text-stroke: 0.1px; }
+h3, .h3 { font: bold 1.5em "rockwell", Courier, Georgia,Times, "Times New Roman", serif; margin: 0 0 1em;-webkit-font-smoothing: antialiased;-webkit-text-stroke: 0.1px; }
+h4, h5, h6, .h4, .h5, .h6 { font: bold 1.2rem "rockwell", Courier, Georgia,Times, "Times New Roman", serif; margin: 0 0 1em;-webkit-font-smoothing: antialiased;-webkit-text-stroke: 0.1px; }
 
-p, ul, dl, ol, table { font-size: 16px; margin: 0 0 1.5em; letter-spacing: 1px; }
+p, ul, dl, ol, table { font-size: 16px; margin: 0 0 1.5em; letter-spacing: 1px;-webkit-font-smoothing: antialiased;-webkit-text-stroke: 0.1px; }
 
 ul { padding-left: 20px;}
 
@@ -186,8 +186,15 @@ sub, sup { line-height: 0; }
 	.background {
 		position: absolute;
 		z-index: 0;
-		width: 100%;
-		height: auto;
+		width: 120%;
+		height: 100%;
+		max-width: none;
+		@media only screen and (orientation : landscape) and (min-device-width : 960px) {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+		}
+
 		
 	}
 	.content-wrapper {
@@ -199,6 +206,7 @@ sub, sup { line-height: 0; }
 		margin:0 auto;
 		z-index: 1;
 		max-width: 650px;
+		max-height:56%;
 		@media all and (min-width: 420px) {
 			top:15%;
 			width: 70%;
@@ -228,12 +236,14 @@ sub, sup { line-height: 0; }
 				text-align: left;
 				position: relative;
 				padding-bottom: 45px;
+				-webkit-text-stroke: 0.1px;
 				h1 {
 					text-align: left;
 					font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
 					font-size: 16px;
 					font-size: 1.6em;
 					margin:0;
+					-webkit-text-stroke: 0.1px;
 					@media all and (min-width: 420px) {
 						margin-bottom: 8px;
 						font-size: 28px;
@@ -254,6 +264,7 @@ sub, sup { line-height: 0; }
 					font-size: 1.4em;
 					margin:0;
 					margin-bottom: 10px;
+					-webkit-text-stroke: 0.1px;
 					@media all and (min-width: 420px) {
 						margin-bottom: 18px;
 						font-size: 18px;
@@ -261,9 +272,9 @@ sub, sup { line-height: 0; }
 						line-height: 20px;
 					}
 					@media all and (min-width: 768px) {
-						font-size: 22px;
-						font-size: 2.2em;
-						line-height: 22px;
+						font-size: 20px;
+						font-size: 2em;
+						line-height: 30px;
 					}
 				}
 				.expand p {
@@ -274,9 +285,9 @@ sub, sup { line-height: 0; }
 					line-height: 17px;
 					@media all and (min-width: 768px) {
 						width: 90%;	
-						font-size: 20px;
-						font-size: 2em;
-						line-height: 22px;
+						font-size: 18px;
+						font-size: 1.8em;
+						line-height: 24px;
 					}
 				}
 			}
@@ -326,19 +337,28 @@ sub, sup { line-height: 0; }
 	.gate {
 		display: block;
 		position: absolute;
-		width: 120%;
-		height: 120%;
-		top:-15%;
-		left:-10%;
+		width: 160%;
+		height: 100%;
+		top: 0%;
+		left: -40%;
 		margin:0;
 		padding:0;
 		z-index: 1;
+		-webkit-transform-style: preserve-3d; 
+		-moz-transform-style: preserve-3d; 
+		-o-transform-style: preserve-3d; 
+		-ms-transform-style: preserve-3d; 
+		transform-style: preserve-3d; 
 		-webkit-transform: rotate(-87deg);
 		-moz-transform: rotate(-87deg);
 		-o-transform: rotate(-87deg);
 		-ms-transform: rotate(-87deg);
 		transform: rotate(-87deg);
 		@media screen and (orientation:landscape) {
+			width: 120%;
+		height: 120%;
+		top:-15%;
+		left:-10%;
 			-webkit-transform: rotate(7deg);
 			-moz-transform: rotate(7deg);
 			-o-transform: rotate(7deg);
@@ -358,15 +378,19 @@ sub, sup { line-height: 0; }
 			height: 60%;
 			margin:0;
 			padding:0;
-			top:-5%;
+			top:0%;
 			overflow: hidden;
 			box-shadow: 0px 0px 4px 0px #000;
+			outline: 1px solid transparent;
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility:    hidden;
+			-ms-backface-visibility:     hidden;
 			@media all and (min-width: 420px) {
 				width: 100%;
 				margin-top: 0;
 				margin-left: 0;
 			}
-			&:after {
+			/* &:after {
 				content:"";
 				display: block;
 				position: absolute;
@@ -376,9 +400,9 @@ sub, sup { line-height: 0; }
 				top:0;
 				left:0;
 			  	background: #000;
-			  	opacity: .2;
+			  	opacity: .1;
 			  	z-index: 1;
-			}
+			} */
 			.top-gate {
 				width: 110%;
 				height:auto;
@@ -386,8 +410,15 @@ sub, sup { line-height: 0; }
 				top: 5%;
 				position: relative;
 				@media screen and (orientation:portrait) {
-					width: 100%;
+					width: 200%;
 					height:200%;
+					-webkit-transform: rotate(87deg);
+					-moz-transform: rotate(87deg);
+					-o-transform: rotate(87deg);
+					-ms-transform: rotate(87deg);
+					transform: rotate(87deg);
+					margin-top:-20%; 
+					margin-left:-50%; 
 				}
 			}
 			p {
@@ -423,10 +454,11 @@ sub, sup { line-height: 0; }
 			}
 		}
 		.bottom-gate-wrapper {
+			outline: 1px solid transparent;
 			position: relative;
 			width:100%;
 			height: 60%;
-			top: -5%;
+			top: 0%;
 			margin:0;
 			padding:0;
 			overflow: hidden;
@@ -457,14 +489,24 @@ sub, sup { line-height: 0; }
 				max-width: none;
 				
 				@media all and (min-width: 420px) {
-					width: 100%;
+					width: 120%;
 					height: auto;
-					margin-top: -20%;
+					margin-top: -10%;
 				}
 				@media screen and (orientation:portrait) {
-					width: 100%;
+					width: 125%;
 					height: auto;
+
+					margin-left: -13%;
+					-webkit-transform: rotate(87deg);
+					-moz-transform: rotate(87deg);
+					-o-transform: rotate(87deg);
+					-ms-transform: rotate(87deg);
+					transform: rotate(87deg);
 				} 
+				@media all and (min-width: 768px) {
+					width:100%;
+				}
 			}	
 			p {
 				position: absolute;
@@ -480,6 +522,9 @@ sub, sup { line-height: 0; }
 				font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
 				font-weight: bold;
 				z-index: 2;
+				transform: rotateY(-180deg);
+				-ms-transform: rotateY(-180deg);
+				-webkit-transform: rotatex(-180deg);
 				@media all and (min-width: 420px) {
 					font-size: 50px;
 					top:-11px;
@@ -539,7 +584,7 @@ sub, sup { line-height: 0; }
 }
 #hindsight-foresight {
 	.gate .top-gate-wrapper .top-gate {
-		top:-50%;
+
 	}
 
 	.content {
@@ -596,6 +641,7 @@ sub, sup { line-height: 0; }
 		  	opacity: .8;
 		} */
 	}
+
 	.content {
 		h1 {
 			color:#cdfc94;
@@ -722,9 +768,13 @@ sub, sup { line-height: 0; }
 		width: 80%;
 		padding:6px 0;
 		float: left;
+		border-right: 2px solid transparent;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
 		@media all and (min-width: 560px) {
 			width:90%;
-			padding:15px 0 0;
+			padding:15px 0;
 		}
 		@media all and (min-width: 1024px) {
 			width: 95%;
@@ -742,19 +792,23 @@ sub, sup { line-height: 0; }
 			}
 		}
 		.subscribe-block {
-			padding-right: 10px;
-			padding-bottom:2px;
 			float:right;
-			height: 35px;
-			width: 50px;
 			background:transparent url(../images/mailer.png) no-repeat 0 0;
+			background-size: 40px;
 			cursor:pointer;
-			@media all and (min-width: 560px) {
-				height: 50px;
+			width: 50px;
+			height: 40px;
+			position: relative;
+			top: 5px;
+			left:-10px;
+			opacity: .8;
+			&:hover {
+				opacity: .9;
 			}
 		}
 	}
 	.cube {
+		background: #000;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
@@ -762,7 +816,8 @@ sub, sup { line-height: 0; }
 		display: block;
 		float:right;
 		width: 20%;
-		border-left: 1px solid transparent;
+		border-left: 2px solid transparent;
+
 		@media all and (min-width: 560px) {
 			width: 10%;
 		}
@@ -770,12 +825,17 @@ sub, sup { line-height: 0; }
 			width: 5%;
 		}
 		a {
-			background:#000 url(../images/cube.png)no-repeat center center; 
-			background-size: 75%;
+
+			background: url(../images/cube.png)no-repeat center center; 
+			background-size: 62px;
 			height: 49px;
 			display: block;
+			opacity: .5;
 			@media all and (min-width: 560px) {
-				height:67px;
+				height:70px;
+			}
+			&:hover {
+				opacity: .8;
 			}
 		}
 	}

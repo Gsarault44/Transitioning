@@ -51,7 +51,7 @@
                 },
                 dots: false,
                 draggable: true,
-                easing: 'linear',
+                easing: 'easeInBack',
                 fade: false,
                 infinite: true,
                 lazyLoad: 'ondemand',
@@ -200,11 +200,11 @@
 
         if (_.transformsEnabled === false) {
             if (_.options.vertical === false) {
-                _.$slideTrack.stop().dealy(400).animate({
+                _.$slideTrack.stop(true, true).delay(5000).animate({
                     left: targetLeft
                 }, _.options.speed, _.options.easing, callback);
             } else {
-                _.$slideTrack.stop().dealy(1400).animate({
+                _.$slideTrack.stop(true, true).delay(5000).animate({
                     top: targetLeft
                 }, _.options.speed, _.options.easing, callback);
             }
@@ -215,7 +215,7 @@
 
                 $({
                     animStart: _.currentLeft
-                }).dealy(1400).animate({
+                }).stop(true, true).delay(5000).animate({
                     animStart: targetLeft
                 }, {
                     duration: _.options.speed,
@@ -1258,7 +1258,7 @@
         if (_.options.infinite === false && (index < 0 || index > (_.slideCount - _.options.slidesToShow + unevenOffset))) {
             if(_.options.fade === false) {
                 targetSlide = _.currentSlide;
-                _.animateSlide.dealy(1400)(slideLeft, function() {
+                _.animateSlide(slideLeft, function() {
                     _.postSlide(targetSlide);
                 });
             }

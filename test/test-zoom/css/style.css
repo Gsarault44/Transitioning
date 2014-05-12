@@ -46,25 +46,35 @@ body {
 
 /* block level */
 h1, .h1 {
-  font: bold 3.8em Helvetica, Arial, sans-serif;
-  margin: 0 0 0.5em; }
+  font: bold 3.8em "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  margin: 0 0 0.5em;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke: 0.1px; }
 
 h2, .h2 {
-  font: bold 1.8em Helvetica, Arial, sans-serif;
-  margin: 0 0 1em; }
+  font: bold 1.8em "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  margin: 0 0 1em;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke: 0.1px; }
 
 h3, .h3 {
-  font: bold 1.5em Helvetica, Arial, sans-serif;
-  margin: 0 0 1em; }
+  font: bold 1.5em "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  margin: 0 0 1em;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke: 0.1px; }
 
 h4, h5, h6, .h4, .h5, .h6 {
-  font: bold 1.2rem Helvetica, Arial, sans-serif;
-  margin: 0 0 1em; }
+  font: bold 1.2rem "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  margin: 0 0 1em;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke: 0.1px; }
 
 p, ul, dl, ol, table {
   font-size: 16px;
   margin: 0 0 1.5em;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke: 0.1px; }
 
 ul {
   padding-left: 20px; }
@@ -254,8 +264,14 @@ sub, sup {
   .slide .background {
     position: absolute;
     z-index: 0;
-    width: 100%;
-    height: auto; }
+    width: 120%;
+    height: 100%;
+    max-width: none; }
+    @media only screen and (orientation: landscape) and (min-device-width: 960px) {
+      .slide .background {
+        width: 100%;
+        max-width: 100%;
+        height: auto; } }
   .slide .content-wrapper {
     top: 11%;
     left: 0;
@@ -265,6 +281,7 @@ sub, sup {
     margin: 0 auto;
     z-index: 1;
     max-width: 650px;
+    max-height: 56%;
     /* @media all and (min-width: 560px) {
     	left:0;
     } */ }
@@ -291,13 +308,15 @@ sub, sup {
       .slide .content-wrapper .button-wrapper .content {
         text-align: left;
         position: relative;
-        padding-bottom: 45px; }
+        padding-bottom: 45px;
+        -webkit-text-stroke: 0.1px; }
         .slide .content-wrapper .button-wrapper .content h1 {
           text-align: left;
           font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
           font-size: 16px;
           font-size: 1.6em;
-          margin: 0; }
+          margin: 0;
+          -webkit-text-stroke: 0.1px; }
           @media all and (min-width: 420px) {
             .slide .content-wrapper .button-wrapper .content h1 {
               margin-bottom: 8px;
@@ -316,7 +335,8 @@ sub, sup {
           font-size: 14px;
           font-size: 1.4em;
           margin: 0;
-          margin-bottom: 10px; }
+          margin-bottom: 10px;
+          -webkit-text-stroke: 0.1px; }
           @media all and (min-width: 420px) {
             .slide .content-wrapper .button-wrapper .content p {
               margin-bottom: 18px;
@@ -325,9 +345,9 @@ sub, sup {
               line-height: 20px; } }
           @media all and (min-width: 768px) {
             .slide .content-wrapper .button-wrapper .content p {
-              font-size: 22px;
-              font-size: 2.2em;
-              line-height: 22px; } }
+              font-size: 20px;
+              font-size: 2em;
+              line-height: 30px; } }
         .slide .content-wrapper .button-wrapper .content .expand p {
           letter-spacing: 0;
           font-family: Arial, Helvetica, sans-serif;
@@ -337,9 +357,9 @@ sub, sup {
           @media all and (min-width: 768px) {
             .slide .content-wrapper .button-wrapper .content .expand p {
               width: 90%;
-              font-size: 20px;
-              font-size: 2em;
-              line-height: 22px; } }
+              font-size: 18px;
+              font-size: 1.8em;
+              line-height: 24px; } }
   .slide .b-border {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -378,13 +398,18 @@ sub, sup {
   .slide .gate {
     display: block;
     position: absolute;
-    width: 120%;
-    height: 120%;
-    top: -15%;
-    left: -10%;
+    width: 160%;
+    height: 100%;
+    top: 0%;
+    left: -40%;
     margin: 0;
     padding: 0;
     z-index: 1;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
     -webkit-transform: rotate(-87deg);
     -moz-transform: rotate(-87deg);
     -o-transform: rotate(-87deg);
@@ -392,6 +417,10 @@ sub, sup {
     transform: rotate(-87deg); }
     @media screen and (orientation: landscape) {
       .slide .gate {
+        width: 120%;
+        height: 120%;
+        top: -15%;
+        left: -10%;
         -webkit-transform: rotate(7deg);
         -moz-transform: rotate(7deg);
         -o-transform: rotate(7deg);
@@ -409,26 +438,31 @@ sub, sup {
       height: 60%;
       margin: 0;
       padding: 0;
-      top: -5%;
+      top: 0%;
       overflow: hidden;
-      box-shadow: 0px 0px 4px 0px #000; }
+      box-shadow: 0px 0px 4px 0px #000;
+      outline: 1px solid transparent;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      /* &:after {
+      	content:"";
+      	display: block;
+      	position: absolute;
+      	overflow: hidden;
+      	height:100%;
+      	width:100%;
+      	top:0;
+      	left:0;
+        	background: #000;
+        	opacity: .1;
+        	z-index: 1;
+      } */ }
       @media all and (min-width: 420px) {
         .slide .gate .top-gate-wrapper {
           width: 100%;
           margin-top: 0;
           margin-left: 0; } }
-      .slide .gate .top-gate-wrapper:after {
-        content: "";
-        display: block;
-        position: absolute;
-        overflow: hidden;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background: #000;
-        opacity: .2;
-        z-index: 1; }
       .slide .gate .top-gate-wrapper .top-gate {
         width: 110%;
         height: auto;
@@ -437,8 +471,15 @@ sub, sup {
         position: relative; }
         @media screen and (orientation: portrait) {
           .slide .gate .top-gate-wrapper .top-gate {
-            width: 100%;
-            height: 200%; } }
+            width: 200%;
+            height: 200%;
+            -webkit-transform: rotate(87deg);
+            -moz-transform: rotate(87deg);
+            -o-transform: rotate(87deg);
+            -ms-transform: rotate(87deg);
+            transform: rotate(87deg);
+            margin-top: -20%;
+            margin-left: -50%; } }
       .slide .gate .top-gate-wrapper p {
         position: absolute;
         font-size: 40px;
@@ -470,10 +511,11 @@ sub, sup {
             font-size: 130px;
             bottom: -30px; } }
     .slide .gate .bottom-gate-wrapper {
+      outline: 1px solid transparent;
       position: relative;
       width: 100%;
       height: 60%;
-      top: -5%;
+      top: 0%;
       margin: 0;
       padding: 0;
       overflow: hidden;
@@ -502,13 +544,22 @@ sub, sup {
         max-width: none; }
         @media all and (min-width: 420px) {
           .slide .gate .bottom-gate-wrapper .bottom-gate {
-            width: 100%;
+            width: 120%;
             height: auto;
-            margin-top: -20%; } }
+            margin-top: -10%; } }
         @media screen and (orientation: portrait) {
           .slide .gate .bottom-gate-wrapper .bottom-gate {
-            width: 100%;
-            height: auto; } }
+            width: 125%;
+            height: auto;
+            margin-left: -13%;
+            -webkit-transform: rotate(87deg);
+            -moz-transform: rotate(87deg);
+            -o-transform: rotate(87deg);
+            -ms-transform: rotate(87deg);
+            transform: rotate(87deg); } }
+        @media all and (min-width: 768px) {
+          .slide .gate .bottom-gate-wrapper .bottom-gate {
+            width: 100%; } }
       .slide .gate .bottom-gate-wrapper p {
         position: absolute;
         font-size: 40px;
@@ -522,7 +573,10 @@ sub, sup {
         text-align: center;
         font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
         font-weight: bold;
-        z-index: 2; }
+        z-index: 2;
+        transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        -webkit-transform: rotatex(-180deg); }
         @media all and (min-width: 420px) {
           .slide .gate .bottom-gate-wrapper p {
             font-size: 50px;
@@ -569,8 +623,6 @@ sub, sup {
 #horsepower-brainpower .content li {
   color: #81c2ff; }
 
-#hindsight-foresight .gate .top-gate-wrapper .top-gate {
-  top: -50%; }
 #hindsight-foresight .content {
   /* &:after {
   	content:"";
@@ -716,11 +768,15 @@ sub, sup {
     background: #000;
     width: 80%;
     padding: 6px 0;
-    float: left; }
+    float: left;
+    border-right: 2px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
     @media all and (min-width: 560px) {
       .footer .f-wrapper {
         width: 90%;
-        padding: 15px 0 0; } }
+        padding: 15px 0; } }
     @media all and (min-width: 1024px) {
       .footer .f-wrapper {
         width: 95%; } }
@@ -735,17 +791,20 @@ sub, sup {
           .footer .f-wrapper .footer-logo img {
             padding-left: 50px; } }
     .footer .f-wrapper .subscribe-block {
-      padding-right: 10px;
-      padding-bottom: 2px;
       float: right;
-      height: 35px;
-      width: 50px;
       background: transparent url(../images/mailer.png) no-repeat 0 0;
-      cursor: pointer; }
-      @media all and (min-width: 560px) {
-        .footer .f-wrapper .subscribe-block {
-          height: 50px; } }
+      background-size: 40px;
+      cursor: pointer;
+      width: 50px;
+      height: 40px;
+      position: relative;
+      top: 5px;
+      left: -10px;
+      opacity: .8; }
+      .footer .f-wrapper .subscribe-block:hover {
+        opacity: .9; }
   .footer .cube {
+    background: #000;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -753,7 +812,7 @@ sub, sup {
     display: block;
     float: right;
     width: 20%;
-    border-left: 1px solid transparent; }
+    border-left: 2px solid transparent; }
     @media all and (min-width: 560px) {
       .footer .cube {
         width: 10%; } }
@@ -761,13 +820,16 @@ sub, sup {
       .footer .cube {
         width: 5%; } }
     .footer .cube a {
-      background: black url(../images/cube.png) no-repeat center center;
-      background-size: 75%;
+      background: url(../images/cube.png) no-repeat center center;
+      background-size: 62px;
       height: 49px;
-      display: block; }
+      display: block;
+      opacity: .5; }
       @media all and (min-width: 560px) {
         .footer .cube a {
-          height: 67px; } }
+          height: 70px; } }
+      .footer .cube a:hover {
+        opacity: .8; }
 
 .zoom-zoom-in {
   -webkit-animation: zoomer-in 2s ease-in-out both;
@@ -1347,7 +1409,23 @@ sub, sup {
   margin-top: -10px;
   padding: 0;
   border: none;
-  outline: none; }
+  outline: none;
+  font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif; }
+  @media all and (min-width: 560px) {
+    .slick-prev:hover, .slick-next:hover {
+      color: #fff; } }
+
+.slick-prev p {
+  font-size: 22px;
+  margin: 20px 0 24px 70px; }
+.slick-prev p:nth-of-type(2) {
+  margin-left: 30px; }
+
+.slick-next p {
+  font-size: 22px;
+  margin: 20px 70px 24px 0; }
+.slick-next p:nth-of-type(2) {
+  margin-right: 30px; }
 
 .slick-prev:focus, .slick-next:focus {
   outline: none; }
@@ -1469,7 +1547,7 @@ sub, sup {
   font-size: 26px; }
   @media all and (min-width: 560px) {
     .slick-prev {
-      width: 200px;
+      width: 300px;
       height: 100px;
       top: 12%; } }
   .slick-prev:before {
@@ -1536,7 +1614,7 @@ sub, sup {
   @media all and (min-width: 560px) {
     .slick-next {
       bottom: 12%;
-      width: 200px;
+      width: 300px;
       height: 100px; } }
   .slick-next:before {
     content: "";
@@ -1596,6 +1674,9 @@ sub, sup {
   -moz-transition: all .8s ease-out;
   -o-transition: all .8s ease-out;
   transition: all .8s ease-out; }
+
+.slick-disabled {
+  display: none !important; }
 
 .zoom-light {
   display: none;
@@ -1676,77 +1757,134 @@ sub, sup {
   transition: all .8s ease-out;
   color: #fff; }
   .subscribe-form-block .subscribe-form-wrapper {
-    padding: 15px 15px 50px;
+    /* padding:15px 15px 50px; */
     background: rgba(0, 0, 0, 0.95);
     display: block;
     margin: 0 auto;
     width: 90%;
-    max-width: 500px;
-    margin-top: 20%;
-    position: relative; }
+    max-width: 645px;
+    margin-top: 10%;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.6); }
     .subscribe-form-block .subscribe-form-wrapper .close {
       position: absolute;
-      top: -15px;
-      right: -15px;
+      top: 10px;
+      right: 10px;
       display: block;
-      background: #fff;
-      color: #000;
-      width: 30px;
-      height: 30px;
+      background: #000;
+      width: 50px;
+      height: 50px;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
       font-size: 25px;
-      border: 2px solid #000;
+      border: 2px solid #fff;
       cursor: pointer; }
       .subscribe-form-block .subscribe-form-wrapper .close:before {
-        content: "X";
+        content: "";
         z-index: 99999999999;
         display: block;
         position: absolute;
-        width: 20px;
-        height: 20px;
-        text-indent: 6px;
-        font-family: arial; }
-    .subscribe-form-block .subscribe-form-wrapper form {
-      padding: 10px;
-      margin: 0 auto; }
-      .subscribe-form-block .subscribe-form-wrapper form .subscribe-input {
-        margin: 0 auto;
+        height: 40px;
+        border-left: 2px solid #fff;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        left: 24px;
+        top: 5px; }
+      .subscribe-form-block .subscribe-form-wrapper .close:after {
+        content: "";
+        z-index: 99999999999;
         display: block;
-        margin-bottom: 20px;
-        width: 100%;
-        max-width: 300px;
-        padding: 5px;
-        font-size: 13px; }
-        @media all and (min-width: 420px) {
-          .subscribe-form-block .subscribe-form-wrapper form .subscribe-input {
-            padding: 10px; } }
-      .subscribe-form-block .subscribe-form-wrapper form .subscribe-submit {
-        float: right;
-        text-transform: uppercase;
-        -moz-box-shadow: inset 0px 0px 0px 0px #ffffff;
-        -webkit-box-shadow: inset 0px 0px 0px 0px #ffffff;
-        box-shadow: inset 0px 0px 0px 0px #ffffff;
-        background-color: #ededed;
-        border: 1px solid #dcdcdc;
-        display: inline-block;
-        cursor: pointer;
-        color: #777777;
-        font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-        font-size: 13px;
-        font-weight: bold;
-        padding: 5px 14px;
-        text-decoration: none;
-        text-shadow: 0px 0px 0px #ffffff;
-        -webkit-border-radius: 6px;
-        -moz-border-radius: 6px;
-        border-radius: 6px; }
-        @media all and (min-width: 420px) {
-          .subscribe-form-block .subscribe-form-wrapper form .subscribe-submit {
-            padding: 10px 14px; } }
-        .subscribe-form-block .subscribe-form-wrapper form .subscribe-submit:hover {
-          background-color: #dfdfdf; }
-        .subscribe-form-block .subscribe-form-wrapper form .subscribe-submit:active {
-          position: relative;
-          top: 1px; }
+        position: absolute;
+        height: 40px;
+        border-left: 2px solid #fff;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left: 24px;
+        top: 5px; }
+    .subscribe-form-block .subscribe-form-wrapper .form-wrapper {
+      padding: 80px 100px;
+      font-family: arial;
+      -webkit-font-smoothing: antialiased; }
+      .subscribe-form-block .subscribe-form-wrapper .form-wrapper p {
+        font-size: 18px;
+        font-size: 1.8em;
+        line-height: 21px; }
+      .subscribe-form-block .subscribe-form-wrapper .form-wrapper form {
+        margin: 0 auto; }
+        .subscribe-form-block .subscribe-form-wrapper .form-wrapper form .subscribe-input {
+          display: block;
+          margin-bottom: 15px;
+          width: 100%;
+          padding: 5px;
+          color: #a2a1a1;
+          font-size: 13px;
+          -moz-box-shadow: 0;
+          -webkit-box-shadow: 0;
+          box-shadow: 0;
+          -webkit-text-stroke: 0.1px;
+          -webkit-font-smoothing: antialiased; }
+          @media all and (min-width: 420px) {
+            .subscribe-form-block .subscribe-form-wrapper .form-wrapper form .subscribe-input {
+              padding: 10px;
+              font-size: 18px; } }
+          .subscribe-form-block .subscribe-form-wrapper .form-wrapper form .subscribe-input:focus {
+            outline: 2px solid #077d9b; }
+          .subscribe-form-block .subscribe-form-wrapper .form-wrapper form .subscribe-input:last-of-type {
+            margin-bottom: 20px; }
+        .subscribe-form-block .subscribe-form-wrapper .form-wrapper form .subscribe-submit {
+          -webkit-text-stroke: 0.1px;
+          float: right;
+          background-color: #000;
+          border: 1px solid #fff;
+          display: inline-block;
+          cursor: pointer;
+          color: #777777;
+          font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+          font-size: 16px;
+          color: #fff;
+          padding: 5px 14px;
+          text-decoration: none;
+          outline: none;
+          -moz-box-shadow: 0;
+          -webkit-box-shadow: 0;
+          box-shadow: 0; }
+          @media all and (min-width: 420px) {
+            .subscribe-form-block .subscribe-form-wrapper .form-wrapper form .subscribe-submit {
+              padding: 6px 10px;
+              margin-right: -24px; } }
+          .subscribe-form-block .subscribe-form-wrapper .form-wrapper form .subscribe-submit:hover {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000; }
+          .subscribe-form-block .subscribe-form-wrapper .form-wrapper form .subscribe-submit:active {
+            position: relative;
+            top: 1px; }
+
+::-webkit-input-placeholder {
+  padding-left: 5px;
+  font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  color: #a2a1a1; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  padding-left: 5px;
+  font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  color: #a2a1a1; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  padding-left: 5px;
+  font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  color: #a2a1a1; }
+
+:-ms-input-placeholder {
+  padding-left: 5px;
+  font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  color: #a2a1a1; }

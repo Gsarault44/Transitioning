@@ -37,7 +37,32 @@
 	margin-top: -10px; 
 	padding: 0; 
 	border: none; 
-	outline: none; 
+	outline: none;
+	font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+	@media all and (min-width: 560px) {
+		&:hover {
+			color:#fff;
+		}
+	}
+	
+}
+.slick-prev {
+	p {
+		font-size: 22px;
+		margin: 20px 0 24px 70px;
+	}
+	p:nth-of-type(2) {
+		margin-left: 30px;
+	}
+}
+.slick-next {
+	p {
+		font-size: 22px;
+		margin: 20px 70px 24px 0;
+	}
+	p:nth-of-type(2) {
+		margin-right: 30px;
+	}
 }
 .slick-prev:focus, .slick-next:focus { outline: none; }
 .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before { opacity: 0.25; }
@@ -136,7 +161,7 @@
 	height:50px;
 	font-size: 26px;
 	@media all and (min-width: 560px) {
-		width:200px;
+		width:300px;
 		height:100px;
 		top:12%;
 	}
@@ -215,7 +240,7 @@
 	height: 50px;
 	@media all and (min-width: 560px) {
 		bottom:12%;
-		width: 200px;
+		width: 300px;
 		height: 100px;
 	}
 	&:before {
@@ -285,5 +310,7 @@
 	@include transitions;
 }
 
-
+.slick-disabled {
+	display: none !important;
+}
 
