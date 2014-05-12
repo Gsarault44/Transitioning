@@ -170,11 +170,19 @@ sub, sup { line-height: 0; }
 	position: absolute;
 	overflow: hidden;
 }
-
+.wrapper {
+	padding:50px;
+}
 
 .slide {
 	overflow: hidden;
 	position: relative;
+	margin:0 auto;
+	width: 98%;
+	height: 100%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
 	.background {
 		position: absolute;
 		z-index: 0;
@@ -325,11 +333,18 @@ sub, sup { line-height: 0; }
 		margin:0;
 		padding:0;
 		z-index: 1;
-		-webkit-transform: rotate(7deg);
-		-moz-transform: rotate(7deg);
-		-o-transform: rotate(7deg);
-		-ms-transform: rotate(7deg);
-		transform: rotate(7deg);
+		-webkit-transform: rotate(-87deg);
+		-moz-transform: rotate(-87deg);
+		-o-transform: rotate(-87deg);
+		-ms-transform: rotate(-87deg);
+		transform: rotate(-87deg);
+		@media screen and (orientation:landscape) {
+			-webkit-transform: rotate(7deg);
+			-moz-transform: rotate(7deg);
+			-o-transform: rotate(7deg);
+			-ms-transform: rotate(7deg);
+			transform: rotate(7deg);
+		}
 		img {
 			-webkit-transform: rotate(-7deg);
 			-moz-transform: rotate(-7deg);
@@ -732,10 +747,9 @@ sub, sup { line-height: 0; }
 			float:right;
 			height: 35px;
 			width: 50px;
-			background:transparent url(../images/mail-tiny.png) no-repeat 0 0;
+			background:transparent url(../images/mailer.png) no-repeat 0 0;
 			cursor:pointer;
 			@media all and (min-width: 560px) {
-				background:transparent url(../images/mail-small.png) no-repeat 0 0;
 				height: 50px;
 			}
 		}
@@ -767,18 +781,7 @@ sub, sup { line-height: 0; }
 	}
 }
 
-.zoom-zoom {
-	-webkit-animation: zoomer 2s ease-in-out both;
-	-moz-animation: zoomer 2s ease-in-out both;
-	-o-animation: zoomer 2s ease-in-out both;
-	-ms-animation: zoomer 2s ease-in-out both;
-	animation: zoomer 2s ease-in-out both;
-	.slick-dots {
-		div {
-			z-index: 9999999999;
-		}
-	}
-}
+
 .zoom-zoom-in {
 	-webkit-animation: zoomer-in 2s ease-in-out both;
 	-moz-animation: zoomer-in 2s ease-in-out both;
@@ -808,4 +811,16 @@ sub, sup { line-height: 0; }
 	-ms-transform:     scale(0.5);
 	-o-transform:      scale(0.5);
 	transform:         scale(0.5);
+}
+.zoom-zoom {
+	-webkit-animation: zoomer 2s ease-in-out both;
+	-moz-animation: zoomer 2s ease-in-out both;
+	-o-animation: zoomer 2s ease-in-out both;
+	-ms-animation: zoomer 2s ease-in-out both;
+	animation: zoomer 2s ease-in-out both;
+	.slick-dots {
+		div {
+			z-index: 9999999999;
+		}
+	}
 }

@@ -12,6 +12,21 @@ function hashing() {
 		window.location.hash = hash ;
 	}*/
 }
+function pagiappend() {
+	if ($('#horsepower-brainpower').hasClass('slick-active')){
+		$('.next-wrapper').prepend('<p>Hindsight</p><p>Foresight</p>');
+		$('.prev-wrapper').prepend('<p>Computers</p><p>Compassion</p>');
+	}
+	if ($('#hindsight-foresite').hasClass('slick-active')){
+		$('.next-wrapper').prepend('<p>Horsepower</p><p>BrainPower</p>');
+		$('.prev-wrapper').prepend('<p>Computers</p><p>Compassion</p>');
+	}
+	if ($('#computers-compassion').hasClass('slick-active')){
+		$('.next-wrapper').prepend('<p>Horsepower</p><p>BrainPower</p>');
+		$('.prev-wrapper').prepend('<p>Hindsight</p><p>Foresight</p>');
+	}
+}
+
 function pagiLabel() {
 	$('.next-title').each(function(){
 		if($('.next-title:last-of-type').hasClass('current')){
@@ -69,16 +84,20 @@ function slick() {
 
 		dots: true,
 		infinite: true,
-		speed: 2000,
+		speed: 1800,
 		slidesToShow: 1,
-		slide: '.slide',
 		onBeforeChange : function() {
-			$('.slick-active .gate').find('.top-gate-wrapper').animate({top: '0'}, 700, 'easeInOutQuad');
-			$('.slick-active .gate').find('.bottom-gate-wrapper').animate({top: '0'}, 700,'easeInOutQuad');
-			$('.slick-list').addClass('zoom');
 			$('.content-wrapper').removeAttr('style');
 			$('.content').removeClass('moveup');
 			$('.slick-list').removeClass('zoom-zoom-in');
+			$('.slick-active .gate').find('.top-gate-wrapper').animate({top: '0'}, 200);
+			$('.slick-active .gate').find('.bottom-gate-wrapper').animate({top: '0'}, 200);
+			if ($('.slick-track').hasClass('zoom-zoom')){
+				
+			}else{
+				$('.slick-list').addClass('zoom');
+			}
+			
 			// Status bar 
 		},
 		onAfterChange: function(){
@@ -104,14 +123,18 @@ function slick() {
 			
 			hashing();
 			pagiLabel();
+			pagiappend();
 		}
-	});
 
+	});
+	
 }
 
 function zoomLight() {
 	
 	$('.zoomer').click(function(){
+		$('.gate').find('.top-gate-wrapper').animate({top: '0'}, 700, 'easeInOutQuad');
+		$('.gate').find('.bottom-gate-wrapper').animate({top: '0'}, 700,'easeInOutQuad');
 		$('.slick-cloned').hide();
 		$('.slick-list').addClass('zoom-zoom');
 		$('.slick-track').addClass('slick-dots');
@@ -125,61 +148,44 @@ function zoomLight() {
 		});
 		return false;
 	});
-	$('.bg-1').click(function(){
-		$('.slick-list').removeClass('zoom-zoom-in');
-		var bt1 = $(".slick-dots button").text('1');
-		$(bt1).click();
-	});
 
 	/*$('.zoomer').click(function(){
 		$('.zoom-light').fadeToggle().css('display', 'table');
 		$('.zoom-light').toggleClass('scale-up');
 		$('.zoom-light').toggleClass('scale-down');
+		return false;
 	});
 	$('.zoom-light').click(function(){
 		$('.zoom-light').fadeOut();
 		$('.zoom-light').toggleClass('scale-up');
 		$('.zoom-light').toggleClass('scale-down');
-
+		return false;
 	});
-	$('.zoom-layout li a').each(function(){
-		$(this).click(function(){
+	*/
 
-		});
-	});*/
-}
-
-
-
-
-var agent = navigator.userAgent,
-	device = {
-		Android: function() {return agent.match(/Android/i) ? true : false; },
-		iOS: function() {return agent.match(/iPod|iPad|iPhone/i) ? true : false;},
-		Blackberry: function() {return agent.match(/BlackBerry/i) ? true : false;},
-		winPhone: function() {return agent.match(/IEMobile/i) ? true : false;},
-		all: function() {return (device.Android() || device.iOS() || device.Blackberry() || device.winPhone());}
-	};
-function checkMode() {
-	var o = window.orientation;
-
-	if (o !== 90 && o !== -90) {
-		$(".sl-slide").attr("data-orientation","vertical");
-	} else {
-		$(".sl-slide").attr("data-orientation","horizontal");
-	}
-}
-	if (device.iOS()) {
-	
-
-	// dom onload check
-	checkMode();
-
-	// listen to changes
-	$(window).bind('orientationchange', function() {
-		checkMode();
+	$('.bg-1').on('click',function(){
+		$('.slick-dots a.1').click();
+		$('.slick-list').removeClass('zoom');
+		$('.slick-track').removeClass('zoom-zoom');
+		return false;
+	});
+	$('.bg-2').on('click',function(){
+		$('.slick-dots a.2').click();
+		$('.slick-list').removeClass('zoom');
+		$('.slick-track').removeClass('zoom-zoom');
+		return false;
+	});
+	$('.bg-3').on('click', function(){
+		$('.slick-dots a.3').click();
+		$('.slick-list').removeClass('zoom');
+		$('.slick-track').removeClass('zoom-zoom');
+		return false;
 	});
 }
+
+
+
+
 function orientation(){
 	var windowH = $(window).height();
 	var windowW = $(window).width();
@@ -203,7 +209,9 @@ $(window).resize(function(){
 ********************/
 
 jQuery(window).load(function(){
+	
 	slick();
+	pagiappend();
 	pagiLabel();
 	initalClick();
 });
@@ -214,6 +222,7 @@ jQuery(window).load(function(){
 
 jQuery(document).ready(function(){
 	//theIndex();
+	
 	moreContent();
 	zoomLight();
 	orientation();

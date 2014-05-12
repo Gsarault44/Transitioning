@@ -236,9 +236,21 @@ sub, sup {
   position: absolute;
   overflow: hidden; }
 
+.wrapper {
+  padding: 50px; }
+
 .slide {
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  margin: 0 auto;
+  width: 98%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */ }
   .slide .background {
     position: absolute;
     z-index: 0;
@@ -373,11 +385,18 @@ sub, sup {
     margin: 0;
     padding: 0;
     z-index: 1;
-    -webkit-transform: rotate(7deg);
-    -moz-transform: rotate(7deg);
-    -o-transform: rotate(7deg);
-    -ms-transform: rotate(7deg);
-    transform: rotate(7deg); }
+    -webkit-transform: rotate(-87deg);
+    -moz-transform: rotate(-87deg);
+    -o-transform: rotate(-87deg);
+    -ms-transform: rotate(-87deg);
+    transform: rotate(-87deg); }
+    @media screen and (orientation: landscape) {
+      .slide .gate {
+        -webkit-transform: rotate(7deg);
+        -moz-transform: rotate(7deg);
+        -o-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        transform: rotate(7deg); } }
     .slide .gate img {
       -webkit-transform: rotate(-7deg);
       -moz-transform: rotate(-7deg);
@@ -721,11 +740,10 @@ sub, sup {
       float: right;
       height: 35px;
       width: 50px;
-      background: transparent url(../images/mail-tiny.png) no-repeat 0 0;
+      background: transparent url(../images/mailer.png) no-repeat 0 0;
       cursor: pointer; }
       @media all and (min-width: 560px) {
         .footer .f-wrapper .subscribe-block {
-          background: transparent url(../images/mail-small.png) no-repeat 0 0;
           height: 50px; } }
   .footer .cube {
     -webkit-box-sizing: border-box;
@@ -750,15 +768,6 @@ sub, sup {
       @media all and (min-width: 560px) {
         .footer .cube a {
           height: 67px; } }
-
-.zoom-zoom {
-  -webkit-animation: zoomer 2s ease-in-out both;
-  -moz-animation: zoomer 2s ease-in-out both;
-  -o-animation: zoomer 2s ease-in-out both;
-  -ms-animation: zoomer 2s ease-in-out both;
-  animation: zoomer 2s ease-in-out both; }
-  .zoom-zoom .slick-dots div {
-    z-index: 9999999999; }
 
 .zoom-zoom-in {
   -webkit-animation: zoomer-in 2s ease-in-out both;
@@ -787,6 +796,15 @@ sub, sup {
   -ms-transform: scale(0.5);
   -o-transform: scale(0.5);
   transform: scale(0.5); }
+
+.zoom-zoom {
+  -webkit-animation: zoomer 2s ease-in-out both;
+  -moz-animation: zoomer 2s ease-in-out both;
+  -o-animation: zoomer 2s ease-in-out both;
+  -ms-animation: zoomer 2s ease-in-out both;
+  animation: zoomer 2s ease-in-out both; }
+  .zoom-zoom .slick-dots div {
+    z-index: 9999999999; }
 
 @-webkit-keyframes slide {
   0% {
@@ -1322,11 +1340,10 @@ sub, sup {
   height: 20px;
   width: 20px;
   line-height: 0;
-  font-size: 0;
   cursor: pointer;
   background: transparent;
   color: transparent;
-  top: 50%;
+  text-align: center;
   margin-top: -10px;
   padding: 0;
   border: none;
@@ -1376,7 +1393,7 @@ sub, sup {
   width: 100%; }
 
 /* .dot-styles button { position: relative; display: inline-block; height: 20px; width: 33%; padding: 0px 5px; cursor: pointer; } */
-.dot-styles button:focus {
+.dot-styles a:focus {
   outline: none; }
 
 .dot-style {
@@ -1392,7 +1409,7 @@ sub, sup {
     .dot-style {
       bottom: 35px; } }
 
-.dot-style button {
+.dot-style a {
   text-indent: -999999px;
   display: inline-block;
   float: left;
@@ -1408,22 +1425,22 @@ sub, sup {
   box-sizing: border-box;
   border-right: 2px solid #000; }
 
-.dot-style li + li button {
+.dot-style li + li a {
   background: #ebb231; }
 
-.dot-style li + li + li button {
+.dot-style li + li + li a {
   background: #21a3ba; }
 
-.dot-style button:nth-of-type(4) {
+.dot-style a:nth-of-type(4) {
   background: yellow; }
 
-.dot-style button:nth-of-type(5) {
+.dot-style a:nth-of-type(5) {
   background: blue; }
 
-.dot-style button:nth-of-type(6) {
+.dot-style a:nth-of-type(6) {
   background: orange; }
 
-.dot-style li.slick-active button {
+.dot-style li.slick-active a {
   opacity: 1;
   vertical-align: bottom;
   margin-top: -2px;
@@ -1454,8 +1471,7 @@ sub, sup {
     .slick-prev {
       width: 200px;
       height: 100px;
-      left: 5px;
-      top: 15%; } }
+      top: 12%; } }
   .slick-prev:before {
     content: "";
     display: block;
@@ -1519,8 +1535,7 @@ sub, sup {
   height: 50px; }
   @media all and (min-width: 560px) {
     .slick-next {
-      bottom: 5%;
-      right: 5px;
+      bottom: 12%;
       width: 200px;
       height: 100px; } }
   .slick-next:before {

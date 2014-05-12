@@ -47,7 +47,7 @@
                 centerPadding: '50px',
                 cssEase: 'ease',
                 customPaging: function(slider, i) {
-                    return '<button type="button">' + (i + 1) + '</button>';
+                    return '<a href="#" class="'+(i + 1)+'">' + (i + 1) + '</a>';
                 },
                 dots: false,
                 draggable: true,
@@ -200,11 +200,11 @@
 
         if (_.transformsEnabled === false) {
             if (_.options.vertical === false) {
-                _.$slideTrack.animate({
+                _.$slideTrack.stop().dealy(400).animate({
                     left: targetLeft
                 }, _.options.speed, _.options.easing, callback);
             } else {
-                _.$slideTrack.animate({
+                _.$slideTrack.stop().dealy(1400).animate({
                     top: targetLeft
                 }, _.options.speed, _.options.easing, callback);
             }
@@ -215,7 +215,7 @@
 
                 $({
                     animStart: _.currentLeft
-                }).animate({
+                }).dealy(1400).animate({
                     animStart: targetLeft
                 }, {
                     duration: _.options.speed,
@@ -757,7 +757,7 @@
         }
 
         if(_.options.accessibility === true) {
-            _.$list.on('keydown.slick', _.keyHandler); 
+            _.$list.on('keydown.slick', _.keyHandler);
         }
 
         $(window).on('orientationchange.slick.slick-' + _.instanceUid, function() {
@@ -830,7 +830,7 @@
         var _ = this,
             loadRange, cloneRange, rangeStart, rangeEnd;
 
-	    if (_.options.centerMode === true || _.options.fade === true ) {
+        if (_.options.centerMode === true || _.options.fade === true ) {
             rangeStart = _.options.slidesToShow + _.currentSlide - 1;
             rangeEnd = rangeStart + _.options.slidesToShow + 2;
         } else {
@@ -1007,8 +1007,8 @@
         var _ = this,
             positionProps = {}, x, y;
 
-        x = _.positionProp == 'left' ? position + 'px' : '0px';
-        y = _.positionProp == 'top' ? position + 'px' : '0px';
+        x = _.positionProp === 'left' ? position + 'px' : '0px';
+        y = _.positionProp === 'top' ? position + 'px' : '0px';
 
         positionProps[_.positionProp] = position;
 
@@ -1258,7 +1258,7 @@
         if (_.options.infinite === false && (index < 0 || index > (_.slideCount - _.options.slidesToShow + unevenOffset))) {
             if(_.options.fade === false) {
                 targetSlide = _.currentSlide;
-                _.animateSlide(slideLeft, function() {
+                _.animateSlide.dealy(1400)(slideLeft, function() {
                     _.postSlide(targetSlide);
                 });
             }
