@@ -261,20 +261,6 @@ sub, sup {
   /* Firefox, other Gecko */
   box-sizing: border-box;
   /* Opera/IE 8+ */ }
-  .slide .background {
-    position: absolute;
-    z-index: 0;
-    width: 120%;
-    height: 100%;
-    max-width: none; }
-    @media only screen and (orientation: landscape) and (min-device-width: 960px) {
-      .slide .background {
-        width: 200%;
-        height: auto; } }
-    @media only screen and (min-device-width: 1024px) {
-      .slide .background {
-        width: 130%;
-        height: auto; } }
   .slide .content-wrapper {
     top: 3%;
     left: 0;
@@ -417,7 +403,10 @@ sub, sup {
     -moz-transform: rotate(-87deg);
     -o-transform: rotate(-87deg);
     -ms-transform: rotate(-87deg);
-    transform: rotate(-87deg); }
+    transform: rotate(-87deg);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden; }
     @media screen and (orientation: landscape) {
       .slide .gate {
         width: 120%;
@@ -429,6 +418,11 @@ sub, sup {
         -o-transform: rotate(7deg);
         -ms-transform: rotate(7deg);
         transform: rotate(7deg); } }
+    @media all and (max-width: 568px) and (min-height: 900px) {
+      .slide .gate {
+        width: 300%;
+        height: 100%;
+        margin-left: -70%; } }
     .slide .gate img {
       -webkit-transform: rotate(-7deg);
       -moz-transform: rotate(-7deg);
@@ -484,6 +478,7 @@ sub, sup {
             margin-top: -20%;
             margin-left: -50%; } }
       .slide .gate .top-gate-wrapper p {
+        -webkit-font-smoothing: antialiased;
         position: absolute;
         font-size: 38px;
         color: white;
@@ -578,9 +573,10 @@ sub, sup {
         text-align: center;
         font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
         font-weight: bold;
-        transform: rotateY(-180deg);
-        -ms-transform: rotateY(-180deg);
-        -webkit-transform: rotatex(-180deg); }
+        transform: rotateX(-180deg);
+        -ms-transform: rotateX(-180deg);
+        -moz-transform: rotateX(-180deg);
+        -webkit-transform: rotateX(-180deg); }
         @media all and (min-width: 420px) {
           .slide .gate .bottom-gate-wrapper p {
             font-size: 50px;
