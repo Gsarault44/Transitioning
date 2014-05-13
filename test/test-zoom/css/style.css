@@ -279,12 +279,11 @@ sub, sup {
     top: 11%;
     left: 0;
     position: relative;
-    overflow: auto;
     width: 75%;
     margin: 0 auto;
     z-index: 1;
     max-width: 650px;
-    max-height: 60%;
+    max-height: 62%;
     /* @media all and (min-width: 560px) {
     	left:0;
     } */ }
@@ -294,9 +293,12 @@ sub, sup {
         width: 70%; } }
     @media all and (min-width: 768px) {
       .slide .content-wrapper {
-        width: 45%;
-        top: 20%;
+        width: 55%;
+        top: 10%;
         left: -13%; } }
+    @media all and (min-width: 960px) {
+      .slide .content-wrapper {
+        top: 15%; } }
     @media all and (min-width: 1400px) {
       .slide .content-wrapper {
         left: -15%; } }
@@ -364,14 +366,12 @@ sub, sup {
               font-size: 1.8em;
               line-height: 24px; } }
   .slide .b-border {
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
     border-bottom: 1px solid #fff;
-    height: 54%; }
+    height: 54%;
+    overflow: auto; }
     @media screen and (orientation: landscape) {
       .slide .b-border {
-        height: 45%; } }
+        height: 62%; } }
   .slide .more {
     display: block;
     position: relative;
@@ -630,11 +630,26 @@ sub, sup {
 #horsepower-brainpower .content li {
   color: #81c2ff; }
 
-#hindsight-foresight .bottom-gate {
-  margin-left: -10%; }
-  @media all and (min-width: 560px) {
-    #hindsight-foresight .bottom-gate {
-      margin-left: 0; } }
+#hindsight-foresight .gate .top-gate-wrapper .top-gate {
+  width: 100%; }
+  @media all and (min-width: 960px) {
+    #hindsight-foresight .gate .top-gate-wrapper .top-gate {
+      top: -25%; } }
+  @media screen and (orientation: portrait) {
+    #hindsight-foresight .gate .top-gate-wrapper .top-gate {
+      margin-left: 0;
+      top: 5%; } }
+  @media screen and (orientation: landscape) {
+    #hindsight-foresight .gate .top-gate-wrapper .top-gate {
+      top: -5%; } }
+@media screen and (orientation: portrait) {
+  #hindsight-foresight .bottom-gate {
+    margin-left: -20%;
+    margin-top: -50%; } }
+@media all and (min-width: 960px) and (orientation: landscape) {
+  #hindsight-foresight .bottom-gate {
+    margin-left: 0;
+    margin-top: -10%; } }
 #hindsight-foresight .content {
   /* &:after {
   	content:"";
@@ -666,6 +681,9 @@ sub, sup {
 #computers-compassion .bottom-gate {
   width: 145%;
   margin-left: -20%; }
+  @media screen and (orientation: landscape) {
+    #computers-compassion .bottom-gate {
+      margin-top: -50%; } }
 #computers-compassion .content {
   /* &:after {
   	content:"";
@@ -827,7 +845,9 @@ sub, sup {
     display: block;
     float: right;
     width: 20%;
-    border-left: 2px solid transparent; }
+    border-left: 2px solid transparent;
+    position: relative;
+    z-index: 99999999999999; }
     @media all and (min-width: 560px) {
       .footer .cube {
         width: 10%; } }
@@ -877,7 +897,7 @@ sub, sup {
 
 .zoom-zoom {
   -webkit-animation: zoomer 2s ease-in-out both;
-  -moz-animation: zoomer 2s ease-in-out both;
+  -moz-transform: scale(0.3, 0.3);
   -o-animation: zoomer 2s ease-in-out both;
   -ms-animation: zoomer 2s ease-in-out both;
   animation: zoomer 2s ease-in-out both; }
@@ -1280,18 +1300,12 @@ sub, sup {
       -webkit-transform: scale(0.3); } } }
 @media screen and (orientation: portrait) {
   @-moz-keyframes zoomer {
-    0% {
-      -moz-transform: scale(1); }
-
     100% {
       -moz-transform: scale(0.5); } } }
 @media screen and (orientation: landscape) {
   @-moz-keyframes zoomer {
-    0% {
-      -moz-transform: scale(1); }
-
     100% {
-      -moz-transform: scale(0.3); } } }
+      -moz-transform: scale(0.3, 0.3); } } }
 @media screen and (orientation: portrait) {
   @-o-keyframes zoomer {
     0% {
@@ -1325,7 +1339,7 @@ sub, sup {
     0% {
       transform: scale(1); }
 
-    30% {
+    100% {
       transform: scale(0.5); } } }
 @media screen and (orientation: landscape) {
   @keyframes zoomer {
@@ -1826,46 +1840,63 @@ sub, sup {
       right: 10px;
       display: block;
       background: #000;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
       font-size: 25px;
       border: 2px solid #fff;
       cursor: pointer; }
+      @media all and (min-width: 560px) {
+        .subscribe-form-block .subscribe-form-wrapper .close {
+          width: 50px;
+          height: 50px; } }
       .subscribe-form-block .subscribe-form-wrapper .close:before {
         content: "";
         z-index: 99999999999;
         display: block;
         position: absolute;
-        height: 40px;
+        height: 30px;
         border-left: 2px solid #fff;
         -webkit-transform: rotate(-45deg);
         -moz-transform: rotate(-45deg);
         -o-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
-        left: 24px;
-        top: 5px; }
+        left: 20px;
+        top: 4px; }
+        @media all and (min-width: 560px) {
+          .subscribe-form-block .subscribe-form-wrapper .close:before {
+            height: 40px;
+            left: 24px;
+            top: 5px; } }
       .subscribe-form-block .subscribe-form-wrapper .close:after {
         content: "";
         z-index: 99999999999;
         display: block;
         position: absolute;
-        height: 40px;
+        height: 30px;
         border-left: 2px solid #fff;
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
         -o-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
-        left: 24px;
-        top: 5px; }
+        left: 20px;
+        top: 4px; }
+        @media all and (min-width: 560px) {
+          .subscribe-form-block .subscribe-form-wrapper .close:after {
+            height: 40px;
+            left: 24px;
+            top: 5px; } }
     .subscribe-form-block .subscribe-form-wrapper .form-wrapper {
-      padding: 80px 100px;
+      padding: 40px 40px 80px 15px;
       font-family: arial;
       -webkit-font-smoothing: antialiased; }
+      @media all and (min-width: 560px) {
+        .subscribe-form-block .subscribe-form-wrapper .form-wrapper {
+          padding: 80px 100px; } }
       .subscribe-form-block .subscribe-form-wrapper .form-wrapper p {
         font-size: 18px;
         font-size: 1.8em;

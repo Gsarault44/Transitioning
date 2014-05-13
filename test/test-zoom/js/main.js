@@ -54,7 +54,7 @@ function moreContent(){
 		$(this).click(function(){
 			$(this).parent().parent().find('.expand').slideDown();
 			$(this).parent('.more').hide();
-			$(this).parents('.content-wrapper').addClass('b-border');
+			$('.content-wrapper').addClass('b-border');
 			return false;
 		});
 	});
@@ -85,9 +85,10 @@ function slick() {
 			}else{
 				$('.slick-list').addClass('zoom');
 			}
-			$('.slick-track').delay(2000).animate();
+			$('.slick-track').delay(2000);
 			$('.expand').slideUp();
 			$('.more').show();
+
 		},
 		onAfterChange: function(){
 			$('.slick-list').removeClass('zoom');
@@ -112,7 +113,7 @@ function slick() {
 			
 			$(".gate img").removeAttr('style');
 			$('.content-wrapper').removeAttr('style');
-			$('.content-wrapper').removeClass('b-border');
+			
 			
 			if ($('#horsepower-brainpower').hasClass('slick-active')){
 				$('.next-wrapper button p:first').html('Hindsight');
@@ -144,6 +145,7 @@ function pagiText() {
 function zoomLight() {
 	
 	$('.zoomer').click(function(){
+		$('.content-wrapper').removeClass('b-border');
 		$('.gate').find('.top-gate-wrapper').animate({top: '0'}, 700, 'easeInOutQuad');
 		$('.gate').find('.bottom-gate-wrapper').animate({top: '0'}, 700,'easeInOutQuad');
 		$('.slick-cloned').hide();
