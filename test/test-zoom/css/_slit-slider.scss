@@ -60,7 +60,7 @@
 	border: none; 
 	outline: none;
 	font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-	@media all and (min-width: 560px) {
+	@media all and (min-width: 768px) {
 		&:hover {
 			color:#fff;
 		}
@@ -106,7 +106,7 @@
 .dot-style {
 	text-align: center;
 	position: fixed;
-	bottom: 25px;
+	bottom: 22px;
 	width: 100%;
 	left: 0;
 	z-index: 1000;

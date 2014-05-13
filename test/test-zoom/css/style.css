@@ -262,10 +262,11 @@ sub, sup {
   box-sizing: border-box;
   /* Opera/IE 8+ */ }
   .slide .content-wrapper {
+    direction: rtl;
     top: 3%;
     left: 0;
     position: relative;
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     z-index: 1;
     max-width: 650px;
@@ -290,12 +291,15 @@ sub, sup {
         left: -15%; } }
     @media only screen and (orientation: landscape) and (max-device-width: 480px) {
       .slide .content-wrapper {
-        height: 150px; } }
+        height: 150px;
+        overflow: auto; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
       .slide .content-wrapper {
         height: auto; } }
     .slide .content-wrapper .button-wrapper {
-      position: relative; }
+      direction: ltr;
+      position: relative;
+      padding-left: 20px; }
       .slide .content-wrapper .button-wrapper .content {
         text-align: left;
         position: relative;
@@ -304,8 +308,8 @@ sub, sup {
         .slide .content-wrapper .button-wrapper .content h1 {
           text-align: left;
           font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-          font-size: 16px;
-          font-size: 1.6em;
+          font-size: 18px;
+          font-size: 1.8em;
           margin: 0;
           -webkit-text-stroke: 0.1px; }
           @media all and (min-width: 420px) {
@@ -325,6 +329,8 @@ sub, sup {
           font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
           font-size: 14px;
           font-size: 1.4em;
+          line-height: 12px;
+          letter-spacing: 0;
           margin: 0;
           margin-bottom: 10px;
           -webkit-text-stroke: 0.1px; }
@@ -353,7 +359,7 @@ sub, sup {
               line-height: 24px; } }
   .slide .b-border {
     border-bottom: 1px solid #fff;
-    height: 54%;
+    height: 62%;
     overflow: auto; }
     @media screen and (orientation: landscape) {
       .slide .b-border {
@@ -411,7 +417,7 @@ sub, sup {
       .slide .gate {
         width: 120%;
         height: 120%;
-        top: -15%;
+        top: -25%;
         left: -10%;
         -webkit-transform: rotate(7deg);
         -moz-transform: rotate(7deg);
@@ -799,7 +805,7 @@ sub, sup {
     overflow: hidden;
     background: #000;
     width: 80%;
-    padding: 6px 0;
+    padding: 3px 0;
     float: left;
     border-right: 2px solid transparent;
     -webkit-box-sizing: border-box;
@@ -807,11 +813,11 @@ sub, sup {
     box-sizing: border-box; }
     @media all and (min-width: 560px) {
       .footer .f-wrapper {
-        width: 90%;
+        width: 86%;
         padding: 15px 0; } }
     @media all and (min-width: 1024px) {
       .footer .f-wrapper {
-        width: 94%; } }
+        width: 92%; } }
     .footer .f-wrapper .footer-logo {
       display: block;
       float: left; }
@@ -849,15 +855,15 @@ sub, sup {
     z-index: 99999999999999; }
     @media all and (min-width: 560px) {
       .footer .cube {
-        width: 10%; } }
+        width: 14%; } }
     @media all and (min-width: 1024px) {
       .footer .cube {
-        width: 6%; } }
+        width: 8%; } }
     .footer .cube a {
       margin-right: 3px;
       background: url(../images/cube.png) no-repeat center center;
       background-size: 62px;
-      height: 52px;
+      height: 46px;
       display: block;
       opacity: .5; }
       @media all and (min-width: 560px) {
@@ -1299,10 +1305,16 @@ sub, sup {
       -webkit-transform: scale(0.3); } } }
 @media screen and (orientation: portrait) {
   @-moz-keyframes zoomer {
+    0% {
+      -moz-transform: scale(1); }
+
     100% {
       -moz-transform: scale(0.5); } } }
 @media screen and (orientation: landscape) {
   @-moz-keyframes zoomer {
+    0% {
+      -moz-transform: scale(1, 1); }
+
     100% {
       -moz-transform: scale(0.3, 0.3); } } }
 @media screen and (orientation: portrait) {
@@ -1484,7 +1496,7 @@ sub, sup {
   border: none;
   outline: none;
   font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif; }
-  @media all and (min-width: 560px) {
+  @media all and (min-width: 768px) {
     .slick-prev:hover, .slick-next:hover {
       color: #fff; } }
 
@@ -1550,7 +1562,7 @@ sub, sup {
 .dot-style {
   text-align: center;
   position: fixed;
-  bottom: 25px;
+  bottom: 22px;
   width: 100%;
   left: 0;
   z-index: 1000;

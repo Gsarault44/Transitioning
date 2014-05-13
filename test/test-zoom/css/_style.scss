@@ -184,10 +184,11 @@ sub, sup { line-height: 0; }
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 	.content-wrapper {
+		direction:rtl;
 		top:3%;
 		left: 0;
 		position: relative;
-		width: 75%;
+		width: 90%;
 		margin:0 auto;
 		z-index: 1;
 		max-width: 650px;
@@ -212,6 +213,7 @@ sub, sup { line-height: 0; }
 		}
 		@media only screen and (orientation : landscape) and (max-device-width : 480px) {
 			height: 150px;
+			overflow: auto;
 		}
 		@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
 			height:auto;
@@ -219,7 +221,9 @@ sub, sup { line-height: 0; }
 
 
 		.button-wrapper{
-			position: relative;	
+			direction:ltr;
+			position: relative;
+			padding-left: 20px;
 			.content {
 				text-align: left;
 				position: relative;
@@ -228,8 +232,8 @@ sub, sup { line-height: 0; }
 				h1 {
 					text-align: left;
 					font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-					font-size: 16px;
-					font-size: 1.6em;
+					font-size: 18px;
+					font-size: 1.8em;
 					margin:0;
 					-webkit-text-stroke: 0.1px;
 					@media all and (min-width: 420px) {
@@ -250,6 +254,8 @@ sub, sup { line-height: 0; }
 					font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
 					font-size: 14px;
 					font-size: 1.4em;
+					line-height: 12px;
+					letter-spacing: 0;
 					margin:0;
 					margin-bottom: 10px;
 					-webkit-text-stroke: 0.1px;
@@ -284,7 +290,7 @@ sub, sup { line-height: 0; }
 	}
 	.b-border {
 		border-bottom: 1px solid #fff;
-		height: 54%;
+		height: 62%;
 		overflow: auto;
 		@media screen and (orientation:landscape) {
 			height: 62%;
@@ -346,7 +352,7 @@ sub, sup { line-height: 0; }
 		@media screen and (orientation:landscape) {
 			width: 120%;
 			height: 120%;
-			top:-15%;
+			top:-25%;
 			left:-10%;
 			-webkit-transform: rotate(7deg);
 			-moz-transform: rotate(7deg);
@@ -799,18 +805,18 @@ sub, sup { line-height: 0; }
 		overflow: hidden;
 		background:#000;
 		width: 80%;
-		padding:6px 0;
+		padding:3px 0;
 		float: left;
 		border-right: 2px solid transparent;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 		@media all and (min-width: 560px) {
-			width:90%;
+			width:86%;
 			padding:15px 0;
 		}
 		@media all and (min-width: 1024px) {
-			width: 94%;
+			width: 92%;
 		}
 		.footer-logo {
 			display: block;			
@@ -853,16 +859,16 @@ sub, sup { line-height: 0; }
 		position: relative;
 		z-index: 99999999999999;
 		@media all and (min-width: 560px) {
-			width: 10%;
+			width: 14%;
 		}
 		@media all and (min-width: 1024px) {
-			width: 6%;
+			width: 8%;
 		}
 		a {
 			margin-right: 3px;
 			background: url(../images/cube.png)no-repeat center center; 
 			background-size: 62px;
-			height: 52px;
+			height: 46px;
 			display: block;
 			opacity: .5;
 			@media all and (min-width: 560px) {

@@ -225,11 +225,13 @@
 }
 @media screen and (orientation:portrait) {
 	@-moz-keyframes zoomer{
+		0% {-moz-transform: scale(1);}
 		100% {-moz-transform: scale(0.5);}
 	}
 }
 @media screen and (orientation:landscape) {
 	@-moz-keyframes zoomer{
+		0% {-moz-transform: scale(1, 1);}
 		100% {-moz-transform: scale(0.3, 0.3);}
 	}
 }
