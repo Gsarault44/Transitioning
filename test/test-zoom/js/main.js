@@ -14,7 +14,7 @@ function hashing() {
 }
 function newsletter() {
 	$('.subscribe-block').click(function(){
-		$('.subscribe-form-block').fadeToggle();
+		$('.subscribe-form-block').fadeIn();
 		$('.close').on('click', function (){
 			$('.subscribe-form-block').fadeOut();
 		});
@@ -25,8 +25,8 @@ function initalClick(){
 	if ($(window).width() < 768) {
 		if($('.slick-list').hasClass('zoom-zoom')) {
 			$('.gate').click(function(){
-				$(this).find('.top-gate-wrapper').animate({top: '-43%'}, 600, 'easeOutCubic');
-				$(this).find('.bottom-gate-wrapper').animate({top: '42%'}, 600, 'easeOutCubic', function(){
+				$(this).find('.top-gate-wrapper').stop(true, true).animate({top: '-43%'}, 300, 'linear');
+				$(this).find('.bottom-gate-wrapper').stop(true, true).animate({top: '42%'}, 300, 'linear', function(){
 					$('.content-wrapper').css('z-index', '99');
 				});
 				return false;
@@ -36,8 +36,8 @@ function initalClick(){
 	else {
 		if($('.slick-list').hasClass('zoom-zoom')) {
 			$('.gate').click(function(){
-				$(this).find('.top-gate-wrapper').animate({top: '-45%'}, 600, 'easeOutCubic');
-				$(this).find('.bottom-gate-wrapper').animate({top: '30%'}, 600, 'easeOutCubic', function(){
+				$(this).find('.top-gate-wrapper').stop(true, true).animate({top: '-45%'}, 300, 'linear');
+				$(this).find('.bottom-gate-wrapper').stop(true, true).animate({top: '30%'}, 300, 'linear', function(){
 					$('.content-wrapper').css('z-index', '99');
 				});
 				return false;
@@ -71,21 +71,21 @@ function slick() {
 		touch: false,
 		swipe: true,
 		draggable: false,
-		speed: 1800,
+		speed: 1400,
 		slidesToShow: 1,
 		easing: 'easeInExpo',
 		onBeforeChange : function() {
 			$('.content-wrapper').removeAttr('style');
 			$('.content').removeClass('moveup');
 			$('.slick-list').removeClass('zoom-zoom-in');
-			$('.slick-active .gate').find('.top-gate-wrapper').animate({top: '0'}, 200);
-			$('.slick-active .gate').find('.bottom-gate-wrapper').animate({top: '0'}, 200);
+			$('.slick-active .gate').find('.top-gate-wrapper').stop(true, true).animate({top: '0'}, 200);
+			$('.slick-active .gate').find('.bottom-gate-wrapper').stop(true, true).animate({top: '0'}, 200);
+			$('.content-wrapper').removeClass('b-border');
 			if ($('.slick-track').hasClass('zoom-zoom')){
 				
 			}else{
 				$('.slick-list').addClass('zoom');
 			}
-			$('.slick-track').delay(2000);
 			$('.expand').slideUp();
 			$('.more').show();
 
@@ -96,20 +96,28 @@ function slick() {
 			var bottomGate = $('.slick-active .gate').find('.bottom-gate-wrapper');
 			var notTopGate = $(".gate:not(.slick-active .gate)").find('.top-gate-wrapper');
 			var notBottomGate = $(".gate:not(.slick-active .gate)").find('.bottom-gate-wrapper');
-			if (windowH > windowW) {
-				$(topGate).stop().delay(400).animate({top: '-40%'}, 700, 'easeInOutQuad');
-				$(bottomGate).stop().delay(400).animate({top: '35%'}, 700,'easeInOutQuad', function(){
-					$('.slick-active .content-wrapper').css('z-index', '9999999');
-				});
-			}else {
-				$(topGate).stop().delay(400).animate({top: '-45%'}, 700, 'easeInOutQuad');
-				$(bottomGate).stop().delay(400).animate({top: '30%'}, 700,'easeInOutQuad', function(){
-					$('.slick-active .content-wrapper').css('z-index', '9999999');
-				});
+		/*	$(topGate, bottomGate).each(function(){
+				$(this).css("height", $(this).height());
+				$(this).css("width", $(this).width());
+			});*/
+
+
+			if ($('.slick-list').hasClass('zoom-zoom')){
+			}else{
+				if (windowH > windowW) {
+					$(topGate).stop().delay(600).animate({top: '-40%'}, 400, 'linear');
+					$(bottomGate).stop().delay(600).animate({top: '35%'}, 400,'linear', function(){
+						$('.slick-active .content-wrapper').css('z-index', '9999999');
+					});
+				}else {
+					$(topGate).stop().delay(600).animate({top: '-45%'}, 400, 'linear');
+					$(bottomGate).stop().delay(600).animate({top: '30%'}, 400,'linear', function(){
+						$('.slick-active .content-wrapper').css('z-index', '9999999');
+					});
+				}
 			}
-			
-			$(notTopGate).animate({top: '0'}, 600);
-			$(notBottomGate).animate({top: '0'}, 600);
+			$(notTopGate).animate({top: '0'}, 300);
+			$(notBottomGate).animate({top: '0'}, 300);
 			
 			$(".gate img").removeAttr('style');
 			$('.content-wrapper').removeAttr('style');
@@ -146,8 +154,8 @@ function zoomLight() {
 	
 	$('.zoomer').click(function(){
 		$('.content-wrapper').removeClass('b-border');
-		$('.gate').find('.top-gate-wrapper').animate({top: '0'}, 700, 'easeInOutQuad');
-		$('.gate').find('.bottom-gate-wrapper').animate({top: '0'}, 700,'easeInOutQuad');
+		$('.gate').find('.top-gate-wrapper').stop(true, true).animate({top: '0'}, 300, 'linear');
+		$('.gate').find('.bottom-gate-wrapper').stop(true, true).animate({top: '0'}, 300,'linear');
 		$('.slick-cloned').hide();
 		$('.slick-list').addClass('zoom-zoom');
 		$('.slick-track').addClass('slick-dots');

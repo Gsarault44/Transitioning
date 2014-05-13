@@ -1,7 +1,16 @@
 /* Slider */
 .slick-slider { position: relative; height: 100%; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: none; touch-action: none; -webkit-tap-highlight-color: transparent; }
 
-.slick-list { position: relative; display: block; margin: 0; padding: 0; height:100%;}
+.slick-list { 
+	position: relative; 
+	display: block; 
+	margin: 0; 
+	padding: 0; 
+	height:100%; 
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden; 
+}
 .slick-list:focus { outline: none; }
 .slick-loading .slick-list { background: white  center center no-repeat; }
 .slick-list.dragging { cursor: pointer; cursor: hand; }
@@ -17,6 +26,9 @@
 	zoom: 1; 
 	height:100%;
 	max-width: none !important;
+  	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
  }
 .slick-track:before, .slick-track:after { content: ""; display: table; }
 .slick-track:after { clear: both; }

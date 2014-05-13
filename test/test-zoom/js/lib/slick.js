@@ -200,11 +200,11 @@
 
         if (_.transformsEnabled === false) {
             if (_.options.vertical === false) {
-                _.$slideTrack.stop(true, true).delay(5000).animate({
+                _.$slideTrack.animate({
                     left: targetLeft
                 }, _.options.speed, _.options.easing, callback);
             } else {
-                _.$slideTrack.stop(true, true).delay(5000).animate({
+                _.$slideTrack.animate({
                     top: targetLeft
                 }, _.options.speed, _.options.easing, callback);
             }
@@ -215,7 +215,7 @@
 
                 $({
                     animStart: _.currentLeft
-                }).stop(true, true).delay(5000).animate({
+                }).animate({
                     animStart: targetLeft
                 }, {
                     duration: _.options.speed,

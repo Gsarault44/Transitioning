@@ -276,7 +276,7 @@ sub, sup {
         width: 130%;
         height: auto; } }
   .slide .content-wrapper {
-    top: 11%;
+    top: 3%;
     left: 0;
     position: relative;
     width: 75%;
@@ -401,10 +401,10 @@ sub, sup {
   .slide .gate {
     display: block;
     position: absolute;
-    width: 160%;
+    width: 200%;
     height: 100%;
     top: 0%;
-    left: -40%;
+    left: -60%;
     margin: 0;
     padding: 0;
     z-index: 1;
@@ -496,8 +496,7 @@ sub, sup {
         width: 100%;
         text-align: center;
         font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-        font-weight: bold;
-        z-index: 2; }
+        font-weight: bold; }
         @media all and (min-width: 420px) {
           .slide .gate .top-gate-wrapper p {
             font-size: 50px;
@@ -523,24 +522,25 @@ sub, sup {
       margin: 0;
       padding: 0;
       overflow: hidden;
-      box-shadow: 0px 0px 4px 0px #000; }
+      box-shadow: 0px 0px 4px 0px #000;
+      /* &:after {
+      	content:"";
+      	display: block;
+      	position: absolute;
+      	overflow: hidden;
+      	height:100%;
+      	width:100%;
+      	top:0;
+      	left:0;
+        	background: #000;
+        	opacity: .2;
+        	z-index: 1;
+      } */ }
       @media all and (min-width: 420px) {
         .slide .gate .bottom-gate-wrapper {
           width: 100%;
           margin-top: 0;
           margin-left: 0; } }
-      .slide .gate .bottom-gate-wrapper:after {
-        content: "";
-        display: block;
-        position: absolute;
-        overflow: hidden;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background: #000;
-        opacity: .2;
-        z-index: 1; }
       .slide .gate .bottom-gate-wrapper .bottom-gate {
         width: 120%;
         height: auto;
@@ -578,7 +578,6 @@ sub, sup {
         text-align: center;
         font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
         font-weight: bold;
-        z-index: 2;
         transform: rotateY(-180deg);
         -ms-transform: rotateY(-180deg);
         -webkit-transform: rotatex(-180deg); }
@@ -642,9 +641,13 @@ sub, sup {
   @media screen and (orientation: landscape) {
     #hindsight-foresight .gate .top-gate-wrapper .top-gate {
       top: -5%; } }
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 960px) {
   #hindsight-foresight .bottom-gate {
     margin-left: -20%;
+    margin-top: -50%; } }
+@media screen and (orientation: portrait) and (min-width: 960px) {
+  #hindsight-foresight .bottom-gate {
+    margin-left: 0%;
     margin-top: -50%; } }
 @media all and (min-width: 960px) and (orientation: landscape) {
   #hindsight-foresight .bottom-gate {
@@ -868,18 +871,18 @@ sub, sup {
         opacity: .8; }
 
 .zoom-zoom-in {
-  -webkit-animation: zoomer-in 2s ease-in-out both;
-  -moz-animation: zoomer-in 2s ease-in-out both;
-  -o-animation: zoomer-in 2s ease-in-out both;
-  -ms-animation: zoomer-in 2s ease-in-out both;
-  animation: zoomer-in 2s ease-in-out both; }
+  -webkit-animation: zoomer-in 1.4s ease-in-out both;
+  -moz-animation: zoomer-in 1.4s ease-in-out both;
+  -o-animation: zoomer-in 1.4s ease-in-out both;
+  -ms-animation: zoomer-in 1.4s ease-in-out both;
+  animation: zoomer-in 1.4s ease-in-out both; }
 
 .zoom {
-  -webkit-animation: zoom 2s ease-in-out both;
-  -moz-animation: zoom 2s ease-in-out both;
-  -o-animation: zoom 2s ease-in-out both;
-  -ms-animation: zoom 2s ease-in-out both;
-  animation: zoom 2s ease-in-out both; }
+  -webkit-animation: zoom 1.4s ease-in-out both;
+  -moz-animation: zoom 1.4s ease-in-out both;
+  -o-animation: zoom 1.4s ease-in-out both;
+  -ms-animation: zoom 1.4s ease-in-out both;
+  animation: zoom 1.4s ease-in-out both; }
 
 .zoom-out {
   -webkit-transform: scale(1);
@@ -896,11 +899,11 @@ sub, sup {
   transform: scale(0.5); }
 
 .zoom-zoom {
-  -webkit-animation: zoomer 2s ease-in-out both;
+  -webkit-animation: zoomer 1.4s ease-in-out both;
   -moz-transform: scale(0.3, 0.3);
-  -o-animation: zoomer 2s ease-in-out both;
-  -ms-animation: zoomer 2s ease-in-out both;
-  animation: zoomer 2s ease-in-out both; }
+  -o-animation: zoomer 1.4s ease-in-out both;
+  -ms-animation: zoomer 1.4s ease-in-out both;
+  animation: zoomer 1.4s ease-in-out both; }
   .zoom-zoom .slick-dots div {
     z-index: 9999999999;
     cursor: pointer;
@@ -1405,7 +1408,10 @@ sub, sup {
   display: block;
   margin: 0;
   padding: 0;
-  height: 100%; }
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
 
 .slick-list:focus {
   outline: none; }
@@ -1424,7 +1430,10 @@ sub, sup {
   display: block;
   zoom: 1;
   height: 100%;
-  max-width: none !important; }
+  max-width: none !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
 
 .slick-track:before, .slick-track:after {
   content: "";
@@ -1819,13 +1828,8 @@ sub, sup {
   z-index: 99999;
   height: 100%;
   width: 100%;
-  -webkit-transition: all .8s ease-out;
-  -moz-transition: all .8s ease-out;
-  -o-transition: all .8s ease-out;
-  transition: all .8s ease-out;
   color: #fff; }
   .subscribe-form-block .subscribe-form-wrapper {
-    /* padding:15px 15px 50px; */
     background: rgba(0, 0, 0, 0.95);
     display: block;
     margin: 0 auto;

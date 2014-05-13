@@ -67,10 +67,8 @@
 	z-index: 99999;
 	height: 100%;
 	width: 100%;
-	@include transitions;
 	color:#fff;
 	.subscribe-form-wrapper {
-		/* padding:15px 15px 50px; */
 		background:rgba(0,0,0,.95); 
 		display: block;
 		margin:0 auto;

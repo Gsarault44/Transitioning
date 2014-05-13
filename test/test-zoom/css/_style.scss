@@ -201,7 +201,7 @@ sub, sup { line-height: 0; }
 		
 	}
 	.content-wrapper {
-		top:11%;
+		top:3%;
 		left: 0;
 		position: relative;
 		width: 75%;
@@ -340,10 +340,10 @@ sub, sup { line-height: 0; }
 	.gate {
 		display: block;
 		position: absolute;
-		width: 160%;
+		width: 200%;
 		height: 100%;
 		top: 0%;
-		left: -40%;
+		left: -60%;
 		margin:0;
 		padding:0;
 		z-index: 1;
@@ -368,6 +368,10 @@ sub, sup { line-height: 0; }
 			-ms-transform: rotate(7deg);
 			transform: rotate(7deg);
 		}
+		@media all and (max-width: 420px) {
+
+		}
+
 		img {
 			-webkit-transform: rotate(-7deg);
 			-moz-transform: rotate(-7deg);
@@ -441,7 +445,6 @@ sub, sup { line-height: 0; }
 				text-align: center;
 				font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
 				font-weight: bold;
-				z-index: 2;
 				@media all and (min-width: 420px) {
 					font-size: 50px;
 					bottom:-11px;
@@ -475,7 +478,7 @@ sub, sup { line-height: 0; }
 				margin-top: 0;
 				margin-left: 0;
 			}
-			&:after {
+			/* &:after {
 				content:"";
 				display: block;
 				position: absolute;
@@ -487,7 +490,7 @@ sub, sup { line-height: 0; }
 			  	background: #000;
 			  	opacity: .2;
 			  	z-index: 1;
-			}
+			} */
 			
 			.bottom-gate {
 				width: 120%;
@@ -529,7 +532,6 @@ sub, sup { line-height: 0; }
 				text-align: center;
 				font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
 				font-weight: bold;
-				z-index: 2;
 				transform: rotateY(-180deg);
 				-ms-transform: rotateY(-180deg);
 				-webkit-transform: rotatex(-180deg);
@@ -608,8 +610,12 @@ sub, sup { line-height: 0; }
 		}	
 	}
 	.bottom-gate {
-		@media screen and (orientation:portrait) {
+		@media screen and (orientation:portrait) and (max-width: 960px){
 			margin-left: -20%;
+			margin-top:-50%;
+		}
+		@media screen and (orientation:portrait) and (min-width: 960px){
+			margin-left: 0%;
 			margin-top:-50%;
 		}
 		@media all and (min-width: 960px) and (orientation:landscape) {
@@ -881,19 +887,19 @@ sub, sup { line-height: 0; }
 
 
 .zoom-zoom-in {
-	-webkit-animation: zoomer-in 2s ease-in-out both;
-	-moz-animation: zoomer-in 2s ease-in-out both;
-	-o-animation: zoomer-in 2s ease-in-out both;
-	-ms-animation: zoomer-in 2s ease-in-out both;
-	animation: zoomer-in 2s ease-in-out both;
+	-webkit-animation: zoomer-in 1.4s ease-in-out both;
+	-moz-animation: zoomer-in 1.4s ease-in-out both;
+	-o-animation: zoomer-in 1.4s ease-in-out both;
+	-ms-animation: zoomer-in 1.4s ease-in-out both;
+	animation: zoomer-in 1.4s ease-in-out both;
 }
 
 .zoom {
-	-webkit-animation: zoom 2s ease-in-out both;
-	-moz-animation: zoom 2s ease-in-out both;
-	-o-animation: zoom 2s ease-in-out both;
-	-ms-animation: zoom 2s ease-in-out both;
-	animation: zoom 2s ease-in-out both;
+	-webkit-animation: zoom 1.4s ease-in-out both;
+	-moz-animation: zoom 1.4s ease-in-out both;
+	-o-animation: zoom 1.4s ease-in-out both;
+	-ms-animation: zoom 1.4s ease-in-out both;
+	animation: zoom 1.4s ease-in-out both;
 }
 .zoom-out {
 	-webkit-transform: scale(1.0);
@@ -911,11 +917,11 @@ sub, sup { line-height: 0; }
 	transform:         scale(0.5);
 }
 .zoom-zoom {
-	-webkit-animation: zoomer 2s ease-in-out both;
+	-webkit-animation: zoomer 1.4s ease-in-out both;
 	-moz-transform: scale(0.3, 0.3);
-	-o-animation: zoomer 2s ease-in-out both;
-	-ms-animation: zoomer 2s ease-in-out both;
-	animation: zoomer 2s ease-in-out both;
+	-o-animation: zoomer 1.4s ease-in-out both;
+	-ms-animation: zoomer 1.4s ease-in-out both;
+	animation: zoomer 1.4s ease-in-out both;
 	.slick-dots {
 		div {
 			z-index: 9999999999;
