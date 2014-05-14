@@ -205,7 +205,6 @@
 			left: 30px;
 			top: 20px;
 		p {
-			color:#fff;
 			font-size: 26px;
 			margin:0;
 			margin-left: 25px;
@@ -213,6 +212,17 @@
 		}
 		p + p {
 			margin-left: 0px;
+		}
+	}
+	.prev-current {
+		
+		display: block;
+		p{
+			color:rgba(255,255,255,0.5);
+
+		}
+		&:hover p {
+			color:rgba(255,255,255,0.8);
 		}
 	}
 	
@@ -269,13 +279,7 @@
 			top:40px;
 		}
 	}
-	@media all and (min-width: 768px) {
-		&:hover {
-			.next-current {
-				display: block;
-			}
-		}
-	}
+	
 	.next-title {
 		display: none;
 		position: absolute;
@@ -283,7 +287,6 @@
 		top: 25px;
 		p {
 			line-height: 24px;
-			color:#fff;
 			font-size: 26px;
 			margin:0 40px 0 0;
 		}
@@ -292,12 +295,25 @@
 			margin:0 0 0 0;
 		}
 	}
+	.next-current {
+		
+		display: block;
+		p{
+			color:rgba(255,255,255,0.5);
+
+		}
+		&:hover p {
+			color:rgba(255,255,255,0.8);
+		}
+	}
+
 }
 
 .next-current, .prev-current {
 	display: block;
 	@include transitions;
 }
+
 /* Custom navigation dots */
 .container {
 	.nav-dots {
