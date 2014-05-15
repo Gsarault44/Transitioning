@@ -68,21 +68,21 @@
 
 	$.Slitslider.defaults = {
 		// transitions speed
-		speed : 700,
+		speed : 2000,
 		// if true the item's slices will also animate the opacity value
-		optOpacity : true,
+		optOpacity : false,
 		// amount (%) to translate both slices - adjust as necessary
 		translateFactor : 160,
 		// maximum possible angle
 		maxAngle : 25,
 		// maximum possible scale
-		maxScale : 2,
+		maxScale : 1,
 		// slideshow on / off
 		autoplay : false,
 		// keyboard navigation
 		keyboard : true,
 		// time between transitions
-		interval : 4000,
+		interval : 8000,
 		// callbacks
 		onBeforeChange : function( slide, idx ) { return false; },
 		onAfterChange : function( slide, idx ) { return false; }
@@ -221,7 +221,7 @@
 				// default slide's slices style
 				resetStyle = {
 					'transform' : 'translate(0%,0%) rotate(0deg) scale(1)',
-					opacity : 1 
+					opacity : 1
 				},
 				// slice1 style
 				slice1Style	= config.orientation === 'horizontal' ? {
@@ -246,7 +246,7 @@
 			// we are adding the classes sl-trans-elems and sl-trans-back-elems to the slide that is either coming "next"
 			// or going "prev" according to the direction.
 			// the idea is to make it more interesting by giving some animations to the respective slide's elements
-			//( dir === 'next' ) ? $nextSlide.addClass( 'sl-trans-elems' ) : $currentSlide.addClass( 'sl-trans-back-elems' );
+			( dir === 'next' ) ? $nextSlide.addClass( 'sl-trans-elems' ) : $currentSlide.addClass( 'sl-trans-back-elems' );
 			
 			$currentSlide.removeClass( 'sl-trans-elems' );
 
@@ -266,7 +266,7 @@
 							
 								var slice = this;
 								this.css( slice1Style );
-								setTimeout( function() {
+								setTimeout(function() {
 									$nextSlide.addClass('sl-trans-elems')
 									slice.css( resetStyle );
 
@@ -343,7 +343,7 @@
 						.find( 'div.sl-content-wrapper' )
 						.css( cssStyle );
 			
-			$nextSlide.delay(1600).show();
+			$nextSlide.show();
 			
 		},
 		_validateValues : function( config ) {
