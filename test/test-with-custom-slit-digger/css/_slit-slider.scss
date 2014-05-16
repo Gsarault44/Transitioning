@@ -81,11 +81,11 @@
 	-o-transform: translateX(0%) scale(1) ease-in;
 	-ms-transform: translateX(0%) scale(1) ease-in;
 	transform: translateX(0%) scale(1) ease-in;
-	-webkit-transition-delay: 1s !important;
-	-moz-transition-delay: 1s !important;
-	-o-transition-delay: 1s !important;
-	-ms-transition-delay: 1s !important;
-	transition-delay: 1s !important;
+	-webkit-transition-delay: .8s !important;
+	-moz-transition-delay: .8s !important;
+	-o-transition-delay: .8s !important;
+	-ms-transition-delay: .8s !important;
+	transition-delay: .8s !important;
 }
 
 .sl-slide-vertical .sl-content-slice:first-child {
@@ -115,6 +115,11 @@
 /* Default styles for background colors */
 .sl-slide-horizontal .sl-slide-inner {
 	background: #ddd;
+	-webkit-transition-delay: .8s !important;
+	-moz-transition-delay: .8s !important;
+	-o-transition-delay: .8s !important;
+	-ms-transition-delay: .8s !important;
+	transition-delay: .8s !important;
 }
 
 .sl-slide-vertical .sl-slide-inner {

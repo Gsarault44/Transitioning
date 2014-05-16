@@ -236,7 +236,6 @@ sub, sup { line-height: 0; }
 			}
 			position: relative;	
 			.content {
-				height: 400px;
 				text-align: left;
 				position: relative;
 				padding-bottom: 45px;	
@@ -307,7 +306,7 @@ sub, sup { line-height: 0; }
 		@media screen and (orientation:landscape) {
 			height: 45%;
 			height: 100%;
-			height: 400px;
+			max-height: 400px;
 		}
 	}
 	.more {
@@ -345,11 +344,12 @@ sub, sup { line-height: 0; }
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		top:-8.5%;
+		top:-8.2%;
 		left:-8.5%;
 		margin:0;
 		padding:0;
 		z-index: 1;
+		overflow: hidden;
 		@media screen and (orientation:portrait) {
 			-webkit-transform: rotate(-87deg);
 			-moz-transform: rotate(-87deg);
@@ -449,7 +449,6 @@ sub, sup { line-height: 0; }
 			overflow: hidden;
 			box-shadow: 0px 0px 4px 0px #000;
 			@media all and (min-width: 420px) {
-				width: 100%;
 				margin-top: 0;
 				margin-left: 0;
 			}
@@ -471,10 +470,9 @@ sub, sup { line-height: 0; }
 				width: 100%;
 				height: auto;
 				max-width: none;
+				position: relative;
 				@media all and (min-width: 420px) {
-					width: 100%;
-					height: auto;
-					margin-top: -20%;
+					margin-top: -30%;
 				}
 				@media screen and (orientation:portrait) {
 					-webkit-transform: rotate(80deg);
@@ -497,9 +495,10 @@ sub, sup { line-height: 0; }
 				display: block;
 				width: 100%;
 				text-align: center;
-				transform: rotateY(-180deg);
-				-ms-transform: rotateY(-180deg);
-				-webkit-transform: rotatex(-180deg);
+				-webkit-transform: rotateX(-180deg);
+				-moz-transform: rotateX(-180deg);
+				-ms-transform: rotateX(-180deg);
+				transform: rotateX(-180deg);
 				font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
 				font-weight: bold;
 				z-index: 2;
@@ -549,26 +548,7 @@ sub, sup { line-height: 0; }
 	.gate .top-gate-wrapper .top-gate {
 		top:-50%;
 	}
-
 	.sl-content {
-		/* &:after {
-			content:"";
-			display: block;
-			position: absolute;
-			overflow: hidden;
-			height:100%;
-			width:100%;
-			top:0;
-			left:0;
-		  	background-color: transparent;
-		  	background-repeat: repeat-x;
-		  	background: -webkit-gradient(linear, 0% 0%, 0% .9, from(#FFCE51), to(#78A13F));
-		  	background: -webkit-linear-gradient(top, #FFCE51, #78A13F);
-		  	background: -moz-linear-gradient(top, #FFCE51, #78A13F);
-		  	background: -ms-linear-gradient(top, #FFCE51, #78A13F);
-		  	background: -o-linear-gradient(top, #FFCE51, #78A13F);
-		  	opacity: .8;
-		} */
 	}
 	.content {
 		color:#445b0d;
@@ -585,24 +565,6 @@ sub, sup { line-height: 0; }
 }
 #computers-compassion {
 	.sl-content {
-		/* &:after {
-			content:"";
-			display: block;
-			position: absolute;
-			overflow: hidden;
-			height:100%;
-			width:100%;
-			top:0;
-			left:0;
-		  	background-color: transparent;
-		  	background-repeat: repeat-x;
-		  	background: -webkit-gradient(linear, 0% 0%, 0% .9, from(#008BB0), to(#00746D));
-		  	background: -webkit-linear-gradient(top, #008BB0, #00746D);
-		  	background: -moz-linear-gradient(top, #008BB0, #00746D);
-		  	background: -ms-linear-gradient(top, #008BB0, #00746D);
-		  	background: -o-linear-gradient(top, #008BB0, #00746D);
-		  	opacity: .8;
-		} */
 	}
 	.content {
 		h1 {
@@ -615,24 +577,6 @@ sub, sup { line-height: 0; }
 }
 #slice4 {
 	.sl-content {
-		/* &:after {
-			content:"";
-			display: block;
-			position: absolute;
-			overflow: hidden;
-			height:100%;
-			width:100%;
-			top:0;
-			left:0;
-		  	background-color: transparent;
-		  	background-repeat: repeat-x;
-		  	background: -webkit-gradient(linear, 0% 0%, 0% .9, from(#008BB0), to(#00746D));
-		  	background: -webkit-linear-gradient(top, #008BB0, #00746D);
-		  	background: -moz-linear-gradient(top, #008BB0, #00746D);
-		  	background: -ms-linear-gradient(top, #008BB0, #00746D);
-		  	background: -o-linear-gradient(top, #008BB0, #00746D);
-		  	opacity: .8;
-		} */
 	}
 	.content {
 		h1 {
@@ -645,24 +589,6 @@ sub, sup { line-height: 0; }
 }
 #slice5 {
 	.sl-content {
-		/* &:after {
-			content:"";
-			display: block;
-			position: absolute;
-			overflow: hidden;
-			height:100%;
-			width:100%;
-			top:0;
-			left:0;
-		  	background-color: transparent;
-		  	background-repeat: repeat-x;
-		  	background: -webkit-gradient(linear, 0% 0%, 0% .9, from(#008BB0), to(#00746D));
-		  	background: -webkit-linear-gradient(top, #008BB0, #00746D);
-		  	background: -moz-linear-gradient(top, #008BB0, #00746D);
-		  	background: -ms-linear-gradient(top, #008BB0, #00746D);
-		  	background: -o-linear-gradient(top, #008BB0, #00746D);
-		  	opacity: .8;
-		} */
 	}
 	.content {
 		h1 {

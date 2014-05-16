@@ -82,7 +82,7 @@
 		// keyboard navigation
 		keyboard : true,
 		// time between transitions
-		interval : 8000,
+		interval : 4000,
 		// callbacks
 		onBeforeChange : function( slide, idx ) { return false; },
 		onAfterChange : function( slide, idx ) { return false; }
@@ -263,25 +263,28 @@
 						.cond(
 							dir === 'prev', 
 							function() {
-							
+								console.log("slice1 set timeout");
+								
 								var slice = this;
 								this.css( slice1Style );
 								setTimeout(function() {
+									console.log("slice1.1 set timeout");
 									$nextSlide.addClass('sl-trans-elems')
 									slice.css( resetStyle );
 
-								}, 20 );
+								}, 10 );
 										 
 							}, 
-							function() {
+
+							function() {	
 								
 								var slice = this;
 								setTimeout( function() {
-									
+									console.log("slice1.4 set timeout");
 									slice.css( slice1Style );
 
-								}, 20 );
-						
+								},10 );
+								
 							}
 						)
 						.clone()
@@ -289,11 +292,11 @@
 						.cond(
 							dir === 'prev', 
 							function() {
-								
+								console.log("slice2 set timeout");
 								var slice = this;
 								this.css( slice2Style );
 								setTimeout( function() {
-
+									console.log("slice2.2 set timeout");
 									$currentSlide.addClass( 'sl-trans-back-elems' );
 
 									if( self.support ) {
@@ -311,13 +314,15 @@
 
 									}
 
-								}, 20 );
+								}, 10 );
 						
 							},
 							function() {
 								
 								var slice = this;
 								setTimeout( function() {
+									$('.bottom-gate-wrapper ').stop(true, true).animate({top: '0'}, 700, 'easeInOutQuad');
+									console.log("slice2.4 set timeout");
 
 									$nextSlide.addClass( 'sl-trans-elems' );
 									
@@ -336,7 +341,7 @@
 
 									}
 
-								}, 20 );
+								}, 10);
 								
 							}
 						)
@@ -388,7 +393,7 @@
 			// remove second slide's slice
 			$slice.remove();
 			// unwrap..
-			$slide.css( 'z-index', 1 )
+			$slide.css( 'z-index', 0 )
 				  .find( 'div.sl-content-wrapper' )
 				  .unwrap();
 			
