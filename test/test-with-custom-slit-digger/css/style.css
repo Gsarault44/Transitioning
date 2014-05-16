@@ -260,8 +260,8 @@ sub, sup {
     top: 11%;
     left: 0;
     height: 400px;
+    overflow: hidden;
     position: relative;
-    overflow: auto;
     width: 68%;
     z-index: 1;
     -webkit-transform: rotate(-7deg);
@@ -276,28 +276,18 @@ sub, sup {
       .sl-slide .content-wrapper {
         top: 9%;
         width: 70%;
-        max-width: 650px; } }
+        max-width: 680px; } }
     @media all and (min-width: 768px) {
       .sl-slide .content-wrapper {
-        width: 45%;
-        top: 25%;
+        width: 58%;
+        top: 20%;
         left: 10%; } }
-    @media only screen and (orientation: landscape) and (max-device-width: 480px) {
-      .sl-slide .content-wrapper {
-        height: 150px; } }
     .sl-slide .content-wrapper .button-wrapper {
-      height: 220px;
-      overflow: auto;
       padding-left: 20px;
       position: relative; }
-      @media all and (min-width: 420px) {
-        .sl-slide .content-wrapper .button-wrapper {
-          height: auto;
-          overflow: hidden; } }
       .sl-slide .content-wrapper .button-wrapper .content {
         text-align: left;
-        position: relative;
-        padding-bottom: 45px; }
+        position: relative; }
         .sl-slide .content-wrapper .button-wrapper .content h1 {
           text-align: left;
           font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
@@ -316,8 +306,9 @@ sub, sup {
               font-size: 3.6em; } }
           @media all and (min-width: 960px) {
             .sl-slide .content-wrapper .button-wrapper .content h1 {
-              font-size: 50px;
-              font-size: 5em; } }
+              line-height: 47px;
+              font-size: 49px;
+              font-size: 4.9em; } }
         .sl-slide .content-wrapper .button-wrapper .content p {
           font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
           font-size: 16px;
@@ -351,21 +342,11 @@ sub, sup {
               font-size: 1.8em;
               line-height: 24px; } }
   .sl-slide .b-border {
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
     border-bottom: 1px solid #fff; }
-    @media screen and (orientation: landscape) {
-      .sl-slide .b-border {
-        height: 45%;
-        height: 100%;
-        max-height: 400px; } }
   .sl-slide .more {
     display: block;
-    position: relative;
     border-top: 1px solid #fff;
-    width: 100%;
-    bottom: 45px; }
+    width: 100%; }
     .sl-slide .more a {
       display: inline-block;
       color: #fff;
@@ -379,10 +360,10 @@ sub, sup {
         display: block;
         background: transparent url(../images/circle-arrow-down.png) no-repeat 0 0;
         background-size: 100%;
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
         margin-left: 30px;
-        margin-top: 10px; }
+        margin-top: 5px; }
   .sl-slide a.next {
     font-size: 18px;
     color: #fff; }
@@ -391,12 +372,18 @@ sub, sup {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: -8.05%;
+    top: -8.5%;
     left: -8.5%;
     margin: 0;
     padding: 0;
     z-index: 1;
-    overflow: hidden; }
+    overflow: hidden;
+    border-bottom: 1px solid transparent;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden; }
     @media screen and (orientation: portrait) {
       .sl-slide .gate {
         -webkit-transform: rotate(-90deg);
@@ -484,7 +471,6 @@ sub, sup {
     .sl-slide .gate .bottom-gate-wrapper {
       position: relative;
       width: 100%;
-      height: 50%;
       margin: 0;
       padding: 0;
       overflow: hidden;
@@ -509,7 +495,7 @@ sub, sup {
         height: auto;
         max-width: none;
         position: relative;
-        top: -20%; }
+        margin-top: -10%; }
         @media screen and (orientation: portrait) {
           .sl-slide .gate .bottom-gate-wrapper .bottom-gate {
             -webkit-transform: rotate(80deg);
@@ -567,7 +553,7 @@ sub, sup {
   top: -50%; }
 
 #hindsight-foresight .gate .top-gate-wrapper .top-gate {
-  top: -50%; }
+  top: -30%; }
 #hindsight-foresight .content {
   color: #445b0d; }
   #hindsight-foresight .content h1 {
@@ -1059,7 +1045,6 @@ sub, sup {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  background: transparent;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
@@ -1069,7 +1054,6 @@ sub, sup {
 
 /* Horizontal slice */
 .sl-slide-horizontal .sl-content-slice {
-  background: transparent;
   width: 100%;
   height: 50%;
   left: -200px;
@@ -1094,7 +1078,6 @@ sub, sup {
 
 /* Vertical slice */
 .sl-slide-vertical .sl-content-slice {
-  background: transparent;
   width: 50%;
   height: 100%;
   top: -200px;
@@ -1123,25 +1106,18 @@ sub, sup {
   position: absolute;
   width: 120%;
   height: 120%;
-  overflow: visible;
-  background: transparent; }
+  overflow: visible; }
 
 .sl-content {
   width: 120%;
-  height: 120%;
-  background: transparent; }
+  height: 120%; }
 
 /* Default styles for background colors */
 .sl-slide-horizontal .sl-slide-inner {
-  background: transparent;
-  -webkit-transition-delay: .8s !important;
-  -moz-transition-delay: .8s !important;
-  -o-transition-delay: .8s !important;
-  -ms-transition-delay: .8s !important;
-  transition-delay: .8s !important; }
+  background: #ddd; }
 
 .sl-slide-vertical .sl-slide-inner {
-  background: transparent; }
+  background: #ccc; }
 
 /*-------------------------------------------    
 	Custom Style Sheet
@@ -1152,8 +1128,7 @@ sub, sup {
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
-  background: transparent; }
+  left: 0; }
 
 .nav-arrows > div {
   position: absolute;
@@ -1367,7 +1342,7 @@ sub, sup {
 
 .zoom-light {
   display: none;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.95);
   position: absolute;
   z-index: 99999999;
   height: 100%;
@@ -1606,8 +1581,7 @@ input:focus:-moz-placeholder {
 /* vertical scrollbar */
 .mCSB_container {
   width: auto;
-  margin-right: 30px;
-  overflow: hidden; }
+  margin-right: 30px; }
 
 .mCSB_container.mCS_no_scrollbar {
   margin-right: 0; }
@@ -1748,9 +1722,9 @@ input:focus:-moz-placeholder {
   /* old ie */ }
 
 .mCSB_scrollTools .mCSB_draggerRail {
-  background: #000;
+  background: transparent;
   /* rgba fallback */
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0);
   filter: "alpha(opacity=40)";
   -ms-filter: "alpha(opacity=40)";
   /* old ie */ }

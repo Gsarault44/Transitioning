@@ -219,9 +219,11 @@
 					marginLeft : -this.size.width / 2
 				},
 				// default slide's slices style
+
 				resetStyle = {
 					'transform' : 'translate(0%,0%) rotate(0deg) scale(1)',
 					opacity : 1
+
 				},
 				// slice1 style
 				slice1Style	= config.orientation === 'horizontal' ? {
@@ -280,8 +282,6 @@
 								console.log("Next 1 set timeout");
 								var slice = this;
 								setTimeout( function() {
-									$('.top-gate-wrapper').stop().animate({top: '0'}, 400, 'easeInOutQuad');
-									$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 400, 'easeInOutQuad');
 									console.log("Next 3 set timeout");
 									slice.css( slice1Style );
 
@@ -323,7 +323,8 @@
 								
 								var slice = this;
 									console.log("Next 2 set timeout");
-
+									$('.top-gate-wrapper').stop().animate({top: '0'}, 800, 'easeOutQuint');
+									$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 800, 'easeOutQuint');
 								setTimeout( function() {
 									console.log("Next 4 set timeout");
 

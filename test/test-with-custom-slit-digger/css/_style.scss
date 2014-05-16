@@ -199,8 +199,8 @@ sub, sup { line-height: 0; }
 		top:11%;
 		left: 0;
 		height: 400px;
+		overflow: hidden;
 		position: relative;
-		overflow: auto;
 		width: 68%;
 		z-index: 1;
 		-webkit-transform: rotate(-7deg);
@@ -211,15 +211,15 @@ sub, sup { line-height: 0; }
 		@media all and (min-width: 420px) {
 			top:9%;
 			width: 70%;
-			max-width: 650px;
+			max-width: 680px;
 		}
 		@media all and (min-width: 768px) {
-			width: 45%;
-			top:25%;
+			width: 58%;
+			top:20%;
 			left:10%;
 		}
 		@media only screen and (orientation : landscape) and (max-device-width : 480px) {
-			height: 150px;
+			//height: 150px;
 		}
 		/* @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
 			height:auto;
@@ -227,18 +227,15 @@ sub, sup { line-height: 0; }
 
 
 		.button-wrapper{
-			height: 220px;
-			overflow: auto;
 			padding-left: 20px;
+			position: relative;
 			@media all and (min-width: 420px) {
-				height: auto;
-				overflow: hidden;
+
 			}
-			position: relative;	
+				
 			.content {
 				text-align: left;
-				position: relative;
-				padding-bottom: 45px;	
+				position: relative;	
 				h1 {
 					text-align: left;
 					font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
@@ -256,8 +253,9 @@ sub, sup { line-height: 0; }
 						font-size: 3.6em;
 					}
 					@media all and (min-width: 960px) {
-						font-size: 50px;
-						font-size: 5em;
+						line-height: 47px;
+						font-size: 49px;
+						font-size: 4.9em;
 					}
 				}
 				p {
@@ -299,22 +297,16 @@ sub, sup { line-height: 0; }
 
 	}
 	.b-border {
-		-webkit-backface-visibility: hidden;
-		-moz-backface-visibility:    hidden;
-		-ms-backface-visibility:     hidden;
 		border-bottom: 1px solid #fff;
+
 		@media screen and (orientation:landscape) {
-			height: 45%;
-			height: 100%;
-			max-height: 400px;
+
 		}
 	}
 	.more {
 		display:block;
-		position: relative;
 		border-top: 1px solid #fff;
 		width: 100%;
-		bottom:45px;
 		a {
 			display: inline-block;
 			color:#fff;
@@ -328,10 +320,10 @@ sub, sup { line-height: 0; }
 				display: block;
 				background:transparent url(../images/circle-arrow-down.png)no-repeat 0 0;
 				background-size: 100%;
-				width:35px;
-				height:35px;
+				width:30px;
+				height:30px;
 				margin-left: 30px;
-				margin-top: 10px;
+				margin-top: 5px;
 			}	
 		}
 	}
@@ -344,12 +336,18 @@ sub, sup { line-height: 0; }
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		top:-8.05%;
+		top:-8.5%;
 		left:-8.5%;
 		margin:0;
 		padding:0;
 		z-index: 1;
 		overflow: hidden;
+		border-bottom: 1px solid transparent;
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-o-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		backface-visibility: hidden;
 		@media screen and (orientation:portrait) {
 			-webkit-transform: rotate(-90deg);
 			-moz-transform: rotate(-90deg);
@@ -443,7 +441,6 @@ sub, sup { line-height: 0; }
 		.bottom-gate-wrapper {
 			position: relative;
 			width:100%;
-			height: 50%;
 			margin:0;
 			padding:0;
 			overflow: hidden;
@@ -470,7 +467,7 @@ sub, sup { line-height: 0; }
 				height: auto;
 				max-width: none;
 				position: relative;
-				top:-20%;
+				margin-top: -10%;
 				@media screen and (orientation:portrait) {
 					-webkit-transform: rotate(80deg);
 					-moz-transform: rotate(80deg);
@@ -543,7 +540,7 @@ sub, sup { line-height: 0; }
 }
 #hindsight-foresight {
 	.gate .top-gate-wrapper .top-gate {
-		top:-50%;
+		top:-30%;
 	}
 	.sl-content {
 	}
