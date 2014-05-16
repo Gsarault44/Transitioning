@@ -391,7 +391,7 @@ sub, sup {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: -8.2%;
+    top: -8.05%;
     left: -8.5%;
     margin: 0;
     padding: 0;
@@ -399,11 +399,11 @@ sub, sup {
     overflow: hidden; }
     @media screen and (orientation: portrait) {
       .sl-slide .gate {
-        -webkit-transform: rotate(-87deg);
-        -moz-transform: rotate(-87deg);
-        -o-transform: rotate(-87deg);
-        -ms-transform: rotate(-87deg);
-        transform: rotate(-87deg);
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
         width: 165%;
         left: -40%; } }
     .sl-slide .gate img {
@@ -491,7 +491,6 @@ sub, sup {
       box-shadow: 0px 0px 4px 0px #000; }
       @media all and (min-width: 420px) {
         .sl-slide .gate .bottom-gate-wrapper {
-          margin-top: 0;
           margin-left: 0; } }
       .sl-slide .gate .bottom-gate-wrapper:after {
         content: "";
@@ -509,10 +508,8 @@ sub, sup {
         width: 100%;
         height: auto;
         max-width: none;
-        position: relative; }
-        @media all and (min-width: 420px) {
-          .sl-slide .gate .bottom-gate-wrapper .bottom-gate {
-            margin-top: -30%; } }
+        position: relative;
+        top: -20%; }
         @media screen and (orientation: portrait) {
           .sl-slide .gate .bottom-gate-wrapper .bottom-gate {
             -webkit-transform: rotate(80deg);
@@ -1062,7 +1059,7 @@ sub, sup {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  background: #fff;
+  background: transparent;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
@@ -1072,6 +1069,7 @@ sub, sup {
 
 /* Horizontal slice */
 .sl-slide-horizontal .sl-content-slice {
+  background: transparent;
   width: 100%;
   height: 50%;
   left: -200px;
@@ -1096,6 +1094,7 @@ sub, sup {
 
 /* Vertical slice */
 .sl-slide-vertical .sl-content-slice {
+  background: transparent;
   width: 50%;
   height: 100%;
   top: -200px;
@@ -1124,15 +1123,17 @@ sub, sup {
   position: absolute;
   width: 120%;
   height: 120%;
-  overflow: visible; }
+  overflow: visible;
+  background: transparent; }
 
 .sl-content {
   width: 120%;
-  height: 120%; }
+  height: 120%;
+  background: transparent; }
 
 /* Default styles for background colors */
 .sl-slide-horizontal .sl-slide-inner {
-  background: #ddd;
+  background: transparent;
   -webkit-transition-delay: .8s !important;
   -moz-transition-delay: .8s !important;
   -o-transition-delay: .8s !important;
@@ -1140,7 +1141,7 @@ sub, sup {
   transition-delay: .8s !important; }
 
 .sl-slide-vertical .sl-slide-inner {
-  background: #ccc; }
+  background: transparent; }
 
 /*-------------------------------------------    
 	Custom Style Sheet
@@ -1151,7 +1152,8 @@ sub, sup {
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0; }
+  left: 0;
+  background: transparent; }
 
 .nav-arrows > div {
   position: absolute;

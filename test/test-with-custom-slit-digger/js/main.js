@@ -91,9 +91,8 @@ function slitSlider(){
 
 
 				$('.sl-trans-elems .content-wrapper').css('z-index', '0');
-
-				$('.bottom-gate-wrapper ').stop(true, true).animate({top: '0'}, 700).dequeue();
-				$('.top-gate-wrapper').stop(true, true).animate({top: '0'}, 700).dequeue();
+				$('.top-gate-wrapper').stop().animate({top: '0'}, 400, 'easeInOutQuad');
+				$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 400, 'easeInOutQuad');
 				
 
 				$('.content-wrapper').removeAttr('style');

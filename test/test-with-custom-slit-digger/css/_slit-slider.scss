@@ -33,7 +33,7 @@
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
-	background: #fff;
+	background:transparent;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-o-backface-visibility: hidden;
@@ -45,6 +45,7 @@
 /* Horizontal slice */
 
 .sl-slide-horizontal .sl-content-slice {
+	background:transparent;
 	width: 100%;
 	height: 50%;
 	left: -200px;
@@ -73,6 +74,7 @@
 /* Vertical slice */
 
 .sl-slide-vertical .sl-content-slice {
+	background:transparent;
 	width: 50%;
 	height: 100%;
 	top: -200px;
@@ -105,16 +107,18 @@
 	width: 120%;
 	height: 120%;
 	overflow: visible;
+	background:transparent;
 }
 
 .sl-content {
 	width: 120%;
 	height: 120%;
+	background:transparent;
 }
 
 /* Default styles for background colors */
 .sl-slide-horizontal .sl-slide-inner {
-	background: #ddd;
+	background:transparent;
 	-webkit-transition-delay: .8s !important;
 	-moz-transition-delay: .8s !important;
 	-o-transition-delay: .8s !important;
@@ -123,7 +127,7 @@
 }
 
 .sl-slide-vertical .sl-slide-inner {
-	background: #ccc;
+	background:transparent;
 }
 
 
@@ -140,6 +144,7 @@
 	height: 100%;
 	top: 0;
 	left: 0;
+	background:transparent;
 }
 .nav-arrows {
 

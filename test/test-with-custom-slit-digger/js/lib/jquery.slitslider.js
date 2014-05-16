@@ -263,28 +263,30 @@
 						.cond(
 							dir === 'prev', 
 							function() {
-								console.log("slice1 set timeout");
-								
+								console.log("Prev 1 set timeout");
+								//$('.bottom-gate-wrapper ').stop(true, true).animate({top: '0'}, 700).dequeue();
 								var slice = this;
 								this.css( slice1Style );
 								setTimeout(function() {
-									console.log("slice1.1 set timeout");
+									console.log("Prev 3 set timeout");
 									$nextSlide.addClass('sl-trans-elems')
 									slice.css( resetStyle );
 
-								}, 10 );
+								}, 100 );
 										 
 							}, 
-
-							function() {	
+							function() {
 								
+								console.log("Next 1 set timeout");
 								var slice = this;
 								setTimeout( function() {
-									console.log("slice1.4 set timeout");
+									$('.top-gate-wrapper').stop().animate({top: '0'}, 400, 'easeInOutQuad');
+									$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 400, 'easeInOutQuad');
+									console.log("Next 3 set timeout");
 									slice.css( slice1Style );
 
-								},10 );
-								
+								}, 100 );
+						
 							}
 						)
 						.clone()
@@ -292,11 +294,11 @@
 						.cond(
 							dir === 'prev', 
 							function() {
-								console.log("slice2 set timeout");
+								console.log("Prev2 set timeout");
 								var slice = this;
 								this.css( slice2Style );
 								setTimeout( function() {
-									console.log("slice2.2 set timeout");
+									console.log("Prev4 set timeout");
 									$currentSlide.addClass( 'sl-trans-back-elems' );
 
 									if( self.support ) {
@@ -314,15 +316,16 @@
 
 									}
 
-								}, 10 );
+								}, 100 );
 						
 							},
 							function() {
 								
 								var slice = this;
+									console.log("Next 2 set timeout");
+
 								setTimeout( function() {
-									$('.bottom-gate-wrapper ').stop(true, true).animate({top: '0'}, 700, 'easeInOutQuad');
-									console.log("slice2.4 set timeout");
+									console.log("Next 4 set timeout");
 
 									$nextSlide.addClass( 'sl-trans-elems' );
 									
@@ -341,7 +344,7 @@
 
 									}
 
-								}, 10);
+								}, 100 );
 								
 							}
 						)
