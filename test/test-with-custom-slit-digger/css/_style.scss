@@ -785,10 +785,9 @@ sub, sup { line-height: 0; }
 			float:right;
 			height: 35px;
 			width: 50px;
-			background:transparent url(../images/mail-tiny.png) no-repeat 0 0;
+			background:transparent url(../images/mailer.png) no-repeat 0 0;
 			cursor:pointer;
 			@media all and (min-width: 560px) {
-				background:transparent url(../images/mail-small.png) no-repeat 0 0;
 				height: 50px;
 			}
 		}
