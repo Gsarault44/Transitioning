@@ -68,15 +68,15 @@
 
 	$.Slitslider.defaults = {
 		// transitions speed
-		speed : 700,
+		speed : 2000,
 		// if true the item's slices will also animate the opacity value
-		optOpacity : true,
+		optOpacity : false,
 		// amount (%) to translate both slices - adjust as necessary
 		translateFactor : 160,
 		// maximum possible angle
 		maxAngle : 25,
 		// maximum possible scale
-		maxScale : 2,
+		maxScale : 1,
 		// slideshow on / off
 		autoplay : false,
 		// keyboard navigation
@@ -219,9 +219,11 @@
 					marginLeft : -this.size.width / 2
 				},
 				// default slide's slices style
+
 				resetStyle = {
 					'transform' : 'translate(0%,0%) rotate(0deg) scale(1)',
-					opacity : 1 
+					opacity : 1
+
 				},
 				// slice1 style
 				slice1Style	= config.orientation === 'horizontal' ? {
@@ -246,7 +248,7 @@
 			// we are adding the classes sl-trans-elems and sl-trans-back-elems to the slide that is either coming "next"
 			// or going "prev" according to the direction.
 			// the idea is to make it more interesting by giving some animations to the respective slide's elements
-			//( dir === 'next' ) ? $nextSlide.addClass( 'sl-trans-elems' ) : $currentSlide.addClass( 'sl-trans-back-elems' );
+			( dir === 'next' ) ? $nextSlide.addClass( 'sl-trans-elems' ) : $currentSlide.addClass( 'sl-trans-back-elems' );
 			
 			$currentSlide.removeClass( 'sl-trans-elems' );
 
@@ -263,24 +265,27 @@
 						.cond(
 							dir === 'prev', 
 							function() {
-							
+								console.log("Prev 1 set timeout");
+								//$('.bottom-gate-wrapper ').stop(true, true).animate({top: '0'}, 700).dequeue();
 								var slice = this;
 								this.css( slice1Style );
-								setTimeout( function() {
+								setTimeout(function() {
+									console.log("Prev 3 set timeout");
 									$nextSlide.addClass('sl-trans-elems')
 									slice.css( resetStyle );
 
-								}, 20 );
+								}, 100 );
 										 
 							}, 
 							function() {
 								
+								console.log("Next 1 set timeout");
 								var slice = this;
 								setTimeout( function() {
-									
+									console.log("Next 3 set timeout");
 									slice.css( slice1Style );
 
-								}, 20 );
+								}, 100 );
 						
 							}
 						)
@@ -289,11 +294,11 @@
 						.cond(
 							dir === 'prev', 
 							function() {
-								
+								console.log("Prev2 set timeout");
 								var slice = this;
 								this.css( slice2Style );
 								setTimeout( function() {
-
+									console.log("Prev4 set timeout");
 									$currentSlide.addClass( 'sl-trans-back-elems' );
 
 									if( self.support ) {
@@ -311,13 +316,17 @@
 
 									}
 
-								}, 20 );
+								}, 100 );
 						
 							},
 							function() {
 								
 								var slice = this;
+									console.log("Next 2 set timeout");
+									$('.top-gate-wrapper').stop().animate({top: '0'}, 800, 'easeOutQuint');
+									$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 800, 'easeOutQuint');
 								setTimeout( function() {
+									console.log("Next 4 set timeout");
 
 									$nextSlide.addClass( 'sl-trans-elems' );
 									
@@ -336,14 +345,14 @@
 
 									}
 
-								}, 20 );
+								}, 100 );
 								
 							}
 						)
 						.find( 'div.sl-content-wrapper' )
 						.css( cssStyle );
 			
-			$nextSlide.delay(1600).show();
+			$nextSlide.show();
 			
 		},
 		_validateValues : function( config ) {
@@ -388,7 +397,7 @@
 			// remove second slide's slice
 			$slice.remove();
 			// unwrap..
-			$slide.css( 'z-index', 1 )
+			$slide.css( 'z-index', 0 )
 				  .find( 'div.sl-content-wrapper' )
 				  .unwrap();
 			
