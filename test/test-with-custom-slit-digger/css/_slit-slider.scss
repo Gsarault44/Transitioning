@@ -21,9 +21,6 @@
 	left: 0;
 } 
 
-.sl-slide {
-	z-index: 1;
-}
 
 /* The duplicate parts/slices */
 
@@ -113,11 +110,10 @@
 
 /* Default styles for background colors */
 .sl-slide-horizontal .sl-slide-inner {
-	background: #ddd;
+
 }
 
 .sl-slide-vertical .sl-slide-inner {
-	background: #ccc;
 }
 
 
@@ -152,7 +148,7 @@
 .nav-arrows .nav-arrow-prev {
 	position: absolute;
 	left: 15px;
-	bottom:55px;
+	bottom:57px;
 	text-align: left;
 	width:60px;
 	height:50px;
@@ -161,7 +157,7 @@
 		width:200px;
 		height:70px;
 		left:15px;
-		top:15%;
+		top:5%;
 	}
 	&:hover {
 		opacity: .8;
@@ -175,6 +171,7 @@
 		height:30px;
 		position: absolute;
 		border-left: 3px solid #fff;
+		-ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=45);
 		-webkit-transform: rotate(45deg);
 		-moz-transform: rotate(45deg);
 		-o-transform: rotate(45deg);
@@ -199,6 +196,7 @@
 		-o-transform: rotate(-45deg);
 		-ms-transform: rotate(-45deg);
 		transform: rotate(-45deg);
+		-ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-45);
 		@media all and (min-width: 768px) {
 			height: 40px;
 			top:16px;
@@ -243,7 +241,7 @@
 
 .nav-arrows .nav-arrow-next {
 	right:15px;
-	bottom:54px;
+	bottom:56px;
 	border-left: none;
 	border-bottom: none;
 	text-align: right;
@@ -252,7 +250,7 @@
 	opacity: .5;
 	@include transitions;
 	@media all and (min-width: 768px) {
-		bottom:15%;
+		bottom:10%;
 		right:15px;
 		width: 200px;
 		height: 70px;
@@ -337,12 +335,12 @@
 	.nav-dots {
 		text-align: center;
 		position: fixed;
-		bottom: 41px;
+		bottom: 38px;
 		width: 100%;
 		left: 0;
 		z-index: 1000;
 		padding:0 0 5px;
-		@media all and (min-width: 560px) {
+		@media all and (min-width: 768px) {
 			bottom: 60px;
 		}
 	}

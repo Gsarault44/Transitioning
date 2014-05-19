@@ -320,11 +320,10 @@
 						
 							},
 							function() {
-								
+								$('.top-gate-wrapper, .bottom-gate-wrapper').stop().animate({top: '0'}, 500, 'linear');
 								var slice = this;
 									console.log("Next 2 set timeout");
-									$('.top-gate-wrapper').stop().animate({top: '0'}, 600, 'linear');
-									$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 600, 'linear');
+									
 								setTimeout( function() {
 									console.log("Next 4 set timeout");
 
