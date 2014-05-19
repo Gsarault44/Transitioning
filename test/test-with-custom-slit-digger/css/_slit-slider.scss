@@ -168,6 +168,9 @@
 	}
 	&:hover {
 		opacity: .8;
+		& .prev-current p {
+			display: block;
+		}
 	}
 	&:before {
 		content: "";
@@ -218,6 +221,7 @@
 			left: 24px;
 			top: 8px;
 		p {
+			display: none;
 			font-size: 22px;
 			margin:0;
 			margin-left: 25px;
@@ -232,8 +236,8 @@
 			display: block;
 		}
 		p{
+			letter-spacing: 0;
 			color:#fff;
-
 		}
 	}
 	
@@ -249,6 +253,7 @@
 	width: 60px;
 	height: 50px;
 	opacity: .5;
+	@include transitions;
 	@media all and (min-width: 768px) {
 		bottom:15%;
 		right:15px;
@@ -301,31 +306,36 @@
 		right: 30px;
 		top: 10px;
 		p {
+			@include transitions;
 			line-height: 20px;
 			font-size: 22px;
 			margin:0 40px 0 0;
 		}
 		p + p {
-			display: inline-block;
 			margin:0 0 0 0;
+		}
+		&:hover p {
+			display: block;
+			@include transitions;
 		}
 	}
 	.next-current {
-		@media all and (min-width: 768px) {
-			display: block;
-		}
+		display: block;
+		letter-spacing: 0;
 		p{
+			display: none;
 			color:#fff;
-
 		}
+		
+
+		
 	}
-
+	&:hover .next-current p {
+		display: block;
+	}
 }
 
-.next-current, .prev-current {
-	display: block;
-	@include transitions;
-}
+
 
 /* Custom navigation dots */
 .container {
@@ -336,8 +346,7 @@
 		width: 100%;
 		left: 0;
 		z-index: 1000;
-		background:#000;
-		padding:5px 0;
+		padding:0 0 5px;
 		@media all and (min-width: 560px) {
 			bottom: 60px;
 		}
@@ -351,11 +360,14 @@
 		height: 5px;
 		background:#753d78;
 		cursor: pointer;
-		opacity: .25;
+		opacity: .45;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 		border-right:2px solid #000; 
+		&:hover {
+			opacity: 0.7;
+		}
 	}
 	.nav-dots span:nth-of-type(2) {
 		background:#ebb231;
@@ -376,9 +388,7 @@
 	.nav-dots span.nav-dot-current {
 		opacity: 1;
 		vertical-align: bottom;
-		margin-top: -3px;
 		content: "";
-		height: 8px;
 		-moz-box-shadow:    0px 2px 6px -2px #ccc;
 		-webkit-box-shadow: 0px 2px 6px -2px #ccc;
 		box-shadow:         0px 2px 6px -2px #ccc;

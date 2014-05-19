@@ -102,7 +102,7 @@
 }
 @-webkit-keyframes scaleDown{
 	0% {-webkit-transform: scale(1);}
-	100% {-webkit-transform: scale(2);}
+	100% {-webkit-transform: scale(0.3);}
 }
 @-moz-keyframes scaleDown{
 	0% {-moz-transform: scale(1);}
@@ -118,7 +118,7 @@
 }
 @keyframes scaleDown{
 	0% {transform: scale(1);}
-	100% {transform: scale(2);}
+	100% {transform: scale(0.3);}
 }
 @-webkit-keyframes scaleUp{
 	0% {-webkit-transform: scale(0.3);}

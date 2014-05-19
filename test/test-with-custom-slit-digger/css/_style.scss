@@ -16,9 +16,14 @@ www.bluecadet.com
 -------------------------------------------*/
 @font-face {
   font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+
+  
   src: url('../css/fonts/rock.ttf')  format('truetype'); /* Safari, Android, iOS */
   src: url('../css/fonts/rockwell.otf')  format('opentype'); /* Safari, Android, iOS */
   src: url('../css/fonts/rockwell.eot')  format('opentype'); /* Safari, Android, iOS */
+  src: url('http://ufonts.com/fonts/rockwell.html')  format('opentype');
+  src: url('http://ufonts.com/q32583')  format('opentype');
+  
 }
 
 
@@ -203,6 +208,7 @@ sub, sup { line-height: 0; }
 		position: relative;
 		width: 68%;
 		z-index: 1;
+		padding-bottom: 45px;
 		-webkit-transform: rotate(-7deg);
 		-moz-transform: rotate(-7deg);
 		-o-transform: rotate(-7deg);
@@ -342,6 +348,7 @@ sub, sup { line-height: 0; }
 		padding:0;
 		z-index: 1;
 		overflow: hidden;
+		cursor:pointer;
 		border-bottom: 1px solid transparent;
 		-webkit-backface-visibility: hidden;
 		-moz-backface-visibility: hidden;
@@ -357,6 +364,20 @@ sub, sup { line-height: 0; }
 			width: 185%;
 			left:-50%;
 		}
+		&:hover {
+			img {
+				@include transitions;
+				-webkit-transform:rotate(-7deg) scale(1.01);
+				-moz-transform: rotate(-7deg) scale(1.01);
+				-o-transform: rotate(-7deg) scale(1.01);
+				-ms-transform: rotate(-7deg) scale(1.01);
+				transform: rotate(-7deg) scale(1.01);
+			}
+			.top-gate-wrapper p, .bottom-gate-wrapper p {
+				@include transitions;
+				opacity: .85;
+			}
+		}
 		img {
 			-webkit-transform: rotate(-7deg);
 			-moz-transform: rotate(-7deg);
@@ -371,9 +392,7 @@ sub, sup { line-height: 0; }
 			margin:0;
 			padding:0;
 			overflow: hidden;
-			box-shadow: 0px 0px 4px 0px #000;
 			@media all and (min-width: 420px) {
-
 				width: 100%;
 				margin-top: 0;
 				margin-left: 0;
@@ -396,6 +415,7 @@ sub, sup { line-height: 0; }
 				height:auto;
 				max-width: none;
 				position: relative;
+				@include transitions;
 				@media screen and (orientation:portrait) {
 					-webkit-transform: rotate(80deg);
 					-moz-transform: rotate(80deg);
@@ -407,13 +427,14 @@ sub, sup { line-height: 0; }
 				}
 			}
 			p {
+				@include transitions;
 				position: absolute;
 				font-size: 40px;
 				color: white;
 				margin:0;
 				bottom: -9px;
 				text-transform: uppercase;
-				opacity: 0.8;
+				opacity: 0.75;
 				display: block;
 				width: 100%;
 				text-align: center;
@@ -434,7 +455,8 @@ sub, sup { line-height: 0; }
 				}
 				@media all and (min-width: 1024px) {
 					font-size: 130px;
-					bottom:-30px;
+					bottom: 0;
+					line-height: 86px;
 				}
 			}
 		}
@@ -444,7 +466,6 @@ sub, sup { line-height: 0; }
 			margin:0;
 			padding:0;
 			overflow: hidden;
-			box-shadow: 0px 0px 4px 0px #000;
 			@media all and (min-width: 420px) {
 				margin-left: 0;
 			}
@@ -468,6 +489,7 @@ sub, sup { line-height: 0; }
 				max-width: none;
 				position: relative;
 				margin-top: -10%;
+				@include transitions;
 				@media screen and (orientation:portrait) {
 					-webkit-transform: rotate(80deg);
 					-moz-transform: rotate(80deg);
@@ -479,13 +501,14 @@ sub, sup { line-height: 0; }
 				} 
 			}	
 			p {
+				@include transitions;
 				position: absolute;
 				font-size: 40px;
 				color: white;
 				top: -9px;
 				margin:0;
 				text-transform: uppercase;
-				opacity: 0.8;
+				opacity: 0.75;
 				display: block;
 				width: 100%;
 				text-align: center;
@@ -510,7 +533,8 @@ sub, sup { line-height: 0; }
 				}
 				@media all and (min-width: 1024px) {
 					font-size: 130px;
-					top:-30px;
+					top:0;
+					line-height: 86px;
 				}
 			}
 		}
@@ -565,6 +589,9 @@ sub, sup { line-height: 0; }
 #computers-compassion {
 	.gate .bottom-gate-wrapper .bottom-gate {
 		margin-left: -30%;
+		@media all and (min-width: 768px) {
+			margin-left: 0;
+		}
 	}
 	.sl-content {
 	}

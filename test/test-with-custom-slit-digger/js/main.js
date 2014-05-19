@@ -113,14 +113,14 @@ function slitSlider(){
 		$pagiN = $( '.nav-arrow-next > div' ),
 	
 		slitslider = $( '#slider' ).slitslider( {
-			speed: 1200,
+			speed: 800,
 
 			onBeforeChange : function( slide, pos ) {
 
 
 				$('.sl-trans-elems .content-wrapper').css('z-index', '0');
-				$('.top-gate-wrapper').stop().animate({top: '0'}, 700, 'easeOutQuint');
-				$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 700, 'easeOutQuint');
+				$('.top-gate-wrapper').stop().animate({top: '0'}, 600, 'easeOutQuint');
+				$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 600, 'easeOutQuint');
 				
 
 				$('.content-wrapper').removeAttr('style');
@@ -149,11 +149,16 @@ function slitSlider(){
 				$pagiN.eq( pos ).addClass( 'current' );
 				$pagiN.eq( pos ).next().addClass( 'next-current' );
 
-				$('.sl-slider').removeClass('scale-up');
+				//$('.sl-slider').removeClass('scale-up');
 			},
 			onAfterChange: function(){
-				$('.gate .top-gate-wrapper').stop().delay(900).animate({top: '-40%'}, 700, 'easeOutQuint');
-				$('.gate .bottom-gate-wrapper').stop().delay(900).animate({top: '35%'}, 700,'easeOutQuint');
+				/* AUTO OPEN AFTER PAGINATION */
+
+				//$('.gate .top-gate-wrapper').stop().delay(900).animate({top: '-40%'}, 700, 'easeOutQuint');
+				//$('.gate .bottom-gate-wrapper').stop().delay(900).animate({top: '35%'}, 700,'easeOutQuint');
+
+				/* CLOSE ALL NON-ACTIVE GATES AFTER PAGINATIONS */
+
 				/*$(".gate:not(.sl-trans-elems .gate)").find('.top-gate-wrapper').stop(true, true).animate({top: '0'}, 300).dequeue();
 				$(".gate:not(.sl-trans-elems .gate)").find('.bottom-gate-wrapper').stop(true, true).animate({top: '0'}, 300).dequeue();*/
 				$('.sl-trans-elems .content-wrapper').css('z-index', '9999999');
@@ -206,7 +211,7 @@ function slitSlider(){
 					}
 					slitslider.jump( i + 1 );
 
-					$('.zoom-light').fadeOut();
+					$('.zoom-light').fadeOut(5000);
 				});
 			});
 			$pagiP.each( function() {
@@ -356,8 +361,6 @@ jQuery(window).load(function(){
 
 jQuery(document).ready(function(){
 	zoomIn();
-	//theIndex();
-	
 	zoomLight();
 	orientation();
 	newsletter();
