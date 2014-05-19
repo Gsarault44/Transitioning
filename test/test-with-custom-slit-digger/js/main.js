@@ -14,15 +14,6 @@ function hashing() {
 }
 function scrollbar() {
 	/*http://manos.malihu.gr/jquery-custom-content-scroller/*/
-	/*$(".bg-1 .content-wrapper").mCustomScrollbar({
-		mouseWheel:false,
-		updateOnContentResize: true,
-		theme:'light-thin',
-		autoDraggerLength:false,
-		autoHideScrollbar: true,
-		scrollInertia:0,
-		advanced:{autoScrollOnFocus:false}
-	});*/
 	$(".bg-1 .content-wrapper").mCustomScrollbar();
 	$(".bg-2 .content-wrapper").mCustomScrollbar();
 	$(".bg-3 .content-wrapper").mCustomScrollbar();
@@ -211,7 +202,7 @@ function slitSlider(){
 					}
 					slitslider.jump( i + 1 );
 
-					$('.zoom-light').fadeOut(5000);
+					$('.zoom-light').delay(800).fadeOut();
 				});
 			});
 			$pagiP.each( function() {
@@ -265,11 +256,13 @@ function zoomLight() {
 		$('.zoom-light').fadeToggle().css('display', 'table');
 		$('.zoom-light').toggleClass('scale-up');
 		$('.zoom-light').toggleClass('scale-down');
+		return false;
 	});
 	$('.zoom-light').click(function(){
 		$('.zoom-light').fadeOut();
 		$('.zoom-light').toggleClass('scale-up');
 		$('.zoom-light').toggleClass('scale-down');
+		return false;
 	});
 	
 }

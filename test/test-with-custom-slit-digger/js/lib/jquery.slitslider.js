@@ -253,7 +253,7 @@
 			$currentSlide.removeClass( 'sl-trans-elems' );
 
 			var transitionProp = {
-				'transition' : 'all ' + this.options.speed + 'ms ease-in'
+				'transition' : 'all ' + this.options.speed + 'ms ease-out'
 			};
 
 			// add the 2 slices and animate them
@@ -323,8 +323,8 @@
 								
 								var slice = this;
 									console.log("Next 2 set timeout");
-									$('.top-gate-wrapper').stop().animate({top: '0'}, 800, 'easeOutQuint');
-									$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 800, 'easeOutQuint');
+									$('.top-gate-wrapper').stop().animate({top: '0'}, 600, 'linear');
+									$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 600, 'linear');
 								setTimeout( function() {
 									console.log("Next 4 set timeout");
 
