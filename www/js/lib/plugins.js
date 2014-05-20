@@ -1187,9 +1187,9 @@ function mce_success_cb(resp){
 
 	$.Slitslider.defaults = {
 		// transitions speed
-		speed : 2000,
+		speed : 700,
 		// if true the item's slices will also animate the opacity value
-		optOpacity : true,
+		optOpacity : false,
 		// amount (%) to translate both slices - adjust as necessary
 		translateFactor : 160,
 		// maximum possible angle
@@ -1384,11 +1384,11 @@ function mce_success_cb(resp){
 						.cond(
 							dir === 'prev', 
 							function() {
-								console.log("Prev 1 set timeout");
+								//console.log("Prev 1 set timeout");
 								var slice = this;
 								this.css( slice1Style );
 								setTimeout(function() {
-									console.log("Prev 3 set timeout");
+									//console.log("Prev 3 set timeout");
 									
 									slice.css( resetStyle );
 
@@ -1397,10 +1397,10 @@ function mce_success_cb(resp){
 							}, 
 							function() {
 								
-								console.log("Next 1 set timeout");
+								//console.log("Next 1 set timeout");
 								var slice = this;
 								setTimeout( function() {
-									console.log("Next 3 set timeout");
+									//console.log("Next 3 set timeout");
 									slice.css( slice1Style );
 
 								}, 50 );
@@ -1412,11 +1412,11 @@ function mce_success_cb(resp){
 						.cond(
 							dir === 'prev', 
 							function() {
-								console.log("Prev2 set timeout");
+								//console.log("Prev2 set timeout");
 								var slice = this;
 								this.css( slice2Style );
 								setTimeout( function() {
-									console.log("Prev4 set timeout");
+									//console.log("Prev4 set timeout");
 									$currentSlide.addClass( 'sl-trans-back-elems' );
 
 									if( self.support ) {
@@ -1438,13 +1438,13 @@ function mce_success_cb(resp){
 						
 							},
 							function() {
-								$('.top-gate-wrapper, .bottom-gate-wrapper').stop().animate({top: '0',}, 600, 'linear');
+								$('.top-gate-wrapper, .bottom-gate-wrapper').stop().animate({top: '0',}, 500, 'linear');
 							
 								var slice = this;
-									console.log("Next 2 set timeout");
+									//console.log("Next 2 set timeout");
 									
 								setTimeout( function() {
-									console.log("Next 4 set timeout");
+									//console.log("Next 4 set timeout");
 
 									$nextSlide.addClass( 'sl-trans-elems' );
 									

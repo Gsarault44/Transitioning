@@ -1,3 +1,4 @@
+@import url("//hello.myfonts.net/count/2af591");
 /*
 *************************************************
 
@@ -12,37 +13,51 @@ www.bluecadet.com
 /*-------------------------------------------    
     Fonts     
 -------------------------------------------*/
+/* @import must be at top of file, otherwise CSS will not work */
 @font-face {
-  font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-  font-style: normal;
-  font-weight: 400;
-  src: url("css/fonts/rock.ttf") format("truetype");
-  src: url("css/fonts/rockwell.otf") format("opentype");
-  src: url("css/fonts/rockwell.eot") format("opentype"); }
+  font-family: 'Rockwell-Condensed';
+  src: url("../css/fonts/webfonts/2AF591_0_0.eot");
+  src: url("../css/fonts/webfonts/2AF591_0_0.eot?#iefix") format("embedded-opentype"), url("../css/fonts/webfonts/2AF591_0_0.woff") format("woff"), url("../css/fonts/webfonts/2AF591_0_0.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local("PT Sans"), local("PTSans-Regular"), url(http://themes.googleusercontent.com/static/fonts/ptsans/v6/7YGmE4Ls5b94ct65u07hVQLUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
+  font-family: 'RockwellMT-BoldItalic';
+  src: url("../css/fonts/webfonts/2AF591_1_0.eot");
+  src: url("../css/fonts/webfonts/2AF591_1_0.eot?#iefix") format("embedded-opentype"), url("../css/fonts/webfonts/2AF591_1_0.woff") format("woff"), url("../css/fonts/webfonts/2AF591_1_0.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local("PT Sans Bold"), local("PTSans-Bold"), url(http://themes.googleusercontent.com/static/fonts/ptsans/v6/0XxGQsSc1g4rdRdjJKZrNL3hpw3pgy2gAi-Ip7WPMi0.woff) format("woff"); }
+  font-family: 'Rockwell-ExtraBold';
+  src: url("../css/fonts/webfonts/2AF591_2_0.eot");
+  src: url("../css/fonts/webfonts/2AF591_2_0.eot?#iefix") format("embedded-opentype"), url("../css/fonts/webfonts/2AF591_2_0.woff") format("woff"), url("../css/fonts/webfonts/2AF591_2_0.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Rokkitt';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Rokkitt"), url(http://themes.googleusercontent.com/static/fonts/rokkitt/v6/RcB7dRNAX_8JE8zinU47YALUuEpTyoUstqEm5AMlJo4.woff) format("woff"); }
+  font-family: 'RockwellMT-Bold';
+  src: url("../css/fonts/webfonts/2AF591_3_0.eot");
+  src: url("../css/fonts/webfonts/2AF591_3_0.eot?#iefix") format("embedded-opentype"), url("../css/fonts/webfonts/2AF591_3_0.woff") format("woff"), url("../css/fonts/webfonts/2AF591_3_0.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Rokkitt';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Rokkitt Bold"), local("Rokkitt-Bold"), url(http://themes.googleusercontent.com/static/fonts/rokkitt/v6/Mef17w3J4CtS0lw4Wa_8r73hpw3pgy2gAi-Ip7WPMi0.woff) format("woff"); }
+  font-family: 'RockwellMT';
+  src: url("../css/fonts/webfonts/2AF591_4_0.eot");
+  src: url("../css/fonts/webfonts/2AF591_4_0.eot?#iefix") format("embedded-opentype"), url("../css/fonts/webfonts/2AF591_4_0.woff") format("woff"), url("../css/fonts/webfonts/2AF591_4_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'RockwellMT-LightItalic';
+  src: url("../css/fonts/webfonts/2AF591_5_0.eot");
+  src: url("../css/fonts/webfonts/2AF591_5_0.eot?#iefix") format("embedded-opentype"), url("../css/fonts/webfonts/2AF591_5_0.woff") format("woff"), url("../css/fonts/webfonts/2AF591_5_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'RockwellMT-Light';
+  src: url("../css/fonts/webfonts/2AF591_6_0.eot");
+  src: url("../css/fonts/webfonts/2AF591_6_0.eot?#iefix") format("embedded-opentype"), url("../css/fonts/webfonts/2AF591_6_0.woff") format("woff"), url("../css/fonts/webfonts/2AF591_6_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'RockwellMT-CondensedBold';
+  src: url("../css/fonts/webfonts/2AF591_7_0.eot");
+  src: url("../css/fonts/webfonts/2AF591_7_0.eot?#iefix") format("embedded-opentype"), url("../css/fonts/webfonts/2AF591_7_0.woff") format("woff"), url("../css/fonts/webfonts/2AF591_7_0.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'RockwellMT-Italic';
+  src: url("../css/fonts/webfonts/2AF591_8_0.eot");
+  src: url("../css/fonts/webfonts/2AF591_8_0.eot?#iefix") format("embedded-opentype"), url("../css/fonts/webfonts/2AF591_8_0.woff") format("woff"), url("../css/fonts/webfonts/2AF591_8_0.ttf") format("truetype"); }
 
 /*-------------------------------------------    
     Flag
@@ -67,7 +82,7 @@ html {
 
 /* for rems */
 body {
-  font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
   color: #333;
   vertical-align: baseline; }
 
@@ -337,8 +352,7 @@ sub, sup {
         position: relative; }
         .sl-slide .content-wrapper .button-wrapper .content h1 {
           text-align: left;
-          font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-          font-size: 19px;
+          font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
           font-size: 1.9em;
           margin: 0;
           -webkit-text-stroke: 0.1px; }
@@ -357,7 +371,7 @@ sub, sup {
               font-size: 49px;
               font-size: 4.9em; } }
         .sl-slide .content-wrapper .button-wrapper .content p {
-          font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+          font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
           font-size: 16px;
           font-size: 1.6em;
           line-height: 16px;
@@ -407,7 +421,7 @@ sub, sup {
     .sl-slide .more a {
       display: inline-block;
       color: #fff;
-      font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+      font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
       font-weight: 400;
       font-size: 20px;
       font-size: 2em; }
@@ -435,7 +449,6 @@ sub, sup {
     padding: 0;
     z-index: 1;
     overflow: hidden;
-    cursor: pointer;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -o-backface-visibility: hidden;
@@ -487,6 +500,7 @@ sub, sup {
       -o-backface-visibility: hidden;
       -ms-backface-visibility: hidden;
       backface-visibility: hidden;
+      cursor: pointer;
       /* &:after {
       	content:"";
       	display: block;
@@ -529,32 +543,31 @@ sub, sup {
         font-size: 35px;
         color: white;
         margin: 0;
-        bottom: -9px;
+        bottom: -15px;
         text-transform: uppercase;
         opacity: 0.75;
         display: block;
         width: 100%;
         text-align: center;
-        font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+        font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
         font-weight: bold;
         z-index: 2; }
         @media all and (min-width: 420px) {
           .sl-slide .gate .top-gate-wrapper p {
             font-size: 50px;
-            bottom: -11px; } }
+            bottom: -23px; } }
         @media all and (min-width: 560px) {
           .sl-slide .gate .top-gate-wrapper p {
             font-size: 80px;
-            bottom: -18px; } }
+            bottom: -36px; } }
         @media all and (min-width: 768px) {
           .sl-slide .gate .top-gate-wrapper p {
             font-size: 90px;
-            bottom: -20px; } }
+            bottom: -41px; } }
         @media all and (min-width: 1024px) {
           .sl-slide .gate .top-gate-wrapper p {
             font-size: 130px;
-            bottom: 0;
-            line-height: 93px; } }
+            bottom: -60px; } }
     .sl-slide .gate .bottom-gate-wrapper {
       position: relative;
       width: 100%;
@@ -563,31 +576,30 @@ sub, sup {
       overflow: hidden;
       box-shadow: 0 0 0 0 transparent;
       border: 0 solid transparent;
+      cursor: pointer;
       -webkit-backface-visibility: hidden;
       -moz-backface-visibility: hidden;
       -o-backface-visibility: hidden;
       -ms-backface-visibility: hidden;
-      backface-visibility: hidden;
-      /* &:after {
-      	content:"";
-      	display: block;
-      	position: absolute;
-      	overflow: hidden;
-      	height:100%;
-      	width:100%;
-      	top:0;
-      	left:0;
-        	background: #000;
-        	opacity: .2;
-        	z-index: 1;
-      } 
-       */ }
+      backface-visibility: hidden; }
       @media all and (min-width: 420px) {
         .sl-slide .gate .bottom-gate-wrapper {
           margin-left: 0; } }
       @media screen and (orientation: landscape) {
         .sl-slide .gate .bottom-gate-wrapper {
           height: 50%; } }
+      .sl-slide .gate .bottom-gate-wrapper:after {
+        content: "";
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: #000;
+        opacity: .2;
+        z-index: 1; }
       .sl-slide .gate .bottom-gate-wrapper .bottom-gate {
         width: 100%;
         height: auto;
@@ -613,7 +625,7 @@ sub, sup {
         position: absolute;
         font-size: 35px;
         color: white;
-        top: -9px;
+        top: -15px;
         margin: 0;
         text-transform: uppercase;
         opacity: 0.75;
@@ -624,26 +636,25 @@ sub, sup {
         -moz-transform: rotateX(-180deg);
         -ms-transform: rotateX(-180deg);
         transform: rotateX(-180deg);
-        font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+        font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
         font-weight: bold;
         z-index: 2; }
         @media all and (min-width: 420px) {
           .sl-slide .gate .bottom-gate-wrapper p {
             font-size: 50px;
-            top: -11px; } }
+            top: -23px; } }
         @media all and (min-width: 560px) {
           .sl-slide .gate .bottom-gate-wrapper p {
             font-size: 80px;
-            top: -18px; } }
+            top: -36px; } }
         @media all and (min-width: 768px) {
           .sl-slide .gate .bottom-gate-wrapper p {
             font-size: 90px;
-            top: -20px; } }
+            top: -41px; } }
         @media all and (min-width: 1024px) {
           .sl-slide .gate .bottom-gate-wrapper p {
             font-size: 130px;
-            top: 0;
-            line-height: 93px; } }
+            top: -59px; } }
 
 blockquote {
   font-size: 18px;
@@ -686,10 +697,8 @@ cite {
 #horsepower-brainpower .gate .top-gate-wrapper .top-gate {
   top: -50%; }
 #horsepower-brainpower .gate .bottom-gate-wrapper p {
-  padding-left: 0.5%; }
-  @media all and (min-width: 768px) {
-    #horsepower-brainpower .gate .bottom-gate-wrapper p {
-      padding-left: 1%; } }
+  padding-left: 0.6%;
+  letter-spacing: 2px; }
 
 #hindsight-foresight .gate .top-gate-wrapper .top-gate {
   top: -30%; }
@@ -710,8 +719,6 @@ cite {
       width: 100%;
       margin-top: -10%;
       margin-left: 0; } }
-#hindsight-foresight .gate .bottom-gate-wrapper p {
-  letter-spacing: 0; }
 #hindsight-foresight .content {
   color: #445b0d; }
   #hindsight-foresight .content h1, #hindsight-foresight .content h2, #hindsight-foresight .content h3, #hindsight-foresight .content h4 {
@@ -731,7 +738,6 @@ cite {
       margin-left: 0;
       margin-top: -30%; } }
 #computers-compassion .gate .bottom-gate-wrapper p {
-  letter-spacing: 0px;
   padding-left: 0.8%; }
   @media all and (min-width: 768px) {
     #computers-compassion .gate .bottom-gate-wrapper p {
@@ -1221,9 +1227,6 @@ cite {
   top: 0;
   left: 0; }
 
-.sl-slide {
-  z-index: 1; }
-
 /* The duplicate parts/slices */
 .sl-content-slice {
   overflow: hidden;
@@ -1235,8 +1238,7 @@ cite {
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-  opacity: 1; }
+  backface-visibility: hidden; }
 
 /* Horizontal slice */
 .sl-slide-horizontal .sl-content-slice {
@@ -1702,7 +1704,7 @@ cite {
           display: inline-block;
           cursor: pointer;
           color: #777777;
-          font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+          font-family: "Rockwell-Condensed", Courier, Georgia,Times, "Times New Roman", serif;
           font-size: 16px;
           color: #fff;
           padding: 5px 14px;
@@ -1725,24 +1727,24 @@ cite {
 
 ::-webkit-input-placeholder {
   padding-left: 5px;
-  font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  font-family: "Rockwell-Condensed", Courier, Georgia,Times, "Times New Roman", serif;
   color: #a2a1a1; }
 
 :-moz-placeholder {
   /* Firefox 18- */
   padding-left: 5px;
-  font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  font-family: "Rockwell-Condensed", Courier, Georgia,Times, "Times New Roman", serif;
   color: #a2a1a1; }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
   padding-left: 5px;
-  font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  font-family: "Rockwell-Condensed", Courier, Georgia,Times, "Times New Roman", serif;
   color: #a2a1a1; }
 
 :-ms-input-placeholder {
   padding-left: 5px;
-  font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+  font-family: "Rockwell-Condensed", Courier, Georgia,Times, "Times New Roman", serif;
   color: #a2a1a1; }
 
 input:focus::-webkit-input-placeholder {
@@ -2265,27 +2267,6 @@ input:focus:-moz-placeholder {
 .mCS-dark-thin > .mCSB_scrollTools .mCSB_buttonRight {
   background-position: -80px -56px; }
 
-@font-face {
-  font-family: 'rockwellregular';
-  src: url("fonts/rock-webfont.eot");
-  src: url("fonts/rock-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/rock-webfont.woff") format("woff"), url("fonts/rock-webfont.ttf") format("truetype"), url("fonts/rock-webfont.svg#rockwellregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'rockwellbold';
-  src: url("fonts/rockb-webfont.eot");
-  src: url("fonts/rockb-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/rockb-webfont.woff") format("woff"), url("fonts/rockb-webfont.ttf") format("truetype"), url("fonts/rockb-webfont.svg#rockwellbold") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'rockwell_lightregular';
-  src: url("fonts/rockwell-light-webfont.eot");
-  src: url("fonts/rockwell-light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/rockwell-light-webfont.woff") format("woff"), url("fonts/rockwell-light-webfont.ttf") format("truetype"), url("fonts/rockwell-light-webfont.svg#rockwell_lightregular") format("svg");
-  font-weight: 100;
-  font-style: normal; }
-
 header {
   background-color: #1a1919;
   color: #c8c8cc;
@@ -2658,7 +2639,7 @@ nav .inner #rightList li:hover > a {
   font-size: 42px;
   margin-bottom: 20px;
   font-weight: bold;
-  font-family: 'rockwellbold',serif;
+  font-family: 'RockwellMT-Bold',serif;
   display: inline-block;
   line-height: 1em;
   float: left;

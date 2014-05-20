@@ -157,12 +157,27 @@ function scaleing() {
 		if (viewportmeta) {
 			viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
 			document.body.addEventListener('gesturestart', function () {
-				viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+				viewportmeta.content = 'width=device-width, initial-scale=2.0';
 			}, false);
 		}
 	}
 }
+var fastButtons = {
 
+	replace: function() {
+		// copy the current click events on document
+		var clickEvents = jQuery.hasData( document ) && jQuery._data( document ).events.click;
+		clickEvents = jQuery.extend(true, {}, clickEvents);
+
+		// remove these click events
+		$(document).off('click');
+
+		// reset them as vclick events
+		for (var i in clickEvents) {
+			$(document).on('vclick', clickEvents[i].handler);
+		}
+	}
+};
 
 function slitSlider(){
 	var Page = (function() {
@@ -187,8 +202,8 @@ function slitSlider(){
 				$('.expand').slideUp();
 
 				$('.content-wrapper').css('z-index', '2');
-				$('.top-gate-wrapper').stop().animate({top: '0'}, 600, 'easeOutQuint');
-				$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 600, 'easeOutQuint');
+				$('.top-gate-wrapper').stop().animate({top: '0'}, 500, 'easeOutQuint');
+				$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 500, 'easeOutQuint');
 				
 
 				$('.content-wrapper').removeAttr('style');
@@ -346,6 +361,7 @@ jQuery(window).load(function(){
 ********************/
 
 jQuery(document).ready(function(){
+	fastButtons.replace();
 	zoomIn();
 	zoomLight();
 	orientation();

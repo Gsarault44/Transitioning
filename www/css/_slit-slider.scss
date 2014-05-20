@@ -21,9 +21,6 @@
 	top: 0;
 	left: 0;
 } 
-.sl-slide {
-	z-index: 1;
-}
 
 /* The duplicate parts/slices */
 
@@ -38,7 +35,6 @@
 	-o-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
-	opacity : 1;
 }
 
 /* Horizontal slice */

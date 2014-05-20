@@ -14,41 +14,89 @@ www.bluecadet.com
 /*-------------------------------------------    
     Fonts     
 -------------------------------------------*/
-@font-face {
-  font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-  font-style: normal;
-  font-weight: 400;
-  
-  src: url('css/fonts/rock.ttf')  format('truetype');
-  src: url('css/fonts/rockwell.otf')  format('opentype');
-  src: url('css/fonts/rockwell.eot')  format('opentype');
-  
-}
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v6/7YGmE4Ls5b94ct65u07hVQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
-}
-@font-face {
-  font-family: 'PT Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/ptsans/v6/0XxGQsSc1g4rdRdjJKZrNL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
-}
-@font-face {
-  font-family: 'Rokkitt';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Rokkitt'), url(http://themes.googleusercontent.com/static/fonts/rokkitt/v6/RcB7dRNAX_8JE8zinU47YALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
-}
-@font-face {
-  font-family: 'Rokkitt';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Rokkitt Bold'), local('Rokkitt-Bold'), url(http://themes.googleusercontent.com/static/fonts/rokkitt/v6/Mef17w3J4CtS0lw4Wa_8r73hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
-}
 
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2af591");
+
+  
+@font-face {
+	font-family: 'Rockwell-Condensed';
+	src: url('../css/fonts/webfonts/2AF591_0_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_0_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_0_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_0_0.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'RockwellMT-BoldItalic';
+	src: url('../css/fonts/webfonts/2AF591_1_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_1_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_1_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_1_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'Rockwell-ExtraBold';
+	src: url('../css/fonts/webfonts/2AF591_2_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_2_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_2_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_2_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'RockwellMT-Bold';
+	src: url('../css/fonts/webfonts/2AF591_3_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_3_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_3_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_3_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'RockwellMT';
+	src: url('../css/fonts/webfonts/2AF591_4_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_4_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_4_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_4_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'RockwellMT-LightItalic';
+	src: url('../css/fonts/webfonts/2AF591_5_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_5_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_5_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_5_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'RockwellMT-Light';
+	src: url('../css/fonts/webfonts/2AF591_6_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_6_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_6_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_6_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'RockwellMT-CondensedBold';
+	src: url('../css/fonts/webfonts/2AF591_7_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_7_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_7_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_7_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'RockwellMT-Italic';
+	src: url('../css/fonts/webfonts/2AF591_8_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_8_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_8_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_8_0.ttf') format('truetype');
+}
+ 
 
 /*-------------------------------------------    
     Flag
@@ -63,7 +111,7 @@ body:after { content: 'mini'; display: none; background:#000;}
 -------------------------------------------*/
 * { margin: 0; padding: 0; }
 html { font-size: 62.5%; -webkit-font-smoothing: antialiased !important; -moz-osx-font-smoothing: grayscale;} /* for rems */
-body { font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline;}
+body { font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline;}
 
 
 /* block level */
@@ -296,8 +344,7 @@ sub, sup { line-height: 0; }
 				position: relative;	
 				h1 {
 					text-align: left;
-					font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
-					font-size: 19px;
+					font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
 					font-size: 1.9em;
 					margin:0;
 					-webkit-text-stroke: 0.1px;
@@ -317,7 +364,7 @@ sub, sup { line-height: 0; }
 					}
 				}
 				p {
-					font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+					font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
 					font-size: 16px;
 					font-size: 1.6em;
 					line-height: 16px;
@@ -375,7 +422,7 @@ sub, sup { line-height: 0; }
 		a {
 			display: inline-block;
 			color:#fff;
-			font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+			font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
 			font-weight: 400;
 			font-size: 20px;
 			font-size: 2em;
@@ -407,7 +454,7 @@ sub, sup { line-height: 0; }
 		padding:0;
 		z-index: 1;
 		overflow: hidden;
-		cursor:pointer;
+		
 		-webkit-backface-visibility: hidden;
 		-moz-backface-visibility: hidden;
 		-o-backface-visibility: hidden;
@@ -459,6 +506,7 @@ sub, sup { line-height: 0; }
 			-o-backface-visibility: hidden;
 			-ms-backface-visibility: hidden;
 			backface-visibility: hidden;
+			cursor:pointer;
 			@media all and (min-width: 420px) {
 				width: 100%;
 				margin-top: 0;
@@ -499,31 +547,30 @@ sub, sup { line-height: 0; }
 				font-size: 35px;
 				color: white;
 				margin:0;
-				bottom: -9px;
+				bottom: -15px;
 				text-transform: uppercase;
 				opacity: 0.75;
 				display: block;
 				width: 100%;
 				text-align: center;
-				font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+				font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
 				font-weight: bold;
 				z-index: 2;
 				@media all and (min-width: 420px) {
 					font-size: 50px;
-					bottom:-11px;
+					bottom:-23px;
 				}
 				@media all and (min-width: 560px) {
 					font-size: 80px;
-					bottom:-18px;
+					bottom:-36px;
 				}
 				@media all and (min-width: 768px) {
 					font-size: 90px;
-					bottom:-20px;
+					bottom:-41px;
 				}
 				@media all and (min-width: 1024px) {
 					font-size: 130px;
-					bottom: 0;
-					line-height: 93px;
+					bottom: -60px;
 				}
 			}
 		}
@@ -535,6 +582,7 @@ sub, sup { line-height: 0; }
 			overflow: hidden;
 			box-shadow: 0 0 0 0 transparent;
 			border:0 solid transparent; 
+			cursor:pointer;
 			-webkit-backface-visibility: hidden;
 			-moz-backface-visibility: hidden;
 			-o-backface-visibility: hidden;
@@ -546,7 +594,7 @@ sub, sup { line-height: 0; }
 			@media screen and (orientation:landscape) {
 				height: 50%;
 			} 
-			/* &:after {
+			&:after {
 				content:"";
 				display: block;
 				position: absolute;
@@ -559,7 +607,7 @@ sub, sup { line-height: 0; }
 			  	opacity: .2;
 			  	z-index: 1;
 			} 
-			 */
+			
 			.bottom-gate {
 				width: 100%;
 				height: auto;
@@ -583,36 +631,36 @@ sub, sup { line-height: 0; }
 				position: absolute;
 				font-size: 35px;
 				color: white;
-				top: -9px;
+				top: -15px;
 				margin:0;
 				text-transform: uppercase;
 				opacity: 0.75;
 				display: block;
 				width: 100%;
 				text-align: center;
+				
 				-webkit-transform: rotateX(-180deg);
 				-moz-transform: rotateX(-180deg);
 				-ms-transform: rotateX(-180deg);
 				transform: rotateX(-180deg);
-				font-family: "rockwell", Courier, Georgia,Times, "Times New Roman", serif;
+				font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
 				font-weight: bold;
 				z-index: 2;
 				@media all and (min-width: 420px) {
 					font-size: 50px;
-					top:-11px;
+					top:-23px;
 				}
 				@media all and (min-width: 560px) {
 					font-size: 80px;
-					top:-18px;
+					top:-36px;
 				}
 				@media all and (min-width: 768px) {
 					font-size: 90px;
-					top:-20px;
+					top:-41px;
 				}
 				@media all and (min-width: 1024px) {
 					font-size: 130px;
-					top:0;
-					line-height: 93px;
+					top:-59px;
 				}
 			}
 		}
@@ -670,10 +718,8 @@ cite {
 	}
 	.gate .bottom-gate-wrapper {
 		p {
-			padding-left: 0.5%;
-			@media all and (min-width: 768px) {
-				padding-left: 1%;
-			}
+			padding-left: 0.6%;
+			letter-spacing: 2px;
 		}
 	}
 }
@@ -699,9 +745,6 @@ cite {
 				margin-top: -10%;
 				margin-left: 0;
 			}
-		}
-		p {
-			letter-spacing: 0;
 		}
 	}
 	.sl-content {
@@ -733,7 +776,6 @@ cite {
 			}
 		}
 		p {
-			letter-spacing: 0px;
 			padding-left: 0.8%;
 			@media all and (min-width: 768px) {
 				padding-left: 2%;
