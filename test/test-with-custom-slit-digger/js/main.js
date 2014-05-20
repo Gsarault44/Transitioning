@@ -111,7 +111,6 @@ function slitSlider(){
 	
 		slitslider = $( '#slider' ).slitslider( {
 			speed: 800,
-
 			onBeforeChange : function( slide, pos ) {
 				$(".bg-1 .content-wrapper").mCustomScrollbar('destroy');
 				$(".bg-2 .content-wrapper").mCustomScrollbar('destroy');
@@ -171,7 +170,7 @@ function slitSlider(){
 					$('.content').addClass('moveup');
 				
 				
-				hashing();
+				//hashing();
 				pagiLabel();
 				scrollbar();
 				anystretch();
@@ -209,8 +208,8 @@ function slitSlider(){
 						$index.removeClass( 'nav-dot-current' );
 						$dot.addClass( 'nav-dot-current' );
 					}
-					slitslider.jump( i + 1 );
-
+					
+						slitslider.jump( i + 1 );
 					//$('.zoom-light').delay(800).fadeOut();
 				});
 			});
@@ -269,8 +268,10 @@ function zoomLight() {
 	});
 	$('.zoom-light').click(function(){
 		//$('.zoom-light').stop().delay(500).fadeOut();
-		$('.zoom-light').removeClass('scale-up');
-		$('.zoom-light').addClass('scale-down');
+		setTimeout( function() {
+			$('.zoom-light').removeClass('scale-up');
+			$('.zoom-light').addClass('scale-down');
+		}, 600 );
 		return false;
 	});
 	

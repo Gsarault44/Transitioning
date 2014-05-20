@@ -318,7 +318,7 @@ sub, sup {
         left: 8%; } }
     @media all and (min-width: 768px) and (orientation: landscape) {
       .sl-slide .content-wrapper {
-        top: 25%; } }
+        top: 20%; } }
     @media all and (max-width: 520px) and (orientation: landscape) and (max-height: 400px) {
       .sl-slide .content-wrapper {
         left: 4%;
@@ -654,85 +654,86 @@ cite {
 /*-------------------------------------------    
 	IMAGES FOR EACH SLIDE
 -------------------------------------------*/
-#horsepower-brainpower {
+.lt-ie9 #horsepower-brainpower {
   background: url(../images/truck.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  #horsepower-brainpower .content h1, #horsepower-brainpower .content h2, #horsepower-brainpower .content h3, #horsepower-brainpower .content h4 {
-    color: #81c2ff; }
-  #horsepower-brainpower .content p, #horsepower-brainpower .content strong, #horsepower-brainpower .content a, #horsepower-brainpower .content li, #horsepower-brainpower .content blockquote, #horsepower-brainpower .content cite {
-    color: #81c2ff; }
-  #horsepower-brainpower .gate .top-gate-wrapper .top-gate {
-    top: -50%; }
-  #horsepower-brainpower .gate .bottom-gate-wrapper p {
-    padding-left: 0.5%; }
-    @media all and (min-width: 768px) {
-      #horsepower-brainpower .gate .bottom-gate-wrapper p {
-        padding-left: 1%; } }
-
-#hindsight-foresight {
+.lt-ie9 #hindsight-foresight {
   background: url(../images/tube.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  #hindsight-foresight .gate .top-gate-wrapper .top-gate {
-    top: -30%; }
-    @media screen and (min-width: 1400px) {
-      #hindsight-foresight .gate .top-gate-wrapper .top-gate {
-        top: -50%; } }
-  #hindsight-foresight .gate .bottom-gate-wrapper .bottom-gate {
-    width: 160%;
-    margin-top: -40%;
-    margin-left: -35%; }
-    @media screen and (orientation: portrait) and (min-width: 768px) {
-      #hindsight-foresight .gate .bottom-gate-wrapper .bottom-gate {
-        width: 100%;
-        margin-left: 0%;
-        margin-top: -40%; } }
-    @media screen and (orientation: landscape) {
-      #hindsight-foresight .gate .bottom-gate-wrapper .bottom-gate {
-        width: 100%;
-        margin-top: -10%;
-        margin-left: 0; } }
-  #hindsight-foresight .gate .bottom-gate-wrapper p {
-    letter-spacing: 0; }
-  #hindsight-foresight .content {
-    color: #445b0d; }
-    #hindsight-foresight .content h1, #hindsight-foresight .content h2, #hindsight-foresight .content h3, #hindsight-foresight .content h4 {
-      color: #445b0d; }
-    #hindsight-foresight .content p, #hindsight-foresight .content strong, #hindsight-foresight .content a, #hindsight-foresight .content li, #hindsight-foresight .content blockquote, #hindsight-foresight .content cite {
-      color: #445b0d; }
-
-#computers-compassion {
+.lt-ie9 #computers-compassion {
   background: url(../images/circut.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+
+#horsepower-brainpower .content h1, #horsepower-brainpower .content h2, #horsepower-brainpower .content h3, #horsepower-brainpower .content h4 {
+  color: #81c2ff; }
+#horsepower-brainpower .content p, #horsepower-brainpower .content strong, #horsepower-brainpower .content a, #horsepower-brainpower .content li, #horsepower-brainpower .content blockquote, #horsepower-brainpower .content cite {
+  color: #81c2ff; }
+#horsepower-brainpower .gate .top-gate-wrapper .top-gate {
+  top: -50%; }
+#horsepower-brainpower .gate .bottom-gate-wrapper p {
+  padding-left: 0.5%; }
   @media all and (min-width: 768px) {
-    #computers-compassion .gate .top-gate-wrapper .top-gate {
+    #horsepower-brainpower .gate .bottom-gate-wrapper p {
+      padding-left: 1%; } }
+
+#hindsight-foresight .gate .top-gate-wrapper .top-gate {
+  top: -30%; }
+  @media screen and (min-width: 1400px) {
+    #hindsight-foresight .gate .top-gate-wrapper .top-gate {
+      top: -50%; } }
+#hindsight-foresight .gate .bottom-gate-wrapper .bottom-gate {
+  width: 160%;
+  margin-top: -40%;
+  margin-left: -35%; }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
+    #hindsight-foresight .gate .bottom-gate-wrapper .bottom-gate {
+      width: 100%;
+      margin-left: 0%;
       margin-top: -40%; } }
-  #computers-compassion .gate .bottom-gate-wrapper .bottom-gate {
-    width: 150%;
-    margin-left: -30%; }
-    @media all and (min-width: 768px) {
-      #computers-compassion .gate .bottom-gate-wrapper .bottom-gate {
-        width: 100%;
-        margin-left: 0;
-        margin-top: -30%; } }
-  #computers-compassion .gate .bottom-gate-wrapper p {
-    letter-spacing: 0px;
-    padding-left: 0.8%; }
-    @media all and (min-width: 768px) {
-      #computers-compassion .gate .bottom-gate-wrapper p {
-        padding-left: 2%; } }
-  #computers-compassion .content h1, #computers-compassion .content h2, #computers-compassion .content h3, #computers-compassion .content h4 {
-    color: #cdfc94; }
-  #computers-compassion .content p, #computers-compassion .content strong, #computers-compassion .content a, #computers-compassion .content li, #computers-compassion .content blockquote, #computers-compassion .content cite {
-    color: #cdfc94; }
+  @media screen and (orientation: landscape) {
+    #hindsight-foresight .gate .bottom-gate-wrapper .bottom-gate {
+      width: 100%;
+      margin-top: -10%;
+      margin-left: 0; } }
+#hindsight-foresight .gate .bottom-gate-wrapper p {
+  letter-spacing: 0; }
+#hindsight-foresight .content {
+  color: #445b0d; }
+  #hindsight-foresight .content h1, #hindsight-foresight .content h2, #hindsight-foresight .content h3, #hindsight-foresight .content h4 {
+    color: #445b0d; }
+  #hindsight-foresight .content p, #hindsight-foresight .content strong, #hindsight-foresight .content a, #hindsight-foresight .content li, #hindsight-foresight .content blockquote, #hindsight-foresight .content cite {
+    color: #445b0d; }
+
+@media all and (min-width: 768px) {
+  #computers-compassion .gate .top-gate-wrapper .top-gate {
+    margin-top: -40%; } }
+#computers-compassion .gate .bottom-gate-wrapper .bottom-gate {
+  width: 150%;
+  margin-left: -30%; }
+  @media all and (min-width: 768px) {
+    #computers-compassion .gate .bottom-gate-wrapper .bottom-gate {
+      width: 100%;
+      margin-left: 0;
+      margin-top: -30%; } }
+#computers-compassion .gate .bottom-gate-wrapper p {
+  letter-spacing: 0px;
+  padding-left: 0.8%; }
+  @media all and (min-width: 768px) {
+    #computers-compassion .gate .bottom-gate-wrapper p {
+      padding-left: 2%; } }
+#computers-compassion .content h1, #computers-compassion .content h2, #computers-compassion .content h3, #computers-compassion .content h4 {
+  color: #cdfc94; }
+#computers-compassion .content p, #computers-compassion .content strong, #computers-compassion .content a, #computers-compassion .content li, #computers-compassion .content blockquote, #computers-compassion .content cite {
+  color: #cdfc94; }
 
 #slice4 .content h1 {
   color: #cdfc94; }

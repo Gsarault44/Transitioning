@@ -266,7 +266,7 @@ sub, sup { line-height: 0; }
 		}
 		
 		@media all and (min-width: 768px) and (orientation : landscape) {
-			top:25%;
+			top:20%;
 		}
 		@media all and (max-width: 520px) and (orientation : landscape) and (max-height: 400px) {
 			left: 4%;
@@ -628,16 +628,30 @@ cite {
 /*-------------------------------------------    
 	IMAGES FOR EACH SLIDE
 -------------------------------------------*/
-#horsepower-brainpower {
-
-	background: url(../images/truck.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	.sl-content{
-
+.lt-ie9 {
+	#horsepower-brainpower {
+		background: url(../images/truck.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
+	#hindsight-foresight {
+		background: url(../images/tube.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	#computers-compassion {
+		background: url(../images/circut.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+#horsepower-brainpower {
 	.content {
 		h1, h2, h3, h4 {
 			color:#81c2ff;
@@ -659,11 +673,6 @@ cite {
 	}
 }
 #hindsight-foresight {
-	background: url(../images/tube.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 	.gate .top-gate-wrapper .top-gate {
 		top:-30%;
 		@media screen and (min-width: 1400px) {
@@ -703,11 +712,6 @@ cite {
 	}
 }
 #computers-compassion {
-	background: url(../images/circut.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 	.gate .top-gate-wrapper .top-gate {
 		@media all and (min-width: 768px) {
 			margin-top:-40%;
