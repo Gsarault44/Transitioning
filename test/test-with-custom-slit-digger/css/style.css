@@ -103,9 +103,6 @@ form {
 label {
   font-size: 1.6rem; }
 
-input.empty::-webkit-input-placeholder, textarea.empty::-webkit-input-placeholder {
-  color: red; }
-
 input.empty:-moz-placeholder, textarea.empty:-moz-placeholder {
   color: red; }
 
@@ -240,18 +237,18 @@ sub, sup {
 -------------------------------------------*/
 @media all and (min-width: 420px) {
   .moveup {
-    -webkit-animation: moveUp .1s ease-in;
-    -moz-animation: moveUp .1s ease-in both;
-    -o-animation: moveUp .1s ease-in both;
-    -ms-animation: moveUp .1s ease-in both;
-    animation: moveUp .1s ease-in both; } }
+    -webkit-animation: moveUp .1s ease-out;
+    -moz-animation: moveUp .1s ease-out both;
+    -o-animation: moveUp .1s ease-out both;
+    -ms-animation: moveUp .1s ease-out both;
+    animation: moveUp .1s ease-out both; } }
 
 .scale-up {
-  -webkit-animation: scaleUp .8s ease-in both;
-  -moz-animation: scaleUp .8s ease-in both;
-  -o-animation: scaleUp .8s ease-in both;
-  -ms-animation: scaleUp .8s ease-in both;
-  animation: scaleUp .8s ease-in both; }
+  -webkit-animation: scaleUp 1s ease-out both;
+  -moz-animation: scaleUp 1s ease-out both;
+  -o-animation: scaleUp 1s ease-out both;
+  -ms-animation: scaleUp 1s ease-out both;
+  animation: scaleUp 1s ease-out both; }
 
 .scale-down {
   -webkit-animation: scaleDown 1s ease-in both;
@@ -462,9 +459,10 @@ sub, sup {
         	transform: rotate(-7deg) scale(1.01);
         } */ }
         .sl-slide .gate:hover .top-gate-wrapper p, .sl-slide .gate:hover .bottom-gate-wrapper p {
-          -webkit-transition: all .8s ease-out;
-          -moz-transition: all .8s ease-out;
+          -ms-transition: all .8s ease-out;
           -o-transition: all .8s ease-out;
+          -moz-transition: all .8s ease-out;
+          -webkit-transition: all .8s ease-out;
           transition: all .8s ease-out;
           opacity: .85; } }
     .sl-slide .gate img {
@@ -520,9 +518,10 @@ sub, sup {
             width: 100%;
             height: 200%; } }
       .sl-slide .gate .top-gate-wrapper p {
-        -webkit-transition: all .8s ease-out;
-        -moz-transition: all .8s ease-out;
+        -ms-transition: all .8s ease-out;
         -o-transition: all .8s ease-out;
+        -moz-transition: all .8s ease-out;
+        -webkit-transition: all .8s ease-out;
         transition: all .8s ease-out;
         position: absolute;
         font-size: 35px;
@@ -603,9 +602,10 @@ sub, sup {
             width: 100%;
             margin-top: -30%; } }
       .sl-slide .gate .bottom-gate-wrapper p {
-        -webkit-transition: all .8s ease-out;
-        -moz-transition: all .8s ease-out;
+        -ms-transition: all .8s ease-out;
         -o-transition: all .8s ease-out;
+        -moz-transition: all .8s ease-out;
+        -webkit-transition: all .8s ease-out;
         transition: all .8s ease-out;
         position: absolute;
         font-size: 35px;
@@ -1385,9 +1385,10 @@ cite {
   width: 60px;
   height: 50px;
   opacity: .5;
-  -webkit-transition: all .8s ease-out;
-  -moz-transition: all .8s ease-out;
+  -ms-transition: all .8s ease-out;
   -o-transition: all .8s ease-out;
+  -moz-transition: all .8s ease-out;
+  -webkit-transition: all .8s ease-out;
   transition: all .8s ease-out; }
   @media all and (min-width: 768px) {
     .nav-arrows .nav-arrow-next {
@@ -1437,9 +1438,10 @@ cite {
     right: 30px;
     top: 10px; }
     .nav-arrows .nav-arrow-next .next-title p {
-      -webkit-transition: all .8s ease-out;
-      -moz-transition: all .8s ease-out;
+      -ms-transition: all .8s ease-out;
       -o-transition: all .8s ease-out;
+      -moz-transition: all .8s ease-out;
+      -webkit-transition: all .8s ease-out;
       transition: all .8s ease-out;
       line-height: 20px;
       font-size: 22px;
@@ -1517,9 +1519,10 @@ cite {
   height: 100%;
   width: 100%;
   cursor: pointer;
-  -webkit-transition: all .8s ease-out;
-  -moz-transition: all .8s ease-out;
+  -ms-transition: all .8s ease-out;
   -o-transition: all .8s ease-out;
+  -moz-transition: all .8s ease-out;
+  -webkit-transition: all .8s ease-out;
   transition: all .8s ease-out; }
   .zoom-light .zoom-layout {
     display: table-cell;
@@ -1531,9 +1534,10 @@ cite {
       .zoom-light .zoom-layout div span {
         float: left;
         width: 100%;
-        -webkit-transition: all .8s ease-out;
-        -moz-transition: all .8s ease-out;
+        -ms-transition: all .8s ease-out;
         -o-transition: all .8s ease-out;
+        -moz-transition: all .8s ease-out;
+        -webkit-transition: all .8s ease-out;
         transition: all .8s ease-out;
         /* @media all and (min-width: 560px) {
         	width: 50%;
@@ -1550,9 +1554,10 @@ cite {
           overflow: hidden; }
           @media all and (min-width: 768px) {
             .zoom-light .zoom-layout div span a:hover {
-              -webkit-transition: all .8s ease-out;
-              -moz-transition: all .8s ease-out;
+              -ms-transition: all .8s ease-out;
               -o-transition: all .8s ease-out;
+              -moz-transition: all .8s ease-out;
+              -webkit-transition: all .8s ease-out;
               transition: all .8s ease-out;
               -webkit-transform: scale(1.1);
               -moz-transform: scale(1.1);
@@ -1560,9 +1565,10 @@ cite {
               -o-transform: scale(1.1);
               transform: scale(1.1); } }
           .zoom-light .zoom-layout div span a img {
-            -webkit-transition: all .8s ease-out;
-            -moz-transition: all .8s ease-out;
+            -ms-transition: all .8s ease-out;
             -o-transition: all .8s ease-out;
+            -moz-transition: all .8s ease-out;
+            -webkit-transition: all .8s ease-out;
             transition: all .8s ease-out; }
 
 .subscribe-form-block {

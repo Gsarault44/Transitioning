@@ -84,8 +84,6 @@ form { margin: 0 0 1.5em; }
 
 label { font-size: 1.6rem; }
 input, select, textarea {  }
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { }
-input.empty::-webkit-input-placeholder, textarea.empty::-webkit-input-placeholder { color: red; }
 input.empty:-moz-placeholder, textarea.empty:-moz-placeholder { color: red; }
 .error { color: red; }
 
@@ -134,9 +132,10 @@ sub, sup { line-height: 0; }
     Mixins
 -------------------------------------------*/
 @mixin transitions {
-	-webkit-transition: all .8s ease-out;
+	-ms-transition: all .8s ease-out;
+	-o-transition: all .8s ease-out;
   	-moz-transition: all .8s ease-out;
-  	-o-transition: all .8s ease-out;
+  	-webkit-transition: all .8s ease-out;
   	transition: all .8s ease-out;
 }
 
@@ -180,19 +179,19 @@ sub, sup { line-height: 0; }
 
 .moveup{
 	@media all and (min-width: 420px) {
-		-webkit-animation: moveUp .1s ease-in;
-		-moz-animation: moveUp .1s ease-in both;
-		-o-animation: moveUp .1s ease-in both;
-		-ms-animation: moveUp .1s ease-in both;
-		animation: moveUp .1s ease-in both;
+		-webkit-animation: moveUp .1s ease-out;
+		-moz-animation: moveUp .1s ease-out both;
+		-o-animation: moveUp .1s ease-out both;
+		-ms-animation: moveUp .1s ease-out both;
+		animation: moveUp .1s ease-out both;
 	}
 }
 .scale-up {
-	-webkit-animation: scaleUp .8s ease-in both;
-	-moz-animation: scaleUp .8s ease-in both;
-	-o-animation: scaleUp .8s ease-in both;
-	-ms-animation: scaleUp .8s ease-in both;
-	animation: scaleUp .8s ease-in both;
+	-webkit-animation: scaleUp 1s ease-out both;
+	-moz-animation: scaleUp 1s ease-out both;
+	-o-animation: scaleUp 1s ease-out both;
+	-ms-animation: scaleUp 1s ease-out both;
+	animation: scaleUp 1s ease-out both;
 }
 .scale-down {
 	-webkit-animation: scaleDown 1s ease-in both;

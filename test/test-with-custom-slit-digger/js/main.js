@@ -82,6 +82,88 @@ function initalClick(){
 	}
 	
 }
+function anystretch() {
+	$('.bg-1 .sl-content-wrapper').anystretch("images/truck.jpg");
+	$('.bg-2 .sl-content-wrapper').anystretch("images/tube.jpg", {speed: 150});
+	$('.bg-3 .sl-content-wrapper').anystretch("images/circut.jpg", {speed: 150});
+}
+
+function zoomLight() {
+	
+	$('.zoomer').click(function(){
+		$('.zoom-light').stop().fadeIn().css('display', 'table');
+		$('.zoom-light').addClass('scale-up');
+		$('.zoom-light').removeClass('scale-down');
+		return false;
+	});
+	$('.zoom-light').click(function(){
+		//$('.zoom-light').stop().delay(500).fadeOut();
+		setTimeout( function() {
+			$('.zoom-light').removeClass('scale-up');
+			$('.zoom-light').addClass('scale-down');
+			$('.zoom-light').stop().fadeOut();
+		}, 600 );
+		return false;
+	});
+	
+}
+
+
+function zoomIn() {
+	$('.sl-slider').addClass('scale-up');
+}
+
+
+var agent = navigator.userAgent,
+	device = {
+		Android: function() {return agent.match(/Android/i) ? true : false; },
+		iOS: function() {return agent.match(/iPod|iPad|iPhone/i) ? true : false;},
+		Blackberry: function() {return agent.match(/BlackBerry/i) ? true : false;},
+		winPhone: function() {return agent.match(/IEMobile/i) ? true : false;},
+		all: function() {return (device.Android() || device.iOS() || device.Blackberry() || device.winPhone());}
+	};
+function checkMode() {
+	var o = window.orientation;
+
+	if (o !== 90 && o !== -90) {
+		$(".sl-slide").attr("data-orientation","vertical");
+	} else {
+		$(".sl-slide").attr("data-orientation","horizontal");
+	}
+}
+	if (device.iOS()) {
+	
+
+	// dom onload check
+	checkMode();
+
+	// listen to changes
+	$(window).bind('orientationchange', function() {
+		checkMode();
+	});
+}
+function orientation(){
+	var windowH = $(window).height();
+	var windowW = $(window).width();
+	if (windowH > windowW) {
+		$(".sl-slide").attr("data-orientation","vertical");
+	}else {
+		$(".sl-slide").attr("data-orientation","horizontal");
+	}
+}
+function scaleing() {
+	if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+		var viewportmeta = document.querySelector('meta[name="viewport"]');
+		if (viewportmeta) {
+			viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
+			document.body.addEventListener('gesturestart', function () {
+				viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+			}, false);
+		}
+	}
+}
+
+
 function slitSlider(){
 	var Page = (function() {
 	var $navArrows = $( '#nav-arrows' ),
@@ -128,7 +210,7 @@ function slitSlider(){
 				$pagiN.eq( pos ).addClass( 'current' );
 				$pagiN.eq( pos ).next().addClass( 'next-current' );
 
-				//$('.sl-slider').removeClass('scale-up');
+				$('.sl-slider').removeClass('scale-up');
 			},
 			onAfterChange: function(){
 				/* AUTO OPEN AFTER PAGINATION */
@@ -144,7 +226,7 @@ function slitSlider(){
 				$('.content-wrapper').css('z-index', '5');
 				//$(".gate img").removeAttr('style');
 				$('.content-wrapper').removeAttr('style');
-				$('.content-wrapper').removeClass('b-border');
+				$('.content-wrapper').removeClass('b-borde2r');
 				
 				$('.content').addClass('moveup');
 				pagiLabel();
@@ -234,83 +316,6 @@ function slitSlider(){
 	//ss.add($items);
 }
 
-function zoomLight() {
-	
-	$('.zoomer').click(function(){
-		$('.zoom-light').stop().fadeIn().css('display', 'table');
-		$('.zoom-light').addClass('scale-up');
-		$('.zoom-light').removeClass('scale-down');
-		return false;
-	});
-	$('.zoom-light').click(function(){
-		//$('.zoom-light').stop().delay(500).fadeOut();
-		setTimeout( function() {
-			$('.zoom-light').removeClass('scale-up');
-			$('.zoom-light').addClass('scale-down');
-		}, 600 );
-		return false;
-	});
-	
-}
-function anystretch() {
-	$('.bg-1 .sl-content-wrapper').anystretch("images/truck.jpg");
-	$('.bg-2 .sl-content-wrapper').anystretch("images/tube.jpg", {speed: 150});
-	$('.bg-3 .sl-content-wrapper').anystretch("images/circut.jpg", {speed: 150});
-}
-
-function zoomIn() {
-	$('.sl-slider').addClass('scale-up');
-}
-
-
-var agent = navigator.userAgent,
-	device = {
-		Android: function() {return agent.match(/Android/i) ? true : false; },
-		iOS: function() {return agent.match(/iPod|iPad|iPhone/i) ? true : false;},
-		Blackberry: function() {return agent.match(/BlackBerry/i) ? true : false;},
-		winPhone: function() {return agent.match(/IEMobile/i) ? true : false;},
-		all: function() {return (device.Android() || device.iOS() || device.Blackberry() || device.winPhone());}
-	};
-function checkMode() {
-	var o = window.orientation;
-
-	if (o !== 90 && o !== -90) {
-		$(".sl-slide").attr("data-orientation","vertical");
-	} else {
-		$(".sl-slide").attr("data-orientation","horizontal");
-	}
-}
-	if (device.iOS()) {
-	
-
-	// dom onload check
-	checkMode();
-
-	// listen to changes
-	$(window).bind('orientationchange', function() {
-		checkMode();
-	});
-}
-function orientation(){
-	var windowH = $(window).height();
-	var windowW = $(window).width();
-	if (windowH > windowW) {
-		$(".sl-slide").attr("data-orientation","vertical");
-	}else {
-		$(".sl-slide").attr("data-orientation","horizontal");
-	}
-}
-function scaleing() {
-	if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
-    var viewportmeta = document.querySelector('meta[name="viewport"]');
-    if (viewportmeta) {
-        viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
-        document.body.addEventListener('gesturestart', function () {
-            viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
-        }, false);
-    }
-}
-}
 
 /********************
 ** jQuery Window resize
