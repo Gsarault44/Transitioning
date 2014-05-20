@@ -266,7 +266,6 @@
 							dir === 'prev', 
 							function() {
 								console.log("Prev 1 set timeout");
-								//$('.bottom-gate-wrapper ').stop(true, true).animate({top: '0'}, 700).dequeue();
 								var slice = this;
 								this.css( slice1Style );
 								setTimeout(function() {
@@ -320,7 +319,7 @@
 						
 							},
 							function() {
-								$('.top-gate-wrapper, .bottom-gate-wrapper').stop().animate({top: '0'}, 500, 'linear');
+								$('.top-gate-wrapper, .bottom-gate-wrapper').stop().animate({top: '0',}, 600, 'linear');
 								var slice = this;
 									console.log("Next 2 set timeout");
 									

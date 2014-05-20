@@ -6,12 +6,6 @@
 /********************
 ** Event Listeners
 ********************/
-function hashing() {
-	/*if($('.sl-slide:visible')) {
-		var hash = $('.sl-slide:visible').attr('id');
-		window.location.hash = hash ;
-	}*/
-}
 function scrollbar() {
 	/*http://manos.malihu.gr/jquery-custom-content-scroller/*/
 	$(".bg-1 .content-wrapper").mCustomScrollbar();
@@ -74,7 +68,7 @@ function initalClick(){
 		$('.gate').click(function(){
 			$(this).find('.top-gate-wrapper').stop().animate({top: '-43%'}, 700, 'easeOutQuint');
 			$(this).find('.bottom-gate-wrapper').stop().animate({top: '42%'}, 700, 'easeOutQuint', function(){
-				$('.content-wrapper').delay(600).css('z-index', '99');
+				$('.content-wrapper').delay(600).css('z-index', '2');
 			});
 		});
 	}
@@ -82,24 +76,11 @@ function initalClick(){
 		$('.gate').click(function(){
 			$(this).find('.top-gate-wrapper').animate({top: '-40%'}, 700, 'easeOutQuint');
 			$(this).find('.bottom-gate-wrapper').animate({top: '35%'}, 700, 'easeOutQuint', function(){
-				$('.content-wrapper').delay(600).css('z-index', '99');
+				$('.content-wrapper').delay(600).css('z-index', '2');
 			});
 		});
 	}
 	
-}
-function moreContent(){
-	
-	/*$('.show-more').each(function(){
-		$(this).on('click', function(){
-			$(this).parent().parent().find('.expand').slideDown();
-			$(this).parent('.more').hide();
-			$(this).parents('.content-wrapper').addClass('b-border');
-			return false;
-
-		});
-	});*/
-	$('.hide').hide();
 }
 function slitSlider(){
 	var Page = (function() {
@@ -112,24 +93,22 @@ function slitSlider(){
 		slitslider = $( '#slider' ).slitslider( {
 			speed: 800,
 			onBeforeChange : function( slide, pos ) {
+				// destroy scroll bar after every pagination
 				$(".bg-1 .content-wrapper").mCustomScrollbar('destroy');
 				$(".bg-2 .content-wrapper").mCustomScrollbar('destroy');
 				$(".bg-3 .content-wrapper").mCustomScrollbar('destroy');
+
 				$('.more').show();
 				$('.expand').slideUp();
 
-				$('.sl-trans-elems .content-wrapper').css('z-index', '0');
+				$('.content-wrapper').css('z-index', '2');
 				$('.top-gate-wrapper').stop().animate({top: '0'}, 600, 'easeOutQuint');
 				$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 600, 'easeOutQuint');
 				
 
 				$('.content-wrapper').removeAttr('style');
 				$('.content').removeClass('moveup');
-				$('.sl-trans-elems .content-wrapper').css('z-index', '0');
 
-				
-				
-				
 				// Status bar 
 				$nav.removeClass( 'nav-dot-current' );
 				$nav.eq( pos ).addClass( 'nav-dot-current' );
@@ -161,16 +140,13 @@ function slitSlider(){
 
 				/*$(".gate:not(.sl-trans-elems .gate)").find('.top-gate-wrapper').stop(true, true).animate({top: '0'}, 300).dequeue();
 				$(".gate:not(.sl-trans-elems .gate)").find('.bottom-gate-wrapper').stop(true, true).animate({top: '0'}, 300).dequeue();*/
-				$('.sl-trans-elems .content-wrapper').css('z-index', '9999999');
-					
-					$(".gate img").removeAttr('style');
-					$('.content-wrapper').removeAttr('style');
-					$('.content-wrapper').removeClass('b-border');
-					
-					$('.content').addClass('moveup');
+
+				$('.content-wrapper').css('z-index', '5');
+				//$(".gate img").removeAttr('style');
+				$('.content-wrapper').removeAttr('style');
+				$('.content-wrapper').removeClass('b-border');
 				
-				
-				//hashing();
+				$('.content').addClass('moveup');
 				pagiLabel();
 				scrollbar();
 				anystretch();
@@ -353,7 +329,6 @@ jQuery(window).load(function(){
 	anystretch();
 	pagiLabel();
 	initalClick();
-	moreContent();
 	scrollbar();
 	
 });
