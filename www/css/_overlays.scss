@@ -32,6 +32,7 @@
 					display: block;
 					margin:15px;
 					overflow: hidden;
+					@include transitions;
 					 &:hover {
 					 	@media all and (min-width: 768px) {
 						 	@include transitions;
@@ -135,11 +136,13 @@
 				padding:80px 100px;	
 			}
 			p {
+				font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
 				font-size: 18px;
 				font-size: 1.8em;
 				line-height: 21px;
 			}
 			form {
+				font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
 				margin:0 auto;
 				.subscribe-input {
 					display: block;
@@ -165,14 +168,13 @@
 				}
 				.subscribe-submit {
 					-webkit-text-stroke: 0.1px;
-					
+					font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
 					float:right;
 					background-color:#000;
 					border:1px solid #fff;
 					display:inline-block;
 					cursor:pointer;
 					color:#777777;
-					font-family: "Rockwell-Condensed", Courier, Georgia,Times, "Times New Roman", serif;
 					font-size:16px;
 					color:#fff;
 					padding:5px 14px;
@@ -202,22 +204,22 @@
 
 ::-webkit-input-placeholder {
 	padding-left:5px;
-	font-family: "Rockwell-Condensed", Courier, Georgia,Times, "Times New Roman", serif;
+	font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
 	color:#a2a1a1;
 }
 :-moz-placeholder { /* Firefox 18- */
 	padding-left:5px;
-   	font-family: "Rockwell-Condensed", Courier, Georgia,Times, "Times New Roman", serif;  
+   	font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
    	color:#a2a1a1;
 }
 ::-moz-placeholder {  /* Firefox 19+ */
 	padding-left:5px;
-   	font-family: "Rockwell-Condensed", Courier, Georgia,Times, "Times New Roman", serif; 
+   	font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
    	color:#a2a1a1;
 }
 :-ms-input-placeholder {  
 	padding-left:5px;
-   	font-family: "Rockwell-Condensed", Courier, Georgia,Times, "Times New Roman", serif; 
+   	font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
    	color:#a2a1a1;
 }
 
@@ -244,7 +246,6 @@ input:focus:-moz-placeholder { color:transparent !important; }
 /* vertical scrollbar */
 .mCSB_container{
 	width:auto;
-	margin-right:30px;
 }
 .mCSB_container.mCS_no_scrollbar{
 	margin-right:0;
@@ -802,6 +803,9 @@ ul#leftList li a {
 	@media all and (min-width: 420px) {
 		padding:8px 12px;
 	}
+}
+#leftList .active {
+	background-color: #2e2e2e;
 }
 #leftList li:hover .subnav{
 	height:88px;

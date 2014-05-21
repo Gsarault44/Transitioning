@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+    	<!--[if lte IE 11]>
+			<html class="no-js ie-all">
+		<![endif]-->
     	<!--[if lt IE 9]>
-		<html class="no-js lt-ie9">
+			<html class="no-js lt-ie9">
 		<![endif]-->
 		<meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
@@ -30,16 +33,8 @@
           			</ul>
       			</li>
       			<li style="border-right:1px solid #666;"><a href="http://www.knowledgedriven.com" target="_blank" title="Knowledge Driven">KnowledgeDriven</a></li>
-	  			<li><a href="http://www.ittakesamerisourcebergen.com" target="_blank" title="Knowledge Driven">What It Takes</a></li>
+	  			<li><a href="#" target="_blank" class="active" title="Knowledge Driven">What It Takes</a></li>
 			</ul>			
-	  
-
-			<div class="outerSearchBar">
- 				<div class="searchBar">
-    				<input type="text" id="searchTextBox" />
-    				<button type="submit" id="searchBtn"></button>
- 				</div>
-			</div>
 		</div>
     </header>
         <div class="container demo-1">
@@ -62,12 +57,13 @@
 										<p>And the changing healthcare environment will only make the relationship between AmerisourceBergen and community pharmacies stronger as new opportunities emerge from Affordable Healthcare Act and the ACA/STAR Measures rating system.</p>
 										<p>All of which—the horsepower and the brainpower—will allow Good Neighbor pharmacists and owners to keep their business thriving and healthy.</p>
 										<p>Because the healthier their business is, the healthier their patients, and community, will be.</p>
-										<h2>Fact Callouts</h2>
-										<p>Patients accept 70% of the therapeutic changes recommended by their community pharmacists.<cite>1</cite></p>
-										<p>The top three disease state management services offered by community pharmacists are immunizations, blood pressure monitoring, and diabetes training.</p>
-										<p>Good Neighbor Pharmacies serve 40,308,168 patients and fill 250,179,190 scripts per year.</p>
+										<div class="callout">
+											<p>Patients accept 70% of the therapeutic changes recommended by their community pharmacists.<cite>1</cite></p>
+											<p>The top three disease state management services offered by community pharmacists are immunizations, blood pressure monitoring, and diabetes training.</p>
+											<p>Good Neighbor Pharmacies serve 40,308,168 patients and fill 250,179,190 scripts per year.</p>
+										</div>
 										<div class="subscribe-block">
-	        									<p><strong>Sign up to get updates on the latest stories from AmerisourceBergen delivered right to your email.</strong></p>
+	        									<p>Sign up to get updates on the latest stories from AmerisourceBergen delivered right to your email.</p>
 	        								</div>
 											<ol class="footnote">
 												<li>2013 NCPA Digest. NCPA. 2013.</li>
@@ -131,7 +127,7 @@
 											<p>And with the panic managed, teens can focus on just being teens instead of a disease.</p>
 											<p>Because when you combine a little foresight and understanding with a company that can handle 5,000 individual, specialty pharmaceutical prescriptions a day with 99.7% accuracy, amazing things are possible.</p>
 											<div class="subscribe-block">
-	        									<p><strong>Sign up to get updates on the latest stories from AmerisourceBergen delivered right to your email.</strong></p>
+	        									<p>Sign up to get updates on the latest stories from AmerisourceBergen delivered right to your email.</p>
 	        								</div>
 											<ol class="footnote">
 												<li>Hemophilia: Data &amp; Statistics. CDC. May 2013. <a href="http://www.cdc.gov/ncbddd/hemophilia/data.html">http://www.cdc.gov/ncbddd/hemophilia/data.html</a></li>
@@ -184,18 +180,19 @@
 										<p>Wondering how they’ll respond to the oral chemo they’ve been prescribed.</p>
 										<p>Wondering if they should even bother taking it.</p>
 										<p>That’s when Martha calls.</p>
-										<blockquote>Martha calls me every few weeks and I can call her anytime. She always understands and never rushes me. She explained how the drug works and how to combat side effects. We go over my tests. She lets me know that some Stage Four patients have been on [Oral Chemotherapy] for more than six years. She helps me frame questions to ask my oncologist</blockquote>
+										<blockquote>Martha calls me every few weeks and I can call her anytime. She always understands and never rushes me. She explained how the drug works and how to combat side effects. We go over my tests. She lets me know that some Stage Four patients have been on [Oral Chemotherapy] for more than six years. She helps me frame questions to ask my oncologist.</blockquote>
 										<p>She brought light into my dark tunnel.</p>
 										<p>She empowered me.</p>
 										<p>Adherence isn’t just about taking pills. It’s about empowerment.</p>
 										<p>About living a better life.</p>
 										<p>And it’s that combination between technology like FastPak EXP and people like Martha that drive that empowerment and drive AmerisourceBergen.</p>
-										<h2>CALL OUTS:</h2>
-										<p>In its history, AmerisourceBergen’s Lash Group has supported over 12 million patients.</p>
-										<p>Last year, Lash Group supported 11,800 patients in just one product adherence program.</p>
+										<div class="callout">
+											<p>In its history, AmerisourceBergen’s Lash Group has supported over 12 million patients.</p>
+											<p>Last year, Lash Group supported 11,800 patients in just one product adherence program.</p>
+										</div>
 									</br>
 										<div class="subscribe-block">
-	        								<p><strong>Sign up to get updates on the latest stories from AmerisourceBergen delivered right to your email.</strong></p>
+	        								<p>Sign up to get updates on the latest stories from AmerisourceBergen delivered right to your email.</p>
 	        							</div>
 										
 										
@@ -288,16 +285,16 @@
 					<form class="subscribe-form validate" action="http://hellotierney.us3.list-manage2.com/subscribe/post?u=50a637c92ad9c4375d3b9768f&amp;id=9175c8b7a6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
 						<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
 							
-						<label for="mce-FNAME" class="phark">First Name </label>	
-						<input type="text" value="" name="FNAME" class="subscribe-input" id="mce-FNAME" placeholder="First name" autofocus>
+						<label for="mce-FNAME" class="phark">First Name *</label>	
+						<input type="text" value="" name="FNAME" class="subscribe-input" id="mce-FNAME" placeholder="First name *" >
 
-						<label for="mce-LNAME" class="phark">Last Name </label>
-						<input type="text" value="" name="LNAME" class="subscribe-input" id="mce-LNAME" placeholder="Last name" autofocus>
+						<label for="mce-LNAME" class="phark">Last Name *</label>
+						<input type="text" value="" name="LNAME" class="subscribe-input" id="mce-LNAME" placeholder="Last name *">
 
 
 
-						<label for="mce-EMAIL" class="phark">Email Address  <span class="asterisk">*</span></label>
-						<input type="email" value="" name="EMAIL" class="required email subscribe-input" id="mce-EMAIL" placeholder="Email address">
+						<label for="mce-EMAIL" class="phark">Email Address *<span class="asterisk">*</span></label>
+						<input type="email" value="" name="EMAIL" class="required email subscribe-input" id="mce-EMAIL" placeholder="Email address *">
 						
 						<div id="mce-responses" class="clear">
 							<div class="response" id="mce-error-response" style="display:none"></div>
@@ -325,8 +322,8 @@
 		    	</div>
 			</div>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/lib/plugins.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/lib/plugins-ck.js"></script>
+		<script type="text/javascript" src="js/main-ck.js"></script>
 
 	
 	</body>

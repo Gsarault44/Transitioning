@@ -60,6 +60,20 @@ function newsletter() {
 		$('.close').on('click', function (){
 			$('.subscribe-form-block').fadeOut();
 		});
+		
+			$('.subscribe-submit').on('click', function(){
+				if($('#mce-EMAIL').hasClass('mce_inline_error')) {
+					$('.subscribe-form-block').delay(900).fadeOut();
+				}else {
+					
+				}
+
+			});
+		
+		return false;
+	});
+	$('#leftList .active').click(function(){
+		return false;
 	});
 }
 
@@ -67,17 +81,21 @@ function initalClick(){
 	if ($(window).width() < 768) {
 		$('.gate').click(function(){
 			$(this).find('.top-gate-wrapper').stop().animate({top: '-43%'}, 700, 'easeOutQuint');
-			$(this).find('.bottom-gate-wrapper').stop().animate({top: '42%'}, 700, 'easeOutQuint', function(){
+			$(this).find('.bottom-gate-wrapper').stop().animate({bottom: '-42%'}, 700, 'easeOutQuint', function(){
 				$('.content-wrapper').delay(600).css('z-index', '2');
+				
 			});
+			$('.content').addClass('moveup');
 		});
 	}
 	else {
 		$('.gate').click(function(){
 			$(this).find('.top-gate-wrapper').animate({top: '-40%'}, 700, 'easeOutQuint');
-			$(this).find('.bottom-gate-wrapper').animate({top: '35%'}, 700, 'easeOutQuint', function(){
+			$(this).find('.bottom-gate-wrapper').animate({bottom: '-35%'}, 700, 'easeOutQuint', function(){
 				$('.content-wrapper').delay(600).css('z-index', '2');
+
 			});
+			$('.content').addClass('moveup');
 		});
 	}
 	
@@ -157,7 +175,7 @@ function scaleing() {
 		if (viewportmeta) {
 			viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0';
 			document.body.addEventListener('gesturestart', function () {
-				viewportmeta.content = 'width=device-width, initial-scale=2.0';
+				viewportmeta.content = 'width=device-width, initial-scale=0.5';
 			}, false);
 		}
 	}
@@ -179,6 +197,7 @@ var fastButtons = {
 	}
 };
 
+
 function slitSlider(){
 	var Page = (function() {
 	var $navArrows = $( '#nav-arrows' ),
@@ -191,23 +210,24 @@ function slitSlider(){
 			speed: 800,
 			onBeforeChange : function( slide, pos ) {
 				//$('.sl-slide').hide();
-
-
+				$('.more').show();
+				$('.expand').slideUp();
+				//$('.content-wrapper').css('z-index', '2');
+				$('.content-wrapper').removeAttr('style');
+				$('.content').removeClass('moveup');
 				// destroy scroll bar after every pagination
 				$(".bg-1 .content-wrapper").mCustomScrollbar('destroy');
 				$(".bg-2 .content-wrapper").mCustomScrollbar('destroy');
 				$(".bg-3 .content-wrapper").mCustomScrollbar('destroy');
 
-				$('.more').show();
-				$('.expand').slideUp();
-
-				$('.content-wrapper').css('z-index', '2');
-				$('.top-gate-wrapper').stop().animate({top: '0'}, 500, 'easeOutQuint');
-				$('.bottom-gate-wrapper ').stop().animate({top: '0'}, 500, 'easeOutQuint');
 				
 
-				$('.content-wrapper').removeAttr('style');
-				$('.content').removeClass('moveup');
+				
+				$('.top-gate-wrapper').stop().animate({top: '0',}, 700, 'linear');
+				$('.bottom-gate-wrapper').stop().animate({bottom: '0',}, 700, 'linear');
+				
+
+				
 
 				// Status bar 
 				$nav.removeClass( 'nav-dot-current' );
@@ -240,13 +260,12 @@ function slitSlider(){
 
 				/*$(".gate:not(.sl-trans-elems .gate)").find('.top-gate-wrapper').stop(true, true).animate({top: '0'}, 300).dequeue();
 				$(".gate:not(.sl-trans-elems .gate)").find('.bottom-gate-wrapper').stop(true, true).animate({top: '0'}, 300).dequeue();*/
-
-				$('.content-wrapper').css('z-index', '5');
+				//$('.content-wrapper').css('z-index', '5');
 				//$(".gate img").removeAttr('style');
 				$('.content-wrapper').removeAttr('style');
 				$('.content-wrapper').removeClass('b-border');
 				
-				$('.content').addClass('moveup');
+				
 				pagiLabel();
 				scrollbar();
 				anystretch();

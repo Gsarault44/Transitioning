@@ -110,16 +110,16 @@ body:after { content: 'mini'; display: none; background:#000;}
     Base     
 -------------------------------------------*/
 * { margin: 0; padding: 0; }
-html { font-size: 62.5%; -webkit-font-smoothing: antialiased !important; -moz-osx-font-smoothing: grayscale;} /* for rems */
+html { font-size: 62.5%; -webkit-font-smoothing: antialiased !important; -moz-osx-font-smoothing: grayscale; -webkit-text-stroke: 0.1px;} /* for rems */
 body { font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline;}
 
 
 /* block level */
 
-h1, .h1 { font: bold 3.8em Helvetica, Arial, sans-serif; margin: 0 0 0.5em; }
-h2, .h2 { font: bold 1.8em Helvetica, Arial, sans-serif; margin: 0 0 1em; }
-h3, .h3 { font: bold 1.5em Helvetica, Arial, sans-serif; margin: 0 0 1em; }
-h4, h5, h6, .h4, .h5, .h6 { font: bold 1.2rem Helvetica, Arial, sans-serif; margin: 0 0 1em; }
+h1, .h1 { font: bold 3.8em "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline;; margin: 0 0 0.5em; }
+h2, .h2 { font: bold 1.8em "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline;; margin: 0 0 1em; }
+h3, .h3 { font: bold 1.5em "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline;; margin: 0 0 1em; }
+h4, h5, h6, .h4, .h5, .h6 { font: bold 1.2rem "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline;; margin: 0 0 1em; }
 
 p, ul, dl, ol, table, strong, blockquote { font-size: 16px; margin: 0 0 1.5em; letter-spacing: 1px; }
 
@@ -227,11 +227,11 @@ sub, sup { line-height: 0; }
 
 .moveup{
 	@media all and (min-width: 420px) {
-		-webkit-animation: moveUp .1s ease-out;
-		-moz-animation: moveUp .1s ease-out both;
-		-o-animation: moveUp .1s ease-out both;
-		-ms-animation: moveUp .1s ease-out both;
-		animation: moveUp .1s ease-out both;
+		-webkit-animation: moveUp .5s ease-out;
+		-moz-animation: moveUp .5s ease-out both;
+		-o-animation: moveUp .5s ease-out both;
+		-ms-animation: moveUp .5s ease-out both;
+		animation: moveUp .5s ease-out both;
 	}
 }
 .scale-up {
@@ -242,11 +242,11 @@ sub, sup { line-height: 0; }
 	animation: scaleUp 1s ease-out both;
 }
 .scale-down {
-	-webkit-animation: scaleDown 1s ease-in both;
-	-moz-animation: scaleDown 1s ease-in both;
-	-o-animation: scaleDown 1s ease-in both;
-	-ms-animation: scaleDown 1s ease-in both;
-	animation: scaleDown 1s ease-in both;
+	-webkit-animation: scaleDown 1s ease-out both;
+	-moz-animation: scaleDown 1s ease-out both;
+	-o-animation: scaleDown 1s ease-out both;
+	-ms-animation: scaleDown 1s ease-out both;
+	animation: scaleDown 1s ease-out both;
 	-webkit-transition-delay: .5s !important;
 	-moz-transition-delay: .5s !important;
 	-o-transition-delay: .5s !important;
@@ -277,7 +277,7 @@ sub, sup { line-height: 0; }
 	transform: rotate(7deg);
 	/* Landscape */
 	@media screen and (orientation:landscape) {
-	   -webkit-transform: rotate(7deg);
+	    -webkit-transform: rotate(7deg);
 		-moz-transform: rotate(7deg);
 		-o-transform: rotate(7deg);
 		-ms-transform: rotate(7deg);
@@ -286,22 +286,23 @@ sub, sup { line-height: 0; }
 	.sl-content-wrapper {
 		.sl-content {
 			position: relative;
+			-webkit-transform: rotate(-7deg);
+			-moz-transform: rotate(-7deg);
+			-o-transform: rotate(-7deg);
+			-ms-transform: rotate(-7deg);
+			transform: rotate(-7deg);
 		}
 
 	} 
 	.content-wrapper {
 		top:10%;
-		left: 2%;
+		left: 6%;
 		height: 50%;
 		overflow: hidden;
 		position: relative;
 		width: 75%;
 		z-index: 1;
-		-webkit-transform: rotate(-7deg);
-		-moz-transform: rotate(-7deg);
-		-o-transform: rotate(-7deg);
-		-ms-transform: rotate(-7deg);
-		transform: rotate(-7deg);
+		
 		@media all and (min-width: 420px) {
 			top:9%;
 			width: 70%;
@@ -336,31 +337,50 @@ sub, sup { line-height: 0; }
 
 
 		.button-wrapper{
-			padding-left: 30px;
+			padding-left: 20px;
 			padding-bottom: 45px;
 			position: relative;	
+			@media all and (min-width: 420px) {
+				padding-left:30px;
+			}
 			.content {
 				text-align: left;
 				position: relative;	
 				h1 {
+					font-weight: normal;
 					text-align: left;
 					font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
 					font-size: 1.9em;
+					line-height: 19px;
 					margin:0;
 					-webkit-text-stroke: 0.1px;
 					@media all and (min-width: 420px) {
 						margin-bottom: 8px;
 						font-size: 28px;
+						line-height: 32px;
 						font-size: 2.8em;
 					}
 					@media all and (min-width: 768px) {
 						font-size: 36px;
 						font-size: 3.6em;
+						line-height: 40px;
 					}
 					@media all and (min-width: 960px) {
 						line-height: 47px;
 						font-size: 49px;
 						font-size: 4.9em;
+					}
+				}
+				h2 {
+					text-align: left;
+					font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
+					font-size: 1.7em;
+					line-height: 17px;
+					-webkit-text-stroke: 0.1px;
+					@media all and (min-width: 420px) {
+						font-size: 20px;
+						line-height: 22px;
+						font-size: 2em;
 					}
 				}
 				p {
@@ -384,22 +404,56 @@ sub, sup { line-height: 0; }
 						line-height: 30px;
 					}
 				}
+
 				.expand p {
 					letter-spacing: 0;
-					font-family:Arial, Helvetica, sans-serif;
-					font-size: 15px;
-					font-size: 1.5em;
-					line-height: 17px;
-					@media all and (min-width: 768px) {
-						width: 90%;	
+					font-size: 16px;
+					font-size: 1.6em;
+					line-height: 16px;
+					@media all and (min-width: 420px) {
+						margin-bottom: 18px;
 						font-size: 18px;
 						font-size: 1.8em;
+						line-height: 20px;
+					}
+					@media all and (min-width: 768px) {
+						width: 95%;	
+						font-size: 20px;
+						font-size: 2em;
 						line-height: 24px;
+					}
+				}
+				ul {
+					font-family: "RockwellMT-LightItalic", Courier, Georgia,Times, "Times New Roman", serif;
+					font-size: 14px;
+					font-size: 1.4em;
+					line-height: 20px;
+					letter-spacing: 0;
+					margin:0;
+					margin-bottom: 30px;
+					-webkit-text-stroke: 0.1px;
+					@media all and (min-width: 420px) {
+						font-size: 16px;
+						font-size: 1.6em;
+						line-height: 20px;
+					}
+					@media all and (min-width: 768px) {
+						font-size: 1.8px;
+						font-size: 1.8em;
+						line-height: 30px;
+					}
+				}
+				.callout {
+					padding-left: 10px;
+					p{
+						font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
+						margin:0 0 8px;
 					}
 				}
 			}
 			.footnote {
 				font-style: italic;
+				font-family: arial;
 			}
 		}
 
@@ -448,40 +502,40 @@ sub, sup { line-height: 0; }
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		top:-8.5%;
+		top:-10%;
 		left:-8.5%;
 		margin:0;
-		padding:0;
+		padding:2px;
 		z-index: 1;
 		overflow: hidden;
-		
+		box-shadow: 0 0 0 0 transparent;
+		border:0 solid transparent; 
 		-webkit-backface-visibility: hidden;
 		-moz-backface-visibility: hidden;
 		-o-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
 		backface-visibility: hidden;
+		-webkit-transform: rotate(7deg);
+		-moz-transform: rotate(7deg);
+		-o-transform: rotate(7deg);
+		-ms-transform: rotate(7deg);
+		transform: rotate(7deg);
 		@media screen and (orientation:portrait) {
-			-webkit-transform: rotate(-90deg);
-			-moz-transform: rotate(-90deg);
-			-o-transform: rotate(-90deg);
-			-ms-transform: rotate(-90deg);
-			transform: rotate(-90deg);
+			-webkit-transform: rotate(-83deg);
+			-moz-transform: rotate(-83deg);
+			-o-transform: rotate(-83deg);
+			-ms-transform: rotate(-83deg);
+			transform: rotate(-83deg);
+
 			width: 185%;
 			left:-50%;
 			top:-10%;
 		}
 		@media all and (min-width: 768px) {
 			&:hover {
-				/* img {
-					-webkit-transform:rotate(-7deg) scale(1.01);
-					-moz-transform: rotate(-7deg) scale(1.01);
-					-o-transform: rotate(-7deg) scale(1.01);
-					-ms-transform: rotate(-7deg) scale(1.01);
-					transform: rotate(-7deg) scale(1.01);
-				} */
-				.top-gate-wrapper p, .bottom-gate-wrapper p {
-					@include transitions;
-					opacity: .85;
+				img {
+					-webkit-filter: brightness(1);
+  					filter: brightness(1);
 				}
 			}
 		}
@@ -491,6 +545,10 @@ sub, sup { line-height: 0; }
 			-o-transform: rotate(-7deg);
 			-ms-transform: rotate(-7deg);
 			transform: rotate(-7deg); 
+			@media all and (min-width: 768px)  and (orientation:landscape) {
+				-webkit-filter: brightness(.99);
+				filter: brightness(.99);
+			}
 		}
 		.top-gate-wrapper{
 			position: relative;
@@ -542,35 +600,40 @@ sub, sup { line-height: 0; }
 				}
 			}
 			p {
-				@include transitions;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
 				position: absolute;
 				font-size: 35px;
 				color: white;
 				margin:0;
-				bottom: -15px;
+				bottom: 0;
 				text-transform: uppercase;
 				opacity: 0.75;
 				display: block;
 				width: 100%;
 				text-align: center;
 				font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
-				font-weight: bold;
 				z-index: 2;
+				line-height: 17px;
 				@media all and (min-width: 420px) {
 					font-size: 50px;
-					bottom:-23px;
+					line-height: 24px;
 				}
-				@media all and (min-width: 560px) {
+				@media all and (min-width: 560px) and (orientation:landscape) {
 					font-size: 80px;
-					bottom:-36px;
+					line-height: 40px;
+					//bottom:-38px;
 				}
 				@media all and (min-width: 768px) {
 					font-size: 90px;
-					bottom:-41px;
+					line-height: 44px;
+					//bottom:-43px;
 				}
 				@media all and (min-width: 1024px) {
 					font-size: 130px;
-					bottom: -60px;
+					line-height: 66px;
+					
 				}
 			}
 		}
@@ -627,56 +690,75 @@ sub, sup { line-height: 0; }
 				} 
 			}	
 			p {
-				@include transitions;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
 				position: absolute;
 				font-size: 35px;
 				color: white;
-				top: -15px;
+				top: -1px;
 				margin:0;
 				text-transform: uppercase;
 				opacity: 0.75;
 				display: block;
 				width: 100%;
 				text-align: center;
-				
+				line-height: 22px;
 				-webkit-transform: rotateX(-180deg);
 				-moz-transform: rotateX(-180deg);
 				-ms-transform: rotateX(-180deg);
+				-ms-perspective: 300px;
+				-ms-transform: rotateX(-180deg) translate(-20px,0px);
 				transform: rotateX(-180deg);
 				font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
-				font-weight: bold;
 				z-index: 2;
 				@media all and (min-width: 420px) {
 					font-size: 50px;
-					top:-23px;
+					line-height: 30px;
 				}
-				@media all and (min-width: 560px) {
+				@media all and (min-width: 560px) and (orientation:landscape) {
 					font-size: 80px;
-					top:-36px;
+					line-height: 46px;
+					//top:-38px;
 				}
 				@media all and (min-width: 768px) {
 					font-size: 90px;
-					top:-41px;
+					line-height: 50px;
+					//top:-43px;
 				}
 				@media all and (min-width: 1024px) {
 					font-size: 130px;
-					top:-59px;
+					line-height: 70px;
+					//top:-59px;
 				}
 			}
 		}
 	}
 }
 blockquote {
-	font-size: 18px;
+	font-size: 15px;
 	font-style: italic;
-	width: 80%;
-	padding-left: 30px;
-	font-weight: bold;
+	width: 90%;
+	font-family: 'RockwellMT-Italic', Courier, Georgia,Times, "Times New Roman", serif;
+	color:#fff;
+	opacity: .9;
 	text-align: center;
+	@media all and (min-width: 420px) {
+		font-size: 20px;
+		font-size: 2em;
+		line-height: 24px;
+		width: 80%;
+		padding-left: 30px;
+	}
 }
 cite {
-	font-size: 85%;
+	font-size: 10px;
 	font-style: italic;
+	position: relative;
+	top: -7px;
+	@media all and (min-width: 420px) {
+		top:-10px;
+	}
 }
 /*-------------------------------------------    
 	IMAGES FOR EACH SLIDE
@@ -707,10 +789,10 @@ cite {
 #horsepower-brainpower {
 	.content {
 		h1, h2, h3, h4 {
-			color:#81c2ff;
+			color:#94cbff;
 		}
-		p, strong, a, li, blockquote, cite {
-			color:#81c2ff;
+		p, strong, a, li, cite {
+			color:#94cbff;
 		}
 	}
 	.gate .top-gate-wrapper .top-gate {
@@ -718,22 +800,51 @@ cite {
 	}
 	.gate .bottom-gate-wrapper {
 		p {
-			padding-left: 0.6%;
-			letter-spacing: 2px;
+			padding-left: 9px;
+			@media all and (min-width: 420px) {
+				padding-left: 11px;
+			}
+			@media all and (min-width: 560px) {	
+				padding-left: 16px;
+			}
+			@media screen and (min-width: 768px) {
+				padding-left: 18px;
+			}
+			@media screen and (min-width: 1024px) {
+				padding-left: 18px;
+			}
+			@media screen and (min-width: 1024px) {
+				padding-left: 26px;
+			}
+			
 		}
 	}
 }
 #hindsight-foresight {
-	.gate .top-gate-wrapper .top-gate {
-		top:-30%;
-		@media screen and (min-width: 1400px) {
-			top:-50%;
+	.gate .top-gate-wrapper {
+		.top-gate {
+			top:-30%;
+			@media screen and (min-width: 1300px) {
+				top:-35%;
+			}
+			@media screen and (min-width: 1400px) {
+				top:-50%;
+			}
+			@media screen and (min-width: 1400px) and (max-height: 1000px) {
+				top:-70%;
+			}
+			@media screen and (min-width: 1400px) {
+				top:-60%;
+			}
+		}
+		p {
+			padding-left: 15px;
 		}
 	}
 	.gate .bottom-gate-wrapper {
 		.bottom-gate {
 			width: 160%;
-			margin-top: -40%;
+			margin-top: -70%;
 			margin-left: -35%;
 			@media screen and (orientation:portrait) and (min-width: 768px) {
 				width: 100%;
@@ -754,7 +865,7 @@ cite {
 		h1, h2, h3, h4 {
 			color:#445b0d;
 		}
-		p, strong, a, li, blockquote, cite {
+		p, strong, a, li, cite {
 			color:#445b0d;
 		}
 	}
@@ -778,7 +889,7 @@ cite {
 		p {
 			padding-left: 0.8%;
 			@media all and (min-width: 768px) {
-				padding-left: 2%;
+				padding-left: 72px;
 			}	
 		}
 	}
@@ -788,7 +899,7 @@ cite {
 		h1, h2, h3, h4 {
 			color:#cdfc94;
 		}
-		p, strong, a, li, blockquote, cite {
+		p, strong, a, li, cite {
 			color:#cdfc94;
 		}
 		
@@ -905,17 +1016,33 @@ cite {
 			width: 50px;
 			height: 40px;
 			position: relative;
-			top: 5px;
+			top: 3px;
 			left:-10px;
 			opacity: .8;
 			padding: 0;
+			margin:0;
 			&:hover {
 				opacity: .9;
+			}
+			@media all and (min-width: 768px) {
+				top:5px;
+			}
+			@media
+				only screen and (-webkit-min-device-pixel-ratio: 2),
+				only screen and (   min--moz-device-pixel-ratio: 2),
+				only screen and (     -o-min-device-pixel-ratio: 2/1),
+				only screen and (        min-device-pixel-ratio: 2),
+				only screen and (                min-resolution: 192dppx),
+				only screen and (                min-resolution: 1.5dppx) { 
+  				
+  				background:transparent url(../images/mailer-x2.png) no-repeat 0 0;
+  				background-size:100%; 
 			}
 		}
 		
 	}
 	.cube {
+
 		background: #000;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
@@ -934,6 +1061,7 @@ cite {
 			width: 8%;
 		}
 		a {
+			@include transitions;
 			margin-right: 3px;
 			background: url(../images/cube.png)no-repeat center center; 
 			background-size: 62px;
@@ -944,21 +1072,57 @@ cite {
 				height:70px;
 			}
 			&:hover {
-				opacity: .8;
+				@include transitions;
+				opacity: .9;
+			}
+			@media
+				only screen and (-webkit-min-device-pixel-ratio: 2),
+				only screen and (   min--moz-device-pixel-ratio: 2),
+				only screen and (     -o-min-device-pixel-ratio: 2/1),
+				only screen and (        min-device-pixel-ratio: 2),
+				only screen and (                min-resolution: 192dppx),
+				only screen and (                min-resolution: 1.5dppx) { 
+  				
+  				background: url(../images/cube-x2.png)no-repeat center center; 
+  				background-size:50%; 
 			}
 		}
 	}
 }
 .subscribe-block {
-	background:transparent url(../images/mailer.png) no-repeat 0 7px;
+	@include transitions;
+	background:transparent url(../images/mailer.png) no-repeat 0 center;
 	cursor:pointer;
 	position: relative;
-	opacity: .8;
-	padding-left: 60px;
-	p strong {
+	opacity: .75;
+	padding: 5px 0 5px 60px;
+	margin-bottom: 20px;
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (   min--moz-device-pixel-ratio: 2),
+		only screen and (     -o-min-device-pixel-ratio: 2/1),
+		only screen and (        min-device-pixel-ratio: 2),
+		only screen and (                min-resolution: 192dppx),
+		only screen and (                min-resolution: 1.5dppx) { 
+			
+			background: url(../images/cube-x2.png)no-repeat center center; 
+			background-size:70%; 
+	}
+	p {
 		color:#fff !important;
+		font-size: 14px;
+		font-size: 0.9em;
+		line-height: 15px;
+		opacity: .85;
+		margin: 0 !important;
+		@media all and (min-width: 768px) {
+			font-size: 16px;
+			font-size: 1em;
+			line-height: 20px;
+		}
 	}
 	&:hover {
-		opacity: .9;
+		opacity: 1;
 	}
+
 }
