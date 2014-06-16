@@ -1,0 +1,1316 @@
+/*
+*************************************************
+
+AmerisourceBergen
+General Screen Styles
+
+Created by the Greg Sarault via Bluecadet
+www.bluecadet.com
+
+*************************************************
+*/
+
+
+/*-------------------------------------------    
+    Fonts     
+-------------------------------------------*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2af591");
+
+  
+@font-face {
+	font-family: 'Rockwell-Condensed';
+	src: url('../css/fonts/webfonts/2AF591_0_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_0_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_0_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_0_0.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'RockwellMT-BoldItalic';
+	src: url('../css/fonts/webfonts/2AF591_1_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_1_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_1_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_1_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'Rockwell-ExtraBold';
+	src: url('../css/fonts/webfonts/2AF591_2_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_2_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_2_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_2_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'RockwellMT-Bold';
+	src: url('../css/fonts/webfonts/2AF591_3_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_3_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_3_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_3_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'RockwellMT';
+	src: url('../css/fonts/webfonts/2AF591_4_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_4_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_4_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_4_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'RockwellMT-LightItalic';
+	src: url('../css/fonts/webfonts/2AF591_5_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_5_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_5_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_5_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'RockwellMT-Light';
+	src: url('../css/fonts/webfonts/2AF591_6_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_6_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_6_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_6_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'RockwellMT-CondensedBold';
+	src: url('../css/fonts/webfonts/2AF591_7_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_7_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_7_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_7_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+	font-family: 'RockwellMT-Italic';
+	src: url('../css/fonts/webfonts/2AF591_8_0.eot');
+	src: url('../css/fonts/webfonts/2AF591_8_0.eot?#iefix') format('embedded-opentype'),
+		 url('../css/fonts/webfonts/2AF591_8_0.woff') format('woff'),
+		 url('../css/fonts/webfonts/2AF591_8_0.ttf') format('truetype');
+}
+ 
+
+/*-------------------------------------------    
+    Flag
+	(Thanks Jeremy: http://adactio.com/journal/5429/)
+-------------------------------------------*/
+body:after { content: 'mini'; display: none; background:#000;}
+
+
+
+/*-------------------------------------------    
+    Base     
+-------------------------------------------*/
+* { margin: 0; padding: 0; }
+html { font-size: 62.5%; -webkit-font-smoothing: antialiased !important; -moz-osx-font-smoothing: grayscale; -webkit-text-stroke: 0.1px;} /* for rems */
+body { font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline;}
+
+
+/* block level */
+
+h1, .h1 { font: bold 3.8em "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline;; margin: 0 0 0.5em; }
+h2, .h2 { font: bold 1.8em "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline;; margin: 0 0 1em; }
+h3, .h3 { font: bold 1.5em "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline;; margin: 0 0 1em; }
+h4, h5, h6, .h4, .h5, .h6 { font: bold 1.2rem "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif; color: #333; vertical-align: baseline;; margin: 0 0 1em; }
+
+p, ul, dl, ol, table, strong, blockquote { font-size: 16px; margin: 0 0 1.5em; letter-spacing: 0.05em; }
+
+
+ul { padding-left: 20px;}
+
+form { margin: 0 0 1.5em; }
+
+/* inline */
+
+label { font-size: 1.6rem; }
+input, select, textarea {  }
+input.empty:-moz-placeholder, textarea.empty:-moz-placeholder { color: red; }
+.error { color: red; }
+
+table { }
+    td { padding: 0.25em 1em; border-top: 1px solid #aaa; }
+
+em { font-style: italic; }
+strong { 
+	font-weight: bold;
+	display: block;
+	margin-bottom:8px; 
+}
+
+mark { background: none; font-style: normal; }
+
+video { width: 100%; height: auto; }
+
+a { text-decoration: none; }
+a:hover, a:focus {  }
+
+img { display: block; margin: 0 10px 10px 0; max-width: 100%; }
+
+a img { border: none; }
+
+i { font-style: normal; }
+b { font-weight: normal; }
+
+ol {
+	padding-left:25px;
+	li {
+		margin-bottom: 5px;
+	}
+}
+abbr, abbr[title], acronym { font-size: 75%; letter-spacing: 0.2em; text-transform: uppercase; border: none; }
+
+code { font: 1.4rem/1 Consolas, 'Courier New', Courier, monospace; color: #999; }
+
+sub, sup { line-height: 0; }
+
+::selection { background: #2a69c2; color: #fff; }
+::-moz-selection { background: #2a69c2; color: #fff; }
+
+
+
+/*-------------------------------------------    
+    Mixins
+-------------------------------------------*/
+@mixin transitions {
+	-ms-transition: all .6s ease-out;
+	-o-transition: all .6s ease-out;
+  	-moz-transition: all .6s ease-out;
+  	-webkit-transition: all .6s ease-out;
+  	transition: all .6s ease-out;
+}
+@mixin transitionsFast{
+	-ms-transition: all .4s ease-out !important;
+	-o-transition: all .4s ease-out !important;
+  	-moz-transition: all .4s ease-out !important;
+  	-webkit-transition: all .4s ease-out !important;
+  	transition: all .4s ease-out !important;
+}
+
+/*-------------------------------------------    
+    Global
+-------------------------------------------*/
+ 
+/* Phark Image Replacement - http://phark.typepad.com/phark/2003/08/accessible_imag.html */
+.phark { display: block; text-indent: -9999px; background-position: 0 0; background-repeat: no-repeat; background-color: transparent; }
+
+/* Trimming Outline in Firefox - http://snook.ca/archives/html_and_css/trimming_long_o  */
+/*\*/ .phark-link { overflow: hidden; } /**/
+
+/* Easy Clearing - http://www.positioniseverything.net/easyclearing.html */ 
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.offscreen { position: absolute; left: -9999px; display: block; }
+.onscreen { left: 0; }
+
+.hide { display: none; }
+
+.no-bullets { list-style: none; }
+
+.bulleted { list-style: disc; }
+
+.uppercase { text-transform: uppercase; }
+
+.rwd-break { display: block; }
+.clr {
+	clear: both;
+	padding: 0;
+	height: 0;
+	margin: 0;
+}
+.hide {
+	display: none;
+}
+/*-------------------------------------------    
+	Modules
+-------------------------------------------*/
+
+.moveup{
+	@media all and (min-width: 420px) {
+		-webkit-animation: moveUp .5s ease-out;
+		-moz-animation: moveUp .5s ease-out both;
+		-o-animation: moveUp .5s ease-out both;
+		-ms-animation: moveUp .5s ease-out both;
+		animation: moveUp .5s ease-out both;
+	}
+}
+.scale-up {
+	-webkit-animation: scaleUp 1s ease-out both;
+	-moz-animation: scaleUp 1s ease-out both;
+	-o-animation: scaleUp 1s ease-out both;
+	-ms-animation: scaleUp 1s ease-out both;
+	animation: scaleUp 1s ease-out both;
+}
+.scale-down {
+	-webkit-animation: scaleDown 1.2s ease-out both;
+	-moz-animation: scaleDown 1.2s ease-out both;
+	-o-animation: scaleDown 1.2s ease-out both;
+	-ms-animation: scaleDown 1.2s ease-out both;
+	animation: scaleDown 1.2s ease-out both;
+	-webkit-transition-delay: .6s !important;
+	-moz-transition-delay: .6s !important;
+	-o-transition-delay: .6s !important;
+	-ms-transition-delay: .6s !important;
+	transition-delay: .6s !important;
+}
+
+
+/*-------------------------------------------    
+	Page
+-------------------------------------------*/
+
+
+.container {
+	background: #000;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+.sl-slide {
+	-webkit-transform: rotate(-7deg);
+	-moz-transform: rotate(-7deg);
+	-o-transform: rotate(-7deg);
+	-ms-transform: rotate(-7deg);
+	transform: rotate(-7deg);
+	/* Landscape */
+	@media screen and (orientation:landscape) {
+	    -webkit-transform: rotate(7deg);
+		-moz-transform: rotate(7deg);
+		-o-transform: rotate(7deg);
+		-ms-transform: rotate(7deg);
+		transform: rotate(7deg);
+	}
+	.sl-content-wrapper {
+		.sl-content {
+			position: relative;
+			-webkit-transform: rotate(7deg);
+			-moz-transform: rotate(7deg);
+			-o-transform: rotate(7deg);
+			-ms-transform: rotate(7deg);
+			transform: rotate(7deg);
+			@media screen and (orientation:landscape) {
+			    -webkit-transform: rotate(-7deg);
+				-moz-transform: rotate(-7deg);
+				-o-transform: rotate(-7deg);
+				-ms-transform: rotate(-7deg);
+				transform: rotate(-7deg);
+			}
+		}
+
+	} 
+	.content-wrapper {
+		top:7%;
+		left: 1%;
+		height: 50%;
+		overflow: hidden;
+		position: relative;
+		width: 75%;
+		z-index: 1;
+		
+		@media all and (min-width: 420px) {
+			top:9%;
+			width: 70%;
+			/* max-width: 680px; */
+			max-width: 800px;
+			height:40%;
+		}
+		@media all and (min-width: 768px) {
+			width: 58%;
+			top:12%;
+			left:8%;
+		}
+		
+		@media all and (min-width: 768px) and (orientation : landscape) {
+			top:20%;
+		}
+		@media all and (max-width: 520px) and (orientation : landscape) and (max-height: 400px) {
+			left: 4%;
+			width: 75%;
+			height:50%;
+			overflow: auto;
+		}
+		@media all and (min-width: 768px) and (min-height: 400px) {
+			height:55%;
+		}
+		@media only screen and (orientation : landscape) and (max-device-width : 480px) {
+			//height: 150px;
+		}
+		/* @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+			height:auto;
+		} */
+
+
+		.button-wrapper{
+			padding-left: 20px;
+			padding-bottom: 45px;
+			position: relative;	
+			@media all and (min-width: 420px) {
+				padding-left:30px;
+			}
+			.content {
+				text-align: left;
+				position: relative;	
+				h1 {
+					font-weight: normal;
+					text-align: left;
+					font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
+					font-size: 1.9em;
+					line-height: 19px;
+					margin:0;
+					-webkit-text-stroke: 0.1px;
+					@media all and (min-width: 420px) {
+						margin-bottom: 8px;
+						font-size: 28px;
+						line-height: 32px;
+						font-size: 2.8em;
+					}
+					@media all and (min-width: 768px) {
+						font-size: 36px;
+						font-size: 3.6em;
+						line-height: 40px;
+					}
+					@media all and (min-width: 960px) {
+						line-height: 47px;
+						font-size: 49px;
+						font-size: 4.9em;
+					}
+				}
+				h2 {
+					text-align: left;
+					font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
+					font-size: 1.7em;
+					line-height: 17px;
+					-webkit-text-stroke: 0.1px;
+					@media all and (min-width: 420px) {
+						font-size: 20px;
+						line-height: 22px;
+						font-size: 2em;
+					}
+				}
+				p {
+					font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
+					font-size: 16px;
+					font-size: 1.6em;
+					line-height: 16px;
+					margin:0;
+					margin-bottom: 10px;
+					-webkit-text-stroke: 0.1px;
+					@media all and (min-width: 420px) {
+						margin-bottom: 18px;
+						font-size: 18px;
+						font-size: 1.8em;
+						line-height: 20px;
+					}
+					@media all and (min-width: 768px) {
+						font-size: 20px;
+						font-size: 2em;
+						line-height: 30px;
+					}
+				}
+
+				.expand {
+					border-top: 1px solid #fff;
+					padding-top: 20px;
+					p {	
+						font-size: 16px;
+						font-size: 1.6em;
+						line-height: 16px;
+						@media all and (min-width: 420px) {
+							margin-bottom: 18px;
+							font-size: 18px;
+							font-size: 1.8em;
+							line-height: 20px;
+						}
+						@media all and (min-width: 768px) {
+							width: 95%;	
+							font-size: 20px;
+							font-size: 2em;
+							line-height: 24px;
+						}
+					}
+				}
+				ul {
+					font-family: "RockwellMT-LightItalic", Courier, Georgia,Times, "Times New Roman", serif;
+					font-size: 14px;
+					font-size: 1.4em;
+					line-height: 20px;
+					margin:0;
+					margin-bottom: 30px;
+					-webkit-text-stroke: 0.1px;
+					@media all and (min-width: 420px) {
+						font-size: 16px;
+						font-size: 1.6em;
+						line-height: 20px;
+					}
+					@media all and (min-width: 768px) {
+						font-size: 1.8px;
+						font-size: 1.8em;
+						line-height: 30px;
+					}
+				}
+				.callout {
+					padding-left: 10px;
+					p{
+						font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
+						margin:0 0 8px;
+					}
+				}
+			}
+			.footnote {
+				font-style: italic;
+				font-family: arial;
+			}
+		}
+
+	}
+	.b-border {
+		-webkit-transition: all .3s ease-out;
+	  	-moz-transition: all .3s ease-out;
+	  	-o-transition: all .3s ease-out;
+	  	transition: all .3s ease-out;
+		border-bottom: 1px solid #fff;
+		border-top: 1px solid #fff;
+		top:7%;
+		@media all and (min-width: 768px) {
+			top:12%;
+		}
+		@media all and (min-width: 1024px) {
+			border-top: none;
+		}
+	}
+	.more {
+		display:block;
+		border-top: 1px solid #fff;
+		width: 100%;
+		a {
+			display: inline-block;
+			color:#fff;
+			font-family: "RockwellMT", Courier, Georgia,Times, "Times New Roman", serif;
+			font-weight: 400;
+			font-size: 20px;
+			font-size: 2em;
+			&:after {
+				content:"";
+				position: absolute;
+				display: block;
+				background:transparent url(../images/circle-arrow-down.png)no-repeat 0 0;
+				background-size: 100%;
+				width:30px;
+				height:30px;
+				margin-left: 30px;
+				margin-top: 5px;
+			}	
+		}
+	}
+	a.next {
+		font-size: 18px;
+		color:#fff;
+	}
+	.gate {
+		@include transitions;
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top:-9.5%;
+		left:-8.5%;
+		margin:0;
+		padding:2px;
+		z-index: 1;
+		overflow: hidden; 
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-o-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-transform:translate3d(0,0,0);
+		-webkit-transform: rotate(7deg);
+		-moz-transform: rotate(7deg);
+		-o-transform: rotate(7deg);
+		-ms-transform: rotate(7deg);
+		transform: rotate(7deg);
+		@media screen and (orientation:portrait) {
+			-webkit-transform: rotate(83deg);
+			-moz-transform: rotate(83deg);
+			-o-transform: rotate(83deg);
+			-ms-transform: rotate(83deg);
+			transform: rotate(83deg);
+			top:-10%;
+			width: 130%;
+			left: -26%;
+		}
+		@media all and (min-width: 420px) {
+			top:-9.6%;
+		}
+		@media all and (min-width: 560px) {
+			top:-9.75%;
+		}
+		
+		
+		.top-gate-wrapper{
+			position: relative;
+			width: 100%;
+			height: 50%;
+			overflow: hidden;
+			cursor:pointer;
+			margin-bottom: -1px;
+			@include transitionsFast;
+			&:before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 200%;
+				top:0;
+				left:0;
+				z-index: -1;
+				-webkit-transform: rotate(-7deg);
+				-moz-transform: rotate(-7deg);
+				-o-transform: rotate(-7deg);
+				-ms-transform: rotate(-7deg);
+				transform: rotate(-7deg);
+				@media screen and (orientation:portrait) {
+					-webkit-transform: rotate(-83deg);
+					-moz-transform: rotate(-83deg);
+					-o-transform: rotate(-83deg);
+					-ms-transform: rotate(-83deg);
+				}
+			}
+			p {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				-webkit-transform: translate(0px, 1px);
+				position: absolute;
+				font-size: 35px;
+				color: white;
+				margin:0;
+				bottom: 0;
+				text-transform: uppercase;
+				opacity: 0.75;
+				display: inline-block;
+				vertical-align: baseline;
+				width: 100%;
+				text-align: center;
+				font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
+				z-index: 2;
+				line-height: 20px;
+				@media all and (min-width: 420px) {
+					font-size: 50px;
+					line-height: 26px;
+				}
+
+				@media all and (min-width: 560px) and (orientation:landscape) {
+					font-size: 80px;
+					line-height: 41px;
+					//bottom:-38px;
+				}
+				@media all and (min-width: 768px) {
+					font-size: 90px;
+					line-height: 44px;
+					//bottom:-43px;
+				}
+				@media all and (min-width: 1024px) {
+					font-size: 130px;
+					line-height: 68px;
+					
+				}
+				@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+					bottom: 6px;
+					@media all and (min-width: 420px) {
+						bottom: 10px;
+					}
+					@media all and (min-width: 560px) and (orientation:landscape) {
+						bottom: 15px;
+					}
+					@media all and (min-width: 768px) {
+						bottom: 17px;
+					}
+					@media all and (min-width: 1024px) {
+						bottom: 22px;
+						
+					}
+				}
+			}
+		}
+		.bottom-gate-wrapper {
+			position: relative;
+			width:100%;
+			height: 50%;
+			overflow: hidden;
+			cursor:pointer;
+			@include transitionsFast;
+			&:before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 200%;
+				top:-50%;
+				left:0;
+				z-index: -1;
+				-webkit-transform: rotate(-7deg);
+				-moz-transform: rotate(-7deg);
+				-o-transform: rotate(-7deg);
+				-ms-transform: rotate(-7deg);
+				transform: rotate(-7deg);
+				@media screen and (orientation:portrait) {
+					-webkit-transform: rotate(-83deg);
+					-moz-transform: rotate(-83deg);
+					-o-transform: rotate(-83deg);
+					-ms-transform: rotate(-83deg);
+				}
+			}		
+			p {
+				-webkit-transform: translate(0px, 1px);
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				position: absolute;
+				font-size: 35px;
+				color: white;
+				top: -1px;
+				margin:0;
+				text-transform: uppercase;
+				opacity: 0.75;
+				display: block;
+				width: 100%;
+
+				text-align: center;
+				line-height: 20px;
+				-webkit-transform: rotateX(-180deg);
+				-moz-transform: rotateX(-180deg);
+				-ms-transform: rotateX(-180deg);
+				-ms-perspective: 300px;
+				-ms-transform: rotateX(-180deg) translate(-20px,0px);
+				transform: rotateX(-180deg);
+				font-family: "RockwellMT-Bold", Courier, Georgia,Times, "Times New Roman", serif;
+				z-index: 99999;
+				@media all and (min-width: 420px) {
+					font-size: 50px;
+					line-height: 28px;
+				}
+				@media all and (min-width: 560px) and (orientation:landscape) {
+					font-size: 80px;
+					line-height: 44px;
+					//top:-38px;
+				}
+				@media all and (min-width: 768px) {
+					font-size: 90px;
+					line-height: 46px;
+					//top:-43px;
+				}
+				@media all and (min-width: 1024px) {
+					font-size: 130px;
+					line-height: 70px;
+					//top:-59px;
+				}
+				// THIS is for IE 10 and 11 
+				@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+					top: 5px;
+					@media all and (min-width: 420px) {
+						top: 6px;
+					}
+					@media all and (min-width: 560px) and (orientation:landscape) {
+						top: 10px;
+					}
+					@media all and (min-width: 768px) {
+						top: 15px;
+					}
+					@media all and (min-width: 1024px) {
+						top: 20px;
+						
+					}
+				}
+			}
+		}
+	}
+}
+.lt-ie9 .sl-slide .gate .top-gate-wrapper p{
+	bottom: 6px;
+	@media all and (min-width: 420px) {
+		bottom: 10px;
+	}
+	@media all and (min-width: 560px) and (orientation:landscape) {
+		bottom: 15px;
+	}
+	@media all and (min-width: 768px) {
+		bottom: 17px;
+	}
+	@media all and (min-width: 1024px) {
+		bottom: 22px;
+		
+	}
+}
+
+blockquote {
+	font-size: 15px;
+	font-style: italic;
+	width: 90%;
+	font-family: 'RockwellMT-Italic', Courier, Georgia,Times, "Times New Roman", serif;
+	color:#fff;
+	opacity: .9;
+	text-align: center;
+	@media all and (min-width: 420px) {
+		font-size: 20px;
+		font-size: 2em;
+		line-height: 24px;
+		width: 80%;
+		padding-left: 30px;
+	}
+}
+cite {
+	font-size: 10px;
+	font-style: italic;
+	position: relative;
+	top: -7px;
+	@media all and (min-width: 420px) {
+		top:-10px;
+	}
+}
+/*-------------------------------------------    
+	IMAGES FOR EACH SLIDE
+-------------------------------------------*/
+.lt-ie9 {
+	#horsepower-brainpower {
+		background: url(../images/truck.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	#hindsight-foresight {
+		background: url(../images/tube.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	#computers-compassion {
+		background: url(../images/circut.jpg) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}
+#horsepower-brainpower {
+	.content {
+		h1, h2, h3, h4 {
+			color:#B2F1FD;
+		}
+		p, strong, a, li, cite {
+			color:#B2F1FD;
+		}
+	}
+	.gate .top-gate-wrapper {
+		&:before {
+			background:transparent url(../images/truck-gate.jpg) no-repeat 0 0;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			@media all and (min-width: 650px) and (orientation:portrait) {
+				background-position: 50px 30%;
+			}
+			@media screen and (orientation:landscape) {
+				background-position: center center;
+			}
+			@media screen and (min-width: 1024px) and (orientation:landscape) {
+				background-position: -80px 70%;
+			}
+		}
+		.top-gate {
+			top:-50%;
+		}
+	}
+	.gate .bottom-gate-wrapper {
+		&:before {
+			background:transparent url(../images/dish.jpg) no-repeat center 30%;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			@media screen and (min-width: 960px) and (orientation:landscape) {
+				background-position: center 20%;
+			}
+			@media screen and (min-width: 1600px) and (orientation:landscape) {
+				background-position: 200px 20%;
+			}
+		}
+		p {
+			padding-left: 7px;
+			@media all and (min-width: 420px) {
+				padding-left: 9px;
+			}
+			@media all and (min-width: 560px) {	
+				padding-left: 15px;
+			}
+			@media screen and (min-width: 768px) {
+				padding-left: 18px;
+			}
+			@media screen and (min-width: 1024px) {
+				padding-left: 26px;
+			}
+			
+		}
+	}
+}
+#hindsight-foresight {
+	.gate .top-gate-wrapper {
+		&:before {
+			background:transparent url(../images/plane.jpg) no-repeat 40px center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			@media all and (min-width: 420px) {
+				background-position: -30px center;
+			}
+			@media all and (orientation:portrait) {
+				background-position: -100px center;
+			}
+
+			@media all and (min-height: 500px) and (orientation:portrait) {
+				background-position:-120px center;
+			}
+			@media all and (max-width: 600px) and (min-height: 746px) and (orientation:portrait) {
+				background-position: -200px center;
+			}
+			@media screen and (min-width: 300px) and (orientation:landscape) {
+				background-position:center -150px;
+			}
+			@media screen and (min-width: 768px) and (orientation:landscape) {
+				background-position:center -210px;
+			}
+			@media screen and (max-height: 900px) and (min-width: 1200px) and (orientation:landscape) {
+				background-position:center -380px;
+			}
+		}
+		.top-gate {
+			top:-30%;
+			@media screen and (min-width: 1300px) {
+				top:-35%;
+			}
+			@media screen and (min-width: 1400px) {
+				top:-50%;
+			}
+			@media screen and (min-width: 1400px) and (max-height: 1000px) {
+				top:-70%;
+			}
+			@media screen and (min-width: 1400px) {
+				top:-60%;
+			}
+		}
+		p {
+			padding-left: 4px;
+			@media screen and (min-width: 560px) and (orientation:landscape) {
+				padding-left: 9px;
+			}
+			@media all and (min-width: 768px) and (orientation:portrait) {
+				padding-left: 12px;
+			}
+			@media all and (min-width: 1024px) and (orientation:portrait) {
+				padding-left: 16px;
+			}
+			@media screen and (orientation:landscape) and (min-width: 1024px)  {
+				padding-left: 15px;	
+			}
+		}
+	}
+	.gate .bottom-gate-wrapper {
+		&:before {
+			background:transparent url(../images/tube-gate.jpg) no-repeat -250px center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			@media all and (min-width: 420px) and (max-height: 520px) {
+				background-position: -300px center;
+			}
+			@media all and (min-width: 360px) and (min-height: 600px) {
+				background-position: -480px center;
+			}
+			@media all and (min-width: 500px) and (min-height: 600px) and (orientation:portrait) {
+				background-position: -490px center;
+			}
+			@media all and (min-width: 768px) and (min-height: 600px) and (orientation:portrait) {
+				background-position: -660px center;
+			}
+			@media all and (max-width: 600px) and (min-height: 746px) and (orientation:portrait) {
+				background-position: -580px center;
+			}
+			@media all and (min-width: 1000px) and (min-height: 1000px) and (orientation:portrait) {
+				background-position: -680px center;
+			}
+			@media screen and (orientation:landscape) {
+				background-position:center center;
+			}
+		}
+		.bottom-gate {
+			width: 160%;
+			margin-top: -70%;
+			margin-left: -35%;
+			@media screen and (orientation:portrait) and (min-width: 768px) {
+				width: 100%;
+				margin-left: 0%;
+				margin-top:-40%;
+			}
+			@media screen and (orientation:landscape) {
+				width:100%;
+				margin-top: -10%;
+				margin-left: 0;
+			}
+		}
+		p {
+			@media screen and (orientation:landscape) {
+				padding-left: 0;
+			}
+			@media screen and (min-width: 560px) and (orientation:landscape) {
+				padding-left: 0;
+			}
+			@media screen and (orientation:landscape) and (min-width: 1024px)  {
+				padding-left: 0;	
+			}
+		}
+	}
+	.sl-content {
+	}
+	.content {
+		color:#445b0d;
+		h1, h2, h3, h4 {
+			color:#445b0d;
+		}
+		p, strong, a, li, cite {
+			color:#445b0d;
+		}
+	}
+}
+#computers-compassion {
+	.gate .top-gate-wrapper {
+		&:before {
+			background:transparent url(../images/circut-gate.jpg) no-repeat 110px 0px;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+
+			@media screen and (orientation:landscape) {
+				background:transparent url(../images/circut-gate.jpg) no-repeat center -200px;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+			}
+		}
+	}
+	.gate .bottom-gate-wrapper {
+		&:before {
+			background:transparent url(../images/baby.jpg) no-repeat center center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			@media screen and (min-width: 560px) and (orientation:landscape) {
+				background-position: center -180px;
+			}
+			@media screen and (min-width: 768px) and (orientation:landscape) {
+				background-position: center -100px;
+			}
+			@media screen and (min-width: 1024px) and (orientation:landscape) {
+				background-position: center -200px;
+			}
+		}
+		.bottom-gate {
+			width: 150%;
+			margin-left: -30%;
+			@media all and (min-width: 768px) {
+				width:100%;
+				margin-left: 0;
+				margin-top:-30%;
+			}
+		}
+		p {	
+			padding-left: 20px;
+			@media all and (min-width: 420px) {
+				padding-left: 30px;
+			}
+			@media all and (min-width: 420px) and (orientation:landscape)  {
+				padding-left: 30px;
+			}
+
+			@media all and (min-width: 560px) {
+				padding-left: 32px;
+			}
+			@media all and (min-width: 560px) and (orientation:landscape)  {
+				padding-left: 44px;
+			}
+			@media all and (min-width: 768px) {
+				padding-left: 50px;
+			}	
+			@media all and (min-width: 1024px) {
+				padding-left: 72px;
+			}
+		}
+	}
+	.sl-content {
+	}
+	.content {
+		h1, h2, h3, h4 {
+			color:#D8FFA8;
+		}
+		p, strong, a, li, cite {
+			color:#D8FFA8;
+		}
+		
+	}
+}
+#slice4 {
+	.sl-content {
+	}
+	.content {
+		h1 {
+			color:#cdfc94;
+		}
+		p {
+			color:#cdfc94;
+		}
+	}
+}
+#slice5 {
+	.sl-content {
+	}
+	.content {
+		h1 {
+			color:#cdfc94;
+		}
+		p {
+			color:#cdfc94;
+		}
+		li {
+			color:#cdfc94;
+		}
+	}
+}
+#slice6 {
+	.sl-content {
+		/* &:after {
+			content:"";
+			display: block;
+			position: absolute;
+			overflow: hidden;
+			height:100%;
+			width:100%;
+			top:0;
+			left:0;
+			/* fallback 
+		  	background-color: transparent;
+		  	background-repeat: repeat-x;
+		  	/* Safari 4-5, Chrome 1-9 
+		  	background: -webkit-gradient(linear, 0% 0%, 0% .9, from(#008BB0), to(#00746D));
+		  	/* Safari 5.1, Chrome 10+ 
+		  	background: -webkit-linear-gradient(top, #008BB0, #00746D);
+		  	/* Firefox 3.6+ 
+		  	background: -moz-linear-gradient(top, #008BB0, #00746D);
+		  	/* IE 10 
+		  	background: -ms-linear-gradient(top, #008BB0, #00746D);
+		  	/* Opera 11.10+ 
+		  	background: -o-linear-gradient(top, #008BB0, #00746D);
+		  	opacity: .8;
+		} */
+	}
+	.content {
+		h1 {
+			color:#cdfc94;
+		}
+		p {
+			color:#cdfc94;
+		}
+	}
+}
+
+
+
+
+/*-------------------------------------------    
+	Footer
+-------------------------------------------*/
+.footer {
+	position: fixed;
+	bottom:0;
+	z-index: 9;
+	width: 100%;
+	.f-wrapper {
+		overflow: hidden;
+		background:#000;
+		width: 86%;
+		padding:3px 0 0;
+		float: left;
+		border-right: 2px solid transparent;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		@media all and (min-width: 768px) {
+			width:89%;
+			padding:15px 0;
+		}
+		@media all and (min-width: 1024px) {
+			width: 91%;
+		}
+		.footer-logo {
+			display: block;			
+			float: left;
+			img {
+				margin:0;
+				padding-left:10px;
+				max-width: 140px;
+				@media all and (min-width: 420px) {
+					padding-left:50px; 	
+				}
+			}
+		}
+		.subscribe-block {
+			border:none;
+			float:right;
+			background:transparent url(../images/mailer.png) no-repeat right 3px;
+			background-size: 75%;
+			cursor:pointer;
+			width: 50px;
+			height: 40px;
+			position: relative;
+			top: 5px;
+			left:-5px;
+			opacity: .8;
+			padding: 0;
+			margin:0;
+			&:hover {
+				opacity: .9;
+			}
+			@media all and (min-width: 768px) {
+				background-size: 100%;
+				left:-10px;
+			}
+			@media
+				only screen and (-webkit-min-device-pixel-ratio: 2),
+				only screen and (   min--moz-device-pixel-ratio: 2),
+				only screen and (     -o-min-device-pixel-ratio: 2/1),
+				only screen and (        min-device-pixel-ratio: 2),
+				only screen and (                min-resolution: 192dppx),
+				only screen and (                min-resolution: 1.5dppx) { 
+  				
+  				background:transparent url(../images/mailer-x2.png) no-repeat 0 0;
+  				background-size:80%; 
+			}
+		}
+		
+	}
+	.cube {
+		background: #000;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		margin:0;
+		display: block;
+		float:right;
+		width: 13.9%;
+		border-left: 2px solid transparent;
+		position: relative;
+		z-index: 999999999;
+		@media all and (min-width: 768px) {
+			width: 10.9%;
+		}
+		@media all and (min-width: 1024px) {
+			width: 8.9%;
+		}
+		a {
+			@include transitions;
+			margin-right: 3px;
+			background: url(../images/cube.png)no-repeat center center; 
+			background-size: 40px;
+			height: 43px;
+			display: block;
+			opacity: .5;
+			@media all and (min-width: 768px) {
+				background-size: 50px;
+			}
+			@media all and (min-width: 768px) {
+				height:70px;
+				background-size: 60px;
+			}
+			&:hover {
+				@include transitions;
+				opacity: .9;
+			}
+			@media
+				only screen and (-webkit-min-device-pixel-ratio: 2),
+				only screen and (   min--moz-device-pixel-ratio: 2),
+				only screen and (     -o-min-device-pixel-ratio: 2/1),
+				only screen and (        min-device-pixel-ratio: 2),
+				only screen and (                min-resolution: 192dppx),
+				only screen and (                min-resolution: 1.5dppx) { 
+  				
+  				background: url(../images/cube-x2.png)no-repeat center center; 
+  				background-size:80%; 
+			}
+		}
+	}
+}
+.subscribe-block {
+	width: 100%;
+	@include transitionsFast;
+	background:transparent url(../images/newsletter_banner_sm2.png) no-repeat center center;
+	background-size: 100%;
+	cursor:pointer;
+	position: relative;
+	opacity: .8;
+	margin-bottom: 20px;
+	height: 75px;
+	@media all and (min-width: 560px) {
+		opacity: .85;
+		width: 90%;
+		background:transparent url(../images/newsletter_banner.png) no-repeat center center;
+		background-size: 100%;
+	}
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (   min--moz-device-pixel-ratio: 2),
+		only screen and (     -o-min-device-pixel-ratio: 2/1),
+		only screen and (        min-device-pixel-ratio: 2),
+		only screen and (                min-resolution: 192dppx),
+		only screen and (                min-resolution: 1.5dppx) { 
+			background:transparent url(../images/newsletter_banner_sm2.png) no-repeat center center;
+			background-size:70%;
+			@media all and (min-width: 560px) {
+				background: url(../images/newsletter_banner.png)no-repeat center center; 
+				background-size:70%; 
+			}
+	}
+	p {
+		color:#fff !important;
+		font-size: 14px;
+		font-size: 0.9em;
+		line-height: 15px;
+		opacity: .85;
+		margin: 0 !important;
+		@media all and (min-width: 768px) {
+			font-size: 16px;
+			font-size: 1em;
+			line-height: 20px;
+		}
+	}
+	&:hover {
+		opacity: 2;
+	}
+
+}
+#mce-success-response {
+	font-size: 20px;
+	font-size: 2em;
+	margin-top: -70px;
+}

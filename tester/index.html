@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Fullscreen Slit Slider with CSS3 and jQuery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Fullscreen Slit Slider with CSS3 and jQuery" />
+        <meta name="keywords" content="slit slider, plugin, css3, transitions, jquery, fullscreen, autoplay" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
+		</noscript>
+    </head>
+    <body>
+        <header>
+    	<div class="inner">
+       		<ul id="leftList">
+      			<li><a class="tLvlNav" href="#"><p>Our Network</p><div class="tLvArrow"></div></a>
+          			<ul class="subnav">
+                		<li><a href="http://www.amerisourcebergendrug.com/abcdrug/" target="_blank" title="AmerisourceBergen Drug Company">AmerisourceBergen Drug Company</a></li>
+                		<li><a href="http://www.absg.com/" target="_blank" title="AmerisourceBergen Speciality Group">AmerisourceBergen Specialty Group</a></li>
+          			</ul>
+      			</li>
+      			<li style="border-right:1px solid #666;"><a href="http://www.knowledgedriven.com" target="_blank" title="Knowledge Driven">KnowledgeDriven</a></li>
+	  			<li><a href="#" target="_blank" class="active" title="Knowledge Driven">What It Takes</a></li>
+			</ul>			
+		</div>
+    </header>
+        <div class="container demo-1">
+            <div id="slider" class="sl-slider-wrapper">
+
+				<div class="sl-slider">
+				
+					<div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+						<div class="sl-slide-inner">
+							<div>
+							<div>
+								<div>
+									<h1>Horsepower. Brainpower.</h1>
+									<p>Getting patients the critical medications and therapies they need at the moment they need them takes more than packing trucks. It takes a global healthcare solutions leader dedicated to enhancing patient care through end-to-end solutions for manufacturers, pharmacies and providers. It takes security, accuracy and consistency. It takes horsepower and brainpower. It takes AmerisourceBergen.</p>
+									<!-- <div class="hide expand">
+										<p>Where can you go without having to make an appointment to speak with a healthcare professional about medication you’re taking, get help managing your diabetes or get a flu shot?</p>
+										<p>The community pharmacy.</p>
+										<p>Just walk right up to the counter and speak with the pharmacist.</p>
+										<p>Who, most likely, is also the owner.</p>
+										<p>It’s that ability to just walk right in that makes community pharmacies such a vital part of any neighborhood and a critical link in the healthcare system.</p>
+										<p>Through the Good Neighbor Pharmacy brand, AmerisourceBergen helps over three thousand independent, local pharmacies across the country build their businesses with resources like inventory management, business consulting services and continuing education.</p>
+										<p>Those services are backed up by a robust distribution network. Sourcing more than 50,000 different items from over 1,500 manufactures through 26 large scale distribution centers across the United States, AmerisourceBergen makes sure that no matter where a Good Neighbor Pharmacy is located—a small town way out on the prairie or on a busy city street corner—it is always well stocked. </p>
+										<p>And the changing healthcare environment will only make the relationship between AmerisourceBergen and community pharmacies stronger as new opportunities emerge from Affordable Healthcare Act and the ACA/STAR Measures rating system.</p>
+										<p>All of which—the horsepower and the brainpower—will allow Good Neighbor pharmacists and owners to keep their business thriving and healthy.</p>
+										<p>Because the healthier their business is, the healthier their patients, and community, will be.</p>
+										<div class="callout">
+											<p>Patients accept 70% of the therapeutic changes recommended by their community pharmacists.<cite>1</cite></p>
+											<p>The top three disease state management services offered by community pharmacists are immunizations, blood pressure monitoring, and diabetes training.</p>
+											<p>Good Neighbor Pharmacies serve 40,308,168 patients and fill 250,179,190 scripts per year.</p>
+										</div>
+										<div class="subscribe-block">
+	        									<p>Sign up to get updates on the latest stories from AmerisourceBergen delivered right to your email.</p>
+	        								</div>
+											<ol class="footnote">
+												<li>2013 NCPA Digest. NCPA. 2013.</li>
+											</ol>
+
+									</div> -->
+								</div>
+								<div c>
+									<a href="#">Read more</a>
+								</div>
+							</div>
+						</div><!-- .content-wrapper -->
+						<div class="gate" >
+							<div class="top-gate-wrapper">
+								<!-- <img src="images/truck-gate.jpg" alt="Gate Top" class="top-gate"> -->
+								<p>Horsepower</p>
+							</div>
+							<div class="bottom-gate-wrapper">
+								<!-- <img src="images/dish.jpg" alt="Gate Bottom" class="bottom-gate"> -->
+								<p>Brainpower</p>
+							</div>
+						</div>
+						</div>
+					</div>
+					
+					<div class="sl-slide bg-2" data-orientation="horizontal" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+						<div class="sl-slide-inner">
+							<div >
+							<div >
+								<div >
+									<h1>Hindsight. Foresight.</h1>
+										<p>Managing growth, addressing change and planning for the future takes past experience as well as innovative, forward thinking. It takes a global healthcare solutions leader dedicated to enhancing patient care through end-to-end solutions for manufacturers, pharmacies and providers. It takes hindsight and foresight. It takes AmerisourceBergen.</p>
+										<!-- <div class="hide expand">
+											<p>A good chunk of a pharmacist’s day is spent pulling product, managing inventory and restocking shelves.</p>
+											<p>There had to be an easier way</p>
+											<p>Neil Herson, an AmerisourceBergen executive, was holding that easier way in his hand.</p>
+											<p>And that easier way was a bottle of water.</p>
+											<p>Getting ready to checkout of his hotel, Neil reached into his room’s mini-fridge to grab a bottle of water. By the time he got to the lobby, the bottle of water was already on his bill.</p>
+											<p>He quickly deduced that the mini-fridge used RFID tags to ascertain which items he had taken out and relayed it to the hotel’s billing system.</p>
+											<p>Which seemed like a lot of technology just for a bottle of water.</p>
+											<p>But thinking about it, the RFID tags were probably a lot more efficient than having someone manually check every mini-fridge, everyday, to check inventory and restock.</p>
+											<p>And if it worked for hotels, then maybe it could work for pharmacies.</p>
+											<p>Not only that, maybe it could even work for patients.</p>
+											<p>Especially patient populations that aren’t necessarily detail oriented.</p>
+											<p>Like teens.</p>
+											<p>Because, generally speaking, teens don’t really think much about restocking medicine.</p>
+											<p>Or keeping a disease diary, data reporting, planning for medical emergencies, contacting their doctor or parents if they do have an emergency – you get the idea.</p>
+											<p>Even if they have a disease.</p>
+											<p>Like hemophilia, for instance.</p>
+											<p>Because for the thousands of people in the U.S. who have hemophilia1, that’s one of the most taxing aspects about the disease; all the work that goes into managing it.</p>
+											<p>Not to mention the fact that getting a cut, bruise or scrape could turn deadly.</p>
+											<p>Which then turns into a trip to the emergency room, contacting doctors, contacting family members and, above all, panic.</p>
+											<p>It’s a lot to manage and keep track of.</p>
+											<p>Hence, the creation of MyCubixx.</p>
+											<p>An in-home medication storage and delivery device, MyCubixx utilizes RFID enabled technology to help patients manage their disease state by handling diagnosis, dosing, dispensing, data reporting, and contacting doctors, parents and caregivers.</p>
+											<p>Here's how it works:</p>
+											<ul>
+												<li>After an event, the patient inputs their bleed details, target joint, and pain rating on the myCubixx touch-pad tablet.</li>
+												<li>MyCubixx records that information and provides access to product as well as dosage instruction. </li>
+												<li>MyCubixx then records how much product is taken and instantly notifies the patient’s doctor, family members and pharmacy so that new medicine can be pulled and the unit automatically restocked.</li>
+											</ul>
+											<p>But most importantly, for parents and teens, MyCubixx goes a long way to helping manage the panic associated with an event. </p>
+											<p>And with the panic managed, teens can focus on just being teens instead of a disease.</p>
+											<p>Because when you combine a little foresight and understanding with a company that can handle 5,000 individual, specialty pharmaceutical prescriptions a day with 99.7% accuracy, amazing things are possible.</p>
+											<div class="subscribe-block">
+	        									<p>Sign up to get updates on the latest stories from AmerisourceBergen delivered right to your email.</p>
+	        								</div>
+											<ol class="footnote">
+												<li>Hemophilia: Data &amp; Statistics. CDC. May 2013. <a href="http://www.cdc.gov/ncbddd/hemophilia/data.html">http://www.cdc.gov/ncbddd/hemophilia/data.html</a></li>
+											</ol>
+										</div> -->
+								</div>
+								<div >
+									<a href="#" class="show-more">Read more</a>
+								</div>
+							</div>
+						</div>
+						<div class="gate">
+							<div class="top-gate-wrapper">
+								<!-- <img src="images/plane.jpg" alt="Gate Top" class="top-gate"> -->
+								<p>Hindsight</p>
+							</div>
+							<div class="bottom-gate-wrapper">
+								<!-- <img src="images/tube-gate.jpg" alt="Gate Bottom" class="bottom-gate"> -->
+								<p>Foresight</p>
+							</div>
+						</div>
+						</div>
+					</div>
+					
+					<div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+						<div class="sl-slide-inner">
+							<div class="content-wrapper">
+							<div class="button-wrapper">
+								<div class="content">
+									<h1>Computers. Compassion.</h1>
+										<p>Helping people takes people &dash; 13,000 to be exact - that can handle everything from the high-tech, worldwide distribution of specialty oncology therapies to spending time on the phone conseling a worried patient. It takes a global healthcare solutions leader dedicated to enhancing patient care through end-to-end solutions for manufacturers, pharmacies and providers. It Takes AmerisourceBergen.</p>
+									<!-- <div class="hide expand">
+										<p>Medication non-adherence is one of the biggest challenges facing healthcare systems and patients today. 50 percent of medications for chronic disease are not taken as prescribed.<cite>1</cite></p>
+										<p>All told, medication non-adherence costs the healthcare system around $290 billion a year<cite>2</cite> and results in an estimated 125,000 deaths annually.<cite>3</cite></p>
+										<p>But through a combination of innovative technologies and personal, one-on-one interactions, AmerisourceBergen not only helps patients get access to critical medications, but stay on them as well.</p>
+										<p>And nowhere is this challenge more prevalent than in long term care facilities.</p>
+										<p>Not only are you dealing with multiple patients with multiple regimens, but those regimens tend to be fairly complex.</p>
+										<p>Of all age groups, the elderly take the highest numbers of medications.<cite>4</cite> More than 76% of Americans over 60 are on two medications. And of those, 37% are on five or more medications.<cite>5</cite></p>
+										<p>One of the major reasons this particular patient population stops taking their medications is because they don’t understand how or when to take them. And the more medications they’re on, the more confusing it gets.</p>
+										<p>The technology in AmerisourceBergen’s FastPak EXP helps address those problems.</p>
+										<p>A high volume packaging system that can consolidate multiple medications into individual packages, the FastPak EXP is capable of filling up to 65 customized pouches per minute. </p>
+										<p>Each package is clearly-labeled with easy-to-understand information for the patient including; patient name, time of dosage, individual drug description and dose quantity.</p>
+										<p>The ability to deliver custom solutions at high speed allows a long term care facility’s pharmacy to run more efficiently and eliminate errors. Which results in superior care and better outcomes for their patients.</p>
+
+										<p>On the personal, individual side there is well, actually, a person. </p>
+										<p>Her name is Martha. </p>
+										<p>Martha is one of the thousands of patient counselors who work every day on patient support programs that are administered by AmerisourceBergen’s Lash Group. There are hundreds of these programs that provide critical support to help patients start —and stay — on various therapies.</p>
+										<p>So, after a patient has been diagnosed with kidney cancer.</p>
+
+										<p>And they’re sitting in their house.</p>
+										<p>Wondering if they’ll see next Christmas.</p>
+										<p>Wondering how they’ll respond to the oral chemo they’ve been prescribed.</p>
+										<p>Wondering if they should even bother taking it.</p>
+										<p>That’s when Martha calls.</p>
+										<blockquote>Martha calls me every few weeks and I can call her anytime. She always understands and never rushes me. She explained how the drug works and how to combat side effects. We go over my tests. She lets me know that some Stage Four patients have been on [Oral Chemotherapy] for more than six years. She helps me frame questions to ask my oncologist.</blockquote>
+										<p>She brought light into my dark tunnel.</p>
+										<p>She empowered me.</p>
+										<p>Adherence isn’t just about taking pills. It’s about empowerment.</p>
+										<p>About living a better life.</p>
+										<p>And it’s that combination between technology like FastPak EXP and people like Martha that drive that empowerment and drive AmerisourceBergen.</p>
+										<div class="callout">
+											<p>In its history, AmerisourceBergen’s Lash Group has supported over 12 million patients.</p>
+											<p>Last year, Lash Group supported 11,800 patients in just one product adherence program.</p>
+										</div>
+									</br>
+										<div class="subscribe-block">
+	        								<p>Sign up to get updates on the latest stories from AmerisourceBergen delivered right to your email.</p>
+	        							</div>
+										
+										
+									</br>
+										<ol class="footnote">
+											<li>Agency for Healthcare Research and Quality (AHRQ) Evidence Report/Technology Assessment Number 208. Medication Adherence Interventions: Comparative Effectiveness. September 2012.</li>
+											<li>Thinking Outside The Pillbox: A System-wide Approach to Improving Patient Adherence for Chronic Disease.” NEHI. 2009.</li>
+											<li>Ho 2009, Circulation; Edmondson 2013, Br J of Health Psychology; George & Shalansky 2006, Br J Clin Phar </li>
+											<li>Osterberg L,Blaschke T. Adherence to medication. NEJM 2005;353:487- 97.</li>
+											<li>NCHS Data Brief Number 42, September 2010 / Prescription Drug Use Continues to Increase: U.S. Prescription Drug Data for 2007-2008 <a href="http://www.cdc.gov/nchs/data/databriefs/db42.htm">http://www.cdc.gov/nchs/data/databriefs/db42.htm</a></li>
+										</ol>
+									</div> -->
+								</div>
+								<div class="more">
+									<a href="#" class="show-more">Read more</a>
+								</div>
+							</div>
+						</div>
+						<div class="gate">
+							<div class="top-gate-wrapper">
+								<!-- <img src="images/circut-gate.jpg" alt="Gate Top" class="top-gate"> -->
+								<p>Computers</p>
+							</div>
+							<div class="bottom-gate-wrapper">
+								<!-- <img src="images/baby.jpg" alt="Gate Bottom" class="bottom-gate"> -->
+								<p>Compassion</p>
+							</div>
+						</div>
+					</div>
+						</div>
+					</div>
+					
+				</div><!-- /sl-slider -->
+				
+				<nav id="nav-arrows" class="nav-arrows">
+					<span class="nav-arrow-prev">Previous</span>
+					<span class="nav-arrow-next">Next</span>
+				</nav>
+
+				<nav id="nav-dots" class="nav-dots">
+					<span class="nav-dot-current"></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</nav>
+
+			</div><!-- /slider-wrapper -->
+
+        </div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
+		<script type="text/javascript" src="js/jquery.slitslider.js"></script>
+		<script type="text/javascript">	
+			$(function() {
+			
+				var Page = (function() {
+
+					var $navArrows = $( '#nav-arrows' ),
+						$nav = $( '#nav-dots > span' ),
+						slitslider = $( '#slider' ).slitslider( {
+							onBeforeChange : function( slide, pos ) {
+
+								$nav.removeClass( 'nav-dot-current' );
+								$nav.eq( pos ).addClass( 'nav-dot-current' );
+
+							}
+						} ),
+
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':last' ).on( 'click', function() {
+
+								slitslider.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':first' ).on( 'click', function() {
+								
+								slitslider.previous();
+								return false;
+
+							} );
+
+							$nav.each( function( i ) {
+							
+								$( this ).on( 'click', function( event ) {
+									
+									var $dot = $( this );
+									
+									if( !slitslider.isActive() ) {
+
+										$nav.removeClass( 'nav-dot-current' );
+										$dot.addClass( 'nav-dot-current' );
+									
+									}
+									
+									slitslider.jump( i + 1 );
+									return false;
+								
+								} );
+								
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+				/**
+				 * Notes: 
+				 * 
+				 * example how to add items:
+				 */
+
+				/*
+				
+				var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
+				
+				// call the plugin's add method
+				ss.add($items);
+
+				*/
+			
+			});
+		</script>
+	</body>
+</html>
